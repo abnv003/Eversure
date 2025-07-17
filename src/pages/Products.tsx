@@ -1,9 +1,11 @@
+// Products.tsx
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Search, Filter, Star } from 'lucide-react';
-import { products } from '../data/ProductData';
+import { useParams, useNavigate } from 'react-router-dom';
+import { Search, Filter, ArrowRight } from 'lucide-react';
+import { products } from '../data/ProductsData';
 
 const Products = () => {
+  const navigate = useNavigate();
   const { category } = useParams();
 
   const readableCategory = category
@@ -49,11 +51,11 @@ const Products = () => {
   const filteredProducts = products.filter(product => {
     const matchesCategory =
       selectedCategory === 'All Products' ||
-      product.name === selectedCategory ||
+      product.product_name === selectedCategory ||
       product.category === readableCategory;
 
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          product.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = (product.product_name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          (product.description || '').toLowerCase().includes(searchTerm.toLowerCase());
 
     return matchesCategory && matchesSearch;
   });
@@ -126,34 +128,28 @@ const Products = () => {
               <div key={product.id} className="bg-white rounded-lg shadow-sm hover:shadow-md overflow-hidden">
                 <img
                   src={product.image}
-                  alt={product.name}
+                  alt={product.product_name}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm text-teal-600 font-medium">{product.category}</span>
-                    <div className="flex items-center space-x-1">
-                      <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                      <span className="text-sm text-gray-600">{product.rating} ({product.reviews})</span>
-                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.name}</h3>
-                  <p className="text-gray-600 mb-4">{product.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.product_name}</h3>
+                  {/* <p className="text-gray-600 mb-4">{product.description}</p>
                   <ul className="text-sm text-gray-600 space-y-1 mb-4">
-                    {product.features.map((feature, index) => (
+                    {(product.product_features || []).map((feature, index) => (
                       <li key={index} className="flex items-center">
                         <span className="w-1.5 h-1.5 bg-teal-600 rounded-full mr-2" />
                         {feature}
                       </li>
                     ))}
-                  </ul>
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-gray-900">{product.price}</span>
-                    <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700">
-                      Request Quote
-                    </button>
-                  </div>
+                  </ul> */}
                 </div>
+                <button onClick={()=>{navigate(`/products/${category}/${product.id}`)}} className="flex items-center text-teal-600 hover:text-teal-700 text-sm font-medium transition-colors duration-200">
+                      Read More
+                      <ArrowRight className="h-4 w-4 ml-1" />
+                    </button>
               </div>
             ))}
           </div>

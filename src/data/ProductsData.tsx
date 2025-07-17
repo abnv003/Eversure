@@ -1,4 +1,16 @@
-export const products = [
+export type Product = {
+  id: number;
+  product_name: string;
+  sizes: string;
+  product_code: string;
+  category: string;
+  sub_category: string;
+  description: string;
+  image: string;
+  product_features: string[];
+};
+
+export const products: Product[] = [
     {
       "id": 1,
       "product_name": "MODCANN WI+",

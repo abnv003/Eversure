@@ -9,8 +9,8 @@ import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
 import Events from './pages/Event';
 import Certificate from './pages/Certificate';
-import ProductDetail from './pages/ProductDetails';
 import DownloadTab from './components/DownloadTab';
+import ProductDetails from './pages/ProductDetails';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:category" element={<Products />} />
-            <Route path="/products/:category/:productId" element={<ProductDetail />} /> 
+            <Route path="/products/:category/:id" element={<ProductDetails />} /> 
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:blogId" element={<BlogDetails />} />
