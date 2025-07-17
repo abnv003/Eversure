@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Search, Filter, Star } from 'lucide-react';
+import { products } from '../data/ProductData';
 
 const Products = () => {
   const { category } = useParams();
@@ -44,32 +45,6 @@ const Products = () => {
 
   const [selectedCategory, setSelectedCategory] = React.useState('All Products');
   const [searchTerm, setSearchTerm] = React.useState('');
-
-  const products = [
-    {
-      id: 1,
-      name: 'IV Cannula',
-      category: 'Infusion & Transfusion Therapy',
-      description: 'Used for intravenous therapy.',
-      price: '$29.99',
-      rating: 4.8,
-      reviews: 100,
-      image: 'https://via.placeholder.com/400',
-      features: ['Sterile', 'Latex-free', 'Available in various gauges']
-    },
-    {
-      id: 2,
-      name: 'Suction Catheter',
-      category: 'Anesthesia',
-      description: 'Flexible tube to remove secretions from airway.',
-      price: '$9.99',
-      rating: 4.5,
-      reviews: 50,
-      image: 'https://via.placeholder.com/400',
-      features: ['Soft tip', 'Sterile', 'Multiple sizes']
-    },
-    // Add the rest...
-  ];
 
   const filteredProducts = products.filter(product => {
     const matchesCategory =

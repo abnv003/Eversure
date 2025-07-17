@@ -1,4 +1,3 @@
-import React from 'react';
 import { Check, Shield, Award, Zap, ArrowRight, Star } from 'lucide-react';
 
 const ProductDetail = () => {

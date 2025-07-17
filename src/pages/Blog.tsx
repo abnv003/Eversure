@@ -1,41 +1,10 @@
 import { Calendar, User, Clock, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
+import { blogPosts } from '../data/BlogData';
 const Blog = () => {
   
   const navigate = useNavigate();
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'Eversure: Best IV Infusion Manufacturers in India',
-      excerpt: 'What is IV Infusion? Eversure is acclaimed as best iv infusion manufacturers in India, with state of art manufacturing facility and quality manufacturing process makes Eversure best iv infusion manufacturers …',
-      author: 'Dr. Sarah Johnson',
-      date: '2024-01-15',
-      readTime: '5 min read',
-      category: 'Uncategorized',
-      image: '/api/placeholder/400/250'
-    },
-    {
-      id: 2,
-      title: 'Eversure- Best iv catheter parts manufacturers in India',
-      excerpt: 'IV Catheter Eversure is considered as one of the best IV catheter parts manufacturers in India. IV Catheter or Intravenous Catheter is a little, adaptable cylinder intended to convey IV …',
-      author: 'Michael Chen',
-      date: '2024-01-12',
-      readTime: '7 min read',
-      category: 'Uncategorized',
-      image: '/api/placeholder/400/250'
-    },
-    {
-      id: 3,
-      title: 'Eversure – Best IV Cannula  Manufacturers in India',
-      excerpt: 'Eversure – Best IV Cannula  Manufacturers in India About Eversure Eversure is acclaimed as one of the best IV Cannula manufactures in India, with the state of art manufacturing facilities …',
-      author: 'Dr. Emily Rodriguez',
-      date: '2024-01-10',
-      readTime: '6 min read',
-      category: 'Uncategorized',
-      image: '/api/placeholder/400/250'
-    }
-  ];
+  
 
   const categories = ['All', 'Innovation', 'Quality', 'Surgery', 'Sustainability', 'Education', 'Regulation'];
 
@@ -125,16 +94,16 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Load More Section */}
+      {/* Load More Section
       <section className="pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <button className="bg-teal-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200">
             Load More Articles
           </button>
         </div>
-      </section>
+      </section> */}
 
-      {/* Newsletter Signup */}
+      {/* Newsletter Signup
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
@@ -154,7 +123,7 @@ const Blog = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
