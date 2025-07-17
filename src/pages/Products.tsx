@@ -12,6 +12,22 @@ const Products = () => {
     ? category.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())
     : null;
 
+  // Create a mapping to handle URL category to actual category name conversion
+  const categoryMapping = {
+    'Infusion Transfusion Therapy': ['Infusion Transfusion Therapy', 'infusion-transfusion-therapy'],
+    'Anesthesia': ['Anesthesia', 'anesthesia'],
+    'Gastroenterology': ['Gastroenterology', 'gastroenterology'],
+    'Urology': ['Urology', 'urology'],
+    'Surgery Wound Drainage': ['Surgery Wound Drainage', 'surgery-wound-drainage'],
+    'Central Venous Access Catheters': ['Central Venous Access Catheters', 'central-venous-access-catheters']
+  };
+
+  // Find the actual category name that matches either the readable format or URL format
+  const actualCategory = Object.keys(categoryMapping).find(key => 
+    key === readableCategory || 
+    categoryMapping[key as keyof typeof categoryMapping].includes(category || '')
+  ) || readableCategory;
+
   const subcategoryMap = {
     'Infusion Transfusion Therapy': [
       'IV Cannula',
@@ -41,23 +57,31 @@ const Products = () => {
   type CategoryKey = keyof typeof subcategoryMap;
 
   const subcategories =
-    readableCategory && Object.keys(subcategoryMap).includes(readableCategory)
-      ? subcategoryMap[readableCategory as CategoryKey]
+    actualCategory && Object.keys(subcategoryMap).includes(actualCategory)
+      ? subcategoryMap[actualCategory as CategoryKey]
       : [];
 
   const [selectedCategory, setSelectedCategory] = React.useState('All Products');
   const [searchTerm, setSearchTerm] = React.useState('');
 
   const filteredProducts = products.filter(product => {
-    const matchesCategory =
-      selectedCategory === 'All Products' ||
+    // First filter by the main category from params
+    const matchesMainCategory = !actualCategory || 
+      product.category === actualCategory || 
+      product.category === readableCategory ||
+      product.category === category;
+    
+    // Then filter by selected subcategory
+    const matchesSubCategory = 
+      selectedCategory === 'All Products' || 
       product.product_name === selectedCategory ||
-      product.category === readableCategory;
+      product.sub_category === selectedCategory ||
+      (product.sub_category && product.sub_category === selectedCategory);
 
     const matchesSearch = (product.product_name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
                           (product.description || '').toLowerCase().includes(searchTerm.toLowerCase());
 
-    return matchesCategory && matchesSearch;
+    return matchesMainCategory && matchesSubCategory && matchesSearch;
   });
 
   return (
@@ -66,10 +90,10 @@ const Products = () => {
       <section className="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">
-            {readableCategory || 'All Products'}
+            {actualCategory || 'All Products'}
           </h1>
           <p className="text-xl text-teal-100">
-            Browse {readableCategory || 'our full'} product range.
+            Browse {actualCategory || 'our full'} product range.
           </p>
         </div>
       </section>
@@ -123,7 +147,7 @@ const Products = () => {
       {/* Product Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-lg shadow-sm hover:shadow-md overflow-hidden">
                 <img
