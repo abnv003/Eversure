@@ -65,10 +65,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-left">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Eversure</h1>
             <p className="text-xl text-teal-100">
-              Eversure branded disposable medical devices are produced by the medical device division of Eversure India Pvt Ltd, belonging to Pune’s Rathigroup, an industrial house currently in it’s third generation. The group’s roots trace back to a textile mill which the family started in 1948. This medical device division was started in the year 2012, making it the youngest member of the Rathigroup.
-              Our world-class certified production facility is located in Pune,India. It includes state of the art injection moulding, extrusion, class 10000 clean room assembly, ETO sterilization and automated packaging.
-              Our product range includes various disposable medical devices for Infusion Therapy, Anesthesia , Gastroenterology, Urology, Surgery & Wound Drainage, Central Venous Access Catheters and so on. Our products are manufactured using the highest technical standards while striving for continuous development with care for environment.
-              Our brand promises you innovation, quality and reliability assuring you the best of comfort and care.
+              Eversure, a brand under the medical device division of Eversure India Pvt. Ltd., is part of Pune’s Rathigroup, an industrial house now in its third generation, with origins in a textile mill established in 1948. The medical division, launched in 2012, is the group’s youngest venture. Operating from a world-class certified facility in Pune, it features advanced injection moulding, extrusion, Class 10000 cleanroom assembly, ETO sterilization, and automated packaging. Eversure offers a wide range of disposable medical devices for Infusion Therapy, Anesthesia, Gastroenterology, Urology, Surgery & Wound Drainage, and Central Venous Access. Committed to innovation, quality, and reliability, the brand upholds high technical standards and environmental responsibility to ensure comfort and care.
             </p>
           </div>
         </div>
