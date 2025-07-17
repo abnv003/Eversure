@@ -119,15 +119,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        {/* Yellow Quick Product Finder Tab */}
-        <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-20">
-          <div className="bg-yellow-400 text-black px-4 py-8 rounded-l-lg shadow-lg cursor-pointer hover:bg-yellow-300 transition-colors">
-            <div className="transform -rotate-90 whitespace-nowrap text-sm font-semibold">
-              Quick Product Finder
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* About Us Section */}

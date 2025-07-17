@@ -10,10 +10,12 @@ import BlogDetails from './pages/BlogDetails';
 import Events from './pages/Event';
 import Certificate from './pages/Certificate';
 import ProductDetail from './pages/ProductDetails';
+import DownloadTab from './components/DownloadTab';
 
 function App() {
   return (
     <Router>
+      <DownloadTab />
       <div className="min-h-screen bg-white">
         <Header />
         <main>
