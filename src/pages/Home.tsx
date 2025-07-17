@@ -113,7 +113,7 @@ const Home = () => {
                   Empowering health through innovation
                 </h1>
                 <p className="text-lg mb-8 text-gray-200 leading-relaxed max-w-2xl">
-                  At Polymed, we believe that innovation is the cornerstone of ensuring access to the best healthcare solutions for all. At the heart of our operations is the strategic integration of automation, which drives operational efficiency and precision in patient care. Our approach focuses on not just addressing the current needs of healthcare but also anticipating the demands of tomorrow. In an era characterized by rapid medical transformation, we remain committed to developing new technologies.
+                  At Eversure, we believe that innovation is the cornerstone of ensuring access to the best healthcare solutions for all. At the heart of our operations is the strategic integration of automation, which drives operational efficiency and precision in patient care. Our approach focuses on not just addressing the current needs of healthcare but also anticipating the demands of tomorrow. In an era characterized by rapid medical transformation, we remain committed to developing new technologies.
                 </p>
               </div>
             </div>
@@ -133,14 +133,14 @@ const Home = () => {
                 <div className="w-20 h-1 bg-yellow-400"></div>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                Polymed is a global leader in the medical device industry, renowned for its extensive range of high-quality medical devices. Since our establishment in 1997, the company has upheld a steadfast commitment to innovation and excellence, envisioning a world where top-tier healthcare is universally accessible. Our expansive global reach, cutting edge technologies and advanced manufacturing capabilities...
+                Eversure is a global leader in the medical device industry, renowned for its extensive range of high-quality medical devices. Since our establishment in 1997, the company has upheld a steadfast commitment to innovation and excellence, envisioning a world where top-tier healthcare is universally accessible. Our expansive global reach, cutting edge technologies and advanced manufacturing capabilities...
               </p>
               <div className="flex items-center space-x-4">
                 <Link
                   to="/about"
                   className="bg-teal-600 text-white px-8 py-3 rounded-full font-medium hover:bg-teal-700 transition-colors duration-200"
                 >
-                  Learn More About Polymed
+                  Learn More About Eversure
                 </Link>
                 <div className="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-teal-700 transition-colors">
                   <ChevronRight className="h-6 w-6 text-white" />

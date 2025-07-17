@@ -63,9 +63,9 @@ const About = () => {
       <section className="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-left">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About PolyMedicure</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Eversure</h1>
             <p className="text-xl text-teal-100">
-              Eversure branded disposable medical devices are produced by the medical device division of Polybond India Pvt Ltd, belonging to Pune’s Rathigroup, an industrial house currently in it’s third generation. The group’s roots trace back to a textile mill which the family started in 1948. This medical device division was started in the year 2012, making it the youngest member of the Rathigroup.
+              Eversure branded disposable medical devices are produced by the medical device division of Eversure India Pvt Ltd, belonging to Pune’s Rathigroup, an industrial house currently in it’s third generation. The group’s roots trace back to a textile mill which the family started in 1948. This medical device division was started in the year 2012, making it the youngest member of the Rathigroup.
               Our world-class certified production facility is located in Pune,India. It includes state of the art injection moulding, extrusion, class 10000 clean room assembly, ETO sterilization and automated packaging.
               Our product range includes various disposable medical devices for Infusion Therapy, Anesthesia , Gastroenterology, Urology, Surgery & Wound Drainage, Central Venous Access Catheters and so on. Our products are manufactured using the highest technical standards while striving for continuous development with care for environment.
               Our brand promises you innovation, quality and reliability assuring you the best of comfort and care.

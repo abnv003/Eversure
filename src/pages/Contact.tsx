@@ -47,7 +47,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@polymedicure.com', 'support@polymedicure.com']
+      details: ['info@eversure.com', 'support@eversure.com']
     },
     {
       icon: Clock,
@@ -221,14 +221,14 @@ const Contact = () => {
                   <p className="text-gray-600 mb-2">
                     Interested in product training or certification programs? Contact our education team:
                   </p>
-                  <p className="text-green-600 font-semibold">training@polymedicure.com</p>
+                  <p className="text-green-600 font-semibold">training@eversure.com</p>
                 </div>
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Partnership Opportunities</h3>
                   <p className="text-gray-600 mb-2">
                     Explore partnership and distribution opportunities with our business development team:
                   </p>
-                  <p className="text-purple-600 font-semibold">partnerships@polymedicure.com</p>
+                  <p className="text-purple-600 font-semibold">partnerships@eversure.com</p>
                 </div>
               </div>
             </div>
