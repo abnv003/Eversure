@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Download, Eye, X, ZoomIn, ZoomOut } from 'lucide-react';
 
 const Certificate = () => {

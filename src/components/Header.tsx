@@ -7,6 +7,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [showCompanyDropdown, setShowCompanyDropdown] = useState(false);
+
+
   const location = useLocation();  
 
   const navigation = [
@@ -203,6 +205,7 @@ const Header = () => {
           </div>
         )}
       </nav>
+      
     </header>
   );
 };

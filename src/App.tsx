@@ -10,6 +10,7 @@ import BlogDetails from './pages/BlogDetails';
 import Events from './pages/Event';
 import Certificate from './pages/Certificate';
 import DownloadTab from './components/DownloadTab';
+import QuickFinderTab from './components/QuickFinderTab';
 import ProductDetails from './pages/ProductDetails';
 import { Sustainability } from './pages/Sustainability';
 import { CSR } from './pages/CSR';
@@ -18,6 +19,7 @@ function App() {
   return (
     <Router>
       <DownloadTab />
+      <QuickFinderTab />
       <div className="min-h-screen bg-white">
         <Header />
         <main>
