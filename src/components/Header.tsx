@@ -6,6 +6,7 @@ import { Menu, X, Search, ChevronDown } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [showCompanyDropdown, setShowCompanyDropdown] = useState(false);
   const location = useLocation();  
 
   const navigation = [
@@ -26,11 +27,22 @@ const Header = () => {
     'Central Venous Access Catheters',
   ];
 
+  const drop_company = [
+    'About Us',
+    'Corporate Social Responsibility',
+    'Sustainability'
+  ];
+
   const isActive = (path: string) => location.pathname === path;
 
   const formatCategoryPath = (category: string) => {
     return `/products/${encodeURIComponent(category.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-'))}`;
   };
+
+  const formatCompanyPath = (companyItem: any) => {
+  // Format the path based on your routing structure  
+  return `/company/${companyItem.toLowerCase().replace(/\s+/g, '-')}`;
+};
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -47,58 +59,96 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
   {navigation.map((item) =>
-    item.name === 'Product & Therapies' ? (
-      <div
-        key={item.name}
-        className="relative"
-        onMouseEnter={() => setShowDropdown(true)}
-        onMouseLeave={() => setShowDropdown(false)}
-      >
-        <div>
-          <button
-            className={`flex items-center px-5 py-3 text-sm font-medium transition-colors duration-200 hover:text-teal-600 ${
-              isActive(item.href)
-                ? 'text-teal-600 border-b-2 border-teal-600'
-                : 'text-gray-700'
-            }`}
-          >
-            {item.name}
-            <ChevronDown className="ml-1 h-4 w-4" />
-          </button>
-        </div>
-
-        {/* Dropdown */}
-        <div
-          className={`absolute left-0 mt-0 pt-3 w-[32rem] bg-white shadow-lg rounded-md border z-50 transition-opacity duration-200 ${
-            showDropdown ? 'opacity-100 visible' : 'opacity-0 invisible'
+  item.name === 'Product & Therapies' ? (
+    <div
+      key={item.name}
+      className="relative"
+      onMouseEnter={() => setShowDropdown(true)}
+      onMouseLeave={() => setShowDropdown(false)}
+    >
+      <div>
+        <button
+          className={`flex items-center px-5 py-3 text-sm font-medium transition-colors duration-200 hover:text-teal-600 ${
+            isActive(item.href)
+              ? 'text-teal-600 border-b-2 border-teal-600'
+              : 'text-gray-700'
           }`}
         >
-          {categories.map((category) => (
-            <Link
-              key={category}
-              to={formatCategoryPath(category)}
-              className="block px-4 py-3 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700"
-              onClick={() => setShowDropdown(false)}
-            >
-              {category}
-            </Link>
-          ))}
-        </div>
+          {item.name}
+          <ChevronDown className="ml-1 h-4 w-4" />
+        </button>
       </div>
-    ) : (
-      <Link
-        key={item.name}
-        to={item.href}
-        className={`px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-teal-600 ${
-          isActive(item.href)
-            ? 'text-teal-600 border-b-2 border-teal-600'
-            : 'text-gray-700'
+
+      {/* Dropdown Categories*/}
+      <div
+        className={`absolute left-0 mt-0 pt-3 w-[32rem] bg-white shadow-lg rounded-md border z-50 transition-opacity duration-200 ${
+          showDropdown ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
-        {item.name}
-      </Link>
-    )
-  )}
+        {categories.map((category) => (
+          <Link
+            key={category}
+            to={formatCategoryPath(category)}
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700"
+            onClick={() => setShowDropdown(false)}
+          >
+            {category}
+          </Link>
+        ))}
+      </div>
+    </div>
+  ) : item.name === 'Company' ? (
+    <div
+      key={item.name}
+      className="relative"
+      onMouseEnter={() => setShowCompanyDropdown(true)}
+      onMouseLeave={() => setShowCompanyDropdown(false)}
+    >
+      <div>
+        <button
+          className={`flex items-center px-5 py-3 text-sm font-medium transition-colors duration-200 hover:text-teal-600 ${
+            isActive(item.href)
+              ? 'text-teal-600 border-b-2 border-teal-600'
+              : 'text-gray-700'
+          }`}
+        >
+          {item.name}
+          <ChevronDown className="ml-1 h-4 w-4" />
+        </button>
+      </div>
+
+      {/* Company Dropdown */}
+      <div
+        className={`absolute left-0 mt-0 pt-3 w-[32rem] bg-white shadow-lg rounded-md border z-50 transition-opacity duration-200 ${
+          showCompanyDropdown ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}
+      >
+        {drop_company.map((companyItem) => (
+          <Link
+            key={companyItem}
+            to={formatCompanyPath(companyItem)}
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700"
+            onClick={() => setShowCompanyDropdown(false)}
+          >
+            {companyItem}
+          </Link>
+        ))}
+      </div>
+    </div>
+  ) : (
+    <Link
+      key={item.name}
+      to={item.href}
+      className={`px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-teal-600 ${
+        isActive(item.href)
+          ? 'text-teal-600 border-b-2 border-teal-600'
+          : 'text-gray-700'
+      }`}
+    >
+      {item.name}
+    </Link>
+  )
+)}
   <button className="p-2 text-gray-700 hover:text-teal-600">
     <Search className="h-5 w-5" />
   </button>

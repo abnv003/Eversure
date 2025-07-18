@@ -157,16 +157,12 @@ const ProductDetails = () => {
                 <h3 className="text-lg font-semibold text-teal-900 mb-4">Product Information</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-teal-700">Availability:</span>
-                    <span className="font-medium text-teal-900">In Stock</span>
+                    <span className="text-teal-700">Product Code:</span>
+                    <span className="font-medium text-teal-900">{product.product_code}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-teal-700">Packaging:</span>
-                    <span className="font-medium text-teal-900">Sterile</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-teal-700">Material:</span>
-                    <span className="font-medium text-teal-900">Medical Grade</span>
+                    <span className="text-teal-700">Sizes:</span>
+                    <span className="font-medium text-teal-900">{product.sizes}</span>
                   </div>
                 </div>
               </div>
@@ -177,7 +173,7 @@ const ProductDetails = () => {
                 <p className="text-gray-600 mb-4">
                   Contact our medical device specialists for detailed product information and specifications.
                 </p>
-                <button className="w-full bg-teal-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-teal-700 transition-colors duration-200">
+                <button onClick={()=>{navigate('/contact')}} className="w-full bg-teal-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-teal-700 transition-colors duration-200">
                   Contact Us
                 </button>
               </div>

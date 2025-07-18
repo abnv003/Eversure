@@ -11,6 +11,8 @@ import Events from './pages/Event';
 import Certificate from './pages/Certificate';
 import DownloadTab from './components/DownloadTab';
 import ProductDetails from './pages/ProductDetails';
+import { Sustainability } from './pages/Sustainability';
+import { CSR } from './pages/CSR';
 
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/company/about-us" element={<About />} />
+            <Route path="/company/corporate-social-responsibility" element={<CSR />} />
+            <Route path="/company/sustainability" element={<Sustainability />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:category" element={<Products />} />
             <Route path="/products/:category/:id" element={<ProductDetails />} /> 

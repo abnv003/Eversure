@@ -1,57 +1,32 @@
 import React, { useState } from 'react';
-import { Download, Eye, X } from 'lucide-react';
+import { Download, Eye, X, ZoomIn, ZoomOut } from 'lucide-react';
 
 const Certificate = () => {
   const [selectedCertificate, setSelectedCertificate] = useState<any>(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
 
   const certificates = [
     {
       id: 1,
       title: 'ISO 13485:2016 Quality Management Systems',
       category: 'Quality Assurance',
-      issueDate: '2023-12-15',
-      expiryDate: '2026-12-15',
-      image: '/api/placeholder/600/800'
+      valid_from: '2023-04-15',
+      valid_until: '2026-04-14',
+      image: '/ISO 13485_Q5 115632 0001 Rev.00_Valid 2023-04-15 to 2026-04-14 (2)_page-0001.jpg'
     },
     {
       id: 2,
       title: 'FDA 510(k) Medical Device Clearance',
       category: 'Regulatory Compliance',
-      issueDate: '2023-10-22',
-      expiryDate: '2028-10-22',
-      image: '/api/placeholder/600/800'
+      image: '/CE Certificate G10 115632 0002 Rev. 00_Valid 2023-07-18 Until 2028-07-17 (1) (1)_page-0002.jpg'
     },
     {
       id: 3,
       title: 'CE Mark Certification',
       category: 'European Compliance',
-      issueDate: '2023-11-08',
-      expiryDate: '2026-11-08',
-      image: '/api/placeholder/600/800'
-    },
-    {
-      id: 4,
-      title: 'Good Manufacturing Practice (GMP)',
-      category: 'Manufacturing Standards',
-      issueDate: '2023-09-12',
-      expiryDate: '2025-09-12',
-      image: '/api/placeholder/600/800'
-    },
-    {
-      id: 5,
-      title: 'Medical Device Single Audit Program (MDSAP)',
-      category: 'International Standards',
-      issueDate: '2023-08-30',
-      expiryDate: '2026-08-30',
-      image: '/api/placeholder/600/800'
-    },
-    {
-      id: 6,
-      title: 'ISO 14971:2019 Risk Management',
-      category: 'Risk Management',
-      issueDate: '2023-07-18',
-      expiryDate: '2026-07-18',
-      image: '/api/placeholder/600/800'
+      valid_from: '2023-07-18',
+      valid_until: '2028-07-17',
+      image: '/CE Certificate G10 115632 0002 Rev. 00_Valid 2023-07-18 Until 2028-07-17 (1) (1)_page-0001.jpg'
     }
   ];
 
@@ -113,7 +88,7 @@ const Certificate = () => {
               <div key={certificate.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all duration-200 group">
                 <div className="relative aspect-[3/4] bg-gray-200 overflow-hidden">
                   <div className="w-full h-full flex items-center justify-center text-gray-500">
-                    Certificate Image
+                    <img src={certificate.image} alt='cert-image'/>
                   </div>
                   
                   {/* Hover Overlay */}
@@ -129,7 +104,9 @@ const Certificate = () => {
                       className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200"
                       title="Download Certificate"
                     >
-                      <Download className="h-5 w-5" />
+                      <a href={certificate.image} download>
+                        <Download className="h-5 w-5" />
+                      </a>
                     </button>
                   </div>
                 </div>
@@ -144,8 +121,8 @@ const Certificate = () => {
                     {certificate.title}
                   </h3>
                   <div className="text-xs text-gray-500 space-y-1">
-                    <p>Issued: {new Date(certificate.issueDate).toLocaleDateString()}</p>
-                    <p>Expires: {new Date(certificate.expiryDate).toLocaleDateString()}</p>
+                    <p>Valid From: {certificate.valid_from}</p>
+                    <p>Valid Until: {certificate.valid_until}</p>
                   </div>
                 </div>
               </div>
@@ -165,39 +142,70 @@ const Certificate = () => {
 
       {/* Modal for Certificate Viewing */}
       {selectedCertificate && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
-          <div className="relative bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-hidden">
-            <div className="flex items-center justify-between p-4 border-b">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {selectedCertificate.title}
-                </h3>
-                <p className="text-sm text-gray-600">{selectedCertificate.category}</p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <button
-                  className="bg-teal-600 text-white p-2 rounded-lg hover:bg-teal-700 transition-colors duration-200"
-                  title="Download Certificate"
-                >
-                  <Download className="h-5 w-5" />
-                </button>
-                <button
-                  onClick={closeModal}
-                  className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
-                  title="Close"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
-            </div>
-            <div className="p-4">
-              <div className="bg-gray-200 aspect-[3/4] max-h-[70vh] flex items-center justify-center text-gray-500">
-                Full Certificate Image
-              </div>
-            </div>
-          </div>
+  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
+    <div className="relative bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-hidden">
+      <div className="flex items-center justify-between p-4 border-b">
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900">
+            {selectedCertificate.title}
+          </h3>
+          <p className="text-sm text-gray-600">{selectedCertificate.category}</p>
         </div>
-      )}
+        <div className="flex items-center space-x-2">
+          <button
+            onClick={() => setZoomLevel(prev => Math.min(prev + 0.25, 3))}
+            className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+            title="Zoom In"
+          >
+            <ZoomIn className="h-5 w-5" />
+          </button>
+          <button
+            onClick={() => setZoomLevel(prev => Math.max(prev - 0.25, 0.5))}
+            className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+            title="Zoom Out"
+          >
+            <ZoomOut className="h-5 w-5" />
+          </button>
+          <button
+            onClick={() => setZoomLevel(1)}
+            className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200 text-xs px-3"
+            title="Reset Zoom"
+          >
+            {zoomLevel}
+          </button>
+          <button
+            className="bg-teal-600 text-white p-2 rounded-lg hover:bg-teal-700 transition-colors duration-200"
+            title="Download Certificate"
+          >
+            <a href={selectedCertificate.image} download>
+              <Download className="h-5 w-5" />
+            </a>
+          </button>
+          <button
+            onClick={closeModal}
+            className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+            title="Close"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+      </div>
+      <div className="p-4 overflow-auto max-h-[70vh]">
+        <div className="bg-gray-200 aspect-[3/4] flex items-center justify-center text-gray-500">
+          <img 
+            src={selectedCertificate.image} 
+            alt='cert-image'
+            style={{ 
+              transform: `scale(${zoomLevel})`,
+              transition: 'transform 0.2s ease-in-out',
+              cursor: zoomLevel > 1 ? 'grab' : 'default'
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+)}
 
       {/* Info Section */}
       <section className="py-16 bg-gray-50">
