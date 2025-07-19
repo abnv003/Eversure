@@ -7,7 +7,10 @@ export type Product = {
   sub_category: string;
   description: string;
   image: string;
-  product_features: string[];
+  product_features: {
+    title: string;
+    description: string;
+  }[];
 };
 
 export const products: Product[] = [
@@ -21,22 +24,43 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines.",
       "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-modcann-wi.webp",
       "product_features": [
-            "Siliconised, stainless steel, ultra sharp, back cut, needle facilitates pain free insertion inside a vein to provide venous access.",
-            "The back-cut incision creates a highly flexible pathway designed to give you easier insertion with less tissue tearing and faster healing.",
-            "Smoother inner and outer surface, and tapered tip of the catheter ensures frictionless insertion.",
-            "FEP Radiopaque three stripped catheter assures excellent visibility under X-rays.",
-            "Biocompatible material is used for longer indwelling time.",
-            "Also available in Polyurethane (PUR) for more kink resistance and comfortable performance.",
-            "Latex-free, PVC-free.",
-            "Specially designed flexible, wide and soft wings for easy and proper fixation.",
-            "Translucent material makes it easy to see through.",
-            "Material used: Polypropylene",
-            "Ultra transparent flash back chamber to observe quick flashback during venipuncture.",
-            "Hydrophobic filter facilitates proper venting for quick flash back.",
-            "Material used: Polycarbonate for easy visualization.",
-            "Injection port with imported non return white Silicon valve and colour coded cap for extra medication without interrupting infusion.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle",
+        "description": "Back-cut siliconised stainless steel needle for smooth insertion."
+      },
+      {
+        "title": "Smooth & Flexible Insertion",
+        "description": "Tapered tip and soft wings reduce friction."
+      },
+      {
+        "title": "Radiopaque & Translucent Catheter",
+        "description": "Three / four striped FEP catheter visible under X-ray."
+      },
+      {
+        "title": "Biocompatible, Safe Material",
+        "description": "Latex-free, PVC-free for extended safe use."
+      },
+      {
+        "title": "Optional  PUR Catheter",
+        "description": "Polyurethane option enhances kink resistance and comfort."
+      },
+      {
+        "title": "Flashback Chamber with Vent Filter",
+        "description": "Transparent chamber and filter ensure quick flashback."
+      },
+      {
+        "title": "Durable Component Materials",
+        "description": "Polypropylene body and polycarbonate chamber for strength."
+      },
+      {
+        "title": "Secure Injection Port",
+        "description": "Non-return silicon valve with color-coded cap."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, CE certified, single-use device."
+      }
+    ]
     },
     {
       "id": 2,
@@ -48,15 +72,39 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines.",
       "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-ecocann.webp",
       "product_features": [
-            "Siliconised stainless steel, ultra sharp, back cut needle for pain free insertion.",
-            "Flexible wide wings for easy and proper fixation.",
-            "FEP Radiopaque three striped catheter with smoother inner and outer surface and tapered tip to ensure friction less insertion.",
-            "Transparent flash back chamber to check instant venipuncture.",
-            "Injection port with non return Silicon valve and colour coded cap for extra medication.",
-            "Bio-compatible material used for longer indwelling time.",
-            "Latex-free, PVC-free.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      }
+    ]
     },
     {
       "id": 3,
@@ -68,14 +116,39 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines.",
       "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-ecocann-w.webp",
       "product_features": [
-            "Siliconised stainless steel, ultra sharp, back cut needle for pain free insertion.",
-            "Flexible wide wings for easy and proper fixation.",
-            "FEP Radiopaque three striped catheter with smoother inner and outer surface and tapered tip to ensure friction less insertion.",
-            "Transparent flash back chamber to check instant venipuncture.",
-            "Bio-compatible material used for longer indwelling time.",
-            "Latex-free, PVC-free.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      }
+    ]
     },
     {
       "id": 4,
@@ -87,14 +160,39 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines.",
       "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-ecocann-n.webp",
       "product_features": [
-            "Siliconised stainless steel, ultra sharp, back cut needle for pain free insertion.",
-            "Flexible wide wings for easy and proper fixation.",
-            "FEP Radiopaque three striped catheter with smoother inner and outer surface and tapered tip to ensure friction less insertion.",
-            "Transparent flash back chamber to check instant venipuncture.",
-            "Bio-compatible material used for longer indwelling time.",
-            "Latex-free, PVC-free.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      }
+    ]
     },
     {
       "id": 5,
@@ -106,13 +204,31 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines.",
       "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-ecowin.webp",
       "product_features": [
-            "Siliconised stainless steel, ultra sharp, back cut needle for pain free insertion.",
-            "Transparent Needle hub, flash back chamber for easy visualization after needle insertion",
-            "FEP Radiopaque three striped catheter with smoother inner and outer surface and tapered tip to ensure friction less insertion.",
-            "Bio-compatible material used for longer indwelling time.",
-            "Latex-free, PVC-free.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 6,
@@ -124,16 +240,31 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines.",
       "image": "http://eversuremedical.com/assets/images/product/infusion/iv-infusion-products-iv-cannula-ecocann-s.webp",
       "product_features": [
-            "Siliconised stainless steel, ultra sharp, back cut needle for pain free insertion.",
-            "Safety needle guard automatically covers the needle’s sharp bevel after withdrawal of needle, minimizing the risk of needle stick injuries.",
-            "Transparent Needle hub, flash back chamber for easy visualization after needle insertion",
-            "Flexible wide wings for easy and proper fixation.",
-            "Injection port with non return Silicon valve and colour coded cap for extra medication.",
-            "FEP Radiopaque three striped catheter with smoother inner and outer surface and tapered tip to ensure friction less insertion.",
-            "Bio-compatible material used for longer indwelling time.",
-            "Latex-free, PVC-free.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 7,
@@ -145,16 +276,31 @@ export const products: Product[] = [
       "description": "For simultaneous and continuous infusion of two fluids to connect the luer device and control flow direction.",
       "image": "http://eversuremedical.com/assets/images/product/infusion-transfusion-modway.webp",
       "product_features": [
-            "360 degree smooth rotation",
-            "Universal 6% luer taper to ensure leakage free fitment.",
-            "One male luer lock for secure connection with other accessories.",
-            "Two female luer connectors for easy connection to other device.",
-            "Fully transparent Polycarbonate Channel for easy visualization of fluids.",
-            "Minimum priming volume for precise drug administration.",
-            "Rigid construction with circular flow channel to prevent air trap incidence.",
-            "Rotating handle with arrow symbol to indicate the direction of flow.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 8,
@@ -166,14 +312,31 @@ export const products: Product[] = [
       "description": "For simultaneous and continuous infusion of two fluids to connect the luer device and control flow direction away from the venipuncture site.",
       "image": "http://eversuremedical.com/assets/images/product/infusion-transfusion-modexway.webp",
       "product_features": [
-            "DEHP free PVC tube.",
-            "Extension tube with three way stop cock at one end and male luer lock connector at other end.",
-            "360 degree smooth rotation.",
-            "High quality, kink resistant tube with smooth inner surface for uninterrupted fluid movement.",
-            "Extension tube dia: I Ø 3.0 mm, O Ø 4.1 mm.",
-            "Tube length (cm): 10, 25, 50, 100, 150, 200",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 9,
@@ -185,18 +348,31 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
       "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-ecovenn-nv.webp",
       "product_features": [
-            "For gravity feed only.",
-            "Strong, sharp spike for easy penetration.",
-            "Transparent drip chamber for easy monitoring of flow rate and priming.",
-            "15 micron fluid filter inside drip chamber for filtration of foreign particles in the fluid.",
-            "Kink resistant PVC Tube for uniform flow rate.",
-            "Smooth roller- clamp for easy adjustment of flow rate.",
-            "Self sealing latex bulb.",
-            "Drop rate- 20 drops/ml.",
-            "Standard Tube Length 1.5 mtr.",
-            "Tube dia : I Ø 2.8 mm, O Ø 4.0 mm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 10,
@@ -208,19 +384,31 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
       "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-ecovenn-v.webp",
       "product_features": [
-            "For gravity feed only.",
-            "Strong, sharp spike for easy penetration.",
-            "Air vent with bacteria retentive filter to prevent air contamination.",
-            "Transparent drip chamber for easy monitoring of flow rate and priming.",
-            "15 micron fluid filter inside drip chamber for filtration of foreign particles in the fluid.",
-            "Kink resistant PVC Tube for uniform flow rate.",
-            "Smooth roller- clamp for easy adjustment of flow rate.",
-            "Self sealing latex bulb.",
-            "Drop rate- 20 drops/ml.",
-            "Standard Tube Length 1.5 mtr.",
-            "Tube dia : I Ø 2.8 mm, O Ø 4.0 mm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 11,
@@ -232,18 +420,31 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines for children and infants or to infuse sensitive medications where precision in the flow rate is essential.",
       "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-ecovenn-m-nv.webp",
       "product_features": [
-            "For gravity feed only.",
-            "Strong, sharp spike for easy penetration.",
-            "Transparent drip chamber for easy monitoring of flow rate and priming.15 micron fluid filter inside",
-            "drip chamber for filtration of foreign particles in the fluid.",
-            "Kink resistant PVC Tube for uniform flow rate.",
-            "Smooth roller- clamp for easy adjustment of flow rate.",
-            "Self sealing latex bulb.",
-            "Drop rate- 60 drops/ml.",
-            "Standard Tube Length 1.5 mtr.",
-            "Tube dia : I Ø 2.8 mm, O Ø 4.0 mm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 12,
@@ -255,19 +456,31 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines for children and infants or to infuse sensitive medications where precision in the flow rate is essential.",
       "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-ecovenn-m-v.webp",
       "product_features": [
-            "For gravity feed only.",
-            "Strong, sharp spike for easy penetration.",
-            "Air vent with bacteria retentive filter to prevent air contamination.",
-            "Transparent drip chamber for easy monitoring of flow rate and priming.",
-            "15 micron fluid filter inside drip chamber for filtration of foreign particles in the fluid.",
-            "Kink resistant PVC Tube for uniform flow rate.",
-            "Smooth roller- clamp for easy adjustment of flow rate.",
-            "Self sealing latex bulb.",
-            "Drop rate- 60 drops/ml.",
-            "Standard Tube Length 1.5 mtr.",
-            "Tube dia : I Ø 2.8 mm, O Ø 4.0 mm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 13,
@@ -279,19 +492,31 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
       "image": "http://eversuremedical.com/assets/images/product/best-iv-infusion-set-manufacturing-companies-modvenn-v.webp",
       "product_features": [
-            "DEHP Free.",
-            "For gravity feed only.",
-            "Strong, sharp spike for easy penetration.",
-            "Transparent drip chamber for easy monitoring of flow rate and priming.",
-            "15 micron fluid filter inside drip chamber for filtration of foreign particles in the fluid.",
-            "Kink resistant PVC Tube for uniform flow rate.",
-            "Smooth roller- clamp for easy adjustment of flow rate.",
-            "Self sealing latex bulb.",
-            "Drop rate- 20 drops/ml.",
-            "Standard Tube Length 1.5 mtr.",
-            "Tube dia : I Ø 2.8 mm, O Ø 4.0 mm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 14,
@@ -303,21 +528,31 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
       "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-modvenn-v-plus.webp",
       "product_features": [
-            "DEHP Free.",
-            "For gravity feed only.",
-            "Extra strong bevel shaped air vented piercing spike for easy penetration.",
-            " Air vent with filter to prevent air contamination thus preventing Healthcare Associated Infections (HIM).",
-            "Transparent and flexible double chamber for easy visual access and rapid adjustment of fluid level.",
-            "15 micron fluid filter inside drip chamber for filtration of foreign particles in the fluid.",
-            "Specially designed auto air stop with priming filter to prevent air embolism.",
-            "Kink resistant PVC Tube for uniform flow rate.",
-            "Smooth roller- clamp for easy adjustment of flow rate.",
-            "Self sealing latex free bulb/luer lock with latex free Y connector for extra medication.",
-            "Drop rate- 20 drops/ml.",
-            "Standard Tube Length 1.5 mtr.",
-            "Tube dia : I Ø 2.8 mm, O Ø 4.0 mm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 15,
@@ -329,21 +564,31 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines into human circulating system preventing contamination by retaining bacteria, particles of size up to 0.2 micron.",
       "image": "http://eversuremedical.com/assets/images/product/best-iv-infusion-set-manufacturing-companies-modvenn-sv.webp",
       "product_features": [
-            "DEHP Free.",
-            "For gravity feed as well as for pump/pressure infusion.",
-            "Strong, sharp spike for easy penetration.",
-            "Air vent with filter to prevent air contamination thus preventing Healthcare Associated Infections (HIM).",
-            "Transparent big drip chamber for easy monitoring of flow rate and priming.",
-            "15 micron fluid filter inside drip chamber for filtration of foreign particles in the fluid.",
-            "Kink resistant, DEHP free PVC Tube for uniform flow rate.",
-            "Smooth roller- clamp for easy adjustment of flow rate with extra safety feature to prevent contamination and injuries.",
-            "Luer lock with self sealing latex free Y connector.",
-            "Drop rate- 20 drops/ml.",
-            "Standard Tube Length 2.0 mtr.",
-            "Tube dia : I Ø 2.9 mm, O Ø 4.1 mm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified.",
-            "Standard primary packing in medical grade paper and PPPE film."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 16,
@@ -355,22 +600,31 @@ export const products: Product[] = [
       "description": "For infusion of intravenous fluids and medicines into human circulating system preventing contamination by retaining bacteria, particles of size up to 0.2 micron.",
       "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-modvenn-sv-plus.webp",
       "product_features": [
-            "PVC Free.",
-            "For gravity feed as well as for pump/pressure infusion.",
-            "Extra strong bevel shaped air vented piercing spike for easy penetration.",
-            "Air vent with filter to prevent air contamination thus preventing Healthcare Associated Infections (HIM).",
-            "Transparent and flexible double drip chamber for easy visual access and rapid adjustment of fluid level.",
-            "15 micron fluid filter inside drip chamber for filtration of foreign particles in the fluid.",
-            "Specially designed auto air stop with priming filter to prevent air embolism.",
-            "Kink resistant, DEHP free PVC Tube for uniform flow rate.",
-            "Smooth roller- clamp for easy adjustment of flow rate with extra safety feature to prevent contamination and injuries.",
-            "Luer lock with self sealing latex free Y connector for extra medication.",
-            "Drop rate- 20 drops/ml.",
-            "Standard Tube Length 2.0 mtr.",
-            "Tube dia : I Ø 2.9 mm, O Ø 4.1 mm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified.",
-            "Standard primary packing in medical grade paper and PPPE film."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 17,
@@ -382,16 +636,31 @@ export const products: Product[] = [
       "description": "For delivering a fixed volume of IV fluid at a fixed rate.",
       "image": "https://eversuremedical.com/assets/images/product/best-burette-set-manufacturing-companies-ecobuvenn.webp",
       "product_features": [
-            "Transparent, soft, cylindrical measured volume chamber with marking scale suitable for infusion of all types of fluids.",
-            "Bacteria retentive air inlet to prevent air contamination.",
-            "Injection port for extra medication.",
-            "Smooth roller- clamp for easy adjustment of flow rate.",
-            "Floating auto shut off valve prevents air trapping in the fluid line once the measured volume chamber is empty. It also acts as floating indicator.",
-            "15 micron Fluid Filter inside drip chamber for filtration of foreign particles in the fluid. Drop rate- 60 drops/ml.",
-            "Soft, Transparent, Kink resistant & Medical Grade PVC tube of 150 cm.",
-            "Tube dia : I Ø 2.8 mm. & O Ø 4.0 mm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified.",
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 18,
@@ -403,12 +672,31 @@ export const products: Product[] = [
       "description": "For easy and safe connection of the source of infusion and the patient during infusion therapy without any length restrictions.",
       "image": "http://eversuremedical.com/assets/images/product/best-infusion-therapy-extension-set-manufacturing-companies-ecoextt.webp",
       "product_features": [
-            "Multipurpose kink resistant extension tube suitable for low pressure applications.",
-            "One male luer lock at one end and female luer lock at other end to connect to any infusion or transfusion device.",
-            "Extension tube dia: I Ø 3.0 mm, O Ø 4.1 mm.",
-            "Tube length (cm) : 10, 25, 50, 100, 150 & 200 .",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified.",
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 19,
@@ -420,14 +708,31 @@ export const products: Product[] = [
       "description": "For connecting to the end of vascular catheters and enable catheter access for infusion and aspiration avoiding bacterial contamination in fluid path way.",
       "image": "https://eversuremedical.com/assets/images/product/best-extension-tube-with-needle-free-connections-manufacturing-companies-modextt.webp",
       "product_features": [
-            "Ultra transperant chamber with visible fluid path way to ensure blood free flushing.",
-            "Smooth surface permits easy cleaning allowing easy and effective decontamination.",
-            "Integrated fluid path designed with minimal dead space helps in minimising internal biofilm formation and microbial growth.",
-            "Positive displacement assists in preventing occlusion of the catheter.",
-            "Can be used on all peripheral catheter, arterial and CVC for administration of IV fluids or medications.",
-            "For pressure up to 320 psi.",
-            "Latex-free, DEHP-free."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 20,
@@ -439,18 +744,31 @@ export const products: Product[] = [
       "description": "For administration of blood / blood components into human circulating system.",
       "image": "http://eversuremedical.com/assets/images/product/econas.webp",
       "product_features": [
-            "For gravity feed only.",
-            "Strong, sharp spike for easy penetration.",
-            "Transparent drip chamber for easy monitoring of flow rate and priming.",
-            "200 micron blood filter inside drip chamber for filtration of celluar debris and clots.",
-            "Kink resistant PVC Tube for uniform flow rate.",
-            "Smooth roller- clamp for easy adjustment of flow rate with extra safety feature to prevent contamination and injuries.",
-            "Self sealing latex bulb.",
-            "Drop rate- 20 drops/ml.",
-            "Standard Tube Length 1.5 mtr.",
-            "Tube dia : I Ø 2.8 mm, O Ø 4.0 mm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 21,
@@ -462,15 +780,31 @@ export const products: Product[] = [
       "description": "To extract bodily secretions, such as mucus or saliva from the upper airway with maximum comfort to the patient. The purpose of suctioning is to keep the airway clear of secretions and to prevent plugging.",
       "image": "https://eversuremedical.com/assets/images/product/infusion/suction-catheter-ecocath.webp",
       "product_features": [
-            "Manufactured from transparent & non toxic PVC.",
-            "Smooth, soft & kink resistant tubing along with atraumatic eyes for smooth intubations and efficient mucus suctioning.",
-            "Graduated from 5 cm for correct positioning of catheter.",
-            "Color coded funnel at proximal end for easy identification of catheter size.",
-            "Open distal end with 2 lateral eyes for efficient removal of secretion.",
-            "Open distal end with 2 lateral eyes for efficient removal of secretion.",
-            "Catheter Length: 50 cm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified.",
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 22,
@@ -482,12 +816,31 @@ export const products: Product[] = [
       "description": "For oxygen therapy.",
       "image": "https://eversuremedical.com/assets/images/product/infusion/oxygen-mask-manufacturer-ecomask.webp",
       "product_features": [
-            "Specially designed for convenient oxygen therapy.",
-            "Eco friendly, transparent, highly durable & elongated soft facemask for patient’s comfort and long term use.",
-            "Integrated nose clip and adjustable elastic strip for proper positioning of mask.",
-            "Swivel connector for patient’s comfort.Soft, transparent, kink resistant 2.10 meter long, star lumen tubing made of medical grade PVC to ensure continuous flow of oxygen.",
-            "Proximal end of tube is connected with funnel shape connector for easy connection with oxygen source."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 23,
@@ -499,15 +852,31 @@ export const products: Product[] = [
       "description": "For administering medication in mist form inhaled into lungs.",
       "image": "https://eversuremedical.com/assets/images/product/infusion/nubulizer-mask-manufacturers-econeb.webp",
       "product_features": [
-            "A soft and anatomical shape made by soft and odourless medical grade PVC material.",
-            "Specially designed nebulizer chamber for greater nebulization rate. Nebulizes approximately 3cc medicine within 10 minutes.",
-            "Swivel connector for patient’s comfort.",
-            "Eco friendly, transparent, highly durable elongated soft facemask for comfortable fitment over face and long term use.",
-            "Integrated nose clip with adjustable elastic strip to position the mask properly.",
-            "Soft, transparent, kink resistant 2.10 meter long star lumen tubing made of medical grade PVC to ensure continuous flow of oxygen.",
-            "Proximal end of tube is connected with funnel shape connector for easy connection with oxygen source.",
-            "Complete kit consists of Nebulizer chamber, Nebulizer Mask and 2.10 meter tube."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 24,
@@ -519,12 +888,31 @@ export const products: Product[] = [
       "description": "For easy and efficient administration of oxygen.",
       "image": "http://eversuremedical.com/assets/images/product/econas.webp",
       "product_features": [
-            "Specially designed for maximum freedom to the patient, twin bore nasal tips that leaves the mouth free.",
-            "Soft twin bore nasal tips to ensure equal distribution of oxygen through both the air passages.",
-            "Soft, transparent, odourless, kink resistant star lumen tubing made of medical grade PVC to ensure continuous flow of oxygen.",
-            "Proximal end of tube is connected with funnel shape connector for easy connection with oxygen source.",
-            "Tube length: 200 cm."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 25,
@@ -536,15 +924,31 @@ export const products: Product[] = [
       "description": "For nasogastirc intubation – short term feeding and administration of drugs & food and aspiration of gastro- intestinal secretion.",
       "image": "https://eversuremedical.com/assets/images/product/top-iv-catheter-manufacturers-in-india-ryles-tube-ecocath.webp",
       "product_features": [
-            "Manufactured form transparent, non toxic, bio compatible PVC.",
-            "Soft, frosted and kink resistant PVC tubing for easy intubation.",
-            "Closed distal end coned with radio-opaque material for accurate placement.",
-            "Tube with radio-opaque line, marked at 50, 60 and 70 cm from the tip for accurate placement.",
-            "Color coded funnel at proximal end for easy identification of catheter size.",
-            "Four lateral eyes for smooth administration and aspiration.",
-            "Length : 105 cm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 26,
@@ -556,15 +960,31 @@ export const products: Product[] = [
       "description": "For providing feedings and medications into the stomach until the baby can take food by mouth.",
       "image": "https://eversuremedical.com/assets/images/product/top-iv-catheter-manufacturer-infant-feeding-tube-ecocath.webp",
       "product_features": [
-            "Manufactured form transparent, non toxic, bio compatible PVC.",
-            "DEHP free.",
-            "Soft, smooth, kink resistant tubing for nutritional feeding and administration of medicine in neonates and infants.",
-            "Closed distal end with two lateral eyes.",
-            "With graduation marks for easy and precise placement.",
-            "Radio opaque line provided throughout the length of catheter for location verification by X-ray.",
-            "Catheter Length: 40, 50 cm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic ."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 27,
@@ -576,15 +996,31 @@ export const products: Product[] = [
       "description": "For short term bladder catheterisation through urethra in case of urinary retention, having radio opaque line throughout the length for x-ray visualization.",
       "image": "https://eversuremedical.com/assets/images/product/iv-catheter-parts-manufacturers-nelaton-catheter.webp",
       "product_features": [
-            "Manufactured form transparent, non toxic PVC.",
-            "Soft rounded closed tip for atraumatic introduction.",
-            "Two lateral eyes for efficient drainage.",
-            "Color coded connector for easy identification of catheter size.",
-            "Universal funnel shape connector for easy connection for extension.",
-            "Radio opaque line provided throughout the length of catheter for X-ray visualization.",
-            "Catheter Length: 40 cm.",
-            "ETO Sterilized, Single Use, Non Pyrogenic ."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 28,
@@ -596,13 +1032,31 @@ export const products: Product[] = [
       "description": "For short term bladder catheterisation through urethra in case of urinary retention, having radio opaque line throughout the length for x-ray visualization.",
       "image": "https://eversuremedical.com/assets/images/product/iv-catheter-parts-manufacturers-nelaton-catheter.webp",
       "product_features": [
-            "Flexible kink resistant medical grade PVC tube to provide uninterrupted flow during suction and has the strenght to withstand the negative pressure.",
-            "Soft connecters at both ends of the tube for easy connection of the Suction tip on one end and all type of connectors of suction apparatus at the other end.",
-            "Complete set consists of Yankaur Suction Tip mounted on a ribbed tube and universal connector at both ends.",
-            "Tube dimensions : I.D. 6.3 mm & O.D. 9.3 mm.",
-            "Tube length (cm) : 210, 250, and 300.",
-            "ETO Sterilized, Single Use, Non Pyrogenic and CE Certified."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 29,
@@ -614,11 +1068,31 @@ export const products: Product[] = [
       "description": "For postoperative treatment to drain away undesirable secretion and blood under negative pressure with an alternative of operating one or two catheters simultaneously.",
       "image": "https://eversuremedical.com/assets/images/product/closed-wound-suction-unit-manufacturer-ecocws.webp",
       "product_features": [
-            "Big clamp for controlling the negative pressure effectively.",
-            "Smooth and flexible suction catheter for frictionless introduction in a wound.",
-            "Kink resistant, strong connecting tube to withstand the negative pressure.",
-            "Spare perforated Redon drain radio opaque catheter."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 30,
@@ -630,14 +1104,31 @@ export const products: Product[] = [
       "description": "For removal of air, fluid or pus from the intrathoracic space following cardiothoracic or thoracic surgery.",
       "image": "https://eversuremedical.com/assets/images/product/ecocath-thor-s.webp",
       "product_features": [
-            "Smooth and round open distal end with large smooth finish eyes for maximum drainage.",
-            "Graduated at every 2 cm from the last eye for easy and precise positioning.",
-            "Proximal end is fitted with pull through tapered tongue for better forceps grip and non-traumatic insertion.",
-            "Matching size connector for easy connection to the drainage system",
-            "Radio opaque line provided throughout the length of catheter for location verification by X-ray.",
-            "Cross side eyes to prevent tissue aspiration.",
-            "Length 45 cm."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 31,
@@ -649,12 +1140,31 @@ export const products: Product[] = [
       "description": "For removal of air, fluid or pus from the intrathoracic space following cardiothoracic or thoracic surgery.",
       "image": "https://eversuremedical.com/assets/images/product/ecocath-thor-t.webp",
       "product_features": [
-            "Catheter is provided with blunt smooth tipped trocar for quick & precise insertion, placement and handling.",
-            "Graduated at 5, 10, 15 & 20 cm from the last eye for easy and precise positioning.",
-            "Proximal end is fitted with tapered connector for easy connection to the drainage bottle.",
-            "Large smooth finish eyes for maximum drainage.",
-            "Radio opaque line provided throughout the length of catheter for location verification by X-ray."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     },
     {
       "id": 32,
@@ -666,12 +1176,30 @@ export const products: Product[] = [
       "description": "This product is used for catheterization of vena cava with Seldinger method. It is also used to administer fluid and medication.",
       "image": "https://eversuremedical.com/assets/images/product/central-venus-access-catherter-modcvc.webp",
       "product_features": [
-            "Central Venous Catheter is manufactured from specially formulated and bio-compatible PU (Polyure-thane) material.",
-            "With its excellent tensile strength to weight ratio, this PU catheter provides firmness during insertion and advancement into veins, and softens upon warming to body temperature reducing vein trauma.",
-            "The softer and specially designed tapered tip of the catheter ensures easier insertion.",
-            "Radio-opaque catheter with clear and definite marking facilitates precise placement of the catheter tip.",
-            "Specially designed colour coded female connector for male luer fitting for easy identification of fluid line.",
-            "Fixation wing at the channel junction for securing the catheter."
-        ]
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ]
     }
 ];

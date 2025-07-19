@@ -183,38 +183,8 @@
 
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Check, Package, FileText, Settings } from 'lucide-react';
+import { Product, products } from '../data/ProductsData';
 
-// Mock product data - replace with your actual data source
-interface Product {
-  id: number;
-  product_name: string;
-  description: string;
-  product_code: string;
-  sizes: string;
-  category: string;
-  image: string;
-  product_features: string[];
-}
-
-const products: Product[] = [
-  {
-    id: 1,
-    product_name: "Polyway Pro Click",
-    description: "Advanced three-way stopcock with 450 Click",
-    product_code: "13026, 13058, 13600",
-    sizes: "Various sizes available",
-    category: "Infusion Therapy",
-    image: "/lovable-uploads/1e6a4ee8-660b-40fb-994f-bfa9f480ab2d.png",
-    product_features: [
-      "Multiple Infusions",
-      "360° Rotation", 
-      "Pressure Capacity",
-      "Lipid Resistance",
-      "45-Degree Click Mechanism",
-      "Enhanced Safety Features"
-    ]
-  }
-];
 
 const ProductDetails = () => {
   const navigate = useNavigate();
@@ -320,61 +290,19 @@ const ProductDetails = () => {
         </div>
 
         {/* Features Section */}
-        {product.product_features && product.product_features.length > 0 && (
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {product.product_features.map((feature, index) => {
-                // Create feature cards with titles and descriptions
-                const featureCards = [
-                  {
-                    title: "Multiple Infusions",
-                    description: "Simultaneous access to multiple lines for complex treatments."
-                  },
-                  {
-                    title: "360° Rotation", 
-                    description: "Flexible positioning without disrupting fluid flow."
-                  },
-                  {
-                    title: "Pressure Capacity",
-                    description: "Safe fluid delivery up to 5.5 bar."
-                  },
-                  {
-                    title: "Lipid Resistance",
-                    description: "Prevents blockage from lipid emulsions."
-                  },
-                  {
-                    title: "45-Degree Click Mechanism",
-                    description: "Tactile feedback for precise flow control."
-                  },
-                  {
-                    title: "Enhanced Safety Features",
-                    description: "Reduces risks of disconnection and leakage."
-                  }
-                ];
-
-                // Use predefined cards or fall back to feature text
-                const card = featureCards[index] || { 
-                  title: feature, 
-                  description: "Advanced medical device feature for enhanced clinical performance." 
-                };
-
-                return (
-                  <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
-                    <h3 className="text-lg font-semibold mb-3" style={{color: '#309ed9'}}>
-                      {card.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {card.description}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        )}
+        {product.product_features.map((feature, index) => (
+  <div
+    key={index}
+    className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200"
+  >
+    <h3 className="text-lg font-semibold mb-3" style={{ color: '#309ed9' }}>
+      {feature.title}
+    </h3>
+    <p className="text-gray-600 text-sm leading-relaxed">
+      {feature.description}
+    </p>
+  </div>
+))}
 
         {/* Additional Info Sections */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
