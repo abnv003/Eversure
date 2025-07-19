@@ -9,10 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">P</span>
-              </div>
-              <span className="text-xl font-bold">EVERSURE</span>
+              <img className='h-10' src='/eversure-logo-bg.png'/>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Leading manufacturer of high-quality medical devices and healthcare solutions. 
@@ -20,15 +17,15 @@ const Footer = () => {
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-teal-400" />
+                <MapPin className="h-4 w-4" style={{color: '#309ed9'}} />
                 <span className="text-sm text-gray-300">123 Medical Drive, Healthcare City, HC 12345</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-teal-400" />
+                <Phone className="h-4 w-4" style={{color: '#309ed9'}} />
                 <span className="text-sm text-gray-300">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-teal-400" />
+                <Mail className="h-4 w-4" style={{color: '#309ed9'}} />
                 <span className="text-sm text-gray-300">info@eversure.com</span>
               </div>
             </div>
@@ -50,7 +47,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
             <div className="space-y-2">
               <div className="flex items-start space-x-2">
-                <Clock className="h-4 w-4 text-teal-400 mt-0.5" />
+                <Clock className="h-4 w-4 mt-0.5" style={{color: '#309ed9'}} />
                 <div className="text-sm text-gray-300">
                   <div>Monday - Friday: 8:00 AM - 6:00 PM</div>
                   <div>Saturday: 9:00 AM - 2:00 PM</div>

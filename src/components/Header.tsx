@@ -52,10 +52,8 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded-sm mr-1"></div>
-              <div className="w-8 h-8 bg-teal-500 rounded-sm"></div>
+              <img className='h-10' src='/eversure-logo.jpg'/>
             </div>
-            <span className="text-2xl font-bold text-teal-600 ml-2">EVERSURE</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -70,11 +68,18 @@ const Header = () => {
     >
       <div>
         <button
-          className={`flex items-center px-5 py-3 text-sm font-medium transition-colors duration-200 hover:text-teal-600 ${
+          className={`flex items-center px-5 py-3 text-sm font-medium transition-colors duration-200 ${
             isActive(item.href)
-              ? 'text-teal-600 border-b-2 border-teal-600'
-              : 'text-gray-700'
+              ? 'border-b-2'
+              : 'text-gray-700 hover:text-gray-700'
           }`}
+          style={{
+            color: isActive(item.href) ? '#309ed9' : undefined,
+            borderColor: isActive(item.href) ? '#309ed9' : undefined,
+            ':hover': { color: '#309ed9' }
+          }}
+          onMouseEnter={(e) => e.target.style.color = '#309ed9'}
+          onMouseLeave={(e) => e.target.style.color = isActive(item.href) ? '#309ed9' : '#374151'}
         >
           {item.name}
           <ChevronDown className="ml-1 h-4 w-4" />
@@ -91,7 +96,10 @@ const Header = () => {
           <Link
             key={category}
             to={formatCategoryPath(category)}
-            className="block px-4 py-3 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700"
+            className="block px-4 py-3 text-sm text-gray-700 hover:text-gray-700"
+            style={{ ':hover': { backgroundColor: '#309ed9', opacity: 0.1, color: '#309ed9' } }}
+            onMouseEnter={(e) => { e.target.style.backgroundColor = '#f0f9ff'; e.target.style.color = '#309ed9'; }}
+            onMouseLeave={(e) => { e.target.style.backgroundColor = ''; e.target.style.color = '#374151'; }}
             onClick={() => setShowDropdown(false)}
           >
             {category}
@@ -108,11 +116,17 @@ const Header = () => {
     >
       <div>
         <button
-          className={`flex items-center px-5 py-3 text-sm font-medium transition-colors duration-200 hover:text-teal-600 ${
+          className={`flex items-center px-5 py-3 text-sm font-medium transition-colors duration-200 ${
             isActive(item.href)
-              ? 'text-teal-600 border-b-2 border-teal-600'
-              : 'text-gray-700'
+              ? 'border-b-2'
+              : 'text-gray-700 hover:text-gray-700'
           }`}
+          style={{
+            color: isActive(item.href) ? '#309ed9' : undefined,
+            borderColor: isActive(item.href) ? '#309ed9' : undefined
+          }}
+          onMouseEnter={(e) => e.target.style.color = '#309ed9'}
+          onMouseLeave={(e) => e.target.style.color = isActive(item.href) ? '#309ed9' : '#374151'}
         >
           {item.name}
           <ChevronDown className="ml-1 h-4 w-4" />
@@ -129,7 +143,9 @@ const Header = () => {
           <Link
             key={companyItem}
             to={formatCompanyPath(companyItem)}
-            className="block px-4 py-3 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700"
+            className="block px-4 py-3 text-sm text-gray-700 hover:text-gray-700"
+            onMouseEnter={(e) => { e.target.style.backgroundColor = '#f0f9ff'; e.target.style.color = '#309ed9'; }}
+            onMouseLeave={(e) => { e.target.style.backgroundColor = ''; e.target.style.color = '#374151'; }}
             onClick={() => setShowCompanyDropdown(false)}
           >
             {companyItem}
@@ -141,17 +157,23 @@ const Header = () => {
     <Link
       key={item.name}
       to={item.href}
-      className={`px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-teal-600 ${
+      className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
         isActive(item.href)
-          ? 'text-teal-600 border-b-2 border-teal-600'
+          ? 'border-b-2'
           : 'text-gray-700'
       }`}
+      style={{
+        color: isActive(item.href) ? '#309ed9' : undefined,
+        borderColor: isActive(item.href) ? '#309ed9' : undefined
+      }}
+      onMouseEnter={(e) => e.target.style.color = '#309ed9'}
+      onMouseLeave={(e) => e.target.style.color = isActive(item.href) ? '#309ed9' : '#374151'}
     >
       {item.name}
     </Link>
   )
 )}
-  <button className="p-2 text-gray-700 hover:text-teal-600">
+  <button className="p-2 text-gray-700" style={{ ':hover': { color: '#309ed9' } }} onMouseEnter={(e) => e.target.style.color = '#309ed9'} onMouseLeave={(e) => e.target.style.color = '#374151'}>
     <Search className="h-5 w-5" />
   </button>
 </div>
@@ -160,7 +182,9 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-teal-600"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700"
+              onMouseEnter={(e) => e.target.style.color = '#309ed9'}
+              onMouseLeave={(e) => e.target.style.color = '#374151'}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -179,7 +203,9 @@ const Header = () => {
                       <Link
                         key={category}
                         to={formatCategoryPath(category)}
-                        className="block px-3 py-2 text-sm text-gray-600 hover:text-teal-600"
+                        className="block px-3 py-2 text-sm text-gray-600"
+                        onMouseEnter={(e) => e.target.style.color = '#309ed9'}
+                        onMouseLeave={(e) => e.target.style.color = '#6b7280'}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {category}
@@ -193,9 +219,15 @@ const Header = () => {
                   to={item.href}
                   className={`block px-3 py-2 text-base font-medium ${
                     isActive(item.href)
-                      ? 'text-teal-600 bg-teal-50'
-                      : 'text-gray-700 hover:text-teal-600 hover:bg-gray-50'
+                      ? 'hover:bg-gray-50'
+                      : 'text-gray-700 hover:bg-gray-50'
                   }`}
+                  style={{
+                    color: isActive(item.href) ? '#309ed9' : undefined,
+                    backgroundColor: isActive(item.href) ? '#f0f9ff' : undefined
+                  }}
+                  onMouseEnter={(e) => { e.target.style.color = '#309ed9'; if (!isActive(item.href)) e.target.style.backgroundColor = '#f9fafb'; }}
+                  onMouseLeave={(e) => { e.target.style.color = isActive(item.href) ? '#309ed9' : '#374151'; if (!isActive(item.href)) e.target.style.backgroundColor = ''; }}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

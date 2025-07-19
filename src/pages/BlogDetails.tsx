@@ -16,7 +16,7 @@ const BlogDetails = () => {
         <h2 className="text-2xl font-bold text-gray-700">Blog not found</h2>
         <button 
           onClick={() => navigate('/blog')}
-          className="mt-4 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700"
+          className="mt-4 px-4 py-2 text-white rounded transition-colors duration-200" style={{backgroundColor: '#309ed9'}}
         >
           Back to Blog
         </button>
@@ -29,21 +29,21 @@ const BlogDetails = () => {
   return (
     <div className="py-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-20">
+      <section style={{backgroundColor: '#309ed9'}} className="text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <button onClick={() => { navigate('/blog') }} className="flex items-center text-teal-100 hover:text-white mb-6 transition-colors duration-200">
+          <button onClick={() => { navigate('/blog') }} className="flex items-center hover:text-white mb-6 transition-colors duration-200" style={{color: '#f0f9ff'}} onMouseEnter={(e) => e.target.style.color = '#ffffff'} onMouseLeave={(e) => e.target.style.color = '#f0f9ff'}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Blog
           </button>
           <div className="mb-6">
-            <span className="inline-block px-3 py-1 text-xs font-medium bg-teal-100 text-teal-600 rounded-full mb-4">
+            <span className="inline-block px-3 py-1 text-xs font-medium rounded-full mb-4" style={{backgroundColor: '#f0f9ff', color: '#309ed9'}}>
               {category}
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               {title}
             </h1>
           </div>
-          <div className="flex flex-wrap items-center gap-6 text-teal-100">
+          <div className="flex flex-wrap items-center gap-6" style={{color: '#f0f9ff'}}>
             <div className="flex items-center">
               <User className="h-4 w-4 mr-2" />
               {author}

@@ -13,9 +13,9 @@ export default function QuickFinder({ onClose }: { onClose: () => void }) {
 
   const modal = (
     <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[9999] flex items-center justify-center">
-      <div className="bg-teal-600 w-[90%] h-[90%] rounded-xl overflow-hidden shadow-2xl flex relative p-24">
+      <div className="w-[90%] h-[90%] rounded-xl overflow-hidden shadow-2xl flex relative p-24" style={{backgroundColor: '#309ed9'}}>
         {/* Sidebar */}
-        <div className="w-80 bg-teal-600 p-6 overflow-y-auto">
+        <div className="w-80 p-6 overflow-y-auto" style={{backgroundColor: '#309ed9'}}>
           <div className="absolute top-4 right-4">
             <button
               onClick={onClose}
@@ -32,7 +32,7 @@ export default function QuickFinder({ onClose }: { onClose: () => void }) {
                 className={`w-full text-left px-4 py-3 text-white transition-colors ${
                   selectedCategory === category
                     ? "bg-yellow-500 text-black font-medium"
-                    : "hover:bg-teal-500"
+                    : 'hover:bg-opacity-80'
                 }`}
               >
                 {category.replace(/-/g, " ")}

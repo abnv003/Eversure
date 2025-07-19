@@ -48,11 +48,11 @@ const Certificate = () => {
   return (
     <div className="py-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-20">
+      <section style={{backgroundColor: '#309ed9'}} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Certifications</h1>
-            <p className="text-xl text-teal-100">
+            <p className="text-xl" style={{color: '#f0f9ff'}}>
               View our comprehensive collection of industry certifications and compliance documents.
             </p>
           </div>
@@ -69,9 +69,12 @@ const Certificate = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
                   activeCategory === category
-                    ? 'bg-teal-600 text-white'
+                    ? 'text-white'
                     : 'bg-white text-gray-600 hover:bg-teal-100 hover:text-teal-700'
                 }`}
+                style={{backgroundColor: activeCategory === category ? '#309ed9' : undefined}}
+                onMouseEnter={(e) => { if (activeCategory !== category) { e.target.style.backgroundColor = '#f0f9ff'; e.target.style.color = '#309ed9'; }}}
+                onMouseLeave={(e) => { if (activeCategory !== category) { e.target.style.backgroundColor = '#ffffff'; e.target.style.color = '#4b5563'; }}}
               >
                 {category}
               </button>
@@ -113,7 +116,7 @@ const Certificate = () => {
                 
                 <div className="p-4">
                   <div className="mb-2">
-                    <span className="inline-block px-2 py-1 text-xs font-medium bg-teal-100 text-teal-600 rounded-full">
+                    <span className="inline-block px-2 py-1 text-xs font-medium rounded-full" style={{backgroundColor: '#f0f9ff', color: '#309ed9'}}>
                       {certificate.category}
                     </span>
                   </div>
@@ -174,7 +177,7 @@ const Certificate = () => {
             {zoomLevel}
           </button>
           <button
-            className="bg-teal-600 text-white p-2 rounded-lg hover:bg-teal-700 transition-colors duration-200"
+            className="text-white p-2 rounded-lg transition-colors duration-200" style={{backgroundColor: '#309ed9'}}
             title="Download Certificate"
           >
             <a href={selectedCertificate.image} download>
@@ -215,7 +218,7 @@ const Certificate = () => {
             <p className="text-gray-600 mb-8">
               Our comprehensive certifications demonstrate our commitment to quality, safety, and regulatory compliance in medical device manufacturing.
             </p>
-            <button className="bg-teal-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200">
+          <button className="text-white py-3 px-8 rounded-lg font-semibold transition-colors duration-200" style={{backgroundColor: '#309ed9'}}>
               Contact for Verification
             </button>
           </div>

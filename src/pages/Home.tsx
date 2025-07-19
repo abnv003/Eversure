@@ -114,7 +114,7 @@ const Home = () => {
               isAboutVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
             }`}>
               <div className="mb-6">
-                <h2 className="text-4xl font-light text-teal-600 mb-4">About Us</h2>
+                <h2 className="text-4xl font-light mb-4" style={{color: '#309ed9'}}>About Us</h2>
                 <div className="w-20 h-1 bg-yellow-400"></div>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
@@ -123,11 +123,14 @@ const Home = () => {
               <div className="flex items-center space-x-4">
                 <Link
                   to="/about"
-                  className="bg-teal-600 text-white px-8 py-3 rounded-full font-medium hover:bg-teal-700 transition-colors duration-200"
+                  className="text-white px-8 py-3 rounded-full font-medium transition-colors duration-200"
+                  style={{backgroundColor: '#309ed9'}}
+                  onMouseEnter={(e) => e.target.style.backgroundColor = '#1e7b85'}
+                  onMouseLeave={(e) => e.target.style.backgroundColor = '#309ed9'}
                 >
                   Learn More About Eversure
                 </Link>
-                <div className="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-teal-700 transition-colors">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-colors" style={{backgroundColor: '#309ed9'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#1e7b85'} onMouseLeave={(e) => e.target.style.backgroundColor = '#309ed9'}>
                   <ChevronRight className="h-6 w-6 text-white" />
                 </div>
               </div>
@@ -149,7 +152,7 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light text-teal-600 mb-4">Our Product Offerings</h2>
+            <h2 className="text-4xl font-light mb-4" style={{color: '#309ed9'}}>Our Product Offerings</h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
           </div>
           
@@ -168,7 +171,7 @@ const Home = () => {
                     {product.title}
                   </h3>
                   <div className="mt-auto">
-                    <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-teal-600 group-hover:translate-x-1 transition-all duration-300" />
+                    <ArrowRight className="h-5 w-5 text-gray-400 group-hover:translate-x-1 transition-all duration-300" style={{'&:hover': {color: '#309ed9'}}} onMouseEnter={(e) => e.target.style.color = '#309ed9'} onMouseLeave={(e) => e.target.style.color = '#9ca3af'} />
                   </div>
                 </div>
               </div>

@@ -11,11 +11,11 @@ const Blog = () => {
   return (
     <div className="py-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-20">
+      <section style={{backgroundColor: '#309ed9'}} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Latest News & Insights</h1>
-            <p className="text-xl text-teal-100">
+            <p className="text-xl" style={{color: '#f0f9ff'}}>
               Stay informed with the latest developments in medical technology and healthcare innovation.
             </p>
           </div>
@@ -31,9 +31,12 @@ const Blog = () => {
                 key={category}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
                   category === 'All'
-                    ? 'bg-teal-600 text-white'
+                    ? 'text-white'
                     : 'bg-white text-gray-600 hover:bg-teal-100 hover:text-teal-700'
                 }`}
+                style={{backgroundColor: category === 'All' ? '#309ed9' : undefined}}
+                onMouseEnter={(e) => { if (category !== 'All') { e.target.style.backgroundColor = '#f0f9ff'; e.target.style.color = '#309ed9'; }}}
+                onMouseLeave={(e) => { if (category !== 'All') { e.target.style.backgroundColor = '#ffffff'; e.target.style.color = '#4b5563'; }}}
               >
                 {category}
               </button>
@@ -53,7 +56,7 @@ const Blog = () => {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="inline-block px-3 py-1 text-xs font-medium bg-teal-100 text-teal-600 rounded-full">
+                    <span className="inline-block px-3 py-1 text-xs font-medium rounded-full" style={{backgroundColor: '#f0f9ff', color: '#309ed9'}}>
                       {post.category}
                     </span>
                     {/* <div className="flex items-center text-xs text-gray-500">
@@ -82,7 +85,7 @@ const Blog = () => {
                         })}
                       </div>
                     </div>
-                    <button onClick={()=>{navigate(`/blog/${post.id}`)}} className="flex items-center text-teal-600 hover:text-teal-700 text-sm font-medium transition-colors duration-200">
+                    <button onClick={()=>{navigate(`/blog/${post.id}`)}} className="flex items-center text-sm font-medium transition-colors duration-200" style={{color: '#309ed9'}} onMouseEnter={(e) => e.target.style.color = '#1e7b85'} onMouseLeave={(e) => e.target.style.color = '#309ed9'}>
                       Read More
                       <ArrowRight className="h-4 w-4 ml-1" />
                     </button>

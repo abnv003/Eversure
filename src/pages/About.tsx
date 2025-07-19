@@ -60,11 +60,11 @@ const About = () => {
   return (
     <div className="py-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-20">
+      <section style={{backgroundColor: '#309ed9'}} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-left">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Eversure</h1>
-            <p className="text-xl text-teal-100">
+            <p className="text-xl" style={{color: '#f0f9ff'}}>
               Eversure, a brand under the medical device division of Eversure India Pvt. Ltd., is part of Pune’s Rathigroup, an industrial house now in its third generation, with origins in a textile mill established in 1948. The medical division, launched in 2012, is the group’s youngest venture. Operating from a world-class certified facility in Pune, it features advanced injection moulding, extrusion, Class 10000 cleanroom assembly, ETO sterilization, and automated packaging. Eversure offers a wide range of disposable medical devices for Infusion Therapy, Anesthesia, Gastroenterology, Urology, Surgery & Wound Drainage, and Central Venous Access. Committed to innovation, quality, and reliability, the brand upholds high technical standards and environmental responsibility to ensure comfort and care.
             </p>
           </div>
@@ -109,8 +109,8 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center p-6 bg-white rounded-lg shadow-sm">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
-                  <value.icon className="h-8 w-8 text-teal-600" />
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{backgroundColor: '#f0f9ff'}}>
+                  <value.icon className="h-8 w-8" style={{color: '#309ed9'}} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
                 {/* <p className="text-gray-600">{value.description}</p> */}
@@ -171,7 +171,7 @@ const About = () => {
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                <p className="text-teal-600 font-medium">{member.role}</p>
+                <p className="font-medium" style={{color: '#309ed9'}}>{member.role}</p>
               </div>
             ))}
           </div>

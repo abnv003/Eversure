@@ -87,12 +87,12 @@ const Products = () => {
   return (
     <div className="py-16">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-20">
+      <section style={{backgroundColor: '#309ed9'}} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">
             {actualCategory || 'All Products'}
           </h1>
-          <p className="text-xl text-teal-100">
+          <p className="text-xl" style={{color: '#f0f9ff'}}>
             Browse {actualCategory || 'our full'} product range.
           </p>
         </div>
@@ -109,9 +109,10 @@ const Products = () => {
                   onClick={() => setSelectedCategory('All Products')}
                   className={`px-4 py-2 rounded-lg text-sm font-medium ${
                     selectedCategory === 'All Products'
-                      ? 'bg-teal-600 text-white'
+                      ? 'text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-100'
                   }`}
+                  style={{backgroundColor: selectedCategory === 'All Products' ? '#309ed9' : undefined}}
                 >
                   All Products
                 </button>
@@ -121,9 +122,10 @@ const Products = () => {
                     onClick={() => setSelectedCategory(sub)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium ${
                       selectedCategory === sub
-                        ? 'bg-teal-600 text-white'
+                        ? 'text-white'
                         : 'bg-white text-gray-700 hover:bg-gray-100'
                     }`}
+                    style={{backgroundColor: selectedCategory === sub ? '#309ed9' : undefined}}
                   >
                     {sub}
                   </button>
@@ -135,7 +137,9 @@ const Products = () => {
               <input
                 type="text"
                 placeholder="Search products..."
-                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"
+                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2"
+                style={{'&:focus': {ringColor: '#309ed9', '--tw-ring-color': '#309ed9'}}}
+                onFocus={(e) => e.target.style.setProperty('--tw-ring-color', '#309ed9')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -157,20 +161,20 @@ const Products = () => {
                 />
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-teal-600 font-medium">{product.category}</span>
+                    <span className="text-sm font-medium" style={{color: '#309ed9'}}>{product.category}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.product_name}</h3>
                   {/* <p className="text-gray-600 mb-4">{product.description}</p>
                   <ul className="text-sm text-gray-600 space-y-1 mb-4">
                     {(product.product_features || []).map((feature, index) => (
                       <li key={index} className="flex items-center">
-                        <span className="w-1.5 h-1.5 bg-teal-600 rounded-full mr-2" />
+                        <span className="w-1.5 h-1.5 rounded-full mr-2" style={{backgroundColor: '#309ed9'}} />
                         {feature}
                       </li>
                     ))}
                   </ul> */}
                 </div>
-                <button onClick={()=>{navigate(`/products/${category}/${product.id}`)}} className="flex items-center text-teal-600 hover:text-teal-700 text-sm font-medium transition-colors duration-200">
+                <button onClick={()=>{navigate(`/products/${category}/${product.id}`)}} className="flex items-center text-sm font-medium transition-colors duration-200" style={{color: '#309ed9'}} onMouseEnter={(e) => e.target.style.color = '#1e7b85'} onMouseLeave={(e) => e.target.style.color = '#309ed9'}>
                       Read More
                       <ArrowRight className="h-4 w-4 ml-1" />
                     </button>

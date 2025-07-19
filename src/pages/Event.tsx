@@ -113,11 +113,11 @@ const Events = () => {
   return (
     <div className="py-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-20">
+      <section style={{backgroundColor: '#309ed9'}} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Events & Training</h1>
-            <p className="text-xl text-teal-100">
+            <p className="text-xl" style={{color: '#f0f9ff'}}>
               Join us for educational workshops, conferences, and training sessions in medical technology.
             </p>
           </div>
@@ -133,9 +133,12 @@ const Events = () => {
                 onClick={() => setActiveTab('upcoming')}
                 className={`px-8 py-3 rounded-md font-medium transition-colors duration-200 ${
                   activeTab === 'upcoming'
-                    ? 'bg-teal-600 text-white'
-                    : 'text-gray-600 hover:text-teal-600'
+                    ? 'text-white'
+                    : 'text-gray-600'
                 }`}
+                style={{backgroundColor: activeTab === 'upcoming' ? '#309ed9' : undefined}}
+                onMouseEnter={(e) => { if (activeTab !== 'upcoming') e.target.style.color = '#309ed9'; }}
+                onMouseLeave={(e) => { if (activeTab !== 'upcoming') e.target.style.color = '#4b5563'; }}
               >
                 Upcoming Events
               </button>
@@ -143,9 +146,12 @@ const Events = () => {
                 onClick={() => setActiveTab('past')}
                 className={`px-8 py-3 rounded-md font-medium transition-colors duration-200 ${
                   activeTab === 'past'
-                    ? 'bg-teal-600 text-white'
-                    : 'text-gray-600 hover:text-teal-600'
+                    ? 'text-white'
+                    : 'text-gray-600'
                 }`}
+                style={{backgroundColor: activeTab === 'past' ? '#309ed9' : undefined}}
+                onMouseEnter={(e) => { if (activeTab !== 'past') e.target.style.color = '#309ed9'; }}
+                onMouseLeave={(e) => { if (activeTab !== 'past') e.target.style.color = '#4b5563'; }}
               >
                 Past Events
               </button>
@@ -178,7 +184,7 @@ const Events = () => {
                       </div>
                     )}
                     {activeTab === 'upcoming' && 'price' in event && (
-                      <span className="text-teal-600 font-semibold text-sm">
+                      <span className="font-semibold text-sm" style={{color: '#309ed9'}}>
                         {event.price}
                       </span>
                     )}
@@ -212,7 +218,7 @@ const Events = () => {
                   </div>
                   
                   {activeTab === 'upcoming' ? (
-                    <button className="w-full bg-teal-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200 flex items-center justify-center space-x-2">
+                    <button className="w-full text-white py-3 px-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2" style={{backgroundColor: '#309ed9'}}>
                       <span>Register Now</span>
                       <ArrowRight className="h-4 w-4" />
                     </button>
@@ -247,14 +253,14 @@ const Events = () => {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
                   />
-                  <button className="bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200">
+                  <button className="text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200" style={{backgroundColor: '#309ed9'}}>
                     Subscribe
                   </button>
                 </>
               ) : (
-                <button className="bg-teal-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200">
+                <button className="text-white py-3 px-8 rounded-lg font-semibold transition-colors duration-200" style={{backgroundColor: '#309ed9'}}>
                   Contact Us
                 </button>
               )}

@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+// Fix for default markers in react-leaflet
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+});
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -59,11 +70,11 @@ const Contact = () => {
   return (
     <div className="py-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-600 to-teal-800 text-white py-20">
+      <section style={{backgroundColor: '#309ed9'}} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-teal-100">
+            <p className="text-xl" style={{color: '#f0f9ff'}}>
               Get in touch with our team to discuss your medical device needs or request a quote.
             </p>
           </div>
@@ -76,8 +87,8 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => (
               <div key={index} className="text-center p-6 bg-white rounded-lg shadow-sm">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
-                  <info.icon className="h-8 w-8 text-teal-600" />
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{backgroundColor: '#f0f9ff'}}>
+                  <info.icon className="h-8 w-8" style={{color: '#309ed9'}} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{info.title}</h3>
                 <div className="space-y-1">
@@ -111,7 +122,7 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
                     />
                   </div>
                   <div>
@@ -125,7 +136,7 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
                     />
                   </div>
                 </div>
@@ -140,7 +151,7 @@ const Contact = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
                     />
                   </div>
                   <div>
@@ -153,7 +164,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
                     />
                   </div>
                 </div>
@@ -167,7 +178,7 @@ const Contact = () => {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
                   >
                     <option value="">Select a subject</option>
                     <option value="product-inquiry">Product Inquiry</option>
@@ -188,13 +199,13 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent resize-none" style={{'&:focus': {ringColor: '#309ed9'}}}
                     placeholder="Please provide details about your inquiry..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transition-colors duration-200 flex items-center justify-center space-x-2"
+                  className="w-full text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2" style={{backgroundColor: '#309ed9'}}
                 >
                   <Send className="h-5 w-5" />
                   <span>Send Message</span>
@@ -205,16 +216,35 @@ const Contact = () => {
             {/* Map and Additional Info */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Visit Our Facility</h2>
-              <div className="bg-gray-200 rounded-lg h-64 mb-6 flex items-center justify-center">
-                <p className="text-gray-600">Interactive Map Location</p>
+              <div className="rounded-lg h-64 mb-6 overflow-hidden">
+                <MapContainer 
+                  center={[37.7749, -122.4194]} 
+                  zoom={15} 
+                  style={{ height: '100%', width: '100%' }}
+                >
+                  <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  />
+                  <Marker position={[37.7749, -122.4194]}>
+                    <Popup>
+                      <div className="text-center">
+                        <strong>Eversure Medical</strong><br />
+                        123 Medical Drive<br />
+                        Healthcare City, HC 12345<br />
+                        United States
+                      </div>
+                    </Popup>
+                  </Marker>
+                </MapContainer>
               </div>
               <div className="space-y-6">
-                <div className="bg-teal-50 p-6 rounded-lg">
+                <div className="p-6 rounded-lg" style={{backgroundColor: '#f0f9ff'}}>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Emergency Support</h3>
                   <p className="text-gray-600 mb-2">
                     For urgent technical support or emergency inquiries, please call our 24/7 hotline:
                   </p>
-                  <p className="text-teal-600 font-semibold">+1 (555) 911-HELP</p>
+                  <p className="font-semibold" style={{color: '#309ed9'}}>+1 (555) 911-HELP</p>
                 </div>
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Training & Certification</h3>
