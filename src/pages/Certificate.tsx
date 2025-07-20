@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { Download, Eye, X, ZoomIn, ZoomOut } from 'lucide-react';
+import { Eye, X, ZoomIn, ZoomOut } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Certificate = () => {
+  const navigate = useNavigate();
   const [selectedCertificate, setSelectedCertificate] = useState<any>(null);
   const [zoomLevel, setZoomLevel] = useState(1);
 
@@ -9,7 +11,6 @@ const Certificate = () => {
     {
       id: 1,
       title: 'ISO 13485:2016 Quality Management Systems',
-      category: 'Quality Assurance',
       valid_from: '2023-04-15',
       valid_until: '2026-04-14',
       image: '/ISO 13485_Q5 115632 0001 Rev.00_Valid 2023-04-15 to 2026-04-14 (2)_page-0001.jpg'
@@ -17,25 +18,16 @@ const Certificate = () => {
     {
       id: 2,
       title: 'FDA 510(k) Medical Device Clearance',
-      category: 'Regulatory Compliance',
       image: '/CE Certificate G10 115632 0002 Rev. 00_Valid 2023-07-18 Until 2028-07-17 (1) (1)_page-0002.jpg'
     },
     {
       id: 3,
       title: 'CE Mark Certification',
-      category: 'European Compliance',
       valid_from: '2023-07-18',
       valid_until: '2028-07-17',
       image: '/CE Certificate G10 115632 0002 Rev. 00_Valid 2023-07-18 Until 2028-07-17 (1) (1)_page-0001.jpg'
     }
   ];
-
-  const categories = ['All', 'Quality Assurance', 'Regulatory Compliance', 'European Compliance', 'Manufacturing Standards', 'International Standards', 'Risk Management', 'Safety Standards', 'Sterilization Standards'];
-  const [activeCategory, setActiveCategory] = useState('All');
-
-  const filteredCertificates = activeCategory === 'All' 
-    ? certificates 
-    : certificates.filter(cert => cert.category === activeCategory);
 
   const openModal = (certificate: any) => {
     setSelectedCertificate(certificate);
@@ -59,35 +51,11 @@ const Certificate = () => {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
-                  activeCategory === category
-                    ? 'text-white'
-                    : 'bg-white text-gray-600 hover:bg-teal-100 hover:text-teal-700'
-                }`}
-                style={{backgroundColor: activeCategory === category ? '#309ed9' : undefined}}
-                onMouseEnter={(e) => { if (activeCategory !== category) { e.target.style.backgroundColor = '#f0f9ff'; e.target.style.color = '#309ed9'; }}}
-                onMouseLeave={(e) => { if (activeCategory !== category) { e.target.style.backgroundColor = '#ffffff'; e.target.style.color = '#4b5563'; }}}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Certificates Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
-            {filteredCertificates.map((certificate) => (
+            {certificates.map((certificate) => (
               <div key={certificate.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all duration-200 group">
                 <div className="relative aspect-[3/4] bg-gray-200 overflow-hidden">
                   <div className="w-full h-full flex items-center justify-center text-gray-500">
@@ -103,23 +71,10 @@ const Certificate = () => {
                     >
                       <Eye className="h-5 w-5" />
                     </button>
-                    <button
-                      className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors duration-200"
-                      title="Download Certificate"
-                    >
-                      <a href={certificate.image} download>
-                        <Download className="h-5 w-5" />
-                      </a>
-                    </button>
                   </div>
                 </div>
                 
                 <div className="p-4">
-                  <div className="mb-2">
-                    <span className="inline-block px-2 py-1 text-xs font-medium rounded-full" style={{backgroundColor: '#f0f9ff', color: '#309ed9'}}>
-                      {certificate.category}
-                    </span>
-                  </div>
                   <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-2">
                     {certificate.title}
                   </h3>
@@ -138,77 +93,68 @@ const Certificate = () => {
       <section className="pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-600">
-            Showing {filteredCertificates.length} of {certificates.length} certificates
+            Showing {certificates.length} certificates
           </p>
         </div>
       </section>
 
       {/* Modal for Certificate Viewing */}
       {selectedCertificate && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
-    <div className="relative bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-hidden">
-      <div className="flex items-center justify-between p-4 border-b">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900">
-            {selectedCertificate.title}
-          </h3>
-          <p className="text-sm text-gray-600">{selectedCertificate.category}</p>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
+          <div className="relative bg-white rounded-lg max-w-4xl max-h-[90vh] overflow-hidden">
+            <div className="flex items-center justify-between p-4 border-b">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {selectedCertificate.title}
+                </h3>
+              </div>
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => setZoomLevel(prev => Math.min(prev + 0.25, 3))}
+                  className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+                  title="Zoom In"
+                >
+                  <ZoomIn className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={() => setZoomLevel(prev => Math.max(prev - 0.25, 0.5))}
+                  className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+                  title="Zoom Out"
+                >
+                  <ZoomOut className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={() => setZoomLevel(1)}
+                  className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200 text-xs px-3"
+                  title="Reset Zoom"
+                >
+                  {zoomLevel}
+                </button>
+                <button
+                  onClick={closeModal}
+                  className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+                  title="Close"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+            <div className="p-4 overflow-auto max-h-[70vh]">
+              <div className="bg-gray-200 aspect-[3/4] flex items-center justify-center text-gray-500">
+                <img 
+                  src={selectedCertificate.image} 
+                  alt='cert-image'
+                  style={{ 
+                    transform: `scale(${zoomLevel})`,
+                    transition: 'transform 0.2s ease-in-out',
+                    cursor: zoomLevel > 1 ? 'grab' : 'default'
+                  }}
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center space-x-2">
-          <button
-            onClick={() => setZoomLevel(prev => Math.min(prev + 0.25, 3))}
-            className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
-            title="Zoom In"
-          >
-            <ZoomIn className="h-5 w-5" />
-          </button>
-          <button
-            onClick={() => setZoomLevel(prev => Math.max(prev - 0.25, 0.5))}
-            className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
-            title="Zoom Out"
-          >
-            <ZoomOut className="h-5 w-5" />
-          </button>
-          <button
-            onClick={() => setZoomLevel(1)}
-            className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200 text-xs px-3"
-            title="Reset Zoom"
-          >
-            {zoomLevel}
-          </button>
-          <button
-            className="text-white p-2 rounded-lg transition-colors duration-200" style={{backgroundColor: '#309ed9'}}
-            title="Download Certificate"
-          >
-            <a href={selectedCertificate.image} download>
-              <Download className="h-5 w-5" />
-            </a>
-          </button>
-          <button
-            onClick={closeModal}
-            className="bg-gray-100 text-gray-600 p-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
-            title="Close"
-          >
-            <X className="h-5 w-5" />
-          </button>
-        </div>
-      </div>
-      <div className="p-4 overflow-auto max-h-[70vh]">
-        <div className="bg-gray-200 aspect-[3/4] flex items-center justify-center text-gray-500">
-          <img 
-            src={selectedCertificate.image} 
-            alt='cert-image'
-            style={{ 
-              transform: `scale(${zoomLevel})`,
-              transition: 'transform 0.2s ease-in-out',
-              cursor: zoomLevel > 1 ? 'grab' : 'default'
-            }}
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
 
       {/* Info Section */}
       <section className="py-16 bg-gray-50">
@@ -218,7 +164,7 @@ const Certificate = () => {
             <p className="text-gray-600 mb-8">
               Our comprehensive certifications demonstrate our commitment to quality, safety, and regulatory compliance in medical device manufacturing.
             </p>
-          <button className="text-white py-3 px-8 rounded-lg font-semibold transition-colors duration-200" style={{backgroundColor: '#309ed9'}}>
+            <button onClick={()=>{navigate('/contact')}} className="text-white py-3 px-8 rounded-lg font-semibold transition-colors duration-200" style={{backgroundColor: '#309ed9'}}>
               Contact for Verification
             </button>
           </div>

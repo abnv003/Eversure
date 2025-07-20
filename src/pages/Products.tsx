@@ -23,8 +23,8 @@ const Products = () => {
   };
 
   // Find the actual category name that matches either the readable format or URL format
-  const actualCategory = Object.keys(categoryMapping).find(key => 
-    key === readableCategory || 
+  const actualCategory = Object.keys(categoryMapping).find(key =>
+    key === readableCategory ||
     categoryMapping[key as keyof typeof categoryMapping].includes(category || '')
   ) || readableCategory;
 
@@ -66,20 +66,20 @@ const Products = () => {
 
   const filteredProducts = products.filter(product => {
     // First filter by the main category from params
-    const matchesMainCategory = !actualCategory || 
-      product.category === actualCategory || 
+    const matchesMainCategory = !actualCategory ||
+      product.category === actualCategory ||
       product.category === readableCategory ||
       product.category === category;
-    
+
     // Then filter by selected subcategory
-    const matchesSubCategory = 
-      selectedCategory === 'All Products' || 
+    const matchesSubCategory =
+      selectedCategory === 'All Products' ||
       product.product_name === selectedCategory ||
       product.sub_category === selectedCategory ||
       (product.sub_category && product.sub_category === selectedCategory);
 
     const matchesSearch = (product.product_name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          (product.description || '').toLowerCase().includes(searchTerm.toLowerCase());
+      (product.description || '').toLowerCase().includes(searchTerm.toLowerCase());
 
     return matchesMainCategory && matchesSubCategory && matchesSearch;
   });
@@ -87,12 +87,12 @@ const Products = () => {
   return (
     <div className="py-16">
       {/* Hero */}
-      <section style={{backgroundColor: '#309ed9'}} className="text-white py-20">
+      <section style={{ backgroundColor: '#309ed9' }} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">
             {actualCategory || 'All Products'}
           </h1>
-          <p className="text-xl" style={{color: '#f0f9ff'}}>
+          <p className="text-xl" style={{ color: '#f0f9ff' }}>
             Browse {actualCategory || 'our full'} product range.
           </p>
         </div>
@@ -107,12 +107,11 @@ const Products = () => {
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => setSelectedCategory('All Products')}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium ${
-                    selectedCategory === 'All Products'
-                      ? 'text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-100'
-                  }`}
-                  style={{backgroundColor: selectedCategory === 'All Products' ? '#309ed9' : undefined}}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium ${selectedCategory === 'All Products'
+                    ? 'text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-100'
+                    }`}
+                  style={{ backgroundColor: selectedCategory === 'All Products' ? '#309ed9' : undefined }}
                 >
                   All Products
                 </button>
@@ -120,12 +119,11 @@ const Products = () => {
                   <button
                     key={sub}
                     onClick={() => setSelectedCategory(sub)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium ${
-                      selectedCategory === sub
-                        ? 'text-white'
-                        : 'bg-white text-gray-700 hover:bg-gray-100'
-                    }`}
-                    style={{backgroundColor: selectedCategory === sub ? '#309ed9' : undefined}}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium ${selectedCategory === sub
+                      ? 'text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-100'
+                      }`}
+                    style={{ backgroundColor: selectedCategory === sub ? '#309ed9' : undefined }}
                   >
                     {sub}
                   </button>
@@ -137,9 +135,7 @@ const Products = () => {
               <input
                 type="text"
                 placeholder="Search products..."
-                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2"
-                style={{'&:focus': {ringColor: '#309ed9', '--tw-ring-color': '#309ed9'}}}
-                onFocus={(e) => e.target.style.setProperty('--tw-ring-color', '#309ed9')}
+                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#309ed9]"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -151,36 +147,30 @@ const Products = () => {
       {/* Product Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg shadow-sm hover:shadow-md overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.product_name}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium" style={{color: '#309ed9'}}>{product.category}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.product_name}</h3>
-                  {/* <p className="text-gray-600 mb-4">{product.description}</p>
-                  <ul className="text-sm text-gray-600 space-y-1 mb-4">
-                    {(product.product_features || []).map((feature, index) => (
-                      <li key={index} className="flex items-center">
-                        <span className="w-1.5 h-1.5 rounded-full mr-2" style={{backgroundColor: '#309ed9'}} />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul> */}
-                </div>
-                <button onClick={()=>{navigate(`/products/${category}/${product.id}`)}} className="flex items-center text-sm font-medium transition-colors duration-200" style={{color: '#309ed9'}} onMouseEnter={(e) => e.target.style.color = '#1e7b85'} onMouseLeave={(e) => e.target.style.color = '#309ed9'}>
-                      Read More
-                      <ArrowRight className="h-4 w-4 ml-1" />
-                    </button>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {filteredProducts.map((product) => (
+        <div key={product.id} className="bg-white rounded-lg shadow-sm hover:shadow-md overflow-hidden group">
+          <img
+            src={product.image}
+            alt={product.product_name}
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-6">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-medium" style={{ color: '#309ed9' }}>{product.category}</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.product_name}</h3>
           </div>
+          <button
+            onClick={() => navigate(`/products/${category}/${product.id}`)}
+            className="flex items-center text-sm font-medium text-[#309ed9] hover:text-[#1e7b85] transition-all duration-200 opacity-0 group-hover:opacity-100 px-6 pb-6"
+          >
+            Read More
+            <ArrowRight className="h-4 w-4 ml-1" />
+          </button>
+        </div>
+      ))}
+    </div>
 
           {/* Empty state */}
           {filteredProducts.length === 0 && (

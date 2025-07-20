@@ -14,10 +14,10 @@ const Header = () => {
   const navigation = [
     { name: 'Company', href: '/about' },
     { name: 'Product & Therapies', href: '/products' },
-    { name: 'Contact Us', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Event', href: '/events' },
-    { name: 'Certificates', href: '/certs' }
+    { name: 'Certificates', href: '/certs' },
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Blog', href: '/blog' }
   ];
 
   const categories = [

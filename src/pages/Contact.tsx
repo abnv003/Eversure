@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import LocationMap from '../components/LocationMap';
 
 
 const Contact = () => {
@@ -38,17 +39,17 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Address',
-      details: ['123 Medical Drive', 'Healthcare City, HC 12345', 'United States']
+      details: ['Gaia Apex, S.N. 33/2D,', 'Viman Nagar, Pune-411 014', 'INDIA']
     },
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+1 (555) 123-4567', '+1 (555) 123-4568 (Support)']
+      details: ['+91-020-6766-1200']
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@eversure.com', 'support@eversure.com']
+      details: ['eversure@rathigroup.com']
     },
     {
       icon: Clock,
@@ -112,7 +113,7 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9]" 
                     />
                   </div>
                   <div>
@@ -126,7 +127,7 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9]" 
                     />
                   </div>
                 </div>
@@ -141,7 +142,7 @@ const Contact = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9]" 
                     />
                   </div>
                   <div>
@@ -154,7 +155,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9]" 
                     />
                   </div>
                 </div>
@@ -168,7 +169,7 @@ const Contact = () => {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9]" 
                   >
                     <option value="">Select a subject</option>
                     <option value="product-inquiry">Product Inquiry</option>
@@ -189,7 +190,7 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent resize-none" style={{'&:focus': {ringColor: '#309ed9'}}}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent resize-none focus:ring-2 focus:ring-[#309ed9]"
                     placeholder="Please provide details about your inquiry..."
                   ></textarea>
                 </div>
@@ -204,32 +205,12 @@ const Contact = () => {
             </div>
 
             {/* Map and Additional Info */}
-            <div>
+            <div className="flex flex-col h-full">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Visit Our Facility</h2>
-              <div className="rounded-lg h-64 mb-6 overflow-hidden">
-                MAP
-              </div>
-              <div className="space-y-6">
-                <div className="p-6 rounded-lg" style={{backgroundColor: '#f0f9ff'}}>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Emergency Support</h3>
-                  <p className="text-gray-600 mb-2">
-                    For urgent technical support or emergency inquiries, please call our 24/7 hotline:
-                  </p>
-                  <p className="font-semibold" style={{color: '#309ed9'}}>+1 (555) 911-HELP</p>
-                </div>
-                <div className="bg-green-50 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Training & Certification</h3>
-                  <p className="text-gray-600 mb-2">
-                    Interested in product training or certification programs? Contact our education team:
-                  </p>
-                  <p className="text-green-600 font-semibold">training@eversure.com</p>
-                </div>
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Partnership Opportunities</h3>
-                  <p className="text-gray-600 mb-2">
-                    Explore partnership and distribution opportunities with our business development team:
-                  </p>
-                  <p className="text-purple-600 font-semibold">partnerships@eversure.com</p>
+              <div className="flex-1 min-h-[600px]">
+                <h2 className="text-xl font-bold mb-4">Our Location</h2>
+                <div className="h-full min-h-[550px] w-full">
+                  <LocationMap />
                 </div>
               </div>
             </div>

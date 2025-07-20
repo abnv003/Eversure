@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Calendar, MapPin, Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
 
 const Events = () => {
@@ -100,11 +100,11 @@ const Events = () => {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
+    return date.toLocaleDateString('en-US', {
       weekday: 'long',
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     });
   };
 
@@ -113,11 +113,11 @@ const Events = () => {
   return (
     <div className="py-16">
       {/* Hero Section */}
-      <section style={{backgroundColor: '#309ed9'}} className="text-white py-20">
+      <section style={{ backgroundColor: '#309ed9' }} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Events & Training</h1>
-            <p className="text-xl" style={{color: '#f0f9ff'}}>
+            <p className="text-xl" style={{ color: '#f0f9ff' }}>
               Join us for educational workshops, conferences, and training sessions in medical technology.
             </p>
           </div>
@@ -131,27 +131,33 @@ const Events = () => {
             <div className="bg-white rounded-lg p-1 shadow-sm">
               <button
                 onClick={() => setActiveTab('upcoming')}
-                className={`px-8 py-3 rounded-md font-medium transition-colors duration-200 ${
-                  activeTab === 'upcoming'
-                    ? 'text-white'
-                    : 'text-gray-600'
-                }`}
-                style={{backgroundColor: activeTab === 'upcoming' ? '#309ed9' : undefined}}
-                onMouseEnter={(e) => { if (activeTab !== 'upcoming') e.target.style.color = '#309ed9'; }}
-                onMouseLeave={(e) => { if (activeTab !== 'upcoming') e.target.style.color = '#4b5563'; }}
+                className={`px-8 py-3 rounded-md font-medium transition-colors duration-200 ${activeTab === 'upcoming'
+                  ? 'text-white'
+                  : 'text-gray-600'
+                  }`}
+                style={{ backgroundColor: activeTab === 'upcoming' ? '#309ed9' : undefined }}
+                onMouseEnter={(e) => { if (activeTab !== 'upcoming') e.currentTarget.style.color = '#309ed9'; }}
+                onMouseLeave={(e) => { if (activeTab !== 'upcoming') e.currentTarget.style.color = '#4b5563'; }}
               >
                 Upcoming Events
               </button>
               <button
                 onClick={() => setActiveTab('past')}
-                className={`px-8 py-3 rounded-md font-medium transition-colors duration-200 ${
-                  activeTab === 'past'
-                    ? 'text-white'
-                    : 'text-gray-600'
-                }`}
-                style={{backgroundColor: activeTab === 'past' ? '#309ed9' : undefined}}
-                onMouseEnter={(e) => { if (activeTab !== 'past') e.target.style.color = '#309ed9'; }}
-                onMouseLeave={(e) => { if (activeTab !== 'past') e.target.style.color = '#4b5563'; }}
+                className={`px-8 py-3 rounded-md font-medium transition-colors duration-200 ${activeTab === 'past'
+                  ? 'text-white'
+                  : 'text-gray-600'
+                  }`}
+                style={{ backgroundColor: activeTab === 'past' ? '#309ed9' : undefined }}
+                onMouseEnter={(e) => {
+                  if (activeTab !== 'past') {
+                    (e.target as HTMLButtonElement).style.color = '#309ed9';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (activeTab !== 'past') {
+                    (e.target as HTMLButtonElement).style.color = '#4b5563';
+                  }
+                }}
               >
                 Past Events
               </button>
@@ -168,13 +174,12 @@ const Events = () => {
               <div key={event.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200">
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${
-                      event.category === 'Conference' ? 'bg-blue-100 text-blue-600' :
+                    <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${event.category === 'Conference' ? 'bg-blue-100 text-blue-600' :
                       event.category === 'Workshop' ? 'bg-green-100 text-green-600' :
-                      event.category === 'Expo' ? 'bg-purple-100 text-purple-600' :
-                      event.category === 'Webinar' ? 'bg-orange-100 text-orange-600' :
-                      'bg-gray-100 text-gray-600'
-                    }`}>
+                        event.category === 'Expo' ? 'bg-purple-100 text-purple-600' :
+                          event.category === 'Webinar' ? 'bg-orange-100 text-orange-600' :
+                            'bg-gray-100 text-gray-600'
+                      }`}>
                       {event.category}
                     </span>
                     {activeTab === 'past' && (
@@ -184,20 +189,20 @@ const Events = () => {
                       </div>
                     )}
                     {activeTab === 'upcoming' && 'price' in event && (
-                      <span className="font-semibold text-sm" style={{color: '#309ed9'}}>
+                      <span className="font-semibold text-sm" style={{ color: '#309ed9' }}>
                         {event.price}
                       </span>
                     )}
                   </div>
-                  
+
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {event.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                     {event.description}
                   </p>
-                  
+
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center text-sm text-gray-500">
                       <Calendar className="h-4 w-4 mr-2" />
@@ -216,9 +221,9 @@ const Events = () => {
                       {event.attendees} {activeTab === 'upcoming' ? 'expected attendees' : 'attendees'}
                     </div>
                   </div>
-                  
+
                   {activeTab === 'upcoming' ? (
-                    <button className="w-full text-white py-3 px-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2" style={{backgroundColor: '#309ed9'}}>
+                    <button className="w-full text-white py-3 px-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2" style={{ backgroundColor: '#309ed9' }}>
                       <span>Register Now</span>
                       <ArrowRight className="h-4 w-4" />
                     </button>
@@ -230,41 +235,6 @@ const Events = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              {activeTab === 'upcoming' ? 'Stay Informed' : 'Missed an Event?'}
-            </h2>
-            <p className="text-gray-600 mb-8">
-              {activeTab === 'upcoming' 
-                ? 'Subscribe to our newsletter to receive notifications about upcoming events and training opportunities.'
-                : 'Contact us to learn about future events or access recordings from past sessions.'
-              }
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              {activeTab === 'upcoming' ? (
-                <>
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style={{'&:focus': {ringColor: '#309ed9'}}}
-                  />
-                  <button className="text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200" style={{backgroundColor: '#309ed9'}}>
-                    Subscribe
-                  </button>
-                </>
-              ) : (
-                <button className="text-white py-3 px-8 rounded-lg font-semibold transition-colors duration-200" style={{backgroundColor: '#309ed9'}}>
-                  Contact Us
-                </button>
-              )}
-            </div>
           </div>
         </div>
       </section>
