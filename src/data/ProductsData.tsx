@@ -914,78 +914,78 @@ export const products: Product[] = [
       }
     ]
     },
-    {
-      "id": 25,
-      "product_name": "ECOCATH",
-      "sizes": "6FG to 24FG",
-      "product_code": "1801",
-      "category": "Gastroenterology",
-      "sub_category": "Ryles Tube",
-      "description": "For nasogastirc intubation – short term feeding and administration of drugs & food and aspiration of gastro- intestinal secretion.",
-      "image": "https://eversuremedical.com/assets/images/product/top-iv-catheter-manufacturers-in-india-ryles-tube-ecocath.webp",
-      "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ]
-    },
-    {
-      "id": 26,
-      "product_name": "ECOCATH",
-      "sizes": "4FG to 10FG",
-      "product_code": "1901",
-      "category": "Gastroenterology",
-      "sub_category": "Infant Feeding Tube",
-      "description": "For providing feedings and medications into the stomach until the baby can take food by mouth.",
-      "image": "https://eversuremedical.com/assets/images/product/top-iv-catheter-manufacturer-infant-feeding-tube-ecocath.webp",
-      "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ]
-    },
+    // {
+    //   "id": 25,
+    //   "product_name": "ECOCATH",
+    //   "sizes": "6FG to 24FG",
+    //   "product_code": "1801",
+    //   "category": "Gastroenterology",
+    //   "sub_category": "Ryles Tube",
+    //   "description": "For nasogastirc intubation – short term feeding and administration of drugs & food and aspiration of gastro- intestinal secretion.",
+    //   "image": "https://eversuremedical.com/assets/images/product/top-iv-catheter-manufacturers-in-india-ryles-tube-ecocath.webp",
+    //   "product_features": [
+    //   {
+    //     "title": "Ultra-Sharp Needle Design",
+    //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+    //   },
+    //   {
+    //     "title": "Transparent Needle Hub with Flashback Chamber",
+    //     "description": "Provides easy visualization after needle insertion."
+    //   },
+    //   {
+    //     "title": "Radiopaque Frictionless Catheter",
+    //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+    //   },
+    //   {
+    //     "title": "Biocompatible Material",
+    //     "description": "Supports longer indwelling time and patient safety."
+    //   },
+    //   {
+    //     "title": "Latex and PVC-Free",
+    //     "description": "Safe for allergy-prone and sensitive patients."
+    //   },
+    //   {
+    //     "title": "Sterile and Certified",
+    //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+    //   }
+    // ]
+    // },
+    // {
+    //   "id": 26,
+    //   "product_name": "ECOCATH",
+    //   "sizes": "4FG to 10FG",
+    //   "product_code": "1901",
+    //   "category": "Gastroenterology",
+    //   "sub_category": "Infant Feeding Tube",
+    //   "description": "For providing feedings and medications into the stomach until the baby can take food by mouth.",
+    //   "image": "https://eversuremedical.com/assets/images/product/top-iv-catheter-manufacturer-infant-feeding-tube-ecocath.webp",
+    //   "product_features": [
+    //   {
+    //     "title": "Ultra-Sharp Needle Design",
+    //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+    //   },
+    //   {
+    //     "title": "Transparent Needle Hub with Flashback Chamber",
+    //     "description": "Provides easy visualization after needle insertion."
+    //   },
+    //   {
+    //     "title": "Radiopaque Frictionless Catheter",
+    //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+    //   },
+    //   {
+    //     "title": "Biocompatible Material",
+    //     "description": "Supports longer indwelling time and patient safety."
+    //   },
+    //   {
+    //     "title": "Latex and PVC-Free",
+    //     "description": "Safe for allergy-prone and sensitive patients."
+    //   },
+    //   {
+    //     "title": "Sterile and Certified",
+    //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+    //   }
+    // ]
+    // },
     {
       "id": 27,
       "product_name": "ECOCATH",

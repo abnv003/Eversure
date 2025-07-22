@@ -23,7 +23,7 @@ const Header = () => {
   const categories = [
     'Infusion & Transfusion Therapy',
     'Anesthesia',
-    'Gastroenterology',
+    // 'Gastroenterology',
     'Urology',
     'Surgery & Wound Drainage',
     'Central Venous Access Catheters',
