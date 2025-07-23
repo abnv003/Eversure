@@ -53,40 +53,40 @@ const Home = () => {
         </svg>
       )
     },
-    {
-      title: 'Anesthesia',
-      icon: (
-        <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 100 100" strokeWidth="1.5">
-          {/* Anesthesia machine main unit */}
-          <rect x="20" y="40" width="35" height="40" rx="3" strokeWidth="2" />
-          {/* Ventilator screen */}
-          <rect x="25" y="45" width="25" height="15" rx="2" />
-          {/* Breathing circuit waveform */}
-          <path d="M27 52 L30 48 L33 56 L36 44 L39 58 L42 50 L45 52 L48 52" strokeWidth="1.5" fill="none" />
-          {/* Control knobs and dials */}
-          <circle cx="30" cy="67" r="3" />
-          <circle cx="45" cy="67" r="3" />
-          <rect x="25" y="72" width="6" height="3" rx="1" />
-          <rect x="39" y="72" width="6" height="3" rx="1" />
-          {/* Gas cylinders */}
-          <rect x="60" y="25" width="8" height="30" rx="4" strokeWidth="2" />
-          <rect x="70" y="30" width="8" height="25" rx="4" strokeWidth="2" />
-          {/* Cylinder tops/valves */}
-          <rect x="62" y="20" width="4" height="8" rx="1" />
-          <rect x="72" y="25" width="4" height="8" rx="1" />
-          {/* Breathing circuit tubes */}
-          <path d="M55 50 Q65 45, 75 50 Q80 55, 75 60 Q65 65, 55 60" fill="none" strokeWidth="2" />
-          {/* Face mask */}
-          <ellipse cx="75" cy="55" rx="8" ry="6" fill="none" strokeWidth="2" />
-          <path d="M67 55 Q71 52, 75 55 Q79 58, 83 55" fill="none" strokeWidth="1.5" />
-          {/* Connection tubes */}
-          <line x1="55" y1="55" x2="67" y2="55" strokeWidth="2" />
-          {/* Pressure gauge */}
-          <circle cx="85" cy="35" r="6" fill="none" strokeWidth="1.5" />
-          <path d="M82 32 L85 35 L88 32" fill="none" strokeWidth="1" />
-        </svg>
-      )
-    },
+    // {
+    //   title: 'Anesthesia',
+    //   icon: (
+    //     <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 100 100" strokeWidth="1.5">
+    //       {/* Anesthesia machine main unit */}
+    //       <rect x="20" y="40" width="35" height="40" rx="3" strokeWidth="2" />
+    //       {/* Ventilator screen */}
+    //       <rect x="25" y="45" width="25" height="15" rx="2" />
+    //       {/* Breathing circuit waveform */}
+    //       <path d="M27 52 L30 48 L33 56 L36 44 L39 58 L42 50 L45 52 L48 52" strokeWidth="1.5" fill="none" />
+    //       {/* Control knobs and dials */}
+    //       <circle cx="30" cy="67" r="3" />
+    //       <circle cx="45" cy="67" r="3" />
+    //       <rect x="25" y="72" width="6" height="3" rx="1" />
+    //       <rect x="39" y="72" width="6" height="3" rx="1" />
+    //       {/* Gas cylinders */}
+    //       <rect x="60" y="25" width="8" height="30" rx="4" strokeWidth="2" />
+    //       <rect x="70" y="30" width="8" height="25" rx="4" strokeWidth="2" />
+    //       {/* Cylinder tops/valves */}
+    //       <rect x="62" y="20" width="4" height="8" rx="1" />
+    //       <rect x="72" y="25" width="4" height="8" rx="1" />
+    //       {/* Breathing circuit tubes */}
+    //       <path d="M55 50 Q65 45, 75 50 Q80 55, 75 60 Q65 65, 55 60" fill="none" strokeWidth="2" />
+    //       {/* Face mask */}
+    //       <ellipse cx="75" cy="55" rx="8" ry="6" fill="none" strokeWidth="2" />
+    //       <path d="M67 55 Q71 52, 75 55 Q79 58, 83 55" fill="none" strokeWidth="1.5" />
+    //       {/* Connection tubes */}
+    //       <line x1="55" y1="55" x2="67" y2="55" strokeWidth="2" />
+    //       {/* Pressure gauge */}
+    //       <circle cx="85" cy="35" r="6" fill="none" strokeWidth="1.5" />
+    //       <path d="M82 32 L85 35 L88 32" fill="none" strokeWidth="1" />
+    //     </svg>
+    //   )
+    // },
     // {
     //   title: 'Gastroenterology',
     //   icon: (
@@ -298,7 +298,7 @@ const Home = () => {
             <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {productOfferings.map((product, index) => (
               <div
                 onClick={() => navigate(formatCategoryPath(product.title))}

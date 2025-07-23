@@ -490,7 +490,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "I. V. Infusion Set",
       "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
-      "image": "http://eversuremedical.com/assets/images/product/best-iv-infusion-set-manufacturing-companies-modvenn-v.webp",
+      "image": "/images/modvenn v.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -526,7 +526,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "I. V. Infusion Set",
       "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
-      "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-modvenn-v-plus.webp",
+      "image": "/images/Modvenn V+.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -562,7 +562,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "I. V. Infusion Set",
       "description": "For infusion of intravenous fluids and medicines into human circulating system preventing contamination by retaining bacteria, particles of size up to 0.2 micron.",
-      "image": "http://eversuremedical.com/assets/images/product/best-iv-infusion-set-manufacturing-companies-modvenn-sv.webp",
+      "image": "/images/modvenn sv low.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -598,7 +598,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "I. V. Infusion Set",
       "description": "For infusion of intravenous fluids and medicines into human circulating system preventing contamination by retaining bacteria, particles of size up to 0.2 micron.",
-      "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-modvenn-sv-plus.webp",
+      "image": "/images/modvenn sv.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -670,7 +670,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "Extension Tube",
       "description": "For easy and safe connection of the source of infusion and the patient during infusion therapy without any length restrictions.",
-      "image": "http://eversuremedical.com/assets/images/product/best-infusion-therapy-extension-set-manufacturing-companies-ecoextt.webp",
+      "image": "/images/ecoextt.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -706,7 +706,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "Multiway",
       "description": "For connecting to the end of vascular catheters and enable catheter access for infusion and aspiration avoiding bacterial contamination in fluid path way.",
-      "image": "https://eversuremedical.com/assets/images/product/best-extension-tube-with-needle-free-connections-manufacturing-companies-modextt.webp",
+      "image": "/images/triple ext tube.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -742,7 +742,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "Blood Transfusion Set",
       "description": "For administration of blood / blood components into human circulating system.",
-      "image": "http://eversuremedical.com/assets/images/product/econas.webp",
+      "image": "/images/ecotran.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -770,150 +770,150 @@ export const products: Product[] = [
       }
     ]
     },
-    {
-      "id": 21,
-      "product_name": "ECOCATH",
-      "sizes": "5FG to 24FG",
-      "product_code": "1701",
-      "category": "Anesthesia",
-      "sub_category": "Suction Catheter",
-      "description": "To extract bodily secretions, such as mucus or saliva from the upper airway with maximum comfort to the patient. The purpose of suctioning is to keep the airway clear of secretions and to prevent plugging.",
-      "image": "https://eversuremedical.com/assets/images/product/infusion/suction-catheter-ecocath.webp",
-      "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ]
-    },
-    {
-      "id": 22,
-      "product_name": "ECOMASK",
-      "sizes": "Adult, Child",
-      "product_code": "Adult – 3301, Child – 3302",
-      "category": "Anesthesia",
-      "sub_category": "Oxygen Mask",
-      "description": "For oxygen therapy.",
-      "image": "https://eversuremedical.com/assets/images/product/infusion/oxygen-mask-manufacturer-ecomask.webp",
-      "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ]
-    },
-    {
-      "id": 23,
-      "product_name": "ECONEB",
-      "sizes": "Adult, Child",
-      "product_code": "Adult – 3201, Child – 3202",
-      "category": "Anesthesia",
-      "sub_category": "Nebulizer Mask",
-      "description": "For administering medication in mist form inhaled into lungs.",
-      "image": "https://eversuremedical.com/assets/images/product/infusion/nubulizer-mask-manufacturers-econeb.webp",
-      "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ]
-    },
-    {
-      "id": 24,
-      "product_name": "ECONAS",
-      "sizes": "Adult, Child, Neonatal",
-      "product_code": " Adult – 3401, Child – 3402",
-      "category": "Anesthesia",
-      "sub_category": "Nasal Oxygen Cannula",
-      "description": "For easy and efficient administration of oxygen.",
-      "image": "http://eversuremedical.com/assets/images/product/econas.webp",
-      "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ]
-    },
+    // {
+    //   "id": 21,
+    //   "product_name": "ECOCATH",
+    //   "sizes": "5FG to 24FG",
+    //   "product_code": "1701",
+    //   "category": "Anesthesia",
+    //   "sub_category": "Suction Catheter",
+    //   "description": "To extract bodily secretions, such as mucus or saliva from the upper airway with maximum comfort to the patient. The purpose of suctioning is to keep the airway clear of secretions and to prevent plugging.",
+    //   "image": "https://eversuremedical.com/assets/images/product/infusion/suction-catheter-ecocath.webp",
+    //   "product_features": [
+    //   {
+    //     "title": "Ultra-Sharp Needle Design",
+    //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+    //   },
+    //   {
+    //     "title": "Transparent Needle Hub with Flashback Chamber",
+    //     "description": "Provides easy visualization after needle insertion."
+    //   },
+    //   {
+    //     "title": "Radiopaque Frictionless Catheter",
+    //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+    //   },
+    //   {
+    //     "title": "Biocompatible Material",
+    //     "description": "Supports longer indwelling time and patient safety."
+    //   },
+    //   {
+    //     "title": "Latex and PVC-Free",
+    //     "description": "Safe for allergy-prone and sensitive patients."
+    //   },
+    //   {
+    //     "title": "Sterile and Certified",
+    //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+    //   }
+    // ]
+    // },
+    // {
+    //   "id": 22,
+    //   "product_name": "ECOMASK",
+    //   "sizes": "Adult, Child",
+    //   "product_code": "Adult – 3301, Child – 3302",
+    //   "category": "Anesthesia",
+    //   "sub_category": "Oxygen Mask",
+    //   "description": "For oxygen therapy.",
+    //   "image": "https://eversuremedical.com/assets/images/product/infusion/oxygen-mask-manufacturer-ecomask.webp",
+    //   "product_features": [
+    //   {
+    //     "title": "Ultra-Sharp Needle Design",
+    //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+    //   },
+    //   {
+    //     "title": "Transparent Needle Hub with Flashback Chamber",
+    //     "description": "Provides easy visualization after needle insertion."
+    //   },
+    //   {
+    //     "title": "Radiopaque Frictionless Catheter",
+    //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+    //   },
+    //   {
+    //     "title": "Biocompatible Material",
+    //     "description": "Supports longer indwelling time and patient safety."
+    //   },
+    //   {
+    //     "title": "Latex and PVC-Free",
+    //     "description": "Safe for allergy-prone and sensitive patients."
+    //   },
+    //   {
+    //     "title": "Sterile and Certified",
+    //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+    //   }
+    // ]
+    // },
+    // {
+    //   "id": 23,
+    //   "product_name": "ECONEB",
+    //   "sizes": "Adult, Child",
+    //   "product_code": "Adult – 3201, Child – 3202",
+    //   "category": "Anesthesia",
+    //   "sub_category": "Nebulizer Mask",
+    //   "description": "For administering medication in mist form inhaled into lungs.",
+    //   "image": "https://eversuremedical.com/assets/images/product/infusion/nubulizer-mask-manufacturers-econeb.webp",
+    //   "product_features": [
+    //   {
+    //     "title": "Ultra-Sharp Needle Design",
+    //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+    //   },
+    //   {
+    //     "title": "Transparent Needle Hub with Flashback Chamber",
+    //     "description": "Provides easy visualization after needle insertion."
+    //   },
+    //   {
+    //     "title": "Radiopaque Frictionless Catheter",
+    //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+    //   },
+    //   {
+    //     "title": "Biocompatible Material",
+    //     "description": "Supports longer indwelling time and patient safety."
+    //   },
+    //   {
+    //     "title": "Latex and PVC-Free",
+    //     "description": "Safe for allergy-prone and sensitive patients."
+    //   },
+    //   {
+    //     "title": "Sterile and Certified",
+    //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+    //   }
+    // ]
+    // },
+    // {
+    //   "id": 24,
+    //   "product_name": "ECONAS",
+    //   "sizes": "Adult, Child, Neonatal",
+    //   "product_code": " Adult – 3401, Child – 3402",
+    //   "category": "Anesthesia",
+    //   "sub_category": "Nasal Oxygen Cannula",
+    //   "description": "For easy and efficient administration of oxygen.",
+    //   "image": "http://eversuremedical.com/assets/images/product/econas.webp",
+    //   "product_features": [
+    //   {
+    //     "title": "Ultra-Sharp Needle Design",
+    //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+    //   },
+    //   {
+    //     "title": "Transparent Needle Hub with Flashback Chamber",
+    //     "description": "Provides easy visualization after needle insertion."
+    //   },
+    //   {
+    //     "title": "Radiopaque Frictionless Catheter",
+    //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+    //   },
+    //   {
+    //     "title": "Biocompatible Material",
+    //     "description": "Supports longer indwelling time and patient safety."
+    //   },
+    //   {
+    //     "title": "Latex and PVC-Free",
+    //     "description": "Safe for allergy-prone and sensitive patients."
+    //   },
+    //   {
+    //     "title": "Sterile and Certified",
+    //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+    //   }
+    // ]
+    // },
     // {
     //   "id": 25,
     //   "product_name": "ECOCATH",
@@ -988,13 +988,13 @@ export const products: Product[] = [
     // },
     {
       "id": 27,
-      "product_name": "ECOCATH",
+      "product_name": "FOLEY CATHETER",
       "sizes": "6FG to 24FG",
       "product_code": "1601",
       "category": "Urology",
       "sub_category": "Nelaton Catheter",
       "description": "For short term bladder catheterisation through urethra in case of urinary retention, having radio opaque line throughout the length for x-ray visualization.",
-      "image": "https://eversuremedical.com/assets/images/product/iv-catheter-parts-manufacturers-nelaton-catheter.webp",
+      "image": "/images/Foley catheter.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1030,7 +1030,7 @@ export const products: Product[] = [
       "category": "surgery-wound-drainage",
       "sub_category": "Yankaur Suction Set",
       "description": "For short term bladder catheterisation through urethra in case of urinary retention, having radio opaque line throughout the length for x-ray visualization.",
-      "image": "https://eversuremedical.com/assets/images/product/infusion/yankauer-suction-set-ecosuc.webp",
+      "image": "/images/ecosuc.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1066,7 +1066,7 @@ export const products: Product[] = [
       "category": "surgery-wound-drainage",
       "sub_category": "Closed Wound Suction Unit",
       "description": "For postoperative treatment to drain away undesirable secretion and blood under negative pressure with an alternative of operating one or two catheters simultaneously.",
-      "image": "https://eversuremedical.com/assets/images/product/closed-wound-suction-unit-manufacturer-ecocws.webp",
+      "image": "/images/CWS.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1102,7 +1102,7 @@ export const products: Product[] = [
       "category": "surgery-wound-drainage",
       "sub_category": "Thoracic Catheter",
       "description": "For removal of air, fluid or pus from the intrathoracic space following cardiothoracic or thoracic surgery.",
-      "image": "https://eversuremedical.com/assets/images/product/ecocath-thor-s.webp",
+      "image": "/images/ecocath thor s.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1138,7 +1138,7 @@ export const products: Product[] = [
       "category": "surgery-wound-drainage",
       "sub_category": "Thoracic Catheter",
       "description": "For removal of air, fluid or pus from the intrathoracic space following cardiothoracic or thoracic surgery.",
-      "image": "https://eversuremedical.com/assets/images/product/ecocath-thor-t.webp",
+      "image": "/images/ecocath thor t side.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1174,7 +1174,7 @@ export const products: Product[] = [
       "category": "central-venous-access-catheters",
       "sub_category": "Central Venous Catheter",
       "description": "This product is used for catheterization of vena cava with Seldinger method. It is also used to administer fluid and medication.",
-      "image": "https://eversuremedical.com/assets/images/product/central-venus-access-catherter-modcvc.webp",
+      "image": "/images/cvc.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
