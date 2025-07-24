@@ -4,72 +4,53 @@ import ScrollSection from '../components/ScrollSection';
 // Define the interface outside the component
 interface CSRSectionProps {
   title: string;
+  desc: string;
   content: string[];
   imageUrl: string;
   imageAlt: string;
   imageLeft?: boolean;
-  backgroundColor?: string;
-  textColor?: string;
 }
 
-// Individual CSR Section Component
-const CSRSection: React.FC<CSRSectionProps> = ({
-  title,
-  content,
-  imageUrl,
-  imageAlt,
-  imageLeft = false,
-  backgroundColor = "bg-white",
-  textColor = "text-gray-800"
-}) => {
-  return (
-    <ScrollSection imageLeft={imageLeft}>
-      <section className={`${backgroundColor} py-16`}>
-        <div className="container mx-auto px-4">
-          <div className={`grid lg:grid-cols-2 gap-12 items-center ${imageLeft ? '' : 'lg:grid-flow-col-dense'}`}>
-            <div 
-              className={`${imageLeft ? 'lg:order-1' : 'lg:order-2'} transition-transform duration-700 ease-out`}
-            >
-              <img 
-                src={imageUrl} 
-                alt={imageAlt}
-                className="w-full rounded-lg shadow-lg"
-              />
-            </div>
-            <div 
-              className={`${imageLeft ? 'lg:order-2' : 'lg:order-1'} transition-transform duration-700 ease-out`}
-            >
-              <h2 className={`text-3xl lg:text-4xl font-bold mb-6 text-[#309ed9] ${textColor}`}>
-                {title}
-              </h2>
-              <div className="space-y-4">
-                {content.map((paragraph, index) => (
-                  <p key={index} className={`text-lg leading-relaxed ${textColor}`}>
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </ScrollSection>
-  );
-};
-
-// Main CSR Page Component
-export const CSR = () => {
-  // Sample data for demonstration
-  const sampleCSRData = {
-    title: "Healthcare Access",
+const renderImage = [
+  {
+    title: "Food Support",
+    desc: "Food is a fundamental human right, and we are committed to building a healthier future through:",
     content: [
-      "We are committed to improving healthcare access in underserved communities through various initiatives and partnerships.",
-      "Our programs focus on providing medical equipment and support to rural healthcare facilities.",
-      "We believe that quality healthcare should be accessible to everyone, regardless of their economic background."
+      "Providing nutritious meals and essential food supplies to underprivileged families and communities in need.",
+      "Supporting community kitchens and food banks through infrastructure development and regular maintenance to ensure consistent food distribution.",
+      "Encouraging long-term food security by facilitating awareness programs, nutrition education, and sustainable livelihood initiatives."
     ],
-    imageUrl: "https://images.pexels.com/photos/48604/pexels-photo-48604.jpeg?auto=compress&cs=tinysrgb&w=600",
-    imageAlt: "Healthcare workers in action"
-  };
+    imageUrl: "/heroimages/food_support.jpeg",
+    imageAlt: "food support",
+    imageLeft: true
+  },
+  {
+    title: "Animal Welfare",
+    desc: "Compassion for animals reflects the health of our society, and we are committed to a kinder world through:",
+    content: [
+      "Providing food, shelter, and medical care to stray and abandoned animals to ensure their well-being and survival.",
+      "Supporting animal shelters and rescue centers through infrastructure development, equipment, and operational support.",
+      "Encouraging responsible pet ownership and awareness by organizing adoption drives, sterilization programs, and community education initiatives."
+    ],
+    imageUrl: "/heroimages/animal_welfare.jpeg",
+    imageAlt: "animal welfare",
+    imageLeft: false
+  },
+  {
+    title: "Social Welfare",
+    desc: "A just and inclusive society is built on care and support, and we are dedicated to empowering communities through:",
+    content: [
+      "Providing essential resources and services such as clothing, hygiene kits, and shelter support to individuals and families in need.",
+      "Supporting community centers and outreach programs by improving infrastructure and facilitating access to health, education, and legal aid.",
+      "Encouraging self-reliance and dignity through skill development initiatives, employment assistance, and awareness campaigns for marginalized groups."
+    ],
+    imageUrl: "/heroimages/social_welfare.jpeg",
+    imageAlt: "social welfare",
+    imageLeft: true
+  }     
+];
+
+export const CSR = () => {
 
   return (
     <div>
@@ -87,44 +68,132 @@ export const CSR = () => {
               <p className="text-lg mb-6 leading-relaxed">
                 These pillars guide our efforts to creating meaningful and sustainable impact:
               </p>
-              <div className="bg-white text-[#309ed9] p-4 rounded-lg">
-                <h3 className="font-bold text-lg mb-2">Company Profile</h3>
-                <p className="text-sm">Corporate Social Responsibility</p>
-              </div>
             </div>
             <div className="flex justify-center">
-              <img 
-                src="https://images.pexels.com/photos/1127000/pexels-photo-1127000.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                alt="Hands protecting globe" 
+              <img
+                src="/heroimages/CSR_head.jpeg"
+                alt="Hands protecting globe"
                 className="w-full max-w-md rounded-lg shadow-lg"
               />
             </div>
           </div>
         </div>
       </section>
+      
 
-      {/* CSR Section with sample data */}
-      <CSRSection
-        title={sampleCSRData.title}
-        content={sampleCSRData.content}
-        imageUrl={sampleCSRData.imageUrl}
-        imageAlt={sampleCSRData.imageAlt}
-        imageLeft={false}
-        backgroundColor="bg-white"
-        textColor="text-gray-800"
-      />
+      <section className='mt-20'>
+        {renderImage.map((item, key) => (<div className='flex px-60'>
+          {/* <!-- Content Container - Left Side --> */}
+          <div className='max-w-3xl mx-auto flex items-center justify-center w-full lg:w-1/2'>
+            <img src={item.imageUrl} alt={item.imageAlt} />
+          </div>
+          {/* <!-- Content Container - Right Side --> */}
+          <div className="w-full lg:w-1/2 p-20">
+            <div className="max-w-xl">
+              {/* <!-- Title with underline --> */}
+              <div className="mb-8">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-teal-600 mb-3">
+                  {item.title}
+                </h2>
+                <div className="w-16 h-1 bg-orange-400 rounded"></div>
+              </div>
 
-      {/* Commitment Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-[#309ed9]">
-            Our Commitment
-          </h2>
-          <p className="text-lg leading-relaxed max-w-4xl mx-auto text-gray-700">
-            Through our comprehensive CSR model, Eversure aims to contribute to societal growth and well-being. We believe that focused efforts towards a healthy world help in giving wellness, sustainability, and comprehensive care to all stakeholders.
-          </p>
-        </div>
+              {/* <!-- Description --> */}
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                {item.desc}
+              </p>
+
+              {/* <!-- Features List --> */}
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 mt-1">
+                    <svg className="w-5 h-5 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <p className="text-gray-700 text-base leading-relaxed">
+                    {item.content[0]}
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 mt-1">
+                    <svg className="w-5 h-5 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <p className="text-gray-700 text-base leading-relaxed">
+                    {item.content[1]}
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 mt-1">
+                    <svg className="w-5 h-5 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <p className="text-gray-700 text-base leading-relaxed">
+                    {item.content[2]}
+                  </p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          ))}
       </section>
+
     </div>
   );
 };
+
+
+
+
+// {/* <section className="mt-20">
+//   {renderImage.map((item, key) => (
+//     <div key={key} className="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 lg:px-12 py-12 gap-10">
+//       {/* Left Side - Image */}
+//       <div className="w-full lg:w-1/2 flex justify-center">
+//         <img src={item.imageUrl} alt={item.imageAlt} className="w-full max-w-md object-cover rounded-lg shadow-md" />
+//       </div>
+
+//       {/* Right Side - Content */}
+//       <div className="w-full lg:w-1/2">
+//         <div className="max-w-xl">
+//           {/* Title with underline */}
+//           <div className="mb-8">
+//             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-teal-600 mb-3">
+//               {item.title}
+//             </h2>
+//             <div className="w-16 h-1 bg-orange-400 rounded"></div>
+//           </div>
+
+//           {/* Description */}
+//           <p className="text-gray-700 text-lg leading-relaxed mb-8">
+//             {item.desc}
+//           </p>
+
+//           {/* Features List */}
+//           <div className="space-y-6">
+//             {item.content.map((point, idx) => (
+//               <div key={idx} className="flex items-start gap-4">
+//                 <div className="flex-shrink-0 mt-1">
+//                   <svg className="w-5 h-5 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
+//                     <path
+//                       fillRule="evenodd"
+//                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+//                       clipRule="evenodd"
+//                     />
+//                   </svg>
+//                 </div>
+//                 <p className="text-gray-700 text-base leading-relaxed">{point}</p>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   ))}
+// </section> */}

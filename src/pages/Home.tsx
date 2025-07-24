@@ -225,19 +225,19 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-black overflow-hidden">
+      <section className="relative min-h-[75vh] bg-black overflow-hidden">
         {/* Background with overlay */}
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            src="/heroimages/homepage_main.jpeg"
             alt="Medical Technology"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-70 object-[center_30%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 min-h-screen flex items-center">
+        <div className="relative z-10 min-h-[65vh] flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="text-white">
@@ -281,7 +281,7 @@ const Home = () => {
             <div className={`transform transition-all duration-1000 delay-300 ${isAboutVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
               }`}>
               <img
-                src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/heroimages/about_section.jpeg"
                 alt="Healthcare Professional with Patient"
                 className="rounded-lg shadow-lg w-full h-96 object-cover"
               />
