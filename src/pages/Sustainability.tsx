@@ -65,7 +65,7 @@ export const Sustainability: React.FC = () => {
       
       <section className='mt-20'>
       {renderImage.map((item, key) => (
-        <div key={key} className='relative px-60 py-20 mb-20 ml-40'>
+        <div key={key} className='relative px-60 pt-20 mb-20 ml-40'>
           {/* Image Container - Full Width Background */}
           <div className='absolute inset-0 flex items-center justify-start pl-20'>
             <div className='w-3/5 h-full'>

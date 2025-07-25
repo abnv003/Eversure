@@ -65,9 +65,6 @@ export const CSR = () => {
               <p className="text-lg mb-4 leading-relaxed">
                 At Eversure, our Corporate Social Responsibility commitment demonstrates our dedication to contributing towards the welfare of society and the environment.
               </p>
-              <p className="text-lg mb-6 leading-relaxed">
-                These pillars guide our efforts to creating meaningful and sustainable impact:
-              </p>
             </div>
             <div className="flex justify-center">
               <img
@@ -83,7 +80,7 @@ export const CSR = () => {
 
       <section className='mt-20'>
       {renderImage.map((item, key) => (
-        <div key={key} className='relative px-60 py-20 mb-20 ml-40'>
+        <div key={key} className='relative px-60 pt-20 mb-20 ml-40'>
           {/* Image Container - Full Width Background */}
           <div className='absolute inset-0 flex items-center justify-start pl-20'>
             <div className='w-3/5 h-full'>

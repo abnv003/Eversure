@@ -53,69 +53,6 @@ const Home = () => {
         </svg>
       )
     },
-    // {
-    //   title: 'Anesthesia',
-    //   icon: (
-    //     <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 100 100" strokeWidth="1.5">
-    //       {/* Anesthesia machine main unit */}
-    //       <rect x="20" y="40" width="35" height="40" rx="3" strokeWidth="2" />
-    //       {/* Ventilator screen */}
-    //       <rect x="25" y="45" width="25" height="15" rx="2" />
-    //       {/* Breathing circuit waveform */}
-    //       <path d="M27 52 L30 48 L33 56 L36 44 L39 58 L42 50 L45 52 L48 52" strokeWidth="1.5" fill="none" />
-    //       {/* Control knobs and dials */}
-    //       <circle cx="30" cy="67" r="3" />
-    //       <circle cx="45" cy="67" r="3" />
-    //       <rect x="25" y="72" width="6" height="3" rx="1" />
-    //       <rect x="39" y="72" width="6" height="3" rx="1" />
-    //       {/* Gas cylinders */}
-    //       <rect x="60" y="25" width="8" height="30" rx="4" strokeWidth="2" />
-    //       <rect x="70" y="30" width="8" height="25" rx="4" strokeWidth="2" />
-    //       {/* Cylinder tops/valves */}
-    //       <rect x="62" y="20" width="4" height="8" rx="1" />
-    //       <rect x="72" y="25" width="4" height="8" rx="1" />
-    //       {/* Breathing circuit tubes */}
-    //       <path d="M55 50 Q65 45, 75 50 Q80 55, 75 60 Q65 65, 55 60" fill="none" strokeWidth="2" />
-    //       {/* Face mask */}
-    //       <ellipse cx="75" cy="55" rx="8" ry="6" fill="none" strokeWidth="2" />
-    //       <path d="M67 55 Q71 52, 75 55 Q79 58, 83 55" fill="none" strokeWidth="1.5" />
-    //       {/* Connection tubes */}
-    //       <line x1="55" y1="55" x2="67" y2="55" strokeWidth="2" />
-    //       {/* Pressure gauge */}
-    //       <circle cx="85" cy="35" r="6" fill="none" strokeWidth="1.5" />
-    //       <path d="M82 32 L85 35 L88 32" fill="none" strokeWidth="1" />
-    //     </svg>
-    //   )
-    // },
-    // {
-    //   title: 'Gastroenterology',
-    //   icon: (
-    //     <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 100 100" strokeWidth="1.5">
-    //       {/* Stomach outline */}
-    //       <path d="M40 25 Q30 30, 30 40 Q25 50, 30 60 Q35 70, 45 75 Q55 80, 65 75 Q75 70, 75 60 Q80 50, 75 40 Q70 30, 60 25 Q50 20, 40 25 Z" fill="none" strokeWidth="2" />
-    //       {/* Endoscope tube */}
-    //       <path d="M15 15 Q25 20, 35 30 Q45 40, 50 50 Q55 60, 60 65" fill="none" strokeWidth="2" />
-    //       {/* Endoscope handle */}
-    //       <rect x="10" y="10" width="8" height="15" rx="2" strokeWidth="2" />
-    //       <circle cx="14" cy="13" r="1" fill="currentColor" />
-    //       <circle cx="14" cy="17" r="1" fill="currentColor" />
-    //       {/* Endoscope tip with light */}
-    //       <circle cx="60" cy="65" r="3" fill="none" strokeWidth="2" />
-    //       <circle cx="60" cy="65" r="1" fill="currentColor" />
-    //       {/* Light rays */}
-    //       <line x1="57" y1="62" x2="54" y2="59" strokeWidth="1" />
-    //       <line x1="63" y1="62" x2="66" y2="59" strokeWidth="1" />
-    //       <line x1="60" y1="68" x2="60" y2="71" strokeWidth="1" />
-    //       {/* Small intestine representation */}
-    //       <path d="M20 75 Q30 70, 40 75 Q50 80, 60 75 Q70 70, 80 75" fill="none" strokeWidth="1.5" strokeDasharray="3,2" />
-    //       <path d="M25 85 Q35 80, 45 85 Q55 90, 65 85 Q75 80, 85 85" fill="none" strokeWidth="1.5" strokeDasharray="3,2" />
-    //       {/* Liver representation (upper right) */}
-    //       <path d="M70 20 Q80 15, 85 25 Q85 35, 80 40 Q75 35, 70 30" fill="none" strokeWidth="1.5" />
-    //       {/* Control buttons on endoscope */}
-    //       <rect x="12" y="20" width="4" height="2" rx="1" />
-    //     </svg>
-    //   )
-    // },
     {
       title: 'Urology',
       icon: (
@@ -269,11 +206,11 @@ const Home = () => {
               <div className="flex items-center space-x-4">
                 <Link
                   to="/company/about-us"
-                  className="text-white px-8 py-3 rounded-full font-medium transition-colors duration-200 bg-[#309ed9] hover:bg-[#1e7b85]"
+                  className="text-white px-8 py-3 rounded-full font-medium transition-colors duration-200 bg-[#309ed9] hover:bg-yellow-400"
                 >
                   Learn More About Eversure
                 </Link>
-                <div  className="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-colors bg-[#309ed9] hover:bg-[#1e7b85]">
+                <div  className="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-colors bg-[#309ed9] hover:bg-yellow-400">
                   <ChevronRight className="h-6 w-6 text-white" />
                 </div>
               </div>
