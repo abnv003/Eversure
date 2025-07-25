@@ -634,7 +634,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "Burette Set",
       "description": "For delivering a fixed volume of IV fluid at a fixed rate.",
-      "image": "https://eversuremedical.com/assets/images/product/best-burette-set-manufacturing-companies-ecobuvenn.webp",
+      "image": "/images/burette 5.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",

@@ -163,7 +163,7 @@ const Products = () => {
           </div>
           <button
             onClick={() => navigate(`/products/${category}/${product.id}`)}
-            className="flex items-center text-sm font-medium text-[#309ed9] hover:text-[#1e7b85] transition-all duration-200 opacity-0 group-hover:opacity-100 px-6 pb-6"
+            className="flex items-center text-sm font-medium text-[#309ed9] hover:text-yellow-400 transition-all duration-200 opacity-0 group-hover:opacity-100 px-6 pb-6"
           >
             Read More
             <ArrowRight className="h-4 w-4 ml-1" />

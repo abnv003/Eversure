@@ -43,7 +43,7 @@
         <div className="max-w-7xl mx-auto p-8 bg-gray-50">
         {/* Header */}
         <div className="text-center mb-12">
-            <h2 className="text-4xl font-light text-teal-600 mb-4">
+            <h2 className="text-4xl font-light text-[#309ed9] mb-4">
             Our Sustainability Journey in Action
             </h2>
             <div className="w-24 h-1 bg-yellow-400 mx-auto"></div>
@@ -73,7 +73,7 @@
                             />
                             </div>
                             <div className="p-6">
-                            <h3 className="text-xl font-medium text-teal-600 mb-4">
+                            <h3 className="text-xl font-medium text-[#309ed9] mb-4">
                                 {currentItem.title}
                             </h3>
                             <p className="text-gray-600 text-sm leading-relaxed">
@@ -92,7 +92,7 @@
             {/* Navigation Buttons */}
             <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-teal-600 hover:bg-teal-700 text-white rounded-full flex items-center justify-center transition-colors duration-200 shadow-lg z-10"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-[#309ed9] text-white rounded-full flex items-center justify-center transition-colors duration-200 shadow-lg z-10"
             aria-label="Previous"
             >
             <ChevronLeft size={20} />
@@ -100,7 +100,7 @@
 
             <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-teal-600 hover:bg-teal-700 text-white rounded-full flex items-center justify-center transition-colors duration-200 shadow-lg z-10"
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-[#309ed9] text-white rounded-full flex items-center justify-center transition-colors duration-200 shadow-lg z-10"
             aria-label="Next"
             >
             <ChevronRight size={20} />
@@ -115,7 +115,7 @@
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
                 index === currentIndex
-                    ? 'bg-teal-600 scale-125'
+                    ? 'bg-[#309ed9] scale-125'
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
