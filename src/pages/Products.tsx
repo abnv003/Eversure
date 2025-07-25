@@ -153,7 +153,7 @@ const Products = () => {
           <img
             src={product.image}
             alt={product.product_name}
-            className="w-full h-48 object-cover"
+            className="w-full h-48 object-contain"
           />
           <div className="p-6">
             <div className="flex items-center justify-between mb-2">

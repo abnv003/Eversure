@@ -12,7 +12,7 @@ const ProductDetails = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  
+
   const openModal = () => {
     setIsModalOpen(true);
     setZoomLevel(1);
@@ -129,101 +129,93 @@ const ProductDetails = () => {
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
 
-          {/* Product Image */}
-          {/* <div className="bg-white rounded-lg ml-3 p-6 shadow-sm border border-gray-200 aspect-square w-[480px]">
+          <div className="bg-white rounded-lg ml-3 p-6 shadow-sm border border-gray-200 aspect-square w-[480px] flex items-center justify-center">
             <img
               src={product.image}
               alt={product.product_name}
-              className="w-full h-full rounded-lg object-cover"
-            />
-          </div> */}
-
-          <div className="bg-white rounded-lg ml-3 p-6 shadow-sm border border-gray-200 aspect-square w-[480px]">
-            <img
-              src={product.image}
-              alt={product.product_name}
-              className="w-full h-full rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity duration-200"
+              className="max-w-full max-h-full rounded-lg object-contain cursor-pointer hover:opacity-90 transition-opacity duration-200"
               onClick={openModal}
             />
           </div>
 
+
           {/* Modal Overlay */}
-           {isModalOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-          onClick={closeModal}
-        >
-          {/* Modal Content */}
-          <div 
-            className="relative max-w-4xl max-h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close Button */}
-            <button
+          {isModalOpen && (
+            <div
+              className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
               onClick={closeModal}
-              className="absolute top-4 right-4 bg-black bg-opacity-50 text-white rounded-full p-2 shadow-lg hover:bg-opacity-70 transition-colors duration-200 z-20"
-              aria-label="Close modal"
             >
-              <X className="h-6 w-6" />
-            </button>
-            
-            {/* Zoom Controls */}
-            <div className="absolute top-4 left-4 flex flex-col space-y-2 z-20">
-              <button
-                onClick={zoomIn}
-                className="bg-black bg-opacity-50 text-white rounded-full p-2 shadow-lg hover:bg-opacity-70 transition-colors duration-200"
-                aria-label="Zoom in"
-                disabled={zoomLevel >= 3}
+              {/* Modal Content */}
+              <div
+                className="relative max-w-4xl max-h-[90vh] bg-white rounded-lg shadow-2xl overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
               >
-                <ZoomIn className="h-5 w-5" />
-              </button>
-              <button
-                onClick={zoomOut}
-                className="bg-black bg-opacity-50 text-white rounded-full p-2 shadow-lg hover:bg-opacity-70 transition-colors duration-200"
-                aria-label="Zoom out"
-                disabled={zoomLevel <= 0.5}
-              >
-                <ZoomOut className="h-5 w-5" />
-              </button>
-            </div>
+                {/* Close Button */}
+                <button
+                  onClick={closeModal}
+                  className="absolute top-4 right-4 bg-black bg-opacity-50 text-white rounded-full p-2 shadow-lg hover:bg-opacity-70 transition-colors duration-200 z-20"
+                  aria-label="Close modal"
+                >
+                  <X className="h-6 w-6" />
+                </button>
 
-            {/* Zoom Level Indicator */}
-            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm z-20">
-              {Math.round(zoomLevel * 100)}%
-            </div>
-            
-            {/* Image Container */}
-            <div 
-              className="w-full h-[85vh] overflow-hidden cursor-grab active:cursor-grabbing"
-              onMouseDown={handleMouseDown}
-              onMouseMove={handleMouseMove}
-              onMouseUp={handleMouseUp}
-              onMouseLeave={handleMouseUp}
-              onWheel={handleWheel}
-              style={{ 
-                cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default'
-              }}
-            >
-              {/* Large Image */}
-              <img
-                src={product.image}
-                alt={product.product_name}
-                className="w-full h-full object-contain rounded-lg transition-transform duration-200"
-                style={{
-                  transform: `scale(${zoomLevel}) translate(${position.x / zoomLevel}px, ${position.y / zoomLevel}px)`,
-                  transformOrigin: 'center center'
-                }}
-                draggable={false}
-              />
-            </div>
+                {/* Zoom Controls */}
+                <div className="absolute top-4 left-4 flex flex-col space-y-2 z-20">
+                  <button
+                    onClick={zoomIn}
+                    className="bg-black bg-opacity-50 text-white rounded-full p-2 shadow-lg hover:bg-opacity-70 transition-colors duration-200"
+                    aria-label="Zoom in"
+                    disabled={zoomLevel >= 3}
+                  >
+                    <ZoomIn className="h-5 w-5" />
+                  </button>
+                  <button
+                    onClick={zoomOut}
+                    className="bg-black bg-opacity-50 text-white rounded-full p-2 shadow-lg hover:bg-opacity-70 transition-colors duration-200"
+                    aria-label="Zoom out"
+                    disabled={zoomLevel <= 0.5}
+                  >
+                    <ZoomOut className="h-5 w-5" />
+                  </button>
+                </div>
 
-            {/* Instructions */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full text-sm z-20">
-              Scroll to zoom • Drag to pan
+                {/* Zoom Level Indicator */}
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm z-20">
+                  {Math.round(zoomLevel * 100)}%
+                </div>
+
+                {/* Image Container */}
+                <div
+                  className="w-full h-[85vh] overflow-hidden cursor-grab active:cursor-grabbing"
+                  onMouseDown={handleMouseDown}
+                  onMouseMove={handleMouseMove}
+                  onMouseUp={handleMouseUp}
+                  onMouseLeave={handleMouseUp}
+                  onWheel={handleWheel}
+                  style={{
+                    cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default'
+                  }}
+                >
+                  {/* Large Image */}
+                  <img
+                    src={product.image}
+                    alt={product.product_name}
+                    className="w-full h-full object-contain rounded-lg transition-transform duration-200"
+                    style={{
+                      transform: `scale(${zoomLevel}) translate(${position.x / zoomLevel}px, ${position.y / zoomLevel}px)`,
+                      transformOrigin: 'center center'
+                    }}
+                    draggable={false}
+                  />
+                </div>
+
+                {/* Instructions */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full text-sm z-20">
+                  Scroll to zoom • Drag to pan
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          )}
 
           {/* Product Info */}
           <div className="space-y-6">
