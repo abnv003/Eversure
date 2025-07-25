@@ -66,7 +66,7 @@ const About = () => {
     <div className="w-full lg:w-1/2 text-left">
       <h1 className="text-4xl md:text-5xl font-bold mb-6">About Eversure</h1>
       <p className="text-xl" style={{ color: '#f0f9ff' }}>
-        Eversure, a brand under the medical device division of Eversure India Pvt. Ltd., is part of Pune’s Rathigroup, an industrial house now in its third generation, with origins in a textile mill established in 1948. The medical division, launched in 2012, is the group’s youngest venture. Operating from a world-class certified facility in Pune, it features advanced injection moulding, extrusion, Class 10000 cleanroom assembly, ETO sterilization, and automated packaging. Eversure offers a wide range of disposable medical devices for Infusion Therapy, Anesthesia, Gastroenterology, Urology, Surgery & Wound Drainage, and Central Venous Access. Committed to innovation, quality, and reliability, the brand upholds high technical standards and environmental responsibility to ensure comfort and care.
+        Eversure is the medical device brand of Pune's Rathigroup, manufacturing a wide range of disposable devices from a certified, world-class local facility. Their product lines include items for Infusion Therapy, Anesthesia, and Urology, all produced using advanced manufacturing and sterilization. The brand is committed to high standards of quality, innovation, and reliability to ensure patient care.
       </p>
     </div>
 
@@ -80,93 +80,6 @@ const About = () => {
     </div>
   </div>
 </section>
-
-<section className="bg-gray-50 py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-
-                {/* <!-- Content Container - Right Side --> */}
-                <div className="w-full lg:w-1/2">
-                    <div className="max-w-xl">
-                        {/* <!-- Title with underline --> */}
-                        <div className="mb-8">
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-teal-600 mb-3">
-                                Education
-                            </h2>
-                            <div className="w-16 h-1 bg-orange-400 rounded"></div>
-                        </div>
-
-                        {/* <!-- Description --> */}
-                        <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                            Education is the cornerstone of progress, and we are dedicated to fostering a brighter future through:
-                        </p>
-
-                        {/* <!-- Features List --> */}
-                        <div className="space-y-6">
-                            <div className="flex items-start gap-4">
-                                <div className="flex-shrink-0 mt-1">
-                                    <svg className="w-5 h-5 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <p className="text-gray-700 text-base leading-relaxed">
-                                    Providing essential learning materials such as notebooks, school bags, and stationery to underprivileged students.
-                                </p>
-                            </div>
-
-                            <div className="flex items-start gap-4">
-                                <div className="flex-shrink-0 mt-1">
-                                    <svg className="w-5 h-5 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <p className="text-gray-700 text-base leading-relaxed">
-                                    Supporting schools through infrastructure development and maintenance to ensure a conducive learning environment.
-                                </p>
-                            </div>
-
-                            <div className="flex items-start gap-4">
-                                <div className="flex-shrink-0 mt-1">
-                                    <svg className="w-5 h-5 text-teal-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <p className="text-gray-700 text-base leading-relaxed">
-                                    Encouraging young minds by facilitating scholarships and skill-building programs.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-      {/* Mission & Vision */}
-      {/* <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                To develop and manufacture high-quality medical devices that improve patient outcomes and enhance the capabilities of healthcare professionals worldwide.
-              </p>
-              <p className="text-lg text-gray-600">
-                We are committed to innovation, safety, and excellence in everything we do, ensuring that our products meet the highest standards of quality and reliability.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                To be the global leader in medical device manufacturing, recognized for our innovation, quality, and commitment to improving healthcare outcomes.
-              </p>
-              <p className="text-lg text-gray-600">
-                We envision a world where advanced medical technology is accessible to all, enabling healthcare professionals to provide the best possible care to their patients.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* Values Section */}
       <section className="py-16 bg-gray-50">
@@ -219,35 +132,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Team Section
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
-            <p className="text-lg text-gray-600">
-              Experienced professionals leading our mission to advance healthcare.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { name: 'Dr. Sarah Johnson', role: 'CEO & Founder', image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { name: 'Michael Chen', role: 'CTO', image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400' },
-              { name: 'Dr. Emily Rodriguez', role: 'Head of R&D', image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400' }
-            ].map((member, index) => (
-              <div key={index} className="text-center bg-white rounded-lg shadow-sm p-6">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                <p className="font-medium" style={{color: '#309ed9'}}>{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };
