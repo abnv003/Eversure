@@ -14,54 +14,54 @@ export type Product = {
 };
 
 export const products: Product[] = [
-    {
-      "id": 1,
-      "product_name": "MODCANN WI+",
-      "sizes": "14G to 26G",
-      "product_code": "1001",
-      "category": "infusion-transfusion-therapy",
-      "sub_category": "IV Cannula",
-      "description": "For infusion of intravenous fluids and medicines.",
-      "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-modcann-wi.webp",
-      "product_features": [
-      {
-        "title": "Ultra-Sharp Needle",
-        "description": "Back-cut siliconised stainless steel needle for smooth insertion."
-      },
-      {
-        "title": "Smooth & Flexible Insertion",
-        "description": "Tapered tip and soft wings reduce friction."
-      },
-      {
-        "title": "Radiopaque & Translucent Catheter",
-        "description": "Three / four striped FEP catheter visible under X-ray."
-      },
-      {
-        "title": "Biocompatible, Safe Material",
-        "description": "Latex-free, PVC-free for extended safe use."
-      },
-      {
-        "title": "Optional  PUR Catheter",
-        "description": "Polyurethane option enhances kink resistance and comfort."
-      },
-      {
-        "title": "Flashback Chamber with Vent Filter",
-        "description": "Transparent chamber and filter ensure quick flashback."
-      },
-      {
-        "title": "Durable Component Materials",
-        "description": "Polypropylene body and polycarbonate chamber for strength."
-      },
-      {
-        "title": "Secure Injection Port",
-        "description": "Non-return silicon valve with color-coded cap."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, CE certified, single-use device."
-      }
-    ]
-    },
+    // {
+    //   "id": 1,
+    //   "product_name": "MODCANN WI+",
+    //   "sizes": "14G to 26G",
+    //   "product_code": "1001",
+    //   "category": "infusion-transfusion-therapy",
+    //   "sub_category": "IV Cannula",
+    //   "description": "For infusion of intravenous fluids and medicines.",
+    //   "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-modcann-wi.webp",
+    //   "product_features": [
+    //   {
+    //     "title": "Ultra-Sharp Needle",
+    //     "description": "Back-cut siliconised stainless steel needle for smooth insertion."
+    //   },
+    //   {
+    //     "title": "Smooth & Flexible Insertion",
+    //     "description": "Tapered tip and soft wings reduce friction."
+    //   },
+    //   {
+    //     "title": "Radiopaque & Translucent Catheter",
+    //     "description": "Three / four striped FEP catheter visible under X-ray."
+    //   },
+    //   {
+    //     "title": "Biocompatible, Safe Material",
+    //     "description": "Latex-free, PVC-free for extended safe use."
+    //   },
+    //   {
+    //     "title": "Optional  PUR Catheter",
+    //     "description": "Polyurethane option enhances kink resistance and comfort."
+    //   },
+    //   {
+    //     "title": "Flashback Chamber with Vent Filter",
+    //     "description": "Transparent chamber and filter ensure quick flashback."
+    //   },
+    //   {
+    //     "title": "Durable Component Materials",
+    //     "description": "Polypropylene body and polycarbonate chamber for strength."
+    //   },
+    //   {
+    //     "title": "Secure Injection Port",
+    //     "description": "Non-return silicon valve with color-coded cap."
+    //   },
+    //   {
+    //     "title": "Sterile & Certified",
+    //     "description": "ETO sterilized, CE certified, single-use device."
+    //   }
+    // ]
+    // },
     {
       "id": 2,
       "product_name": "ECOCANN",
@@ -114,7 +114,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "IV Cannula",
       "description": "For infusion of intravenous fluids and medicines.",
-      "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-ecocann-w.webp",
+      "image": "/images/Ecocann W.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -158,7 +158,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "IV Cannula",
       "description": "For infusion of intravenous fluids and medicines.",
-      "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-ecocann-n.webp",
+      "image": "/images/Ecocann N.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -202,7 +202,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "IV Cannula",
       "description": "For infusion of intravenous fluids and medicines.",
-      "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-ecowin.webp",
+      "image": "/images/ecowin.jpg",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -230,42 +230,42 @@ export const products: Product[] = [
       }
     ]
     },
-    {
-      "id": 6,
-      "product_name": "ECOCANN S",
-      "sizes": "14G to 26G",
-      "product_code": "1010",
-      "category": "infusion-transfusion-therapy",
-      "sub_category": "IV Cannula",
-      "description": "For infusion of intravenous fluids and medicines.",
-      "image": "http://eversuremedical.com/assets/images/product/infusion/iv-infusion-products-iv-cannula-ecocann-s.webp",
-      "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ]
-    },
+    // {
+    //   "id": 6,
+    //   "product_name": "ECOCANN S",
+    //   "sizes": "14G to 26G",
+    //   "product_code": "1010",
+    //   "category": "infusion-transfusion-therapy",
+    //   "sub_category": "IV Cannula",
+    //   "description": "For infusion of intravenous fluids and medicines.",
+    //   "image": "http://eversuremedical.com/assets/images/product/infusion/iv-infusion-products-iv-cannula-ecocann-s.webp",
+    //   "product_features": [
+    //   {
+    //     "title": "Ultra-Sharp Needle Design",
+    //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+    //   },
+    //   {
+    //     "title": "Transparent Needle Hub with Flashback Chamber",
+    //     "description": "Provides easy visualization after needle insertion."
+    //   },
+    //   {
+    //     "title": "Radiopaque Frictionless Catheter",
+    //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+    //   },
+    //   {
+    //     "title": "Biocompatible Material",
+    //     "description": "Supports longer indwelling time and patient safety."
+    //   },
+    //   {
+    //     "title": "Latex and PVC-Free",
+    //     "description": "Safe for allergy-prone and sensitive patients."
+    //   },
+    //   {
+    //     "title": "Sterile and Certified",
+    //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+    //   }
+    // ]
+    // },
     {
       "id": 7,
       "product_name": "MODWAY",
@@ -346,7 +346,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "I. V. Infusion Set",
       "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
-      "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-ecovenn-nv.webp",
+      "image": "/images/Ecovenn NV.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
