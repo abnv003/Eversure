@@ -4,29 +4,17 @@ import Carousel from '../components/Carousel';
 
 const renderImage = [
   {
-    title: "Social Impact",
-    desc: "Creating lasting change begins with empowering communities, and we are committed to making a meaningful social impact through:",
+    title: "Environmental Impact",
+    desc: "Preserving the environment is integral to our mission, and we are committed to sustainable practices through:",
     content: [
-      "Supporting inclusive programs that uplift underprivileged groups through education, healthcare, and basic necessities.",
-      "Building resilient community infrastructure by investing in development projects, skill training, and local entrepreneurship.",
-      "Encouraging civic engagement and social responsibility through awareness drives, volunteer initiatives, and partnerships with grassroots organizations."
+      "Reducing our ecological footprint by optimizing energy usage, water conservation, and promoting eco-friendly production methods.",
+      "Implementing responsible resource management that prioritizes renewable materials, minimal waste generation, and efficient consumption.",
+      "Fostering environmental awareness and compliance by adhering to environmental standards and encouraging green initiatives across all levels."
     ],
-    imageUrl: "/heroimages/social_impact.jpeg",
+    imageUrl: "/heroimages/environmental.jpeg",
     imageAlt: "social impact",
     imageLeft: true
-  },
-  {
-    title: "Corporate Governance",
-    desc: "Strong corporate governance fosters trust, transparency, and long-term success, and we are committed to ethical leadership through:",
-    content: [
-      "Establishing clear policies and accountability frameworks to ensure compliance, fairness, and integrity in all operations.",
-      "Strengthening oversight and risk management systems through robust internal controls, audits, and board effectiveness.",
-      "Encouraging a culture of transparency and ethical decision-making by promoting stakeholder engagement and responsible business conduct."
-    ],
-    imageUrl: "/heroimages/corporate_governance.jpeg",
-    imageAlt: "corporate governance",
-    imageLeft: false
-  }  
+  } 
 ];
 
 

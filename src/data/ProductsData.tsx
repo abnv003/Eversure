@@ -11,6 +11,7 @@ export type Product = {
     title: string;
     description: string;
   }[];
+  options?: string[];
 };
 
 export const products: Product[] = [
@@ -70,7 +71,7 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "IV Cannula",
       "description": "For infusion of intravenous fluids and medicines.",
-      "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-ecocann.webp",
+      "image": "/images/IV Cannula.png",
       "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -104,7 +105,8 @@ export const products: Product[] = [
         "title": "Sterile & Certified",
         "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
       }
-    ]
+    ],
+    "options": []
     },
     {
       "id": 3,
@@ -148,7 +150,8 @@ export const products: Product[] = [
         "title": "Sterile & Certified",
         "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
       }
-    ]
+    ],
+    "options": []
     },
     {
       "id": 4,
@@ -192,7 +195,8 @@ export const products: Product[] = [
         "title": "Sterile & Certified",
         "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
       }
-    ]
+    ],
+    "options": []
     },
     {
       "id": 5,
@@ -228,7 +232,8 @@ export const products: Product[] = [
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
       }
-    ]
+    ],
+    "options": []
     },
     // {
     //   "id": 6,
@@ -274,32 +279,45 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "Three Way Stop Cock",
       "description": "For simultaneous and continuous infusion of two fluids to connect the luer device and control flow direction.",
-      "image": "http://eversuremedical.com/assets/images/product/infusion-transfusion-modway.webp",
+      "image": "/images/three way stop cock.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "360° Smooth Rotation",
+        "description": "Enables unrestricted and precise fluid direction control."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Universal 6% Luer Taper",
+        "description": "Ensures leak-proof fitment with standard connections."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Connection Ports",
+        "description": "1 Male luer lock: For secure connection with other devices, 2 Female luer connectors: For compatibility with multiple setups."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "Clear Polycarbonate Body",
+        "description": "Transparent channel allows easy visual monitoring of fluid passage."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
+        "title": "Minimal Priming Volume",
+        "description": "Ensures accurate drug dosing and administration."
       },
       {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "Rigid Structure",
+        "description": "Designed to minimize air entrapment with a circular flow channel."
+      },
+      {
+        "title": "Rotating Handle with Directional Arrow",
+        "description": "For clear flow path indication."
+      },
+      {
+        "title": "Sterility & Safety",
+        "description": "ETO Sterilized, Single Use, Non-pyrogenic, CE Certified"
       }
+    ],
+    "options": [
+      "Available in Colours : Red, Blue and White",
+      "Non Lipid Resistant / Lipid Resistant",
+      "Without Rotator"
     ]
     },
     {
@@ -310,32 +328,40 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "Three Way Stop Cock",
       "description": "For simultaneous and continuous infusion of two fluids to connect the luer device and control flow direction away from the venipuncture site.",
-      "image": "http://eversuremedical.com/assets/images/product/infusion-transfusion-modexway.webp",
+      "image": "/images/Three way stop cock with ext tube.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "DEHP-Free PVC Tube",
+        "description": "Ensures safety and minimizes patient exposure to harmful plasticizers."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Dual-End Connectivity",
+        "description": "One end: Integrated Three Way Stopcock, Other end: Male luer lock connector for secure attachment."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "360° Smooth Rotation",
+        "description": "Allows easy control of fluid direction."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "Kink-Resistant Extension Tube",
+        "description": "Designed with a smooth internal surface for consistent fluid flow."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
+        "title": "Extension Tube Dimensions",
+        "description": "Inner Diameter (I Ø): 3.0 mm, Outer Diameter (O Ø): 4.1 mm"
       },
       {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "Available Tube Lengths (in cm)",
+        "description": "10, 25, 50, 100, 150, 200"
+      },
+      {
+        "title": "Sterility & Certification",
+        "description": "ETO Sterilized, Single Use, Non-pyrogenic, CE Certified"
       }
+    ],
+    "options": [
+      "Lipid Resistant Three way stop cock",
+      "Rotating luer lock"
     ]
     },
     {
@@ -349,29 +375,47 @@ export const products: Product[] = [
       "image": "/images/Ecovenn NV.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "Sharp Spike",
+        "description": "Strong, durable spike ensures easy and precise piercing of fluid containers."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Transparent Drip Chamber",
+        "description": "Facilitates visual monitoring of flow rate and effective priming."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "15 Micron Fluid Filter",
+        "description": "Integrated in chamber for filtration of particulates."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "Kink-Resistant PVC Tube",
+        "description": "Ensures uninterrupted, uniform fluid flow."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
+        "title": "Smooth Roller Clamp",
+        "description": "Allows accurate flow rate adjustment."
       },
       {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "Self-Sealing Latex Bulb",
+        "description": "Prevents leakage during infusion."
+      },
+      {
+        "title": "Drop Rate",
+        "description": "20 drops/ml for standard dosing precision."
+      },
+      {
+        "title": "Tube Size",
+        "description": "Length: 1.5 meters and Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
+      },
+      {
+        "title": "Sterility & Safety",
+        "description": "ETO Sterilized, Single Use, Non-pyrogenic, CE Certified"
       }
+    ],
+    "options": [
+      "With Y injection port",
+      "With/without needle",
+      "Luer lock or rotating luer lock",
+      "Flow regulator & needle-free Y injection port"
     ]
     },
     {
@@ -382,32 +426,54 @@ export const products: Product[] = [
       "category": "infusion-transfusion-therapy",
       "sub_category": "I. V. Infusion Set",
       "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
-      "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-ecovenn-v.webp",
+      "image": "/images/infusion.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "Sharp Spike",
+        "description": "Ensures smooth and easy piercing."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Air Vent",
+        "description": "Integrated with bacteria retentive filter to prevent contamination."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Transparent Drip Chamber",
+        "description": "Facilitates clear visibility for flow rate monitoring and priming."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "15 Micron Fluid Filter",
+        "description": "Filters out particulate matter for clean infusion."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
+        "title": "Kink-Resistant PVC Tube",
+        "description": "Promotes uninterrupted fluid flow."
       },
       {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "Smooth Roller Clamp",
+        "description": "Allows precise flow rate adjustments."
+      },
+      {
+        "title": "Self-Sealing Latex Bulb",
+        "description": "Prevents backflow and leakage."
+      },
+      {
+        "title": "Drop Rate",
+        "description": "Standard 20 drops/ml."
+      },
+      {
+        "title": "Tube Specifications",
+        "description": "Length: 1.5 meters and Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
+      },
+      {
+        "title": "Sterility & Compliance",
+        "description": "ETO Sterilized, Single Use, Non-Pyrogenic, CE Certified"
       }
+    ],
+    "options": [
+      "With Y injection port",
+      "With/without needle",
+      "Luer lock or rotating luer lock",
+      "With Flow regulator & needle-free Y injection port"
     ]
     },
     // {
@@ -493,34 +559,58 @@ export const products: Product[] = [
       "image": "/images/modvenn v.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "DEHP Free",
+        "description": "Safer for patients, especially in long-term use."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Gravity Feed Only",
+        "description": "No external pressure needed."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Sharp Spike",
+        "description": "Ensures easy and smooth penetration into fluid containers."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "Transparent Drip Chamber",
+        "description": "Allows visual monitoring of flow rate and priming."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
+        "title": "15 Micron Filter",
+        "description": "Filters out particulate matter from fluid."
       },
       {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "Kink-Resistant PVC Tube",
+        "description": "Ensures smooth and uninterrupted fluid flow."
+      },
+      {
+        "title": "Smooth Roller Clamp",
+        "description": "Easy control of flow rate."
+      },
+      {
+        "title": "Self-Sealing Latex-Free Bulb with Luer Lock",
+        "description": "Includes latex-free Y-connector."
+      },
+      {
+        "title": "Drop Rate",
+        "description": "20 drops/ml"
+      },
+      {
+        "title": "Tube Specifications",
+        "description": "Length: 1.5 meters and Diameter: Inner Ø 2.8 mm, Outer Ø 4.0 mm"
+      },
+      {
+        "title": "Sterility & Safety",
+        "description": "ETO Sterilized, Single Use, Non-Pyrogenic, CE Certified"
       }
+    ],
+    "options": [
+      "Needle free Y connector",
+      "With Flow regulator"
     ]
     },
     {
       "id": 14,
-      "product_name": "MODVENN V +",
+      "product_name": "MODVENN V+",
       "sizes": "Size information not available",
       "product_code": "1105",
       "category": "infusion-transfusion-therapy",
@@ -529,29 +619,61 @@ export const products: Product[] = [
       "image": "/images/Modvenn V+.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "DEHP Free",
+        "description": "Ensures patient safety during long-term use."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Dual Functionality",
+        "description": "Suitable for both gravity feed and pump/pressure infusion."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Strong Beveled Piercing Spike",
+        "description": "Facilitates easy and effective container penetration."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "Air Vent with Filter",
+        "description": "Prevents air contamination, reduces Healthcare Associated Infections (HIM)."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
+        "title": "Flexible Double Drip Chamber",
+        "description": "Improves visual access and allows faster fluid level adjustment."
       },
       {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "15 Micron Filter",
+        "description": "Filters foreign particles from fluid."
+      },
+      {
+        "title": "Auto Air Stop with Priming Filter",
+        "description": "Prevents air embolism during infusion."
+      },
+      {
+        "title": "Kink Resistant PVC Tube",
+        "description": "Maintains steady flow."
+      },
+      {
+        "title": "Smooth Roller Clamp",
+        "description": "Allows easy control of flow rate."
+      },
+      {
+        "title": "Latex-Free Self-Sealing Bulb",
+        "description": "Includes Y-connector for administering additional medication."
+      },
+      {
+        "title": "Drop Rate",
+        "description": "20 drops/ml"
+      },
+      {
+        "title": "Tube Size",
+        "description": "Length: 1.5 meters and Diameter: Inner Ø 2.8 mm, Outer Ø 4.0 mm"
+      },
+      {
+        "title": "Safety Standards",
+        "description": "ETO Sterilized, Single Use, Non-Pyrogenic, CE Certified"
       }
+    ],
+    "options": [
+      "With Y injection port",
+      "With Flow regulator & needle-free Y injection port"
     ]
     },
     {
@@ -565,29 +687,60 @@ export const products: Product[] = [
       "image": "/images/modvenn sv low.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "0.2 Micron Inline Filter",
+        "description": "Retains bacteria and fine particles, preventing infections and ensuring sterile infusion."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "DEHP-Free",
+        "description": "Enhances patient safety, especially for long-term or sensitive infusions."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Dual Mode Functionality",
+        "description": "Suitable for both gravity feed and pump/pressure infusion systems."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "Strong Beveled Piercing Spike",
+        "description": "Facilitates easy, sharp penetration into fluid containers."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
+        "title": "Air Vent with Filter",
+        "description": "Prevents air contamination, reducing the risk of Healthcare Associated Infections (HIM)"
       },
       {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "Transparent Drip Chamber",
+        "description": "Allows clear visibility for monitoring flow rate and priming."
+      },
+      {
+        "title": "15 Micron Fluid Filter (Inside Drip Chamber)",
+        "description": "Filters visible foreign particles from the fluid."
+      },
+      {
+        "title": "Kink Resistant, DEHP-Free PVC Tubing",
+        "description": "Maintains smooth and uninterrupted fluid flow."
+      },
+      {
+        "title": "Smooth Roller Clamp",
+        "description": "Offers precise and easy adjustment of the flow rate."
+      },
+      {
+        "title": "Latex-Free Self-Sealing Bulb with Y-Connector",
+        "description": "Enables safe administration of additional medications via the Y port."
+      },
+      {
+        "title": "Drop Rate: 20 drops/ml",
+        "description": "Standardized drop factor for consistent dosage control."
+      },
+      {
+        "title": "Tube Length: 2.0 meters",
+        "description": "Provides flexibility for different clinical setups."
       }
+    ],
+    "options": [
+      "PVC-Free Components",
+      "Priming Filter Cap",
+      "With or Without Needle",
+      "Y-Injection Port (Needle / Latex-Free Options)",
+      "Check Valve"
     ]
     },
     {
@@ -601,29 +754,51 @@ export const products: Product[] = [
       "image": "/images/modvenn sv.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "0.2 micron inline filter",
+        "description": "Retains bacteria and fine particles and compatible with gravity & pressure infusion systems."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Double drip chamber",
+        "description": "Ensures visibility and fluid control."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Air vent with filter",
+        "description": "Prevents air contamination; reduces HAIs has 15-micron fluid filter inside the chamber."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "Auto air stop with priming filter",
+        "description": "Prevents air embolism."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
+        "title": "Strong spike",
+        "description": "Easy and secure piercing."
       },
       {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "Kink-resistant tubing",
+        "description": "Made from DEHP-free PVC."
+      },
+      {
+        "title": "Smooth roller clamp",
+        "description": "Includes safety features for flow control."
+      },
+      {
+        "title": "Latex-free Y-connector",
+        "description": "With secure luer lock."
+      },
+      {
+        "title": "Drop rate",
+        "description": "20 drops/ml"
+      },
+      {
+        "title": "Tube length",
+        "description": "2.0 m"
       }
+    ],
+    "options": [
+      "PVC Free",
+      "Priming filter cap",
+      "Needle Free",
+      "Latex-free or needle-type Y injection ports"
     ]
     },
     {
@@ -637,29 +812,43 @@ export const products: Product[] = [
       "image": "/images/burette 5.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "Graduated Transparent Burette Chamber",
+        "description": "Capacity 110 ml & 150 ml and allows accurate volume control"
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Bacteria-retentive Air Inlet",
+        "description": "Prevents contamination from external air"
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Injection Port",
+        "description": "Enables addition of extra medication"
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "Smooth Roller Clamp",
+        "description": "For precise adjustment of flow rate"
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
+        "title": "Floating Auto Shut-off Valve",
+        "description": "Prevents air embolism and also Indicates empty chamber status"
       },
       {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "15-Micron Fluid Filter",
+        "description": "Removes foreign particles and debris"
+      },
+      {
+        "title": "Drop Rate",
+        "description": "60 drops/ml for controlled infusion"
+      },
+      {
+        "title": "Soft PVC Tubing",
+        "description": "Transparent and kink-resistant , Length: 150 cm and  Diameter: I.D. 2.8 mm, O.D. 4.0 mm"
       }
+    ],
+    "options": [
+      "With/without Y injection port",
+      "With/without needle",
+      "Luer lock or rotating luer lock",
+      "Flow regulator & needle-free Y injection port options"
     ]
     },
     {
@@ -696,6 +885,12 @@ export const products: Product[] = [
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
       }
+    ],
+    "options": [
+      "With/without Y injection port",
+      "With/without needle",
+      "Luer lock or rotating luer lock",
+      "Flow regulator & needle-free Y injection port options"
     ]
     },
     {
@@ -732,6 +927,12 @@ export const products: Product[] = [
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
       }
+    ],
+    "options": [
+      "With/without Y injection port",
+      "With/without needle",
+      "Luer lock or rotating luer lock",
+      "Flow regulator & needle-free Y injection port options"
     ]
     },
     {
@@ -768,6 +969,12 @@ export const products: Product[] = [
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
       }
+    ],
+    "options": [
+      "With/without Y injection port",
+      "With/without needle",
+      "Luer lock or rotating luer lock",
+      "Flow regulator & needle-free Y injection port options"
     ]
     },
     // {
@@ -1020,6 +1227,12 @@ export const products: Product[] = [
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
       }
+    ],
+    "options": [
+      "With/without Y injection port",
+      "With/without needle",
+      "Luer lock or rotating luer lock",
+      "Flow regulator & needle-free Y injection port options"
     ]
     },
     {
@@ -1033,30 +1246,31 @@ export const products: Product[] = [
       "image": "/images/ecosuc.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "Durable PVC Tubing",
+        "description": "Flexible, kink-resistant medical-grade PVC for smooth suction and pressure resistance."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Easy Connection",
+        "description": "Soft connectors at both ends for easy attachment to suction tips and apparatus."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Complete Set",
+        "description": "Includes Yankauer Suction Tip on ribbed tube with universal connectors."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "Tube Specifications",
+        "description": " I.D. 6.3 mm & O.D. 9.3 mm."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
+        "title": "Length Options",
+        "description": "Available tube lengths: 210, 250, and 300 cm."
       },
       {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "Safety Standard",
+        "description": "ETO Sterilized, Single Use, Non-Pyrogenic, CE Certified."
       }
-    ]
+    ],
+    "options": []
     },
     {
       "id": 29,
@@ -1069,29 +1283,28 @@ export const products: Product[] = [
       "image": "/images/CWS.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "Pressure Control",
+        "description": "Large clamp to manage negative pressure effectively."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Smooth Insertion",
+        "description": "Flexible suction catheter ensures frictionless wound entry."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Durability",
+        "description": "Kink-resistant tube built to endure suction pressure."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "Spare Catheter",
+        "description": "Includes perforated Redon drain (radio-opaque)."
       }
+    ],
+    "options": [
+      "Bellow unit with connector",
+      "Connecting tube with clamp & Y connector",
+      "Trocar needle with matching catheter",
+      "Spare perforated catheter",
+      "Bellow chamber capacity: 600 ml & 800 ml"
     ]
     },
     {
@@ -1105,30 +1318,35 @@ export const products: Product[] = [
       "image": "/images/ecocath thor s.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "Atraumatic Tip",
+        "description": "Smooth, rounded distal end with large finish eyes for efficient drainage and minimal tissue damage."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Depth Marking",
+        "description": "Graduated every 2 cm for accurate placement during insertion."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Easy Handling",
+        "description": "Pull-through tapered tongue at the proximal end improves grip and non-traumatic insertion."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "Secure Fit",
+        "description": "Comes with size-matched connector for leak-proof connection to the drainage system."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
+        "title": "Radiopaque",
+        "description": "Full-length radiopaque line ensures visibility under X-ray."
       },
       {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "Safety",
+        "description": "Cross-side eyes reduce the risk of tissue aspiration."
+      },
+      {
+        "title": "Standard Length",
+        "description": "45 cm catheter length supports common clinical use."
       }
-    ]
+    ],
+    "options": []
     },
     {
       "id": 31,
@@ -1141,30 +1359,27 @@ export const products: Product[] = [
       "image": "/images/ecocath thor t side.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "Trocar Tip",
+        "description": "Includes blunt, smooth-tipped trocar for accurate and controlled insertion."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "Graduated Markings",
+        "description": "Marked at 5, 10, 15 & 20 cm intervals for accurate depth placement."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Ease of Use",
+        "description": "Proximal end has a tapered connector for secure drainage bottle connection."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
+        "title": "Efficient Drainage",
+        "description": "Large, polished eyes at the distal end for maximum fluid evacuation."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "X-Ray Visible",
+        "description": "Radiopaque line extends through the catheter length for imaging verification."
       }
-    ]
+    ],
+    "options": []
     },
     {
       "id": 32,
@@ -1177,29 +1392,27 @@ export const products: Product[] = [
       "image": "/images/cvc.png",
       "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "Soft Tip Polyurethane Catheter",
+        "description": "Made of biocompatible PU (Polyurethane) for body safety, Soft, tapered tip reduces trauma to vessel walls, Thermo-sensitive – softens at body temperature."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
+        "title": "J-Tip Guide Wire",
+        "description": "Flexible and kink-resistant for smooth insertion, Soft tip J-end prevents vessel injury, Stainless steel with torque control for maneuverability, Rounded ends increase safety."
       },
       {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Y-Shaped Introducer Needle",
+        "description": "Bio-compatible, sharp, stainless steel, Y-valve reduces blood spillage and allows guide wire insertion without leakage, Easy to grip and operate."
       },
       {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+        "title": "Tissue Dilator",
+        "description": "Smooth surface and sturdy design for dilating tissue during insertion, Sized to catheter and guide wire for compatibility."
       }
+    ],
+    "options": [
+      "Clamp – prevents air embolism when the catheter is not in use.",
+      "Scalpel – for skin incision.",
+      "5 ml Syringe – for aspiration/flush.",
+      "5 ml Syringe – for aspiration/flush."
     ]
     }
 ];

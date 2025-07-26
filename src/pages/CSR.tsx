@@ -13,41 +13,29 @@ interface CSRSectionProps {
 
 const renderImage = [
   {
-    title: "Food Support",
-    desc: "Food is a fundamental human right, and we are committed to building a healthier future through:",
+    title: "Education",
+    desc: "Education is the cornerstone of progress, and we are dedicated to fostering a brighter future through:",
     content: [
-      "Providing nutritious meals and essential food supplies to underprivileged families and communities in need.",
-      "Supporting community kitchens and food banks through infrastructure development and regular maintenance to ensure consistent food distribution.",
-      "Encouraging long-term food security by facilitating awareness programs, nutrition education, and sustainable livelihood initiatives."
+      "Providing essential learning materials such as notebooks, school bags, and stationery to underprivileged students.",
+      "Supporting schools through infrastructure development and maintenance to ensure a conducive learning environment.",
+      "Encouraging young minds by facilitating scholarships and skill-building programs."
     ],
-    imageUrl: "/heroimages/food_support.jpeg",
+    imageUrl: "/heroimages/education.jpeg",
     imageAlt: "food support",
     imageLeft: true
   },
   {
-    title: "Animal Welfare",
-    desc: "Compassion for animals reflects the health of our society, and we are committed to a kinder world through:",
+    title: "Health",
+    desc: "Health is at the core of our mission, and we strive to improve healthcare access and awareness through:",
     content: [
-      "Providing food, shelter, and medical care to stray and abandoned animals to ensure their well-being and survival.",
-      "Supporting animal shelters and rescue centers through infrastructure development, equipment, and operational support.",
-      "Encouraging responsible pet ownership and awareness by organizing adoption drives, sterilization programs, and community education initiatives."
+      "Organizing medical camps and health check-ups for underserved communities.",
+      "Providing medical supplies and equipment to healthcare facilities in need.",
+      "Promoting preventive healthcare and wellness programs."
     ],
-    imageUrl: "/heroimages/animal_welfare.jpeg",
+    imageUrl: "/heroimages/health.jpeg",
     imageAlt: "animal welfare",
     imageLeft: false
-  },
-  {
-    title: "Social Welfare",
-    desc: "A just and inclusive society is built on care and support, and we are dedicated to empowering communities through:",
-    content: [
-      "Providing essential resources and services such as clothing, hygiene kits, and shelter support to individuals and families in need.",
-      "Supporting community centers and outreach programs by improving infrastructure and facilitating access to health, education, and legal aid.",
-      "Encouraging self-reliance and dignity through skill development initiatives, employment assistance, and awareness campaigns for marginalized groups."
-    ],
-    imageUrl: "/heroimages/social_welfare.jpeg",
-    imageAlt: "social welfare",
-    imageLeft: true
-  }     
+  }    
 ];
 
 export const CSR = () => {

@@ -231,12 +231,12 @@ const ProductDetails = () => {
               </div>
               <p className="text-gray-600 mb-4">{product.description}</p>
 
-              <p className="text-gray-700 leading-relaxed mb-8">
+              {/* <p className="text-gray-700 leading-relaxed mb-8">
                 The {product.product_name} is an advanced medical device specifically
                 designed for efficient and secure use in clinical settings. Its
                 innovative design and unique features enhance functionality, making it
                 ideal for administering a variety of treatments.
-              </p>
+              </p> */}
 
               <button
                 onClick={() => window.open('/specs.pdf', '_blank')}
@@ -246,6 +246,21 @@ const ProductDetails = () => {
                 <FileText className="h-5 w-5 mr-2" />
                 View All Available Variants
               </button>
+              <div className="bg-white border mt-10 border-gray-200 rounded-lg p-6 shadow-sm max-w-lg">
+                <span className="text-md font-medium text-gray-600 mb-3 block">
+                  Options
+                </span>
+                <div className="flex flex-wrap gap-4">
+                  {product.options?.map((option, index) => (
+                    <span
+                      key={index}
+                      className="inline-flex items-center px-3 py-1 bg-blue-50 text-[#309ed9] text-sm font-medium rounded-full border border-blue-200 hover:bg-blue-100 transition-colors duration-200"
+                    >
+                      {option}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
