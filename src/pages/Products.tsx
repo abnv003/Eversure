@@ -149,12 +149,17 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {filteredProducts.map((product) => (
-        <div key={product.id} className="bg-white rounded-lg shadow-sm hover:shadow-md overflow-hidden group">
-          <img
+        <div key={product.id} className="bg-white rounded-lg overflow-hidden group">
+          {/* <img
             src={product.image}
             alt={product.product_name}
-            className="w-full h-48 object-contain"
-          />
+            className="w-full h-48 object-contain border-blue-50 border-2"
+          /> */}
+          <img
+  src={product.image}
+  alt={product.product_name}
+  className="w-full h-48 object-contain border-blue-50 border-2 rounded-lg"
+/>
           <div className="p-6">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium" style={{ color: '#309ed9' }}>{product.category}</span>
