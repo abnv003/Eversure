@@ -17,7 +17,7 @@
         },
         {
         image: "/heroimages/water_conservation.jpeg",
-        title: "Water Conservation",
+        title: "Water Treatment",
         description: "At multiple manufacturing sites, we have embraced practices such as rainwater harvesting and sewage treatment plants for water recycling and reuse. We have also employed smart metering to monitor water usage and identify opportunities for further efficiency improvements."
         },
         {

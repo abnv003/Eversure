@@ -108,7 +108,7 @@ export const Sustainability: React.FC = () => {
         <Carousel />
       </div>
       
-      <SustainabilityGoals />
+      {/* <SustainabilityGoals /> */}
     </div>
   );
 };
