@@ -13,9 +13,9 @@ const Header = () => {
 
   const navigation = [
     { name: 'Company', href: '/about' },
-    { name: 'Product & Therapies', href: '/products' },
-    { name: 'Event', href: '/events' },
+    { name: 'Products', href: '/products' },
     { name: 'Certificates', href: '/certs' },
+    { name: 'Event', href: '/events' },
     { name: 'Contact Us', href: '/contact' },
     { name: 'Blog', href: '/blog' }
   ];
@@ -59,7 +59,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
   {navigation.map((item) =>
-  item.name === 'Product & Therapies' ? (
+  item.name === 'Products' ? (
     <div
       key={item.name}
       className="relative"
@@ -195,9 +195,9 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navigation.map((item) =>
-              item.name === 'Product & Therapies' ? (
+              item.name === 'Products' ? (
                 <div key={item.name}>
-                  <span className="block px-3 py-2 text-base font-medium text-gray-700">Product & Therapies</span>
+                  <span className="block px-3 py-2 text-base font-medium text-gray-700">Products</span>
                   <div className="ml-4">
                     {categories.map((category) => (
                       <Link

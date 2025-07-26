@@ -129,7 +129,7 @@ const ProductDetails = () => {
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
 
-          <div className="bg-white rounded-lg ml-3 p-6 shadow-sm border border-gray-200 aspect-square w-[480px] flex items-center justify-center">
+          <div className="bg-white rounded-lg ml-3 p-6 shadow-sm border-blue-100 border-2 aspect-square w-[480px] flex items-center justify-center">
             <img
               src={product.image}
               alt={product.product_name}

@@ -31,7 +31,7 @@ export default function QuickFinder({ onClose }: { onClose: () => void }) {
                 onClick={() => setSelectedCategory(category)}
                 className={`w-full text-left px-4 py-3 text-white transition-colors ${
                   selectedCategory === category
-                    ? "bg-yellow-500 text-black font-medium"
+                    ? "bg-yellow-400 text-black font-medium"
                     : 'hover:bg-opacity-80'
                 }`}
               >

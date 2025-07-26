@@ -148,34 +148,34 @@ const Products = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {filteredProducts.map((product) => (
-        <div key={product.id} className="bg-white rounded-lg overflow-hidden group">
-          {/* <img
+            {filteredProducts.map((product) => (
+              <div key={product.id} className="bg-white rounded-lg overflow-hidden group">
+                {/* <img
             src={product.image}
             alt={product.product_name}
             className="w-full h-48 object-contain border-blue-50 border-2"
           /> */}
-          <img
-  src={product.image}
-  alt={product.product_name}
-  className="w-full h-48 object-contain border-blue-50 border-2 rounded-lg"
-/>
-          <div className="p-6">
-            {/* <div className="flex items-center justify-between mb-2">
+                <img
+                  src={product.image}
+                  alt={product.product_name}
+                  className="w-full h-48 object-contain border-blue-50 border-2 rounded-lg"
+                />
+                <div className="p-6">
+                  {/* <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium" style={{ color: '#309ed9' }}>{product.category}</span>
             </div> */}
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.product_name}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.product_name}</h3>
+                </div>
+                <button
+                  onClick={() => navigate(`/products/${category}/${product.id}`)}
+                  className="flex items-center text-sm font-medium text-[#309ed9] transition-all duration-200 opacity-0 group-hover:opacity-100 px-6 pb-6"
+                >
+                  Read More
+                  <ArrowRight className="h-4 w-4 ml-1" />
+                </button>
+              </div>
+            ))}
           </div>
-          <button
-            onClick={() => navigate(`/products/${category}/${product.id}`)}
-            className="flex items-center text-sm font-medium text-[#309ed9] transition-all duration-200 opacity-0 group-hover:opacity-100 px-6 pb-6"
-          >
-            Read More
-            <ArrowRight className="h-4 w-4 ml-1" />
-          </button>
-        </div>
-      ))}
-    </div>
 
           {/* Empty state */}
           {filteredProducts.length === 0 && (
