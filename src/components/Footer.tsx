@@ -109,7 +109,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2021 Eversure - Medical Device Division of Polybond India Pvt. Ltd.
+            © 2025 Eversure - Medical Device Division of Polybond India Pvt. Ltd.
           </p>
         </div>
       </div>

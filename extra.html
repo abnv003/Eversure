@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Section</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .about-section {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 100%;
+            min-height: 400px; /* Minimum height to match the design */
+        }
+
+        .about-content {
+            position: relative;
+            width: 55%; /* Adjust for desktop */
+            padding: 40px 40px 40px 60px; /* Adjusted padding for better spacing */
+            color: #ffffff;
+            z-index: 1;
+        }
+
+        .about-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #26c6da; /* Teal color */
+            clip-path: inset(0 0 0 0 round 0 300px 300px 0); /* Increased radius for a deeper curve */
+            z-index: -1;
+        }
+
+        .about-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .about-image {
+            width: 45%;
+            z-index: 0;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .about-content {
+                width: 100%;
+                padding: 40px 20px;
+            }
+
+            .about-content::before {
+                clip-path: inset(0 0 0 0 round 0 0 200px 200px); /* Curve at the bottom for mobile */
+            }
+
+            .about-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="about-section">
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p>Polymed is a global leader in the medical device industry, renowned for its extensive range of high-quality medical devices. Since our establishment in 1997, the company has upheld a steadfast commitment to innovation and excellence, envisioning a world where top-tier healthcare is universally accessible. Our expansive global reach, cutting-edge technologies and advanced manufacturing capabilities serve as a testament to our leadership in the MedTech industry.</p>
+        </div>
+        <div class="about-image">
+            <!-- Replace with your actual image path or base64 if needed; use a similar stock image for replication -->
+            <img src="/public/heroimages/about_section.jpeg" alt="Doctor high-fiving child">
+        </div>
+    </section>
+</body>
+</html>

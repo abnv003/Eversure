@@ -26,7 +26,7 @@ const Home = () => {
 
   const productOfferings = [
     {
-      title: 'Infusion & Transfusion Therapy',
+      title: 'Infusion & Transfusion',
       icon: (
         <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 100 100" strokeWidth="1.5">
           {/* IV Bag */}
@@ -163,33 +163,32 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section className="relative min-h-[75vh] bg-black overflow-hidden">
-        {/* Background with overlay */}
-        <div className="absolute inset-0">
-          <img
-            src="/heroimages/homepage_main.jpeg"
-            alt="Medical Technology"
-            className="w-full h-full object-cover opacity-70 object-[center_30%]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
-        </div>
+  {/* Background with overlay */}
+  <div className="absolute inset-0">
+    <img
+      src="/heroimages/homepage_main.jpeg"
+      alt="Medical Technology"
+      className="w-full h-full object-cover opacity-70 object-[center_30%]"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+  </div>
 
-        {/* Content */}
-        <div className="relative z-10 min-h-[65vh] flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="text-white">
-                <h1 className="text-5xl md:text-6xl font-light mb-8 leading-tight">
-                  Empowering health through innovation
-                </h1>
-                <p className="text-lg mb-8 text-gray-200 leading-relaxed max-w-2xl">
-                  At Eversure, we believe that innovation is the cornerstone of ensuring access to the best healthcare solutions for all. At the heart of our operations is the strategic integration of automation, which drives operational efficiency and precision in patient care. Our approach focuses on not just addressing the current needs of healthcare but also anticipating the demands of tomorrow. In an era characterized by rapid medical transformation, we remain committed to developing new technologies.
-                </p>
-              </div>
-            </div>
-          </div>
+  {/* Content */}
+  <div className="relative z-10 min-h-[65vh] flex items-center">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="flex justify-center pt-80">
+        <div className="text-white max-w-4xl">
+          <h1 className="text-6xl md:text-6xl font-light mb-8 leading-tight">
+            Empowering health through innovation
+          </h1>
+          <p className="text-lg mb-8 text-gray-200 leading-relaxed max-w-3xl">
+            At Eversure, we believe innovation is key to accessible, high-quality healthcare. By integrating automation, we enhance efficiency and precision in patient care. Our focus is both on current needs and future challenges, driving the development of transformative medical technologies.
+          </p>
         </div>
-      </section>
-
+      </div>
+    </div>
+  </div>
+</section>
       {/* About Us Section */}
       <section ref={aboutRef} className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
