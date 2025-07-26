@@ -9,7 +9,7 @@ const Blog = () => {
   const categories = ['All', 'Innovation', 'Quality', 'Surgery', 'Sustainability', 'Education', 'Regulation'];
 
   return (
-    <div className="py-16">
+    <div className="">
       {/* Hero Section */}
       <section style={{backgroundColor: '#309ed9'}} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

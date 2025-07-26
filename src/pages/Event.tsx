@@ -111,7 +111,7 @@ const Events = () => {
   const currentEvents = activeTab === 'upcoming' ? upcomingEvents : pastEvents;
 
   return (
-    <div className="py-16">
+    <div className="">
       {/* Hero Section */}
       <section style={{ backgroundColor: '#309ed9' }} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,32 +132,19 @@ const Events = () => {
               <button
                 onClick={() => setActiveTab('upcoming')}
                 className={`px-8 py-3 rounded-md font-medium transition-colors duration-200 ${activeTab === 'upcoming'
-                  ? 'text-white'
-                  : 'text-gray-600'
+                    ? 'bg-[#309ed9] text-white'
+                    : 'text-gray-600 hover:text-[#309ed9]'
                   }`}
-                style={{ backgroundColor: activeTab === 'upcoming' ? '#309ed9' : undefined }}
-                onMouseEnter={(e) => { if (activeTab !== 'upcoming') e.currentTarget.style.color = '#309ed9'; }}
-                onMouseLeave={(e) => { if (activeTab !== 'upcoming') e.currentTarget.style.color = '#4b5563'; }}
               >
                 Upcoming Events
               </button>
+
               <button
                 onClick={() => setActiveTab('past')}
                 className={`px-8 py-3 rounded-md font-medium transition-colors duration-200 ${activeTab === 'past'
-                  ? 'text-white'
-                  : 'text-gray-600'
+                    ? 'bg-[#309ed9] text-white'
+                    : 'text-gray-600 hover:text-[#309ed9]'
                   }`}
-                style={{ backgroundColor: activeTab === 'past' ? '#309ed9' : undefined }}
-                onMouseEnter={(e) => {
-                  if (activeTab !== 'past') {
-                    (e.target as HTMLButtonElement).style.color = '#309ed9';
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (activeTab !== 'past') {
-                    (e.target as HTMLButtonElement).style.color = '#4b5563';
-                  }
-                }}
               >
                 Past Events
               </button>

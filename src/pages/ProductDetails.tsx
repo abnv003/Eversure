@@ -100,8 +100,12 @@ const ProductDetails = () => {
       {/* Header Section */}
       <section style={{ backgroundColor: '#309ed9' }} className="text-white py-12">
         <div className="max-w-7xl mx-auto px-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-center mb-6">
+            {product.product_name}
+          </h1>
+
           {/* Breadcrumb */}
-          <nav className="text-sm mb-6 opacity-80">
+          <nav className="text-sm opacity-80 text-center">
             <button
               onClick={() => navigate('/')}
               className="hover:underline transition-colors duration-200"
@@ -118,10 +122,6 @@ const ProductDetails = () => {
             <span className="mx-2">/</span>
             <span>{product.product_name}</span>
           </nav>
-
-          <h1 className="text-4xl lg:text-5xl font-bold text-center">
-            {product.product_name}
-          </h1>
         </div>
       </section>
 
@@ -223,6 +223,7 @@ const ProductDetails = () => {
               <h2 className="text-2xl font-bold mb-4" style={{ color: '#309ed9' }}>
                 {product.product_name}
               </h2>
+              <div className="w-20 h-1 bg-yellow-400 mb-6"></div>
 
               {/* Product Codes */}
               <div className="text-sm text-gray-500 mb-6">
@@ -230,14 +231,6 @@ const ProductDetails = () => {
                 {product.product_code} | <span className="font-medium">Sizes: </span>{product.sizes}
               </div>
               <p className="text-gray-600 mb-4">{product.description}</p>
-
-              {/* <p className="text-gray-700 leading-relaxed mb-8">
-                The {product.product_name} is an advanced medical device specifically
-                designed for efficient and secure use in clinical settings. Its
-                innovative design and unique features enhance functionality, making it
-                ideal for administering a variety of treatments.
-              </p> */}
-
               <button
                 onClick={() => window.open('/specs.pdf', '_blank')}
                 className="text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200 flex items-center"
@@ -246,21 +239,23 @@ const ProductDetails = () => {
                 <FileText className="h-5 w-5 mr-2" />
                 View All Available Variants
               </button>
-              <div className="bg-white border mt-10 border-gray-200 rounded-lg p-6 shadow-sm max-w-lg">
-                <span className="text-md font-medium text-gray-600 mb-3 block">
-                  Options
-                </span>
-                <div className="flex flex-wrap gap-4">
-                  {product.options?.map((option, index) => (
-                    <span
-                      key={index}
-                      className="inline-flex items-center px-3 py-1 bg-blue-50 text-[#309ed9] text-sm font-medium rounded-full border border-blue-200 hover:bg-blue-100 transition-colors duration-200"
-                    >
-                      {option}
-                    </span>
-                  ))}
+              {product.options && product.options.length > 0 && (
+                <div className="bg-white border mt-10 border-gray-200 rounded-lg p-6 shadow-sm max-w-lg">
+                  <span className="text-md font-medium text-gray-600 mb-3 block">
+                    Options
+                  </span>
+                  <div className="flex flex-wrap gap-4">
+                    {product.options.map((option, index) => (
+                      <span
+                        key={index}
+                        className="inline-flex items-center px-3 py-1 bg-blue-50 text-[#309ed9] text-sm font-medium rounded-full border border-blue-200 hover:bg-blue-100 transition-colors duration-200"
+                      >
+                        {option}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
@@ -270,6 +265,7 @@ const ProductDetails = () => {
           <h2 className="text-3xl font-bold text-[#309ed9] mb-8">
             Features
           </h2>
+          <div className="w-20 h-1 bg-yellow-400 mt-[-20px] mb-6"></div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-4 mb-12">
             {product.product_features.map((feature, index) => (
               <div
@@ -304,11 +300,11 @@ const ProductDetails = () => {
             <div className="flex flex-col space-y-4">
               <div className="flex items-center space-x-2">
                 <Phone className="h-8 w-8" style={{ color: '#309ed9' }} />
-                <span className="text-sm text-gray-900">+91-020-6766-1200</span>
+                <span className="text-md text-gray-600">+91-020-6766-1200</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-8 w-8" style={{ color: '#309ed9' }} />
-                <span className="text-sm text-gray-900">eversure@rathigroup.com</span>
+                <span className="text-md text-gray-600">eversure@rathigroup.com</span>
               </div>
             </div>
             <button

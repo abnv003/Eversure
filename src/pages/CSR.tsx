@@ -89,7 +89,7 @@ export const CSR = () => {
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#309ed9] mb-3">
                     {item.title}
                   </h2>
-                  <div className="w-16 h-1 bg-orange-400 rounded"></div>
+                  <div className="w-20 h-1 bg-yellow-400"></div>
                 </div>
 
                 {/* Description */}

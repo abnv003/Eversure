@@ -38,13 +38,13 @@ const Products = () => {
       'Multiway',
       'Blood Transfusion Set'
     ],
-    'Anesthesia': [
-      'Suction Catheter',
-      'Oxygen Mask',
-      'Nebulizer Mask',
-      'Nasal Oxygen Cannula'
-    ],
-    'Gastroenterology': ['Ryles Tube', 'Infant Feeding Tube'],
+    // 'Anesthesia': [
+    //   'Suction Catheter',
+    //   'Oxygen Mask',
+    //   'Nebulizer Mask',
+    //   'Nasal Oxygen Cannula'
+    // ],
+    // 'Gastroenterology': ['Ryles Tube', 'Infant Feeding Tube'],
     'Urology': ['Nelaton Catheter'],
     'Surgery Wound Drainage': [
       'Yankaur Suction Set',
@@ -85,7 +85,7 @@ const Products = () => {
   });
 
   return (
-    <div className="py-16">
+    <div className="">
       {/* Hero */}
       <section style={{ backgroundColor: '#309ed9' }} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
@@ -131,7 +131,7 @@ const Products = () => {
               </div>
             </div>
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <Search className="absolute left-3 top-5 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search products..."
@@ -161,14 +161,14 @@ const Products = () => {
   className="w-full h-48 object-contain border-blue-50 border-2 rounded-lg"
 />
           <div className="p-6">
-            <div className="flex items-center justify-between mb-2">
+            {/* <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium" style={{ color: '#309ed9' }}>{product.category}</span>
-            </div>
+            </div> */}
             <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.product_name}</h3>
           </div>
           <button
             onClick={() => navigate(`/products/${category}/${product.id}`)}
-            className="flex items-center text-sm font-medium text-[#309ed9] hover:text-yellow-400 transition-all duration-200 opacity-0 group-hover:opacity-100 px-6 pb-6"
+            className="flex items-center text-sm font-medium text-[#309ed9] transition-all duration-200 opacity-0 group-hover:opacity-100 px-6 pb-6"
           >
             Read More
             <ArrowRight className="h-4 w-4 ml-1" />

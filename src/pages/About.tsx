@@ -58,7 +58,7 @@ const About = () => {
   ];
 
   return (
-    <div className="py-16">
+    <div className="">
       {/* Hero Section */}
       <section style={{ backgroundColor: '#309ed9' }} className="text-white py-20">
   <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 items-center gap-12">
@@ -105,7 +105,7 @@ const About = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-16">
+      <section className="">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Journey</h2>
