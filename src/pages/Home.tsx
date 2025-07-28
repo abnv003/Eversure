@@ -444,7 +444,7 @@ const Home = () => {
         {/* Content */}
         <div className="relative z-10 min-h-[65vh] flex items-center w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="flex justify-center pt-20 w-full">
+            <div className="flex justify-left pt-20 w-full">
               <div className="text-white max-w-4xl text-center w-full">
                 <h1 className="text-4xl md:text-6xl font-light mb-8 leading-tight">
                   Empowering health through innovation
