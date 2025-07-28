@@ -20,12 +20,12 @@ const LocationMap = () => {
     {
       position: [18.695142582432556, 74.08633717496741] as [number, number],
       name: "Polybond India Pvt Ltd.",
-      address: "Manufacturing Facility 1"
+      address: "Manufacturing Facility"
     },
     {
       position: [18.560639237523084, 73.90935577876797] as [number, number],
       name: "Polybond India Private Limited",
-      address: "Manufacturing Facility 2"
+      address: "Head Office"
     }
   ];
 
