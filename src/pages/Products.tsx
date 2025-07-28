@@ -116,9 +116,6 @@ const Products = () => {
           <h1 className="text-5xl font-bold mb-4">
             {actualCategory || 'All Products'}
           </h1>
-          <p className="text-xl" style={{ color: '#f0f9ff' }}>
-            Browse {actualCategory || 'our full'} product range
-          </p>
         </div>
       </section>
 

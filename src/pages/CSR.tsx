@@ -71,53 +71,23 @@ export const CSR = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative w-full h-[576px] bg-[#309ed9] flex items-center overflow-hidden">
-        <div className="relative w-full h-full flex items-center">
-          {/* Text Content */}
-          <div
-            className={`relative z-10 text-white transition-all ml-48 duration-1000 ease-out ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-            }`}
-            style={{
-              padding: '60px 80px',
-              maxWidth: '800px'
-            }}
-          >
-            <h1
-              className="text-4xl lg:text-5xl font-bold mb-6"
-              style={{
-                letterSpacing: '-2px'
-              }}
-            >
-              Corporate Social Responsibility
-            </h1>
-            <p className="text-lg mb-4 leading-relaxed">
+      <section
+        className="text-white py-48 relative bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/heroimages/csr.jpeg')`
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
+          <h1 className="text-5xl font-bold mb-4">
+            Corporate Social Responsibility
+          </h1>
+          <p className="text-lg mb-4 leading-relaxed">
               At Eversure, our Corporate Social Responsibility commitment demonstrates our dedication to contributing towards the welfare of society and the environment.
             </p>
-          </div>
-
-          {/* Image Container */}
-          <div className="absolute right-0 top-0 w-3/5 h-full overflow-hidden">
-            <div
-              className={`w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-out delay-500 ${
-                isVisible ? 'opacity-100 translate-x-[5%]' : 'opacity-0 translate-x-12'
-              }`}
-              style={{
-                backgroundImage: 'url(/heroimages/CSR_head.jpeg)',
-                clipPath: 'ellipse(75% 100% at 100% 50%)',
-                borderLeft: '3px solid rgba(255,255,255,0.3)'
-              }}
-            >
-              {/* Gradient overlay */}
-              <div
-                className="absolute left-0 top-0 w-full h-full"
-                style={{
-                  background: 'linear-gradient(90deg, rgba(32,178,170,0.1) 0%, transparent 30%)',
-                  clipPath: 'ellipse(75% 100% at 100% 50%)'
-                }}
-              />
-            </div>
-          </div>
         </div>
       </section>
       
