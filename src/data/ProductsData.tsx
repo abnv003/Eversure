@@ -890,7 +890,7 @@ export const products: Product[] = [
     "sub_category": "Extension Tube",
     "description": "For easy and safe connection of the source of infusion and the patient during infusion therapy without any length restrictions.",
     "sub_desc": "Extension Tube : High Pressure (DEHP Free)",
-    "image": "/images/ecoextt.png",
+    "image": "/images/ecoextt hp.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1862,7 +1862,7 @@ export const products: Product[] = [
     "sub_category": "Extension Tube",
     "description": "For easy and safe connection of the source of infusion and the patient during infusion therapy without any length restrictions.",
     "sub_desc": "Extension Tube with Flow Regulator (DEHP Free)",
-    "image": "/images/ecoextt.png",
+    "image": "/images/ecoextt extention tube with flow regulator.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1943,7 +1943,7 @@ export const products: Product[] = [
     "sub_category": "Extension Tube",
     "description": "For easy and safe connection of the source of infusion and the patient during infusion therapy without any length restrictions.",
     "sub_desc": "Two Way Extension Tube",
-    "image": "/images/ecoextt.png",
+    "image": "/images/Extension tube two way.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
