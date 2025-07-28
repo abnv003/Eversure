@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import LocationMap from '../components/LocationMap';
 
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,26 +12,60 @@ const Contact = () => {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+
+  const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message. We will get back to you soon!');
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    // Prepare data for backend API
+    const mailData = {
+      name: formData.name,
+      contact: formData.email + (formData.phone ? ` | Phone: ${formData.phone}` : ''),
+      subject: `${formData.subject} - ${formData.name}${formData.company ? ` (${formData.company})` : ''}`,
+      body: formData.message
+    };
+
+    try {
+      const response = await fetch('http://localhost:5000/api/send-mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(mailData)
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        console.error('Server error:', result.error);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Network error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -100,6 +133,24 @@ const Contact = () => {
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+              
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                  <p className="text-green-800">
+                    Thank you for your message! We will get back to you soon.
+                  </p>
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-red-800">
+                    Sorry, there was an error sending your message. Please try again or contact us directly.
+                  </p>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -113,7 +164,8 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9]" 
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9] disabled:bg-gray-100 disabled:cursor-not-allowed" 
                     />
                   </div>
                   <div>
@@ -127,7 +179,8 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9]" 
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9] disabled:bg-gray-100 disabled:cursor-not-allowed" 
                     />
                   </div>
                 </div>
@@ -142,7 +195,8 @@ const Contact = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9]" 
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9] disabled:bg-gray-100 disabled:cursor-not-allowed" 
                     />
                   </div>
                   <div>
@@ -155,7 +209,8 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9]" 
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9] disabled:bg-gray-100 disabled:cursor-not-allowed" 
                     />
                   </div>
                 </div>
@@ -169,14 +224,15 @@ const Contact = () => {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9]" 
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9] disabled:bg-gray-100 disabled:cursor-not-allowed" 
                   >
                     <option value="">Select a subject</option>
-                    <option value="product-inquiry">Product Inquiry</option>
-                    <option value="quote-request">Quote Request</option>
-                    <option value="technical-support">Technical Support</option>
-                    <option value="partnership">Partnership Opportunity</option>
-                    <option value="other">Other</option>
+                    <option value="Product Inquiry">Product Inquiry</option>
+                    <option value="Quote Request">Quote Request</option>
+                    <option value="Technical Support">Technical Support</option>
+                    <option value="Partnership Opportunity">Partnership Opportunity</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
                 <div>
@@ -190,16 +246,19 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent resize-none focus:ring-2 focus:ring-[#309ed9]"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent resize-none focus:ring-2 focus:ring-[#309ed9] disabled:bg-gray-100 disabled:cursor-not-allowed"
                     placeholder="Please provide details about your inquiry..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2" style={{backgroundColor: '#309ed9'}}
+                  disabled={isSubmitting}
+                  className="w-full text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed" 
+                  style={{backgroundColor: isSubmitting ? '#6b7280' : '#309ed9'}}
                 >
                   <Send className="h-5 w-5" />
-                  <span>Send Message</span>
+                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                 </button>
               </form>
             </div>

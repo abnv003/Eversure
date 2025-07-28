@@ -1,6 +1,18 @@
+import React, { useEffect, useState } from 'react';
 import { Users, Target, Heart, Globe } from 'lucide-react';
 
-const About = () => {
+const AboutUs = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation after component mounts
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const values = [
     {
       icon: Heart,
@@ -58,28 +70,59 @@ const About = () => {
   ];
 
   return (
-    <div className="">
-      {/* Hero Section */}
-      <section style={{ backgroundColor: '#309ed9' }} className="text-white py-20">
-  <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 items-center gap-12">
-    {/* Text Section */}
-    <div className="w-full lg:w-1/2 text-left">
-      <h1 className="text-4xl md:text-5xl font-bold mb-6">About Eversure</h1>
-      <p className="text-xl" style={{ color: '#f0f9ff' }}>
-        Eversure is the medical device brand of Pune's Rathigroup, manufacturing a wide range of disposable devices from a certified, world-class local facility. Their product lines include items for Infusion Therapy, Anesthesia, and Urology, all produced using advanced manufacturing and sterilization. The brand is committed to high standards of quality, innovation, and reliability to ensure patient care.
-      </p>
-    </div>
+    <div className="overflow-x-hidden">
+      {/* Hero Section with Curved Design */}
+      <section className="relative w-full h-[576px] bg-[#309ed9] flex items-center overflow-hidden">
+        <div className="relative w-full h-full flex items-center">
+          {/* Text Content */}
+          <div
+            className={`relative z-10 text-white transition-all ml-48 duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+              }`}
+            style={{
+              padding: '60px 80px',
+              maxWidth: '800px'
+            }}
+          >
+            <h1
+              className="text-4xl lg:text-5xl font-bold mb-6"
+              style={{
+                letterSpacing: '-2px'
+              }}
+            >
+              About Eversure
+            </h1>
+            <p
+              className="text-lg mb-4 leading-relaxed"
+            >
+              Eversure is the medical device brand of Pune's Rathigroup, world-class local facility. Their product lines include items for Infusion Therapy, Anesthesia, and Urology, all produced using advanced manufacturing and sterilization. The brand is committed to high standards of quality, innovation, and reliability to ensure patient care.
+            </p>
+          </div>
 
-    {/* Image Section */}
-    <div className="w-full lg:w-1/2 flex justify-center">
-      <img
-        className="w-full max-w-md rounded-full shadow-xl"
-        src="/heroimages/about_section.jpeg"
-        alt="about-main"
-      />
-    </div>
-  </div>
-</section>
+          {/* Image Container */}
+          <div className="absolute right-0 top-0 w-3/5 h-full overflow-hidden">
+            <div
+              className={`w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-out delay-500 ${isVisible ? 'opacity-100 translate-x-[5%]' : 'opacity-0 translate-x-12'
+                }`}
+              style={{
+                // backgroundImage: 'url(https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)',
+                backgroundImage: 'url(/heroimages/about_section.jpeg)',
+
+                clipPath: 'ellipse(75% 100% at 100% 50%)',
+                borderLeft: '3px solid rgba(255,255,255,0.3)'
+              }}
+            >
+              {/* Gradient overlay */}
+              <div
+                className="absolute left-0 top-0 w-full h-full"
+                style={{
+                  background: 'linear-gradient(90deg, rgba(32,178,170,0.1) 0%, transparent 30%)',
+                  clipPath: 'ellipse(75% 100% at 100% 50%)'
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Values Section */}
       <section className="py-16 bg-gray-50">
@@ -93,19 +136,19 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center p-6 bg-white rounded-lg shadow-sm">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{backgroundColor: '#f0f9ff'}}>
-                  <value.icon className="h-8 w-8" style={{color: '#309ed9'}} />
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#f0f9ff' }}>
+                  <value.icon className="h-8 w-8" style={{ color: '#309ed9' }} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
-                {/* <p className="text-gray-600">{value.description}</p> */}
+                <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="">
+      {/* Timeline Section */}
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Journey</h2>
@@ -136,5 +179,4 @@ const About = () => {
   );
 };
 
-export default About;
-
+export default AboutUs;

@@ -122,26 +122,6 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Description */}
-      {/* <div className="bg-gray-50 py-8">
-  <div className="max-w-7xl mx-auto px-4">
-    <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
-      <p className="text-gray-600 text-base leading-relaxed">
-        {actualCategory === 'Infusion Transfusion Therapy'
-          ? categoryDesc[0]
-          : actualCategory === 'Urology'
-            ? categoryDesc[2]
-            : actualCategory === 'Surgery Wound Drainage'
-              ? categoryDesc[3]
-              : actualCategory === 'Central Venous Access Catheters'
-                ? categoryDesc[1]
-                : 'Browse our comprehensive product range designed for medical professionals.'
-        }
-      </p>
-    </div>
-  </div>
-</div> */}
-
       <div className="bg-white py-8 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-blue-50 rounded-lg p-6 border-l-4 border-[#309ed9]">
@@ -223,10 +203,10 @@ const Products = () => {
                   className="w-full h-48 object-contain border-blue-50 border-2 rounded-lg"
                 />
                 <div className="p-6">
-                  {/* <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium" style={{ color: '#309ed9' }}>{product.category}</span>
-            </div> */}
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.product_name}</h3>
+                  <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-medium text-gray-700">{product.sub_desc}</span>
+            </div>
                 </div>
                 <button
                   onClick={() => navigate(`/products/${category}/${product.id}`)}

@@ -7,7 +7,7 @@ import { products } from "../data/ProductsData"
 
 export default function QuickFinder({ onClose }: { onClose: () => void }) {
   const navigate = useNavigate()
-  const [selectedCategory, setSelectedCategory] = useState("infusion-transfusion-therapy")
+  const [selectedCategory, setSelectedCategory] = useState("infusion-transfusion")
   const categories = Array.from(new Set(products.map((p) => p.category)))
   const filteredProducts = products.filter((product) => product.category === selectedCategory)
 
