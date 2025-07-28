@@ -73,9 +73,10 @@ const AboutUs = () => {
     <div className="overflow-x-hidden">
       {/* Hero Section with Curved Design */}
       <section
-        className="text-white py-48 relative bg-cover bg-center bg-no-repeat"
+        className="text-white py-48 relative bg-cover bg-no-repeat"
         style={{
-          backgroundImage: `url('/heroimages/about_section.jpeg')`
+          backgroundImage: `url('/heroimages/about_section.jpeg')`,
+          backgroundPosition: 'center 20%' 
         }}
       >
         {/* Dark overlay */}
@@ -86,10 +87,8 @@ const AboutUs = () => {
           <h1 className="text-5xl font-bold mb-4">
             About Eversure
           </h1>
-          <p
-            className="text-lg mb-4 leading-relaxed"
-          >
-            Eversure is the medical device brand of Pune's Rathigroup, world-class local facility. Their product lines include items for Infusion Therapy, Anesthesia, and Urology, all produced using advanced manufacturing and sterilization. The brand is committed to high standards of quality, innovation, and reliability to ensure patient care.
+          <p className="text-lg mb-4 leading-relaxed">
+            Eversure is the medical device brand of Pune's Rathigroup, world-class local facility. Their product lines include items for Infusion Therapy, Surgery and Wound Drainage, Central Venous Access Catheters, and Urology, all produced using advanced manufacturing and sterilization. The brand is committed to high standards of quality, innovation, and reliability to ensure patient care.
           </p>
         </div>
       </section>
