@@ -197,7 +197,7 @@ const Products = () => {
                 <img
                   src={product.image}
                   alt={product.product_name}
-                  className="w-full h-48 object-contain border-blue-50 border-2 rounded-lg"
+                  className="w-full h-48 object-cover border-blue-50 border-2 rounded-lg"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.product_name}</h3>

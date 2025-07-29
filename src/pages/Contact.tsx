@@ -36,36 +36,46 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/send-mail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(mailData)
-      });
+  const response = await fetch('http://localhost:5000/api/send-mail', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(mailData)
+  });
 
-      const result = await response.json();
+  const result = await response.json();
 
-      if (response.ok && result.success) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          phone: '',
-          subject: '',
-          message: ''
-        });
-      } else {
-        setSubmitStatus('error');
-        console.error('Server error:', result.error);
-      }
-    } catch (error) {
-      setSubmitStatus('error');
-      console.error('Network error:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+  if (response.ok && result.success) {
+    setSubmitStatus('success');
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      subject: '',
+      message: ''
+    });
+    
+    // Trigger brochure download after successful submission
+    const link = document.createElement('a');
+    link.href = '/brochure.pdf'; // Adjust path as needed
+    link.download = 'brochure.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+  } else {
+    setSubmitStatus('error');
+    console.error('Server error:', result.error);
+  }
+  
+} catch (error) {
+  setSubmitStatus('error');
+  console.error('Network error:', error);
+} finally {
+  setIsSubmitting(false);
+}
   };
 
   const contactInfo = [
