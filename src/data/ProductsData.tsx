@@ -1512,7 +1512,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "For infusion of intravenous fluids and medicines.",
     "sub_desc": "Safety IV Cannula with wings & injection port",
-    "image": "/images/IV Cannula.png",
+    "image": "/images/Ecocann S.jpg",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1555,14 +1555,14 @@ export const products: Product[] = [
   },
   {
     "id": 35,
-    "product_name": "ECOCANN WS+",
+    "product_name": "ECOWANN WS+",
     "sizes": "14G to 26G",
     "product_code": "1048",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
     "description": "For infusion of intravenous fluids and medicines.",
     "sub_desc": "Safety IV Cannula with wings & w/o injection port",
-    "image": "/images/IV Cannula.png",
+    "image": "/images/Ecowann ws+ copy.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1613,7 +1613,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "For infusion of intravenous fluids and medicines.",
     "sub_desc": "Safety IV Cannula with wings & w/o injection port",
-    "image": "/images/IV Cannula.png",
+    "image": "/images/Ecocann WS copy.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1662,7 +1662,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "For infusion of intravenous fluids and medicines.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
-    "image": "/images/IV Cannula.png",
+    "image": "/images/Ecowin S+ copy.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1711,7 +1711,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "For infusion of intravenous fluids and medicines.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
-    "image": "/images/IV Cannula.png",
+    "image": "/images/Ecowin S.jpg",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
