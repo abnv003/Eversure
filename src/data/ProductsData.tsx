@@ -1562,7 +1562,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "For infusion of intravenous fluids and medicines.",
     "sub_desc": "Safety IV Cannula with wings & w/o injection port",
-    "image": "/images/Ecowann ws+ copy.png",
+    "image": "/images/Ecowannws+copy.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1662,7 +1662,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "For infusion of intravenous fluids and medicines.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
-    "image": "/images/Ecowin S+ copy.png",
+    "image": "/images/EcowinS+copy.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
