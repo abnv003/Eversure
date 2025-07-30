@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Users, Target, Heart, Globe } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Trigger animation after component mounts
@@ -15,29 +18,34 @@ const AboutUs = () => {
 
   const values = [
     {
-      icon: Heart,
-      title: 'Customers First',
-      description: 'Every product we create is designed with patient safety and comfort as our top priority.'
+      main: "PUT PATIENTS FIRST",
+      title: "We design every product with patient safety and comfort as our top priority.",
+      description: "We focus on building solutions that directly enhance patient care. Everything we do—from R&D to deployment—is guided by empathy and trust.",
+      lottieUrl: "https://lottie.host/e60762dc-411b-4ded-bc4f-fc20c05c96d5/sPXivvregb.lottie"
     },
     {
-      icon: Target,
-      title: 'Ethical Practices',
-      description: 'We strive for perfection in every aspect of our manufacturing and service delivery.'
+      main: "ACT ETHICALLY",
+      title: "We uphold the highest standards in every aspect of our work.",
+      description: "Integrity drives our decisions. We ensure ethical manufacturing, sourcing, and service delivery in every process we adopt.",
+      lottieUrl: "https://lottie.host/41f6cf46-fe95-45b4-860f-db3b9b8ba5e4/YUMXtoA7hp.lottie"
     },
     {
-      icon: Users,
-      title: 'Honest Communication',
-      description: 'Working closely with healthcare professionals to develop innovative solutions.'
+      main: "COMMUNICATE HONESTLY",
+      title: "We collaborate closely with healthcare professionals to innovate with transparency.",
+      description: "Open dialogue and mutual respect help us shape cutting-edge, practical solutions that matter in real clinical settings.",
+      lottieUrl: "https://lottie.host/10bd637e-4856-403a-b8fc-649acabff9c3/kN37TGp11c.lottie"
     },
     {
-      icon: Globe,
-      title: 'Respect Employees',
-      description: 'Making quality healthcare accessible to communities worldwide.'
+      main: "RESPECT OUR PEOPLE",
+      title: "We value and empower our employees to grow professionally and personally.",
+      description: "A culture of support, diversity, and inclusion is at the heart of our mission. We invest in people, not just roles.",
+      lottieUrl: "https://lottie.host/4dcbddd6-7b02-4233-9cbd-b6913f12929e/CLQD5cANC2.lottie"
     },
     {
-      icon: Globe,
-      title: 'Environment Care',
-      description: 'Making quality healthcare accessible to communities worldwide.'
+      main: "PROTECT THE PLANET",
+      title: "We strive to make sustainable, accessible healthcare available worldwide.",
+      description: "Our commitment to environmental stewardship means adopting eco-friendly practices while expanding access to quality care globally.",
+      lottieUrl: "https://lottie.host/1f1a28a3-2163-40a5-ae9d-7271d537da7b/RT0IyjSNhM.lottie"
     }
   ];
 
@@ -94,27 +102,60 @@ const AboutUs = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
-            <p className="text-lg text-gray-600">
-              The principles that guide our decisions and shape our company culture.
+     <main className="px-6 py-16 lg:px-12">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left Column */}
+          <div className="space-y-8">
+            <div className="space-y-2">
+              <p className="text-sm font-medium text-gray-500 tracking-wider uppercase">DRIVEN BY PRINCIPLE</p>
+              <h2 className="text-5xl lg:text-6xl font-light leading-tight">
+                <span className="italic font-serif">Our values</span> lead the way
+              </h2>
+            </div>
+
+            <p className="text-lg text-gray-700 leading-relaxed max-w-lg">
+              This is what makes us who we are: embracing diversity, practicing empathy, and empowering our people to
+              be autonomous and agile.
             </p>
+
+            <div className="flex space-x-4 pt-4">
+              <button 
+                onClick={() => navigate('/contact')} 
+                className="bg-[#309ed9] text-white px-6 py-3 rounded-full hover:bg-[#2889c4] transition-colors"
+              >
+                Request Quote
+              </button>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {/* Right Column - Values */}
+          <div className="space-y-16">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-lg shadow-sm">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#f0f9ff' }}>
-                  <value.icon className="h-8 w-8" style={{ color: '#309ed9' }} />
+              <div key={index} className="flex items-start space-x-6">
+                <div className="flex-shrink-0 w-20 h-20">
+                  <DotLottieReact
+                    src={value.lottieUrl}
+                    autoplay
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <div className="space-y-3">
+                  <p className="text-sm font-medium text-gray-500 tracking-wider uppercase">
+                    {value.main}
+                  </p>
+                  <h3 className="text-2xl font-medium text-gray-900 leading-tight">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
+    </main>
 
       {/* Timeline Section */}
       <section className="py-16">

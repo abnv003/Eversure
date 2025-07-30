@@ -10,21 +10,14 @@ const Certificate = () => {
   const certificates = [
     {
       id: 1,
-      title: 'ISO 13485:2016 Quality Management Systems',
-      valid_from: '2023-04-15',
-      valid_until: '2026-04-14',
       image: '/ISO 13485_Q5 115632 0001 Rev.00_Valid 2023-04-15 to 2026-04-14 (2)_page-0001.jpg'
     },
     {
       id: 2,
-      title: 'FDA 510(k) Medical Device Clearance',
       image: '/CE Certificate G10 115632 0002 Rev. 00_Valid 2023-07-18 Until 2028-07-17 (1) (1)_page-0002.jpg'
     },
     {
       id: 3,
-      title: 'CE Mark Certification',
-      valid_from: '2023-07-18',
-      valid_until: '2028-07-17',
       image: '/CE Certificate G10 115632 0002 Rev. 00_Valid 2023-07-18 Until 2028-07-17 (1) (1)_page-0001.jpg'
     }
   ];
@@ -71,16 +64,6 @@ const Certificate = () => {
                     >
                       <Eye className="h-5 w-5" />
                     </button>
-                  </div>
-                </div>
-                
-                <div className="p-4">
-                  <h3 className="text-sm font-semibold text-gray-900 mb-2 line-clamp-2">
-                    {certificate.title}
-                  </h3>
-                  <div className="text-xs text-gray-500 space-y-1">
-                    <p>Valid From: {certificate.valid_from}</p>
-                    <p>Valid Until: {certificate.valid_until}</p>
                   </div>
                 </div>
               </div>
