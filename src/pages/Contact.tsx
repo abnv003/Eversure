@@ -78,29 +78,6 @@ const Contact = () => {
 }
   };
 
-  const contactInfo = [
-    {
-      icon: MapPin,
-      title: 'Address',
-      details: ['Gaia Apex, S.N. 33/2D,', 'Viman Nagar, Pune-411 014', 'INDIA']
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      details: ['+91-020-6766-1200']
-    },
-    {
-      icon: Mail,
-      title: 'Email',
-      details: ['eversure@rathigroup.com']
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      details: ['Monday - Friday: 8:00 AM - 6:00 PM', 'Saturday: 9:00 AM - 2:00 PM', 'Sunday: Closed']
-    }
-  ];
-
   return (
     <div className="">
       {/* Hero Section */}
@@ -111,27 +88,6 @@ const Contact = () => {
             <p className="text-xl" style={{color: '#f0f9ff'}}>
               Get in touch with our team to discuss your medical device needs or request a quote.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-lg shadow-sm">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{backgroundColor: '#f0f9ff'}}>
-                  <info.icon className="h-8 w-8" style={{color: '#309ed9'}} />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{info.title}</h3>
-                <div className="space-y-1">
-                  {info.details.map((detail, idx) => (
-                    <p key={idx} className="text-gray-600 text-sm">{detail}</p>
-                  ))}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -13,6 +13,7 @@ export type Product = {
     description: string;
   }[];
   options?: string[];
+  variant_pdf: string;
 };
 
 export const products: Product[] = [
@@ -113,7 +114,8 @@ export const products: Product[] = [
       "Coloured Wings",
       "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/ivcannula/ecocann.pdf"
   },
   {
     "id": 3,
@@ -163,7 +165,8 @@ export const products: Product[] = [
       "FEP/PUR Catheter",
       "Hydrophobic Bacteria Retention Filter",
       "Packaging in Coloured Paper/Medical Grade Paper/Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/ivcannula/ecocann w.pdf"
   },
   {
     "id": 4,
@@ -213,7 +216,8 @@ export const products: Product[] = [
       "FEP/PUR Catheter",
       "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper / Medical Grade Paper / Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/ivcannula/ecocann n.pdf"
   },
   {
     "id": 5,
@@ -255,7 +259,8 @@ export const products: Product[] = [
       "FEP/PUR Catheter",
       "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper / Medical Grade Paper / Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/ivcannula/ecowin.pdf"
   },
   // {
   //   "id": 6,
@@ -341,7 +346,8 @@ export const products: Product[] = [
       "Available in Colours : Red, Blue and White",
       "Non Lipid Resistant / Lipid Resistant",
       "Without Rotator"
-    ]
+    ],
+    "variant_pdf": "/variants/threewaystopcock/modway.pdf"
   },
   {
     "id": 8,
@@ -386,7 +392,8 @@ export const products: Product[] = [
     "options": [
       "Lipid Resistant Three way stop cock",
       "Rotating luer lock"
-    ]
+    ],
+    "variant_pdf": "/variants/threewaystopcock/modexway.pdf"
   },
   {
     "id": 9,
@@ -441,7 +448,8 @@ export const products: Product[] = [
       "With/without needle",
       "Luer lock or rotating luer lock",
       "Flow regulator & needle-free Y injection port"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 10,
@@ -500,7 +508,8 @@ export const products: Product[] = [
       "With/without needle",
       "Luer lock or rotating luer lock",
       "With Flow regulator & needle-free Y injection port"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   // {
   //   "id": 11,
@@ -633,7 +642,8 @@ export const products: Product[] = [
     "options": [
       "Needle free Y connector",
       "With Flow regulator"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 14,
@@ -702,7 +712,8 @@ export const products: Product[] = [
     "options": [
       "With Y injection port",
       "With Flow regulator & needle-free Y injection port"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 15,
@@ -767,7 +778,8 @@ export const products: Product[] = [
     "options": [
       "PVC-Free",
       "Needle Free Y Connector"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 16,
@@ -826,7 +838,8 @@ export const products: Product[] = [
       "Priming filter cap",
       "Needle Free",
       "Latex-free or needle-type Y injection ports"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 17,
@@ -879,7 +892,8 @@ export const products: Product[] = [
       "With/without needle",
       "Luer lock or rotating luer lock",
       "With Flow regulator & needle-free Y injection port"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 18,
@@ -919,7 +933,8 @@ export const products: Product[] = [
     ],
     "options": [
       "With Slide Clamp"
-    ]
+    ],
+    "variant_pdf": "/variants/extensiontube/ecoextt hp.pdf"
   },
   {
     "id": 19,
@@ -961,7 +976,8 @@ export const products: Product[] = [
       "PVC Free",
       "Large Bore / Micro Bore Tube",
       "Without Needle Free Connector"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 20,
@@ -1003,7 +1019,8 @@ export const products: Product[] = [
       "Without Airvent",
       "DEHP Free",
       "Luer lock"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   // {
   //   "id": 21,
@@ -1261,7 +1278,8 @@ export const products: Product[] = [
         "description": "Silicone fluid surface results in smooth finish for easy passage through the urethral meatus. Ideal for short-term use."
       }
     ],
-    "options": []
+    "options": [],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 28,
@@ -1299,7 +1317,8 @@ export const products: Product[] = [
         "description": "ETO Sterilized, Single Use, Non-Pyrogenic, CE Certified."
       }
     ],
-    "options": []
+    "options": [],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 29,
@@ -1335,7 +1354,8 @@ export const products: Product[] = [
       "Trocar needle with matching catheter",
       "Spare perforated catheter",
       "Bellow chamber capacity: 600 ml & 800 ml"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 30,
@@ -1377,7 +1397,8 @@ export const products: Product[] = [
         "description": "45 cm catheter length supports common clinical use."
       }
     ],
-    "options": []
+    "options": [],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 31,
@@ -1411,7 +1432,8 @@ export const products: Product[] = [
         "description": "Radiopaque line extends through the catheter length for imaging verification."
       }
     ],
-    "options": []
+    "options": [],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 32,
@@ -1450,7 +1472,8 @@ export const products: Product[] = [
       "Syringe 5ml",
       "Extension Line Clamp",
       "Clamp Fastener"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 33,
@@ -1501,7 +1524,8 @@ export const products: Product[] = [
       "Coloured Wings",
       "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/ecocann s+.pdf"
   },
   {
     "id": 34,
@@ -1551,7 +1575,8 @@ export const products: Product[] = [
       "FEP/PUR Catheter",
       "Coloured Wings",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/ecocann s.pdf"
   },
   {
     "id": 35,
@@ -1602,7 +1627,8 @@ export const products: Product[] = [
       "Coloured Wings",
       "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/ecocann ws+.pdf"
   },
   {
     "id": 36,
@@ -1651,7 +1677,8 @@ export const products: Product[] = [
     "options": [
       "FEP/PUR Catheter",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/ecocann ws.pdf"
   },
   {
     "id": 37,
@@ -1700,7 +1727,8 @@ export const products: Product[] = [
     "options": [
       "FEP/PUR Catheter",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/ecowin s+.pdf"
   },
   {
     "id": 38,
@@ -1749,7 +1777,8 @@ export const products: Product[] = [
     "options": [
       "FEP/PUR Catheter",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/ecowin s.pdf"
   },
   {
     "id": 39,
@@ -1800,7 +1829,8 @@ export const products: Product[] = [
       "Hydrophobic Bacteria Retention Filter",
       "Coloured Wings",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/ivcannula/evercath.pdf"
   },
   {
     "id": 40,
@@ -1851,7 +1881,8 @@ export const products: Product[] = [
       "Hydrophobic Bacteria Retention Filter",
       "Coloured Wings",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
-    ]
+    ],
+    "variant_pdf": "/variants/ivcannula/ecocann sf.pdf"
   },
   {
     "id": 41,
@@ -1891,7 +1922,8 @@ export const products: Product[] = [
     ],
     "options": [
       "With Slide Clamp"
-    ]
+    ],
+    "variant_pdf": "/variants/extensiontube/ecoextt flow.pdf"
   },
   {
     "id": 42,
@@ -1932,7 +1964,8 @@ export const products: Product[] = [
     "options": [
       "With Y Injection Port for extra medication",
       "With Slide Clamp"
-    ]
+    ],
+    "variant_pdf": "/variants/extensiontube/ecoextt lp.pdf"
   },
   {
     "id": 43,
@@ -1974,7 +2007,8 @@ export const products: Product[] = [
       "PVC Free / DEHP Free Tube",
       "Single, Trio",
       "With Luer Lock"
-    ]
+    ],
+    "variant_pdf": "/variants/extensiontube/ecoextt duo.pdf"
   },
   {
     "id": 44,
@@ -2029,7 +2063,8 @@ export const products: Product[] = [
       "With/without needle",
       "Rotating luer lock",
       "With Flow regulator & needle-free Y injection port"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
     "id": 45,
@@ -2080,6 +2115,7 @@ export const products: Product[] = [
       "With needle",
       "Rotating luer lock",
       "With Flow regulator & needle-free Y-Site"
-    ]
+    ],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   }
 ];

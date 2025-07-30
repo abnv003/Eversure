@@ -236,7 +236,7 @@ const ProductDetails = () => {
               </div>
               <p className="text-gray-600 mb-4">{product.description}</p>
               <button
-                onClick={() => window.open('/specs.pdf', '_blank')}
+                onClick={() => window.open(`${product.variant_pdf}`, '_blank')}
                 className="text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200 flex items-center"
                 style={{ backgroundColor: '#309ed9' }}
               >
