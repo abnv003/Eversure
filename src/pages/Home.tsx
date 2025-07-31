@@ -218,7 +218,7 @@ const Home = () => {
              <div className={`transform transition-all duration-1000 delay-300 ${isAboutVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
               }`}>
               <img
-                src="/heroimages/about_section.jpeg"
+                src="/heroimages/about-section.png"
                 alt="Healthcare Professional with Patient"
                 className="rounded-lg shadow-lg w-full h-96 object-cover"
               />
