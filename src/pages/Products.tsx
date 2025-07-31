@@ -1,4 +1,4 @@
-// // Products.tsx
+// Products.tsx
 // import React from 'react';
 // import { useParams, useNavigate } from 'react-router-dom';
 // import { Search, Filter, ArrowRight } from 'lucide-react';
@@ -350,7 +350,7 @@ const Products = () => {
         </div>
       </section>
 
-      <div className="bg-white py-8 border-b border-gray-100">
+      <div className="bg-white py-8">
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-blue-50 rounded-lg p-6 border-l-4 border-[#309ed9]">
             <p className="text-gray-700 text-base leading-relaxed">
@@ -427,7 +427,7 @@ const Products = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {filteredProducts.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg overflow-hidden group shadow-sm hover:shadow-md transition-shadow">
+              <div key={product.id} className="bg-white rounded-lg overflow-hidden group">
                 <img
                   src={product.image}
                   alt={product.product_name}

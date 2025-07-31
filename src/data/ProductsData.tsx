@@ -977,7 +977,7 @@ export const products: Product[] = [
       "Large Bore / Micro Bore Tube",
       "Without Needle Free Connector"
     ],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/multiway/modextt.pdf"
   },
   {
     "id": 20,
@@ -1318,7 +1318,7 @@ export const products: Product[] = [
       }
     ],
     "options": [],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/yankaursuctionset/ecosuc.pdf"
   },
   {
     "id": 29,
@@ -1355,7 +1355,7 @@ export const products: Product[] = [
       "Spare perforated catheter",
       "Bellow chamber capacity: 600 ml & 800 ml"
     ],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/closedwoundsuctionunit/ecocws.pdf"
   },
   {
     "id": 30,
@@ -1398,7 +1398,7 @@ export const products: Product[] = [
       }
     ],
     "options": [],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/thoraciccatheter/ecothors.pdf"
   },
   {
     "id": 31,
@@ -1433,7 +1433,7 @@ export const products: Product[] = [
       }
     ],
     "options": [],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/thoraciccatheter/ecothort.pdf"
   },
   {
     "id": 32,
