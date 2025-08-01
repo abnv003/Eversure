@@ -50,7 +50,7 @@ const AboutUs = () => {
     {
       date: '1978',
       title: 'Start of rubber business - Polybond India',
-      description: 'Polybond India is a globally respected manufacturer of high-performance rubber components for automotive and industrial applications. Established in 1978 as a family-owned business, Polybond has earned a strong reputation for its design and testing expertise, offering innovative and reliable solutions to its customers.',
+      description: 'Established in 1978 as a family-owned business, Polybond has earned a strong reputation for its design and testing expertise, offering innovative and reliable solutions to its customers.',
       image: '/timeline/slide1.jpeg',
       certifications: []
     },
@@ -67,39 +67,49 @@ const AboutUs = () => {
       ]
     },
     {
+      date: '2005',
+      title: 'Plant II at Sanaswadi',
+      description: 'Equipped with injection molding, compression molding, and in-house rubber mixing, the Sanaswadi plant caters to diverse customer requirements with precision and efficiency.',
+      image: '/timeline/slide3.jpeg',
+      certifications: [
+        "IATF 16949",
+        "ISO 45001",
+        "ISO 14001",
+        "ISO 90014"
+      ]
+    },
+    {
+      date: '2005',
+      title: 'Tool Engineering Division',
+      description: 'Polybond’s design team uses NX to craft high-precision molds for compression, transfer, and injection molding. Each mold is tailored to production needs, ensuring reliability and efficiency. Beyond molds, we design fixtures and gauges to streamline manufacturing and quality assurance.',
+      image: '/timeline/slide6.jpeg',
+      certifications: []
+    },
+    {
       date: '2012',
-      title: 'Title 3',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe nulla hic.',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
+      title: 'Start of Medical Device Division - Polybond India',
+      description: "Eversure is a brand of disposable medical devices from Polybond India Pvt Ltd, part of Pune's Rathigroup. Our world-class certified facility in Pune, India, utilizes advanced processes including injection moulding, extrusion, class 10000 clean room assembly, ETO sterilization, and automated packaging.",
+      image: '/timeline/slide5.jpeg',
+      certifications: []
+    },
+    {
+      date: '2013',
+      title: 'Technology Centre - Polybond Rubber',
+      description: 'Here we undertake product design by using simulation techniques, product development, tooling design and development, rubber formulation design and testing as well as rigorous endurance testing of parts. This facility enables us to innovate continuously and meet the evolving demands of our customers.',
+      image: '/timeline/slide4.jpeg',
       certifications: []
     },
     {
       date: '2017',
-      title: 'Title 4',
-      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.',
-      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop',
-      certifications: []
-    },
-    {
-      date: '2022',
-      title: 'Title 5',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.',
-      image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop',
-      certifications: []
-    },
-    {
-      date: '2022',
-      title: 'Title 5',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.',
-      image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop',
-      certifications: []
-    },
-    {
-      date: '2022',
-      title: 'Title 5',
-      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.',
-      image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop',
-      certifications: []
+      title: 'Plant III Devas, Madhya Pradesh - Polybond Rubber',
+      description: 'Our newest and most advanced facility, the Dewas plant, integrates injection molding, extrusion, silicone hose manufacturing, rubber mixing, and compression molding to deliver a wide range of high-quality products.',
+      image: '/timeline/slide1.jpeg',
+      certifications: [
+        "IATF 16949",
+        "ISO 45001",
+        "ISO 14001",
+        "ISO 9001"
+      ]
     }
   ];
 
@@ -211,8 +221,8 @@ const AboutUs = () => {
       </main>
 
       {/* carousel Section */}
-      <div className="max-w-4xl mx-auto p-6 min-h-screen">
-        <h1 className="text-4xl font-bold text-center mb-12 text-slate-800">Timeline Carousel</h1>
+      <div className="max-w-4xl mx-auto p-6 mb-20 mt-10">
+        <h1 className="text-4xl font-bold text-center mb-12 text-slate-800">The Journey So Far...</h1>
 
         <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
           {/* Main Content */}

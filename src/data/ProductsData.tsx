@@ -449,7 +449,7 @@ export const products: Product[] = [
       "Luer lock or rotating luer lock",
       "Flow regulator & needle-free Y injection port"
     ],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/ivinfusionset/ecovenn nv.pdf"
   },
   {
     "id": 10,
@@ -509,7 +509,7 @@ export const products: Product[] = [
       "Luer lock or rotating luer lock",
       "With Flow regulator & needle-free Y injection port"
     ],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/ivinfusionset/ecovenn v.pdf"
   },
   // {
   //   "id": 11,
@@ -643,7 +643,7 @@ export const products: Product[] = [
       "Needle free Y connector",
       "With Flow regulator"
     ],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/ivinfusionset/modvenn v.pdf"
   },
   {
     "id": 14,
@@ -713,7 +713,7 @@ export const products: Product[] = [
       "With Y injection port",
       "With Flow regulator & needle-free Y injection port"
     ],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/ivinfusionset/modvenn v+.pdf"
   },
   {
     "id": 15,
@@ -779,7 +779,7 @@ export const products: Product[] = [
       "PVC-Free",
       "Needle Free Y Connector"
     ],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/ivinfusionset/modvenn sv.pdf"
   },
   {
     "id": 16,
@@ -839,7 +839,7 @@ export const products: Product[] = [
       "Needle Free",
       "Latex-free or needle-type Y injection ports"
     ],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/ivinfusionset/modvenn sv+.pdf"
   },
   {
     "id": 17,
@@ -2064,7 +2064,7 @@ export const products: Product[] = [
       "Rotating luer lock",
       "With Flow regulator & needle-free Y injection port"
     ],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/ivinfusionset/ecovenn.pdf"
   },
   {
     "id": 45,

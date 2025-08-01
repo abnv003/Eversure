@@ -155,7 +155,7 @@ const Home = () => {
     }
   ];
 
-  const formatCategoryPath = (category:any) => {
+  const formatCategoryPath = (category: any) => {
     return `/products/${encodeURIComponent(category.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-'))}`;
   };
 
@@ -164,14 +164,14 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-[75vh] bg-black overflow-hidden w-full">
         {/* Background with overlay */}
-       <div className="absolute inset-0">
-    <img
-      src="/heroimages/homepage_main.jpeg"
-      alt="Medical Technology"
-      className="w-full h-full object-cover opacity-70 object-[center_30%]"
-    />
-    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
-  </div>
+        <div className="absolute inset-0">
+          <img
+            src="/heroimages/homepage_main.jpeg"
+            alt="Medical Technology"
+            className="w-full h-full object-cover opacity-70 object-[center_30%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+        </div>
 
         {/* Content */}
         <div className="relative z-10 min-h-[65vh] flex items-center w-full">
@@ -200,29 +200,33 @@ const Home = () => {
                 <div className="w-20 h-1 bg-yellow-400"></div>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                Eversure is a global leader in the medical device industry, renowned for its extensive range of high-quality medical devices. Since our establishment in 1997, the company has upheld a steadfast commitment to innovation and excellence, envisioning a world where top-tier healthcare is universally accessible. Our expansive global reach, cutting edge technologies and advanced manufacturing capabilities...
+                Eversure is a brand of disposable medical devices from Polybond India Pvt Ltd, part of Pune's Rathigroup. Our world-class certified facility in Pune, India, utilizes advanced processes including injection moulding, extrusion, class 10000 clean room assembly, ETO sterilization, and automated packaging.
+                <p className='mt-2'>
+                  Our product range covers Infusion Therapy, Anesthesia, Gastroenterology, Urology, Surgery & Wound Drainage, and Central Venous Access Catheters, promising innovation, quality, and reliability.
+
+                </p>
               </p>
               <div className="flex items-center space-x-4">
                 <button
-                  onClick={()=>{navigate('/company/about-us')}}
+                  onClick={() => { navigate('/company/about-us') }}
                   className="text-white px-8 py-3 rounded-full font-medium transition-colors duration-200 bg-[#309ed9] hover:bg-yellow-400"
                 >
                   Learn More About Eversure
                 </button>
-                <div onClick={()=>{navigate('/company/about-us')}} className="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-colors bg-[#309ed9] hover:bg-yellow-400">
+                <div onClick={() => { navigate('/company/about-us') }} className="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-colors bg-[#309ed9] hover:bg-yellow-400">
                   <ChevronRight className="h-6 w-6 text-white" />
                 </div>
               </div>
             </div>
             <div className={`transform transition-all duration-1000 delay-300 ${isAboutVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
-             <div className={`transform transition-all duration-1000 delay-300 ${isAboutVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
-              }`}>
-              <img
-                src="/heroimages/about-section.png"
-                alt="Healthcare Professional with Patient"
-                className="rounded-lg shadow-lg w-full h-96 object-cover"
-              />
-            </div>
+              <div className={`transform transition-all duration-1000 delay-300 ${isAboutVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+                }`}>
+                <img
+                  src="/heroimages/about-section.png"
+                  alt="Healthcare Professional with Patient"
+                  className="rounded-lg shadow-lg w-full h-96 object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
