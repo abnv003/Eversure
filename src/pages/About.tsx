@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Users, Target, Heart, Globe } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
@@ -15,6 +15,8 @@ const AboutUs = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+
 
   const values = [
     {
@@ -44,33 +46,82 @@ const AboutUs = () => {
     }
   ];
 
-  const timeline = [
+  const timelineData = [
     {
-      year: '1995',
-      title: 'Company Founded',
-      description: 'PolyMedicure was established with a vision to revolutionize medical device manufacturing.'
+      date: '1978',
+      title: 'Start of rubber business - Polybond India',
+      description: 'Polybond India is a globally respected manufacturer of high-performance rubber components for automotive and industrial applications. Established in 1978 as a family-owned business, Polybond has earned a strong reputation for its design and testing expertise, offering innovative and reliable solutions to its customers.',
+      image: '/timeline/slide1.jpeg',
+      certifications: []
     },
     {
-      year: '2001',
-      title: 'FDA Approval',
-      description: 'Received our first FDA approval for surgical instruments, marking a major milestone.'
+      date: '1990',
+      title: 'Plant I at Alandi',
+      description: 'This facility combines rubber mixing with injection and compression molding to produce robust, custom-molded components tailored to client needs.',
+      image: '/timeline/slide2.jpeg',
+      certifications: [
+        "IATF 16949",
+        "ISO 45001",
+        "ISO 14001",
+        "ISO 9001"
+      ]
     },
     {
-      year: '2008',
-      title: 'International Expansion',
-      description: 'Expanded operations to serve markets in Europe and Asia-Pacific regions.'
+      date: '2012',
+      title: 'Title 3',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe nulla hic.',
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
+      certifications: []
     },
     {
-      year: '2015',
-      title: 'R&D Center',
-      description: 'Opened our state-of-the-art research and development facility.'
+      date: '2017',
+      title: 'Title 4',
+      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.',
+      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop',
+      certifications: []
     },
     {
-      year: '2024',
-      title: 'Leading Innovation',
-      description: 'Continues to lead the industry with cutting-edge medical device solutions.'
+      date: '2022',
+      title: 'Title 5',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.',
+      image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop',
+      certifications: []
+    },
+    {
+      date: '2022',
+      title: 'Title 5',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.',
+      image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop',
+      certifications: []
+    },
+    {
+      date: '2022',
+      title: 'Title 5',
+      description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.',
+      image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop',
+      certifications: []
     }
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? timelineData.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === timelineData.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const currentItem = timelineData[currentIndex];
 
   return (
     <div className="overflow-x-hidden">
@@ -159,34 +210,84 @@ const AboutUs = () => {
         </div>
       </main>
 
-      {/* Timeline Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Journey</h2>
-            <p className="text-lg text-gray-600">
-              Key milestones that have shaped our company's growth and success.
-            </p>
-          </div>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-teal-200"></div>
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-white p-6 rounded-lg shadow-sm">
-                      <div className="text-teal-600 font-bold text-xl mb-2">{item.year}</div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
-                      <p className="text-gray-600">{item.description}</p>
-                    </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-teal-600 rounded-full border-4 border-white"></div>
-                </div>
-              ))}
+      {/* carousel Section */}
+      <div className="max-w-4xl mx-auto p-6 min-h-screen">
+        <h1 className="text-4xl font-bold text-center mb-12 text-slate-800">Timeline Carousel</h1>
+
+        <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
+          {/* Main Content */}
+          <div className="flex flex-col lg:flex-row">
+            {/* Image Section */}
+            <div className="lg:w-1/2 h-64 lg:h-96 relative overflow-hidden">
+              <img
+                src={currentItem.image}
+                alt={currentItem.title}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                {currentItem.date}
+              </div>
+            </div>
+
+            {/* Content Section */}
+            <div className="lg:w-1/2 p-8 flex flex-col justify-center">
+              <h2 className="text-3xl font-bold mb-4 text-slate-800 transition-all duration-300">
+                {currentItem.title}
+              </h2>
+              <p className="text-slate-600 leading-relaxed text-lg transition-all duration-300">
+                {currentItem.description}
+              </p>
             </div>
           </div>
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={goToPrevious}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-700 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          <button
+            onClick={goToNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-700 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            aria-label="Next slide"
+          >
+            <ChevronRight size={24} />
+          </button>
         </div>
-      </section>
+
+        {/* Indicators */}
+        <div className="flex justify-center mt-8 space-x-3">
+          {timelineData.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+                  ? 'bg-slate-700 scale-125'
+                  : 'bg-slate-300 hover:bg-slate-400'
+                }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Progress Bar */}
+        <div className="mt-6 max-w-md mx-auto">
+          <div className="bg-slate-200 rounded-full h-2 overflow-hidden">
+            <div
+              className="bg-gradient-to-r from-slate-600 to-slate-800 h-full transition-all duration-500 ease-out"
+              style={{ width: `${((currentIndex + 1) / timelineData.length) * 100}%` }}
+            />
+          </div>
+          <div className="flex justify-between mt-2 text-sm text-slate-500">
+            <span>{currentIndex + 1} of {timelineData.length}</span>
+            <span>{Math.round(((currentIndex + 1) / timelineData.length) * 100)}%</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };

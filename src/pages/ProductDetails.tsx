@@ -244,7 +244,7 @@ const ProductDetails = () => {
                 View All Available Variants
               </button>
               {product.options && product.options.length > 0 && (
-                <div className="bg-white border mt-10 border-gray-200 rounded-lg p-6 shadow-sm max-w-lg">
+                <div className="bg-white border mt-10 border-gray-200 rounded-lg p-6 shadow-sm max-w-xxl">
                   <span className="text-md font-medium text-gray-600 mb-3 block">
                     Options
                   </span>

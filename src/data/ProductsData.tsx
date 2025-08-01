@@ -72,7 +72,7 @@ export const products: Product[] = [
     "product_code": "1002",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Injection Port provided for extra medication and wings for proper fixation.",
     "sub_desc": "IV Cannula with wings & injection port",
     "image": "/images/IV Cannula.png",
     "product_features": [
@@ -124,7 +124,7 @@ export const products: Product[] = [
     "product_code": "1003",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Without Port IV Cannula reduce the chance of contamination & microorganism.",
     "sub_desc": "IV Cannula with wings & w/o injection port",
     "image": "/images/Ecocann W.png",
     "product_features": [
@@ -175,7 +175,7 @@ export const products: Product[] = [
     "product_code": "1004",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Without Port IV Cannula reduce the chance of contamination & microorganism.",
     "sub_desc": "IV Cannula with small wings & w/o injection port",
     "image": "/images/Ecocann N.png",
     "product_features": [
@@ -226,7 +226,7 @@ export const products: Product[] = [
     "product_code": "1005",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Fever place for  contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin for skin better pateint comfort.",
     "sub_desc": "IV Cannula w/o wings & w/o injection port",
     "image": "/images/ecowin.png",
     "product_features": [
@@ -305,7 +305,7 @@ export const products: Product[] = [
     "product_code": "Non Lipid - 1401, Lipid - 1402",
     "category": "infusion-transfusion",
     "sub_category": "Three Way Stop Cock",
-    "description": "For simultaneous and continuous infusion of two fluids to connect the luer device and control flow direction.",
+    "description": "The product is used to deliver intravenous fluid into human circulating system. Lipid resistant three way stop cock available for Lipid resistant medication.",
     "sub_desc": "Three Way Stop Cock",
     "image": "/images/three way stop cock.png",
     "product_features": [
@@ -356,7 +356,7 @@ export const products: Product[] = [
     "product_code": "1302",
     "category": "infusion-transfusion",
     "sub_category": "Three Way Stop Cock",
-    "description": "For simultaneous and continuous infusion of two fluids to connect the luer device and control flow direction away from the venipuncture site.",
+    "description": "The product is used to deliver intravenous fluid into human circulating system. Extension Tube is used to extend the length of IV lines, catheters, and other infusion sets, providing greater access to patients while minimizing movement of the primary access point.",
     "sub_desc": "Three way stop cock with Extension Tube (DEHP Free)",
     "image": "/images/Three way stop cock with ext tube.png",
     "product_features": [
@@ -458,7 +458,7 @@ export const products: Product[] = [
     "product_code": "1106",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
-    "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
+    "description": "The Infusion sets are used to administer intravenous fluid in to human circulating system by using intravenous catheter or cannula. In built air vent that allows air to enter the IV fluid container (usually a glass bottle or rigid plastic container) as fluid flows out",
     "sub_desc": "IV Infusion Set Vented",
     "image": "/images/infusion.png",
     "product_features": [
@@ -848,7 +848,7 @@ export const products: Product[] = [
     "product_code": "1501",
     "category": "infusion-transfusion",
     "sub_category": "Burette Set",
-    "description": "For delivering a fixed volume of IV fluid at a fixed rate.",
+    "description": "The Burette Type Infusion Set is used to administer Intravenous fluid into human circulating system by using intravenous catheter or cannula, for pediatric use.",
     "sub_desc": "Burette type Infusin Set",
     "image": "/images/burette 5.png",
     "product_features": [
@@ -902,7 +902,7 @@ export const products: Product[] = [
     "product_code": "1202",
     "category": "infusion-transfusion",
     "sub_category": "Extension Tube",
-    "description": "For easy and safe connection of the source of infusion and the patient during infusion therapy without any length restrictions.",
+    "description": "Extension tube are designed to connect the infusion site and the source of infusion, (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Pressure Sustainability for Low pressure Extension Tube is 600 PSI (41 bar)",
     "sub_desc": "Extension Tube : High Pressure (DEHP Free)",
     "image": "/images/ecoextt hp.png",
     "product_features": [
@@ -943,7 +943,7 @@ export const products: Product[] = [
     "product_code": "Single 1204, Double 1205, Triple 1206",
     "category": "infusion-transfusion",
     "sub_category": "Multiway",
-    "description": "For connecting to the end of vascular catheters and enable catheter access for infusion and aspiration avoiding bacterial contamination in fluid path way.",
+    "description": "Extension tube are designed to connect the infusion site and the source of infusion,   (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. It enables for multiple infusions simultaneously, eliminates the need for needles, reduces the risk of needlestick injuries and contamination, and simplifies medication administration.",
     "sub_desc": "Multiline Extension Tube with Needle Free Connectors (DEHP Free)",
     "image": "/images/triple ext tube.png",
     "product_features": [
@@ -986,7 +986,7 @@ export const products: Product[] = [
     "product_code": "ECOTRAN NV - 2401, ECOTRAN V - 2402",
     "category": "infusion-transfusion",
     "sub_category": "Blood Transfusion Set",
-    "description": "For administration of blood / blood components into human circulating system.",
+    "description": "BT set are used to administer blood in to human circulating system by using intravenous catheter and cannula. ",
     "sub_desc": "Blood Transfusion Set Vented",
     "image": "/images/ecotran.png",
     "product_features": [
@@ -1020,7 +1020,7 @@ export const products: Product[] = [
       "DEHP Free",
       "Luer lock"
     ],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/bloodtransfusionset/ecotran.pdf"
   },
   // {
   //   "id": 21,
@@ -1245,7 +1245,7 @@ export const products: Product[] = [
     "product_code": "Two way 3601, Three way 3602",
     "category": "Urology",
     "sub_category": "Nelaton Catheter",
-    "description": "For short term bladder catheterisation through urethra in case of urinary retention, having radio opaque line throughout the length for x-ray visualization.",
+    "description": "Foley Catheter for single use is a thin, sterile tube inserted into bladder to drain urine.",
     "sub_desc": "Foley Balloon Catheter",
     "image": "/images/Foley catheter.png",
     "product_features": [
@@ -1279,7 +1279,7 @@ export const products: Product[] = [
       }
     ],
     "options": [],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/urology/foleycatheter.pdf"
   },
   {
     "id": 28,
@@ -1288,7 +1288,7 @@ export const products: Product[] = [
     "product_code": "2301,2302",
     "category": "surgery-wound-drainage",
     "sub_category": "Yankaur Suction Set",
-    "description": "For short term bladder catheterisation through urethra in case of urinary retention, having radio opaque line throughout the length for x-ray visualization.",
+    "description": "Yankauer suction set is used for removal of blood and fluid during surgery.",
     "sub_desc": "Yankaur Suction Set",
     "image": "/images/ecosuc.png",
     "product_features": [
@@ -1327,7 +1327,7 @@ export const products: Product[] = [
     "product_code": "2901",
     "category": "surgery-wound-drainage",
     "sub_category": "Closed Wound Suction Unit",
-    "description": "For postoperative treatment to drain away undesirable secretion and blood under negative pressure with an alternative of operating one or two catheters simultaneously.",
+    "description": "The device Closed wound suction unit is a vacuum based suction device for draining harmful fluids, such as blood, pus, and tissue secretions, from surgical wounds.",
     "sub_desc": "Closed Wound Suction Unit",
     "image": "/images/CWS.png",
     "product_features": [
@@ -1364,7 +1364,7 @@ export const products: Product[] = [
     "product_code": "2601",
     "category": "surgery-wound-drainage",
     "sub_category": "Thoracic Catheter",
-    "description": "For removal of air, fluid or pus from the intrathoracic space following cardiothoracic or thoracic surgery.",
+    "description": "Thoracic Drainage catheter is used to remove air ( Pnemothorax), fluid ( pleural effusion , blood), or pus ( empyema) from the in thoracic space. Thoracic Drainage Catheter is a flexible plastic tube that is inserted through the chest wall and into the pleural space.",
     "sub_desc": "Thoracic Drainage Catheter Straight",
     "image": "/images/ecocath thor s.png",
     "product_features": [
@@ -1407,7 +1407,7 @@ export const products: Product[] = [
     "product_code": "2801",
     "category": "surgery-wound-drainage",
     "sub_category": "Thoracic Catheter",
-    "description": "For removal of air, fluid or pus from the intrathoracic space following cardiothoracic or thoracic surgery.",
+    "description": "Thoracic Drainage catheter is used to remove air ( Pnemothorax), fluid ( pleural effusion , blood), or pus ( empyema) from the in thoracic space. Thoracic Drainage Catheter is a flexible plastic tube that is inserted through the chest wall and into the pleural space.",
     "sub_desc": "Thoracic Drainage Catheter Trocar",
     "image": "/images/ecocath thor t side.png",
     "product_features": [
@@ -1442,7 +1442,7 @@ export const products: Product[] = [
     "product_code": "Single Lumen-2001 to 2004, Double Lumen-2101 to 2103, Triple Lumen-2201 to 2202",
     "category": "central-venous-access-catheters",
     "sub_category": "Central Venous Catheter",
-    "description": "This product is used for catheterization of vena cava with Seldinger method. It is also used to administer fluid and medication.",
+    "description": "The central venous catheter is designed for treatment of critically ill patients and is suggested for Continuous or intermittent drug infusions. - Central venous blood pressure monitoring (CVP). - Acute hyperalimentation - Blood sampling. - Delivery of whole blood or blood products. - Simultaneous, separate infusion of drug",
     "sub_desc": "Central Venous Access Catheter",
     "image": "/images/cvc.png",
     "product_features": [
@@ -1465,15 +1465,15 @@ export const products: Product[] = [
     ],
     "options": [
       "Soft tip PU indwelling catheter",
-      "'J' tip Guide wire with Dispenser based upon Seldinger Technique",
       "'Y' shaped introducer needle",
       "Tissue Dilator",
       "Scalpel",
       "Syringe 5ml",
       "Extension Line Clamp",
-      "Clamp Fastener"
+      "Clamp Fastener",
+      "'J' tip Guide wire with Dispenser based upon Seldinger Technique"
     ],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/cvc/cvc.pdf"
   },
   {
     "id": 33,
@@ -1482,7 +1482,7 @@ export const products: Product[] = [
     "product_code": "1047",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. circulating system. Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub,   minimizing the risk of needle stick injuries.",
     "sub_desc": "Safety IV Cannula with wings & injection port",
     "image": "/images/EcocannS+.png",
     "product_features": [
@@ -1585,7 +1585,7 @@ export const products: Product[] = [
     "product_code": "1048",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub, minimizing the risk of needle stick injuries. Without Port IV Cannula reduce the chance of contamination & microorganism.",
     "sub_desc": "Safety IV Cannula with wings & w/o injection port",
     "image": "/images/Ecowannws+copy.png",
     "product_features": [
@@ -1687,7 +1687,7 @@ export const products: Product[] = [
     "product_code": "1049",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.   Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub, minimizing the risk of needle stick injuries.Fever place for  contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin for skin better pateint comfort.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
     "image": "/images/EcowinS+copy.png",
     "product_features": [
@@ -1787,7 +1787,7 @@ export const products: Product[] = [
     "product_code": "1035",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Integrated three-way stopcock, allowing for simultaneous administration of multiple fluids or medications through a single access point. This design simplifies the process, reduces the number of punctures needed, and enhances patient comfort.",
     "sub_desc": "IV Cannula with integrated three way stop cock",
     "image": "/images/IV Cannula.png",
     "product_features": [
@@ -1839,7 +1839,7 @@ export const products: Product[] = [
     "product_code": "1035",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Suturable wing allows suture to pass through the perforation & helps to stablize the cannula during pateint movement when inconsious.",
     "sub_desc": "IV Cannula with Suturable wings and with snap fit port cap",
     "image": "/images/IV Cannula.png",
     "product_features": [
@@ -1891,7 +1891,7 @@ export const products: Product[] = [
     "product_code": "1207",
     "category": "infusion-transfusion",
     "sub_category": "Extension Tube",
-    "description": "For easy and safe connection of the source of infusion and the patient during infusion therapy without any length restrictions.",
+    "description": "Extension tube are designed to connect the infusion site and the source of infusion, (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between   infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Flow regulator ensure the accurate and safe delivery of fluids and medications during infusion therapy.",
     "sub_desc": "Extension Tube with Flow Regulator (DEHP Free)",
     "image": "/images/ecoextt extention tube with flow regulator.png",
     "product_features": [
@@ -1932,7 +1932,7 @@ export const products: Product[] = [
     "product_code": "1201",
     "category": "infusion-transfusion",
     "sub_category": "Extension Tube",
-    "description": "For easy and safe connection of the source of infusion and the patient during infusion therapy without any length restrictions.",
+    "description": "Extension tube are designed to connect the infusion site and the source of infusion, (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Pressure Sustainability for Low pressure Extension Tube is 79 PSI (5.5 bar)",
     "sub_desc": "Extension Tube - Low Pressure (DEHP Free)",
     "image": "/images/ecoextt.png",
     "product_features": [
@@ -1974,7 +1974,7 @@ export const products: Product[] = [
     "product_code": "1209",
     "category": "infusion-transfusion",
     "sub_category": "Extension Tube",
-    "description": "For easy and safe connection of the source of infusion and the patient during infusion therapy without any length restrictions.",
+    "description": "Extension tube are designed to connect the infusion site and the source of infusion,  (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Extension Tube is used to extend the length of IV lines, catheters, and other infusion sets, providing greater access to patients while minimizing movement of the primary access point.",
     "sub_desc": "Two Way Extension Tube",
     "image": "/images/Extension tube two way.png",
     "product_features": [
@@ -2017,7 +2017,7 @@ export const products: Product[] = [
     "product_code": "Vented 1117, Non Vented 1118",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
-    "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
+    "description": "The Infusion sets are used to administer intravenous fluid in to human circulating system by using intravenous catheter or cannula.",
     "sub_desc": "IV Infusion Set with Three way Stop Cock",
     "image": "/images/Ecovenn NV.png",
     "product_features": [
@@ -2073,7 +2073,7 @@ export const products: Product[] = [
     "product_code": "1503",
     "category": "infusion-transfusion",
     "sub_category": "Burette Set",
-    "description": "For delivering a fixed volume of IV fluid at a fixed rate.",
+    "description": "The Burette Type Infusion Set is used to administer Intravenous fluid into human circulating system by using intravenous catheter or cannula, for pediatric use.",
     "sub_desc": "Burette Set with Vented spike, Y-Site, Luer lock",
     "image": "/images/burette 5.png",
     "product_features": [
