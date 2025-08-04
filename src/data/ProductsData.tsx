@@ -1240,7 +1240,7 @@ export const products: Product[] = [
     "sub_category": "Burette Set",
     "description": "The Burette Type Infusion Set is used to administer Intravenous fluid into human circulating system by using intravenous catheter or cannula, for pediatric use.",
     "sub_desc": "Burette Set with Vented spike, Y-Site, Luer lock",
-    "image": "/images/burette 5.png",
+    "image": "/images/Burette set Ecobuvenn Y.png",
     "product_features": [
       {
         "title": "Graduated Transparent Burette Chamber",

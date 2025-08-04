@@ -222,7 +222,7 @@ const AboutUs = () => {
 
       {/* carousel Section */}
       <div className="max-w-4xl mx-auto p-6 mb-20 mt-10">
-        <h1 className="text-4xl font-bold text-center mb-12 text-slate-800">The Journey So Far...</h1>
+        <h1 className="text-4xl font-bold text-center mb-12 text-slate-800">Our Journey So Far...</h1>
 
         <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
           {/* Main Content */}
