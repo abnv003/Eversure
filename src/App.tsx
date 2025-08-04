@@ -14,10 +14,12 @@ import QuickFinderTab from './components/QuickFinderTab';
 import ProductDetails from './pages/ProductDetails';
 import { Sustainability } from './pages/Sustainability';
 import { CSR } from './pages/CSR';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <DownloadTab />
       <QuickFinderTab />
       <div className="min-h-screen bg-white">

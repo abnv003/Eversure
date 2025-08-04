@@ -1,12 +1,16 @@
 // Products.tsx
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { Search, Filter, ArrowRight } from 'lucide-react';
 import { products } from '../data/ProductsData';
 
 const Products = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { category } = useParams();
+
+  const urlParams = new URLSearchParams(location.search);
+  const subcategoryFromUrl = urlParams.get('subcategory');
 
   const readableCategory = category
     ? category.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())
@@ -54,13 +58,19 @@ const Products = () => {
       : [];
 
   // Initialize with 'All Products' and ensure it stays that way on component mount
-  const [selectedCategory, setSelectedCategory] = React.useState('All Products');
+  const [selectedCategory, setSelectedCategory] = React.useState(
+    subcategoryFromUrl || 'All Products'
+  );
   const [searchTerm, setSearchTerm] = React.useState('');
 
   // Reset to 'All Products' when category changes
   React.useEffect(() => {
-    setSelectedCategory('All Products');
-  }, [category, actualCategory]);
+    if (subcategoryFromUrl) {
+      setSelectedCategory(subcategoryFromUrl);
+    } else {
+      setSelectedCategory('All Products');
+    }
+  }, [category, actualCategory, subcategoryFromUrl]);
 
   const categoryDesc = [
     "When oral medications aren't enough, infusion therapy provides critical treatment by delivering medication directly into the bloodstream. It's essential for managing severe conditions like unresponsive infections, cancer-related pain, dehydration, and gastrointestinal diseases. Eversure supports this vital process with a comprehensive portfolio of infusion therapy products. Our entire range is CE-certified and meets global quality standards, making IV products more efficient for clinicians and less painful for patients.",
@@ -73,18 +83,18 @@ const Products = () => {
   const filteredProducts = React.useMemo(() => {
     return products.filter(product => {
       // First filter by the main category from params (only if category is specified)
-      const matchesMainCategory = !actualCategory || 
+      const matchesMainCategory = !actualCategory ||
         product.category === actualCategory ||
         product.category === readableCategory ||
         product.category === category;
 
       // Then filter by selected subcategory (simplified logic)
-      const matchesSubCategory = selectedCategory === 'All Products' || 
+      const matchesSubCategory = selectedCategory === 'All Products' ||
         product.product_name === selectedCategory ||
         product.sub_category === selectedCategory;
 
       // Search filter
-      const matchesSearch = !searchTerm || 
+      const matchesSearch = !searchTerm ||
         (product.product_name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
         (product.description || '').toLowerCase().includes(searchTerm.toLowerCase());
 
@@ -142,7 +152,7 @@ const Products = () => {
       </div>
 
       {/* Filters */}
-      <section className="py-8 bg-gray-50">
+      {/* <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between gap-4">
             <div className="flex items-start space-x-4">
@@ -150,6 +160,54 @@ const Products = () => {
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => setSelectedCategory('All Products')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium bg-white text-gray-700 hover:bg-gray-100 transition-colors ${selectedCategory === 'All Products'
+                      ? 'border-b-4 border-yellow-400'
+                      : ''
+                    }`}
+                >
+                  All Products
+                </button>
+                {subcategories.map((sub) => (
+                  <button
+                    key={sub}
+                    onClick={() => setSelectedCategory(sub)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium bg-white text-gray-700 hover:bg-gray-100 transition-colors ${selectedCategory === sub
+                        ? 'border-b-4 border-yellow-400'
+                        : ''
+                      }`}
+                  >
+                    {sub}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <Search className="absolute left-3 top-5 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search products..."
+                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#309ed9] focus:border-transparent"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Updated Filters section */}
+      <section className="py-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between gap-4">
+            <div className="flex items-start space-x-4">
+              <Filter className="h-5 w-5 text-gray-600 mt-2 flex-shrink-0" />
+              <div className="flex flex-wrap gap-2">
+                <button
+                  onClick={() => {
+                    setSelectedCategory('All Products');
+                    // Update URL to remove subcategory parameter
+                    navigate(`/products/${category}`, { replace: true });
+                  }}
                   className={`px-4 py-2 rounded-lg text-sm font-medium bg-white text-gray-700 hover:bg-gray-100 transition-colors ${
                     selectedCategory === 'All Products'
                       ? 'border-b-4 border-yellow-400'
@@ -161,7 +219,11 @@ const Products = () => {
                 {subcategories.map((sub) => (
                   <button
                     key={sub}
-                    onClick={() => setSelectedCategory(sub)}
+                    onClick={() => {
+                      setSelectedCategory(sub);
+                      // Update URL with subcategory parameter
+                      navigate(`/products/${category}?subcategory=${encodeURIComponent(sub)}`, { replace: true });
+                    }}
                     className={`px-4 py-2 rounded-lg text-sm font-medium bg-white text-gray-700 hover:bg-gray-100 transition-colors ${
                       selectedCategory === sub
                         ? 'border-b-4 border-yellow-400'
@@ -196,7 +258,7 @@ const Products = () => {
               <p>Debug: actualCategory = "{actualCategory}", selectedCategory = "{selectedCategory}", filteredProducts = {filteredProducts.length}</p>
             </div>
           )} */}
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-lg overflow-hidden group">
@@ -233,7 +295,7 @@ const Products = () => {
                 {searchTerm ? 'Try adjusting your search terms.' : 'Try selecting "All Products" or a different category.'}
               </p>
               {selectedCategory !== 'All Products' && (
-                <button 
+                <button
                   onClick={() => setSelectedCategory('All Products')}
                   className="mt-4 px-4 py-2 bg-[#309ed9] text-white rounded-lg hover:bg-[#2889c4] transition-colors"
                 >

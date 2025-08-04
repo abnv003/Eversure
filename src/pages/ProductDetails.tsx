@@ -125,6 +125,13 @@ const ProductDetails = () => {
               {readableCategory}
             </button>
             <span className="mx-2">/</span>
+            <button
+              onClick={() => navigate(`/products/${category}?subcategory=${encodeURIComponent(product.sub_category)}`)}
+              className="hover:underline transition-colors duration-200"
+            >
+              {product.sub_category}
+            </button>
+            <span className="mx-2">/</span>
             <span>{product.product_name}</span>
           </nav>
         </div>
