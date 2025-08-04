@@ -13,6 +13,7 @@ export type Product = {
     description: string;
   }[];
   options?: string[];
+  unit_consists?: string[];
   variant_pdf: string;
 };
 
@@ -86,7 +87,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -115,6 +116,7 @@ export const products: Product[] = [
       "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivcannula/ecocann.pdf"
   },
   {
@@ -138,7 +140,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -166,6 +168,7 @@ export const products: Product[] = [
       "Hydrophobic Bacteria Retention Filter",
       "Packaging in Coloured Paper/Medical Grade Paper/Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivcannula/ecocann w.pdf"
   },
   {
@@ -217,6 +220,7 @@ export const products: Product[] = [
       "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper / Medical Grade Paper / Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivcannula/ecocann n.pdf"
   },
   {
@@ -240,7 +244,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
       },
       {
         "title": "Biocompatible Material",
@@ -260,6 +264,7 @@ export const products: Product[] = [
       "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper / Medical Grade Paper / Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivcannula/ecowin.pdf"
   },
   // {
@@ -301,7 +306,7 @@ export const products: Product[] = [
   {
     "id": 7,
     "product_name": "MODWAY",
-    "sizes": "Size information not available",
+    "sizes": "",
     "product_code": "1401 - 1402",
     "category": "infusion-transfusion",
     "sub_category": "Three Way Stop Cock",
@@ -347,6 +352,7 @@ export const products: Product[] = [
       "Non Lipid Resistant / Lipid Resistant",
       "Without Rotator"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/threewaystopcock/modway.pdf"
   },
   {
@@ -393,12 +399,13 @@ export const products: Product[] = [
       "Lipid Resistant Three way stop cock",
       "Rotating luer lock"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/threewaystopcock/modexway.pdf"
   },
   {
     "id": 9,
     "product_name": "ECOVENN NV",
-    "sizes": "Size information not available",
+    "sizes": "",
     "product_code": "1102",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
@@ -449,12 +456,13 @@ export const products: Product[] = [
       "Luer lock or rotating luer lock",
       "Flow regulator & needle-free Y injection port"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivinfusionset/ecovenn nv.pdf"
   },
   {
     "id": 10,
     "product_name": "ECOVENN V",
-    "sizes": "Size information not available",
+    "sizes": "",
     "product_code": "1106",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
@@ -509,6 +517,7 @@ export const products: Product[] = [
       "Luer lock or rotating luer lock",
       "With Flow regulator & needle-free Y injection port"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivinfusionset/ecovenn v.pdf"
   },
   // {
@@ -586,7 +595,7 @@ export const products: Product[] = [
   {
     "id": 13,
     "product_name": "MODVENN V",
-    "sizes": "Size information not available",
+    "sizes": "",
     "product_code": "1107",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
@@ -643,12 +652,13 @@ export const products: Product[] = [
       "Needle free Y connector",
       "With Flow regulator"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivinfusionset/modvenn v.pdf"
   },
   {
     "id": 14,
     "product_name": "MODVENN V+",
-    "sizes": "Size information not available",
+    "sizes": "",
     "product_code": "1105",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
@@ -713,12 +723,13 @@ export const products: Product[] = [
       "With Y injection port",
       "With Flow regulator & needle-free Y injection port"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivinfusionset/modvenn v+.pdf"
   },
   {
     "id": 15,
     "product_name": "MODVENN SV",
-    "sizes": "Size information not available",
+    "sizes": "",
     "product_code": "1111",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
@@ -779,12 +790,13 @@ export const products: Product[] = [
       "PVC-Free",
       "Needle Free Y Connector"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivinfusionset/modvenn sv.pdf"
   },
   {
     "id": 16,
     "product_name": "MODVENN SV+",
-    "sizes": "Size information not available",
+    "sizes": "",
     "product_code": "1112",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
@@ -839,6 +851,7 @@ export const products: Product[] = [
       "Needle Free",
       "Latex-free or needle-type Y injection ports"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivinfusionset/modvenn sv+.pdf"
   },
   {
@@ -893,6 +906,7 @@ export const products: Product[] = [
       "Luer lock or rotating luer lock",
       "With Flow regulator & needle-free Y injection port"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   },
   {
@@ -916,7 +930,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
       },
       {
         "title": "Biocompatible Material",
@@ -934,6 +948,7 @@ export const products: Product[] = [
     "options": [
       "With Slide Clamp"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/extensiontube/ecoextt hp.pdf"
   },
   {
@@ -957,7 +972,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
       },
       {
         "title": "Biocompatible Material",
@@ -977,6 +992,7 @@ export const products: Product[] = [
       "Large Bore / Micro Bore Tube",
       "Without Needle Free Connector"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/multiway/modextt.pdf"
   },
   {
@@ -1000,7 +1016,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
       },
       {
         "title": "Biocompatible Material",
@@ -1020,6 +1036,7 @@ export const products: Product[] = [
       "DEHP Free",
       "Luer lock"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/bloodtransfusionset/ecotran.pdf"
   },
   // {
@@ -1279,6 +1296,7 @@ export const products: Product[] = [
       }
     ],
     "options": [],
+    "unit_consists": [],
     "variant_pdf": "/variants/urology/foleycatheter.pdf"
   },
   {
@@ -1318,6 +1336,7 @@ export const products: Product[] = [
       }
     ],
     "options": [],
+    "unit_consists": [],
     "variant_pdf": "/variants/yankaursuctionset/ecosuc.pdf"
   },
   {
@@ -1348,12 +1367,13 @@ export const products: Product[] = [
         "description": "Includes perforated Redon drain (radio-opaque)."
       }
     ],
-    "options": [
-      "Bellow unit with connector",
-      "Connecting tube with clamp & Y connector",
-      "Trocar needle with matching catheter",
-      "Spare perforated catheter",
-      "Bellow chamber capacity: 600 ml & 800 ml"
+    "options": [],
+    "unit_consists": [
+      "Bellow Unit with connector",
+      "Connecting Tube with clamp and Y connector",
+      "Trocar Needle with matching catheter",
+      "Spare performed catheter",
+      "Sizes of Bellow Chamber 400ml, 600ml & 800ml"
     ],
     "variant_pdf": "/variants/closedwoundsuctionunit/ecocws.pdf"
   },
@@ -1398,6 +1418,7 @@ export const products: Product[] = [
       }
     ],
     "options": [],
+    "unit_consists": [],
     "variant_pdf": "/variants/thoraciccatheter/ecothors.pdf"
   },
   {
@@ -1433,6 +1454,7 @@ export const products: Product[] = [
       }
     ],
     "options": [],
+    "unit_consists": [],
     "variant_pdf": "/variants/thoraciccatheter/ecothort.pdf"
   },
   {
@@ -1463,15 +1485,16 @@ export const products: Product[] = [
         "description": "Smooth surface and sturdy design for dilating tissue during insertion, Sized to catheter and guide wire for compatibility."
       }
     ],
-    "options": [
+    "options": [],
+    "unit_consists": [
       "Soft tip PU indwelling catheter",
-      "'Y' shaped introducer needle",
+      "'J' tip Guide Wire with Dispenser based upon Seldinger Technique",
+      "'Y' Shaped Introducer Needle",
       "Tissue Dilator",
       "Scalpel",
       "Syringe 5ml",
-      "Extension Line Clamp",
-      "Clamp Fastener",
-      "'J' tip Guide wire with Dispenser based upon Seldinger Technique"
+      "Entension Line Clamp",
+      "Clamp Fastener"
     ],
     "variant_pdf": "/variants/cvc/cvc.pdf"
   },
@@ -1496,7 +1519,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -1525,6 +1548,7 @@ export const products: Product[] = [
       "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/safetyivcannula/ecocann s+.pdf"
   },
   {
@@ -1548,7 +1572,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -1576,6 +1600,7 @@ export const products: Product[] = [
       "Coloured Wings",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/safetyivcannula/ecocann s.pdf"
   },
   {
@@ -1599,7 +1624,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -1628,6 +1653,7 @@ export const products: Product[] = [
       "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/safetyivcannula/ecocann ws+.pdf"
   },
   {
@@ -1651,7 +1677,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -1678,6 +1704,7 @@ export const products: Product[] = [
       "FEP/PUR Catheter",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/safetyivcannula/ecocann ws.pdf"
   },
   {
@@ -1701,7 +1728,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -1728,6 +1755,7 @@ export const products: Product[] = [
       "FEP/PUR Catheter",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/safetyivcannula/ecowin s+.pdf"
   },
   {
@@ -1751,7 +1779,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -1778,6 +1806,7 @@ export const products: Product[] = [
       "FEP/PUR Catheter",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/safetyivcannula/ecowin s.pdf"
   },
   {
@@ -1801,7 +1830,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -1830,6 +1859,7 @@ export const products: Product[] = [
       "Coloured Wings",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivcannula/evercath.pdf"
   },
   {
@@ -1853,7 +1883,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -1877,7 +1907,7 @@ export const products: Product[] = [
       },
       {
         "title": "Perforated Wings & Snap-Fit",
-        "description": "Enhanced fixation with easy, secure placement and improved patient comfort."
+        "description": "Includes Perforated Wings and Snap-Fit."
       }
     ],
     "options": [
@@ -1886,12 +1916,13 @@ export const products: Product[] = [
       "Coloured Wings",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivcannula/ecocann sf.pdf"
   },
   {
     "id": 41,
     "product_name": "ECOEXTT FLOW",
-    "sizes": "Size information not available",
+    "sizes": "",
     "product_code": "1207",
     "category": "infusion-transfusion",
     "sub_category": "Extension Tube",
@@ -1909,7 +1940,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
       },
       {
         "title": "Biocompatible Material",
@@ -1927,6 +1958,7 @@ export const products: Product[] = [
     "options": [
       "With Slide Clamp"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/extensiontube/ecoextt flow.pdf"
   },
   {
@@ -1950,7 +1982,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
       },
       {
         "title": "Biocompatible Material",
@@ -1969,6 +2001,7 @@ export const products: Product[] = [
       "With Y Injection Port for extra medication",
       "With Slide Clamp"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/extensiontube/ecoextt lp.pdf"
   },
   {
@@ -1992,7 +2025,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
       },
       {
         "title": "Biocompatible Material",
@@ -2012,12 +2045,13 @@ export const products: Product[] = [
       "Single, Trio",
       "With Luer Lock"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/extensiontube/ecoextt duo.pdf"
   },
   {
     "id": 44,
     "product_name": "ECOVENN",
-    "sizes": "Size information not available",
+    "sizes": "",
     "product_code": "Vented 1117, Non Vented 1118",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
@@ -2068,6 +2102,7 @@ export const products: Product[] = [
       "Rotating luer lock",
       "With Flow regulator & needle-free Y injection port"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/ivinfusionset/ecovenn.pdf"
   },
   {
@@ -2120,6 +2155,7 @@ export const products: Product[] = [
       "Rotating luer lock",
       "With Flow regulator & needle-free Y-Site"
     ],
+    "unit_consists": [],
     "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
   }
 ];

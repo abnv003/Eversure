@@ -73,7 +73,7 @@ const ProductDetails = () => {
   };
 
   const product = products.find(p => p.id === parseInt(id || '0'));
-  
+
   // Get related products
   const relatedProducts = products
     .filter(p => p.category === product?.category && p.id !== product?.id)
@@ -232,7 +232,14 @@ const ProductDetails = () => {
               {/* Product Codes */}
               <div className="text-md text-gray-500 mb-6">
                 <span className="font-medium">Product Code: </span>
-                {product.product_code} | <span className="font-medium">Sizes: </span>{product.sizes}
+                {product.product_code}
+                {product.sizes && product.sizes.trim() !== "" && (
+                  <>
+                    {" | "}
+                    <span className="font-medium">Sizes: </span>
+                    {product.sizes}
+                  </>
+                )}
               </div>
               <p className="text-gray-600 mb-4">{product.description}</p>
               <button
@@ -263,6 +270,32 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
+
+        {/* Unit Consists Of section */}
+        {product.unit_consists && product.unit_consists.length > 0 && (
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-[#309ed9] mb-8">
+              Unit Consists Of
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mb-6"></div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {product.unit_consists.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg border border-blue-200 hover:bg-blue-100 transition-colors duration-200"
+                  >
+                    <div className="w-2 h-2 bg-[#309ed9] rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-md font-medium">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Features Section */}
         <div className="max-w-7xl mx-auto px-4 py-8">
