@@ -99,10 +99,6 @@ export const products: Product[] = [
         "description": "Allows quick visual confirmation during venipuncture."
       },
       {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
         "title": "Biocompatible Material",
         "description": " Designed for patient comfort and longer indwelling duration."
       },
@@ -149,10 +145,6 @@ export const products: Product[] = [
       {
         "title": "Transparent Flashback Chamber",
         "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
       },
       {
         "title": "Biocompatible Material",
@@ -222,7 +214,7 @@ export const products: Product[] = [
   {
     "id": 5,
     "product_name": "EVERCATH",
-    "sizes": "16G to 22G",
+    "sizes": "18G to 24G",
     "product_code": "1035",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
@@ -245,10 +237,6 @@ export const products: Product[] = [
       {
         "title": "Transparent Flashback Chamber",
         "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
       },
       {
         "title": "Biocompatible Material",
@@ -332,7 +320,7 @@ export const products: Product[] = [
   {
     "id": 7,
     "product_name": "ECOCANN S+",
-    "sizes": "14G to 26G",
+    "sizes": "14G to 24G",
     "product_code": "1047",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
@@ -371,6 +359,9 @@ export const products: Product[] = [
       {
         "title": "Sterile & Certified",
         "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      },
+      {
+        "title": ""
       }
     ],
     "options": [
@@ -1332,7 +1323,7 @@ export const products: Product[] = [
     "sizes": "6FG to 24FG",
     "product_code": "Two way 3601, Three way 3602",
     "category": "Urology",
-    "sub_category": "Nelaton Catheter",
+    "sub_category": "Foley Catheter",
     "description": "Foley Catheter for single use is a thin, sterile tube inserted into bladder to drain urine.",
     "sub_desc": "Foley Balloon Catheter",
     "image": "/images/Foley catheter.png",

@@ -41,7 +41,7 @@ const Products = () => {
       'Multiway',
       'Blood Transfusion Set'
     ],
-    'Urology': ['Nelaton Catheter'],
+    'Urology': ['Foley Catheter'],
     'Surgery Wound Drainage': [
       'Yankaur Suction Set',
       'Closed Wound Suction Unit',
@@ -206,27 +206,21 @@ const Products = () => {
       {/* Product Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
-          {/* Debug info - remove in production
-    {process.env.NODE_ENV === 'development' && (
-      <div className="mb-4 p-4 bg-gray-100 rounded text-sm">
-        <p>Debug: actualCategory = "{actualCategory}", selectedCategory = "{selectedCategory}", filteredProducts = {filteredProducts.length}</p>
-      </div>
-    )} */}
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-lg overflow-hidden group">
                 {/* Custom image container with fixed dimensions */}
-                <div className="w-[289px] h-[309px] mx-auto overflow-hidden rounded-lg border-blue-100 border-2">
-                  <img
-                    src={product.image}
-                    alt={product.product_name}
-                    className="w-full h-full object-contain"
-                    onError={(e) => {
-                      e.target.src = '/placeholder-product.jpg'; // Add a fallback image
-                    }}
-                  />
-                </div>
+               <div className="w-full max-w-[289px] h-[309px] mx-auto overflow-hidden rounded-lg border-blue-100 border-2">
+  <img
+    src={product.image}
+    alt={product.product_name}
+    className="w-full h-full object-contain"
+    onError={(e) => {
+      e.target.src = '/placeholder-product.jpg'; 
+    }}
+  />
+</div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#309ed9] mb-2">{product.product_name}</h3>
                   <div className="flex items-center justify-between mb-2">
