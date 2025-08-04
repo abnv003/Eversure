@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Search, ChevronDown } from 'lucide-react';
+import { Menu, X, Search, ChevronDown, Download } from 'lucide-react';
 import { products } from '../data/ProductsData.jsx';
 
 const Header = () => {
@@ -34,16 +34,16 @@ const Header = () => {
     'Corporate Social Responsibility',
     'Sustainability'
   ];
-  
+
   const [showSearch, setShowSearch] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  
+
   // Create refs for search elements
   const searchRef = useRef(null);
   const searchButtonRef = useRef(null);
-  
+
   const handleSearch = (value) => {
     const filtered = products.filter((product) =>
       product.product_name.toLowerCase().includes(value.toLowerCase())
@@ -59,13 +59,13 @@ const Header = () => {
     switch (e.key) {
       case 'ArrowDown':
         e.preventDefault();
-        setSelectedIndex(prev => 
+        setSelectedIndex(prev =>
           prev < filteredProducts.length - 1 ? prev + 1 : 0
         );
         break;
       case 'ArrowUp':
         e.preventDefault();
-        setSelectedIndex(prev => 
+        setSelectedIndex(prev =>
           prev > 0 ? prev - 1 : filteredProducts.length - 1
         );
         break;
@@ -101,11 +101,11 @@ const Header = () => {
   // Handle clicks outside search area
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (showSearch && 
-          searchRef.current && 
-          !searchRef.current.contains(event.target) &&
-          searchButtonRef.current &&
-          !searchButtonRef.current.contains(event.target)) {
+      if (showSearch &&
+        searchRef.current &&
+        !searchRef.current.contains(event.target) &&
+        searchButtonRef.current &&
+        !searchButtonRef.current.contains(event.target)) {
         closeSearch();
       }
     };
@@ -262,6 +262,36 @@ const Header = () => {
               )
             )}
 
+            {/* <div className="relative group">
+              <button
+                ref={searchButtonRef}
+                className="p-2 text-gray-700 hover:text-[#309ed9] transition-colors duration-200"
+                onClick={() => navigate('/contact')}
+              >
+                <Download className="h-5 w-5" />
+              </button> */}
+
+            {/* Tooltip */}
+            {/* <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 px-2 py-1 bg-gray-800 text-white text-xs rounded whitespace-nowrap z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                Download Brochure */}
+            {/* Tooltip arrow */}
+            {/* <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-gray-800"></div>
+              </div>
+            </div> */}
+            <button
+              className="group px-3 py-2 text-sm font-medium transition-colors duration-200 text-gray-700 hover:text-[#309ed9] flex items-center"
+              onClick={() => navigate('/contact')}
+            >
+              {/* Icon - visible by default, hidden on hover */}
+              <Download className="h-5 w-5 group-hover:hidden transition-all duration-200" />
+
+              {/* Text - hidden by default, visible on hover */}
+              <span className="hidden group-hover:inline transition-all duration-200 whitespace-nowrap">
+                Download Brochure
+              </span>
+            </button>
+
+
             <div className="relative">
               <button
                 ref={searchButtonRef}
@@ -301,21 +331,18 @@ const Header = () => {
                             <button
                               key={product.id}
                               onClick={() => handleProductSelect(product)}
-                              className={`w-full text-left px-4 py-2 transition-colors duration-150 ${
-                                selectedIndex === index 
-                                  ? 'bg-[#309ed9] text-white' 
-                                  : 'hover:bg-gray-50'
-                              }`}
+                              className={`w-full text-left px-4 py-2 transition-colors duration-150 ${selectedIndex === index
+                                ? 'bg-[#309ed9] text-white'
+                                : 'hover:bg-gray-50'
+                                }`}
                             >
                               <div className="flex flex-col">
-                                <span className={`font-medium ${
-                                  selectedIndex === index ? 'text-white' : 'text-gray-900'
-                                }`}>
+                                <span className={`font-medium ${selectedIndex === index ? 'text-white' : 'text-gray-900'
+                                  }`}>
                                   {product.product_name}
                                 </span>
-                                <span className={`text-sm ${
-                                  selectedIndex === index ? 'text-blue-100' : 'text-gray-500'
-                                }`}>
+                                <span className={`text-sm ${selectedIndex === index ? 'text-blue-100' : 'text-gray-500'
+                                  }`}>
                                   {product.category}
                                 </span>
                               </div>

@@ -159,13 +159,14 @@ const AboutUs = () => {
       </section>
 
       {/* Values Section - Fixed spacing */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 mb-24">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
-              <span className="font-light italic">Our values</span> lead the way
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#309ed9] mb-3">
+              Our Values Lead The Way
             </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
           </div>
 
           {/* Values Grid */}
@@ -204,7 +205,12 @@ const AboutUs = () => {
 
       {/* carousel Section */}
       <div className="max-w-4xl mx-auto p-6 mb-20">
-        <h1 className="text-4xl font-bold text-center mb-12 text-slate-800">Our Journey So Far...</h1>
+        <div className="mb-8 text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#309ed9] mb-3">
+            Our Journey So Far...
+          </h2>
+          <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
 
         <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
           {/* Main Content */}

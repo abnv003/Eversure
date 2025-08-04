@@ -324,10 +324,14 @@ export const products: Product[] = [
     "product_code": "1047",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. circulating system. Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub,   minimizing the risk of needle stick injuries.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.  Metalic Safety clip automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries.",
     "sub_desc": "Safety IV Cannula with wings & injection port",
     "image": "/images/EcocannS+.png",
     "product_features": [
+      {
+        "title": "Metalic Safety Clip",
+        "description":""
+      },
       {
         "title": "Ultra-Sharp Needle Design",
         "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
@@ -342,7 +346,7 @@ export const products: Product[] = [
       },
       {
         "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
+        "description": "Transparent Flashback Chamber with Hydrophobic Filter and Allows quick visual confirmation during venipuncture."
       },
       {
         "title": "Injection Port with Valve",
@@ -359,9 +363,6 @@ export const products: Product[] = [
       {
         "title": "Sterile & Certified",
         "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      },
-      {
-        "title": ""
       }
     ],
     "options": [
@@ -376,14 +377,18 @@ export const products: Product[] = [
   {
     "id": 8,
     "product_name": "ECOCANN S",
-    "sizes": "14G to 26G",
+    "sizes": "18G to 24G",
     "product_code": "1010",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.  Plastic Safety cage automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries.",
     "sub_desc": "Safety IV Cannula with wings & injection port",
     "image": "/images/Ecocann S.png",
     "product_features": [
+      {
+        "title": "Plastic Cage Safety Clip",
+        "description":""
+      },
       {
         "title": "Ultra-Sharp Needle Design",
         "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
@@ -398,7 +403,7 @@ export const products: Product[] = [
       },
       {
         "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
+        "description": "Transparent Flashback Chamber with Hydrophobic Filter and Allows quick visual confirmation during venipuncture."
       },
       {
         "title": "Injection Port with Valve",
@@ -428,14 +433,18 @@ export const products: Product[] = [
   {
     "id": 9,
     "product_name": "ECOCANN WS+",
-    "sizes": "14G to 26G",
+    "sizes": "14G to 24G",
     "product_code": "1048",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub, minimizing the risk of needle stick injuries. Without Port IV Cannula reduce the chance of contamination & microorganism.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Metalic Safety clip automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries. Without Port IV Cannula reduce the chance of contamination & microorganism.",
     "sub_desc": "Safety IV Cannula with wings & w/o injection port",
     "image": "/images/Ecowannws+copy.png",
     "product_features": [
+      {
+        "title": "Metalic Safety Clip",
+        "description":""
+      },
       {
         "title": "Ultra-Sharp Needle Design",
         "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
@@ -450,11 +459,7 @@ export const products: Product[] = [
       },
       {
         "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
+        "description": "Transparent Flashback Chamber with Hydrophobic Filter and Allows quick visual confirmation during venipuncture."
       },
       {
         "title": "Biocompatible Material",
@@ -481,14 +486,18 @@ export const products: Product[] = [
   {
     "id": 10,
     "product_name": "ECOCANN W-S",
-    "sizes": "14G to 26G",
+    "sizes": "18G to 24G",
     "product_code": "1007",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.  Plastic Safety cage automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries.",
     "sub_desc": "Safety IV Cannula with wings & w/o injection port",
     "image": "/images/Ecocann WS copy.png",
     "product_features": [
+      {
+        "title": "Plastic Cage Safety Clip",
+        "description":""
+      },
       {
         "title": "Ultra-Sharp Needle Design",
         "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
@@ -503,11 +512,7 @@ export const products: Product[] = [
       },
       {
         "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
+        "description": "Transparent Flashback Chamber with Hydrophobic Filter and Allows quick visual confirmation during venipuncture."
       },
       {
         "title": "Biocompatible Material",
@@ -532,21 +537,21 @@ export const products: Product[] = [
   {
     "id": 11,
     "product_name": "ECOWIN S+",
-    "sizes": "14G to 26G",
+    "sizes": "14G to 24G",
     "product_code": "1049",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.   Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub, minimizing the risk of needle stick injuries.Fever place for  contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin for skin better pateint comfort.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Metalic Safety clip automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries.Fever place for contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin better pateint comfort.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
     "image": "/images/EcowinS+copy.png",
     "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+        "title": "Metalic Safety Clip",
+        "description":""
       },
       {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
       },
       {
         "title": "Radiopaque Frictionless Catheter",
@@ -554,11 +559,7 @@ export const products: Product[] = [
       },
       {
         "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
+        "description": "Transparent Flashback Chamber with Hydrophobic Filter and Allows quick visual confirmation during venipuncture."
       },
       {
         "title": "Biocompatible Material",
@@ -583,21 +584,21 @@ export const products: Product[] = [
   {
     "id": 12,
     "product_name": "ECOWIN S",
-    "sizes": "14G to 26G",
+    "sizes": "18G to 24G",
     "product_code": "1008",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Plastic Safety cage automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries.Fever place for contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin better pateint comfort.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
     "image": "/images/Ecowin S.jpg",
     "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+        "title": "Plastic Cage Safety Clip",
+        "description":""
       },
       {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
       },
       {
         "title": "Radiopaque Frictionless Catheter",
@@ -605,11 +606,7 @@ export const products: Product[] = [
       },
       {
         "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
+        "description": "Transparent Flashback Chamber with Hydrophobic Filter and Allows quick visual confirmation during venipuncture."
       },
       {
         "title": "Biocompatible Material",

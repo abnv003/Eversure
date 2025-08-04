@@ -20,7 +20,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <DownloadTab />
+      {/* <DownloadTab /> */}
       <QuickFinderTab />
       <div className="min-h-screen bg-white">
         <Header />
@@ -30,7 +30,7 @@ function App() {
             <Route path="/company/about-us" element={<About />} />
             <Route path="/company/corporate-social-responsibility" element={<CSR />} />
             <Route path="/company/sustainability" element={<Sustainability />} />
-            <Route path="/products" element={<Products />} />
+            {/* <Route path="/products" element={<Products />} /> */}
             <Route path="/products/:category" element={<Products />} />
             <Route path="/products/:category/:id" element={<ProductDetails />} /> 
             <Route path="/contact" element={<Contact />} />
