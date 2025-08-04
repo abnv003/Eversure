@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Heart, Shield, MessageCircle, Users, Leaf, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
@@ -20,31 +20,32 @@ const AboutUs = () => {
 
   const values = [
     {
-      lottieUrl: "https://lottie.host/e60762dc-411b-4ded-bc4f-fc20c05c96d5/sPXivvregb.lottie",
+      icon: Heart,
       title: 'Customers First',
       description: 'Every product we create is designed with patient safety and comfort as our top priority.'
     },
     {
-      lottieUrl: "https://lottie.host/41f6cf46-fe95-45b4-860f-db3b9b8ba5e4/YUMXtoA7hp.lottie",
+      icon: Shield,
       title: 'Ethical Practices',
       description: 'We strive for perfection in every aspect of our manufacturing and service delivery.'
     },
     {
-      lottieUrl: "https://lottie.host/10bd637e-4856-403a-b8fc-649acabff9c3/kN37TGp11c.lottie",
+      icon: MessageCircle,
       title: 'Honest Communication',
       description: 'Working closely with healthcare professionals to develop innovative solutions.'
     },
     {
-      lottieUrl: "https://lottie.host/4dcbddd6-7b02-4233-9cbd-b6913f12929e/CLQD5cANC2.lottie",
+      icon: Users,
       title: 'Respect Employees',
-      description: 'Making quality healthcare accessible to communities worldwide.'
+      description: 'Making quality healthcare accessible to communities through dedicated teamwork.'
     },
     {
-      lottieUrl: "https://lottie.host/1f1a28a3-2163-40a5-ae9d-7271d537da7b/RT0IyjSNhM.lottie",
+      icon: Leaf,
       title: 'Environment Care',
-      description: 'Making quality healthcare accessible to communities worldwide.'
+      description: 'Making quality healthcare accessible to communities through sustainable practices.'
     }
   ];
+
 
   const timelineData = [
     {
@@ -157,71 +158,52 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Values Section */}
-      <main className="px-6 py-16 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+      {/* Values Section - Fixed spacing */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-light leading-tight">
-              <span className="italic font-serif">Our values</span> lead the way
+            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
+              <span className="font-light italic">Our values</span> lead the way
             </h2>
           </div>
 
           {/* Values Grid */}
-          <div className="space-y-28">
-            {/* First Row - 3 Columns */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.slice(0, 3).map((value, index) => (
-                <div key={index} className="text-left space-y-4">
-                  <div className="flex justify-left">
-                    <div className="w-20 h-20">
-                      <DotLottieReact
-                        src={value.lottieUrl}
-                        autoplay
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-2xl font-medium text-gray-900 leading-tight">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      {value.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {values.map((value, index) => {
+              const IconComponent = value.icon;
 
-            {/* Second Row - 2 Columns Centered */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.slice(3, 5).map((value, index) => (
-                <div key={index + 3} className="text-left space-y-4">
-                  <div className="flex justify-left">
-                    <div className="w-20 h-20">
-                      <DotLottieReact
-                        src={value.lottieUrl}
-                        autoplay
-                      />
+              // Different animation for each icon
+              const getAnimationClass = (index) => {
+                const animations = ['animate-float', 'animate-pulse-scale', 'animate-rotate-gentle'];
+                return animations[index % animations.length];
+              };
+
+              return (
+                <div key={index} className="text-center group">
+                  {/* Icon Container */}
+                  <div className="flex justify-center mb-6">
+                    <div className="w-16 h-16 rounded-2xl border border-gray-300 flex items-center justify-center group-hover:border-gray-400 group-hover:shadow-lg group-hover:-translate-y-1 transition-all duration-300 ease-out">
+                      <IconComponent className={`w-8 h-8 text-gray-700 stroke-1 group-hover:scale-110 transition-transform duration-300 ease-out ${getAnimationClass(index)}`} />
                     </div>
                   </div>
-                  <div className="space-y-3">
-                    <h3 className="text-2xl font-medium text-gray-900 leading-tight">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      {value.description}
-                    </p>
-                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed max-w-xs mx-auto">
+                    {value.description}
+                  </p>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
-      </main>
+      </section>
 
       {/* carousel Section */}
-      <div className="max-w-4xl mx-auto p-6 mb-20 mt-10">
+      <div className="max-w-4xl mx-auto p-6 mb-20">
         <h1 className="text-4xl font-bold text-center mb-12 text-slate-800">Our Journey So Far...</h1>
 
         <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
@@ -275,8 +257,8 @@ const AboutUs = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                  ? 'bg-slate-700 scale-125'
-                  : 'bg-slate-300 hover:bg-slate-400'
+                ? 'bg-slate-700 scale-125'
+                : 'bg-slate-300 hover:bg-slate-400'
                 }`}
               aria-label={`Go to slide ${index + 1}`}
             />

@@ -151,51 +151,7 @@ const Products = () => {
         </div>
       </div>
 
-      {/* Filters */}
-      {/* <section className="py-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between gap-4">
-            <div className="flex items-start space-x-4">
-              <Filter className="h-5 w-5 text-gray-600 mt-2 flex-shrink-0" />
-              <div className="flex flex-wrap gap-2">
-                <button
-                  onClick={() => setSelectedCategory('All Products')}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium bg-white text-gray-700 hover:bg-gray-100 transition-colors ${selectedCategory === 'All Products'
-                      ? 'border-b-4 border-yellow-400'
-                      : ''
-                    }`}
-                >
-                  All Products
-                </button>
-                {subcategories.map((sub) => (
-                  <button
-                    key={sub}
-                    onClick={() => setSelectedCategory(sub)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium bg-white text-gray-700 hover:bg-gray-100 transition-colors ${selectedCategory === sub
-                        ? 'border-b-4 border-yellow-400'
-                        : ''
-                      }`}
-                  >
-                    {sub}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className="relative">
-              <Search className="absolute left-3 top-5 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search products..."
-                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#309ed9] focus:border-transparent"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Updated Filters section */}
+      {/* Filters section */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between gap-4">
