@@ -998,7 +998,7 @@ export const products: Product[] = [
   {
     "id": 20,
     "product_name": "ECOTRAN",
-    "sizes": "Adult, Child, Neonatal",
+    "sizes": "",
     "product_code": "ECOTRAN NV - 2401, ECOTRAN V - 2402",
     "category": "infusion-transfusion",
     "sub_category": "Blood Transfusion Set",
