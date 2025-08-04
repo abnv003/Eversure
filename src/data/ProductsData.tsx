@@ -18,56 +18,8 @@ export type Product = {
 };
 
 export const products: Product[] = [
-  // {
-  //   "id": 1,
-  //   "product_name": "MODCANN WI+",
-  //   "sizes": "14G to 26G",
-  //   "product_code": "1001",
-  //   "category": "infusion-transfusion-therapy",
-  //   "sub_category": "IV Cannula",
-  //   "description": "For infusion of intravenous fluids and medicines.",
-  //   "image": "http://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-modcann-wi.webp",
-  //   "product_features": [
-  //   {
-  //     "title": "Ultra-Sharp Needle",
-  //     "description": "Back-cut siliconised stainless steel needle for smooth insertion."
-  //   },
-  //   {
-  //     "title": "Smooth & Flexible Insertion",
-  //     "description": "Tapered tip and soft wings reduce friction."
-  //   },
-  //   {
-  //     "title": "Radiopaque & Translucent Catheter",
-  //     "description": "Three / four striped FEP catheter visible under X-ray."
-  //   },
-  //   {
-  //     "title": "Biocompatible, Safe Material",
-  //     "description": "Latex-free, PVC-free for extended safe use."
-  //   },
-  //   {
-  //     "title": "Optional  PUR Catheter",
-  //     "description": "Polyurethane option enhances kink resistance and comfort."
-  //   },
-  //   {
-  //     "title": "Flashback Chamber with Vent Filter",
-  //     "description": "Transparent chamber and filter ensure quick flashback."
-  //   },
-  //   {
-  //     "title": "Durable Component Materials",
-  //     "description": "Polypropylene body and polycarbonate chamber for strength."
-  //   },
-  //   {
-  //     "title": "Secure Injection Port",
-  //     "description": "Non-return silicon valve with color-coded cap."
-  //   },
-  //   {
-  //     "title": "Sterile & Certified",
-  //     "description": "ETO sterilized, CE certified, single-use device."
-  //   }
-  // ]
-  // },
   {
-    "id": 2,
+    "id": 1,
     "product_name": "ECOCANN",
     "sizes": "14G to 26G",
     "product_code": "1002",
@@ -120,7 +72,7 @@ export const products: Product[] = [
     "variant_pdf": "/variants/ivcannula/ecocann.pdf"
   },
   {
-    "id": 3,
+    "id": 2,
     "product_name": "ECOCANN W",
     "sizes": "14G to 26G",
     "product_code": "1003",
@@ -172,7 +124,7 @@ export const products: Product[] = [
     "variant_pdf": "/variants/ivcannula/ecocann w.pdf"
   },
   {
-    "id": 4,
+    "id": 3,
     "product_name": "ECOCANN N",
     "sizes": "24G to 26G",
     "product_code": "1004",
@@ -224,7 +176,7 @@ export const products: Product[] = [
     "variant_pdf": "/variants/ivcannula/ecocann n.pdf"
   },
   {
-    "id": 5,
+    "id": 4,
     "product_name": "ECOWIN",
     "sizes": "14G to 26G",
     "product_code": "1005",
@@ -267,44 +219,429 @@ export const products: Product[] = [
     "unit_consists": [],
     "variant_pdf": "/variants/ivcannula/ecowin.pdf"
   },
-  // {
-  //   "id": 6,
-  //   "product_name": "ECOCANN S",
-  //   "sizes": "14G to 26G",
-  //   "product_code": "1010",
-  //   "category": "infusion-transfusion",
-  //   "sub_category": "IV Cannula",
-  //   "description": "For infusion of intravenous fluids and medicines.",
-  //   "image": "http://eversuremedical.com/assets/images/product/infusion/iv-infusion-products-iv-cannula-ecocann-s.webp",
-  //   "product_features": [
-  //   {
-  //     "title": "Ultra-Sharp Needle Design",
-  //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-  //   },
-  //   {
-  //     "title": "Transparent Needle Hub with Flashback Chamber",
-  //     "description": "Provides easy visualization after needle insertion."
-  //   },
-  //   {
-  //     "title": "Radiopaque Frictionless Catheter",
-  //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-  //   },
-  //   {
-  //     "title": "Biocompatible Material",
-  //     "description": "Supports longer indwelling time and patient safety."
-  //   },
-  //   {
-  //     "title": "Latex and PVC-Free",
-  //     "description": "Safe for allergy-prone and sensitive patients."
-  //   },
-  //   {
-  //     "title": "Sterile and Certified",
-  //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-  //   }
-  // ]
-  // },
+  {
+    "id": 5,
+    "product_name": "EVERCATH",
+    "sizes": "16G to 22G",
+    "product_code": "1035",
+    "category": "infusion-transfusion",
+    "sub_category": "IV Cannula",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Integrated three-way stopcock, allowing for simultaneous administration of multiple fluids or medications through a single access point. This design simplifies the process, reduces the number of punctures needed, and enhances patient comfort.",
+    "sub_desc": "IV Cannula with integrated three way stop cock",
+    "image": "/images/Evercath.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      }
+    ],
+    "options": [
+      "FEP/PUR Catheter",
+      "Hydrophobic Bacteria Retention Filter",
+      "Coloured Wings",
+      "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/ivcannula/evercath.pdf"
+  },
+  {
+    "id": 6,
+    "product_name": "ECOCANN SF",
+    "sizes": "14G to 26G",
+    "product_code": "1036",
+    "category": "infusion-transfusion",
+    "sub_category": "IV Cannula",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Suturable wing allows suture to pass through the perforation & helps to stablize the cannula during pateint movement when inconsious.",
+    "sub_desc": "IV Cannula with Suturable wings and with snap fit port cap",
+    "image": "/images/Suturabl IV Cannula with snap fit cap.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      },
+      {
+        "title": "Perforated Wings & Snap-Fit",
+        "description": "Includes Perforated Wings and Snap-Fit."
+      }
+    ],
+    "options": [
+      "FEP/PUR Catheter",
+      "Hydrophobic Bacteria Retention Filter",
+      "Coloured Wings",
+      "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/ivcannula/ecocann sf.pdf"
+  },
   {
     "id": 7,
+    "product_name": "ECOCANN S+",
+    "sizes": "14G to 26G",
+    "product_code": "1047",
+    "category": "infusion-transfusion",
+    "sub_category": "Safety IV Cannula",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. circulating system. Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub,   minimizing the risk of needle stick injuries.",
+    "sub_desc": "Safety IV Cannula with wings & injection port",
+    "image": "/images/EcocannS+.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      }
+    ],
+    "options": [
+      "FEP/PUR Catheter",
+      "Coloured Wings",
+      "Hydrophobic Bacteria Retention Filter",
+      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/safetyivcannula/ecocann s+.pdf"
+  },
+  {
+    "id": 8,
+    "product_name": "ECOCANN S",
+    "sizes": "14G to 26G",
+    "product_code": "1010",
+    "category": "infusion-transfusion",
+    "sub_category": "Safety IV Cannula",
+    "description": "For infusion of intravenous fluids and medicines.",
+    "sub_desc": "Safety IV Cannula with wings & injection port",
+    "image": "/images/Ecocann S.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      }
+    ],
+    "options": [
+      "FEP/PUR Catheter",
+      "Coloured Wings",
+      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/safetyivcannula/ecocann s.pdf"
+  },
+  {
+    "id": 9,
+    "product_name": "ECOCANN WS+",
+    "sizes": "14G to 26G",
+    "product_code": "1048",
+    "category": "infusion-transfusion",
+    "sub_category": "Safety IV Cannula",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub, minimizing the risk of needle stick injuries. Without Port IV Cannula reduce the chance of contamination & microorganism.",
+    "sub_desc": "Safety IV Cannula with wings & w/o injection port",
+    "image": "/images/Ecowannws+copy.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      }
+    ],
+    "options": [
+      "FEP/PUR Catheter",
+      "Coloured Wings",
+      "Hydrophobic Bacteria Retention Filter",
+      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/safetyivcannula/ecocann ws+.pdf"
+  },
+  {
+    "id": 10,
+    "product_name": "ECOCANN W-S",
+    "sizes": "14G to 26G",
+    "product_code": "1007",
+    "category": "infusion-transfusion",
+    "sub_category": "Safety IV Cannula",
+    "description": "For infusion of intravenous fluids and medicines.",
+    "sub_desc": "Safety IV Cannula with wings & w/o injection port",
+    "image": "/images/Ecocann WS copy.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      }
+    ],
+    "options": [
+      "FEP/PUR Catheter",
+      "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/safetyivcannula/ecocann ws.pdf"
+  },
+  {
+    "id": 11,
+    "product_name": "ECOWIN S+",
+    "sizes": "14G to 26G",
+    "product_code": "1049",
+    "category": "infusion-transfusion",
+    "sub_category": "Safety IV Cannula",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.   Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub, minimizing the risk of needle stick injuries.Fever place for  contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin for skin better pateint comfort.",
+    "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
+    "image": "/images/EcowinS+copy.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      }
+    ],
+    "options": [
+      "FEP/PUR Catheter",
+      "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/safetyivcannula/ecowin s+.pdf"
+  },
+  {
+    "id": 12,
+    "product_name": "ECOWIN S",
+    "sizes": "14G to 26G",
+    "product_code": "1008",
+    "category": "infusion-transfusion",
+    "sub_category": "Safety IV Cannula",
+    "description": "For infusion of intravenous fluids and medicines.",
+    "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
+    "image": "/images/Ecowin S.jpg",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      }
+    ],
+    "options": [
+      "FEP/PUR Catheter",
+      "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/safetyivcannula/ecowin s.pdf"
+  },
+  {
+    "id": 13,
     "product_name": "MODWAY",
     "sizes": "",
     "product_code": "1401 - 1402",
@@ -356,7 +693,7 @@ export const products: Product[] = [
     "variant_pdf": "/variants/threewaystopcock/modway.pdf"
   },
   {
-    "id": 8,
+    "id": 14,
     "product_name": "MODEXWAY",
     "sizes": "Tube Length (cms): 10, 25, 50, 100, 150, 200",
     "product_code": "1302",
@@ -403,7 +740,7 @@ export const products: Product[] = [
     "variant_pdf": "/variants/threewaystopcock/modexway.pdf"
   },
   {
-    "id": 9,
+    "id": 15,
     "product_name": "ECOVENN NV",
     "sizes": "",
     "product_code": "1102",
@@ -460,7 +797,7 @@ export const products: Product[] = [
     "variant_pdf": "/variants/ivinfusionset/ecovenn nv.pdf"
   },
   {
-    "id": 10,
+    "id": 16,
     "product_name": "ECOVENN V",
     "sizes": "",
     "product_code": "1106",
@@ -520,80 +857,8 @@ export const products: Product[] = [
     "unit_consists": [],
     "variant_pdf": "/variants/ivinfusionset/ecovenn v.pdf"
   },
-  // {
-  //   "id": 11,
-  //   "product_name": "ECOVENN M NV",
-  //   "sizes": "Size information not available",
-  //   "product_code": "1108",
-  //   "category": "infusion-transfusion",
-  //   "sub_category": "I. V. Infusion Set",
-  //   "description": "For infusion of intravenous fluids and medicines for children and infants or to infuse sensitive medications where precision in the flow rate is essential.",
-  //   "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-ecovenn-m-nv.webp",
-  //   "product_features": [
-  //   {
-  //     "title": "Ultra-Sharp Needle Design",
-  //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-  //   },
-  //   {
-  //     "title": "Transparent Needle Hub with Flashback Chamber",
-  //     "description": "Provides easy visualization after needle insertion."
-  //   },
-  //   {
-  //     "title": "Radiopaque Frictionless Catheter",
-  //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-  //   },
-  //   {
-  //     "title": "Biocompatible Material",
-  //     "description": "Supports longer indwelling time and patient safety."
-  //   },
-  //   {
-  //     "title": "Latex and PVC-Free",
-  //     "description": "Safe for allergy-prone and sensitive patients."
-  //   },
-  //   {
-  //     "title": "Sterile and Certified",
-  //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-  //   }
-  // ]
-  // },
-  // {
-  //   "id": 12,
-  //   "product_name": "ECOVENN M V",
-  //   "sizes": "Size information not available",
-  //   "product_code": "1109",
-  //   "category": "infusion-transfusion",
-  //   "sub_category": "I. V. Infusion Set",
-  //   "description": "For infusion of intravenous fluids and medicines for children and infants or to infuse sensitive medications where precision in the flow rate is essential.",
-  //   "image": "http://eversuremedical.com/assets/images/product/infusion/best-iv-infusion-set-manufacturing-companies-ecovenn-m-v.webp",
-  //   "product_features": [
-  //   {
-  //     "title": "Ultra-Sharp Needle Design",
-  //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-  //   },
-  //   {
-  //     "title": "Transparent Needle Hub with Flashback Chamber",
-  //     "description": "Provides easy visualization after needle insertion."
-  //   },
-  //   {
-  //     "title": "Radiopaque Frictionless Catheter",
-  //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-  //   },
-  //   {
-  //     "title": "Biocompatible Material",
-  //     "description": "Supports longer indwelling time and patient safety."
-  //   },
-  //   {
-  //     "title": "Latex and PVC-Free",
-  //     "description": "Safe for allergy-prone and sensitive patients."
-  //   },
-  //   {
-  //     "title": "Sterile and Certified",
-  //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-  //   }
-  // ]
-  // },
   {
-    "id": 13,
+    "id": 17,
     "product_name": "MODVENN V",
     "sizes": "",
     "product_code": "1107",
@@ -656,7 +921,7 @@ export const products: Product[] = [
     "variant_pdf": "/variants/ivinfusionset/modvenn v.pdf"
   },
   {
-    "id": 14,
+    "id": 18,
     "product_name": "MODVENN V+",
     "sizes": "",
     "product_code": "1105",
@@ -727,7 +992,7 @@ export const products: Product[] = [
     "variant_pdf": "/variants/ivinfusionset/modvenn v+.pdf"
   },
   {
-    "id": 15,
+    "id": 19,
     "product_name": "MODVENN SV",
     "sizes": "",
     "product_code": "1111",
@@ -794,7 +1059,7 @@ export const products: Product[] = [
     "variant_pdf": "/variants/ivinfusionset/modvenn sv.pdf"
   },
   {
-    "id": 16,
+    "id": 20,
     "product_name": "MODVENN SV+",
     "sizes": "",
     "product_code": "1112",
@@ -855,1201 +1120,7 @@ export const products: Product[] = [
     "variant_pdf": "/variants/ivinfusionset/modvenn sv+.pdf"
   },
   {
-    "id": 17,
-    "product_name": "ECOBUVENN",
-    "sizes": "110 ml & 150 ml",
-    "product_code": "1501",
-    "category": "infusion-transfusion",
-    "sub_category": "Burette Set",
-    "description": "The Burette Type Infusion Set is used to administer Intravenous fluid into human circulating system by using intravenous catheter or cannula, for pediatric use.",
-    "sub_desc": "Burette type Infusion Set",
-    "image": "/images/burette 5.png",
-    "product_features": [
-      {
-        "title": "Graduated Transparent Burette Chamber",
-        "description": "Capacity 110 ml & 150 ml and allows accurate volume control"
-      },
-      {
-        "title": "Bacteria-retentive Air Inlet",
-        "description": "Prevents contamination from external air"
-      },
-      {
-        "title": "Injection Port",
-        "description": "Enables addition of extra medication"
-      },
-      {
-        "title": "Smooth Roller Clamp",
-        "description": "For precise adjustment of flow rate"
-      },
-      {
-        "title": "Floating Auto Shut-off Valve",
-        "description": "Prevents air embolism and also Indicates empty chamber status"
-      },
-      {
-        "title": "15-Micron Fluid Filter",
-        "description": "Removes foreign particles and debris"
-      },
-      {
-        "title": "Drop Rate",
-        "description": "60 drops/ml for controlled infusion"
-      },
-      {
-        "title": "Soft PVC Tubing",
-        "description": "Transparent and kink-resistant , Length: 150 cm and  Diameter: I.D. 2.8 mm, O.D. 4.0 mm"
-      }
-    ],
-    "options": [
-      "With Y injection port",
-      "DEHP Free",
-      "PVC Free",
-      "With/without needle",
-      "Luer lock or rotating luer lock",
-      "With Flow regulator & needle-free Y injection port"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
-  },
-  {
-    "id": 18,
-    "product_name": "ECOEXTT HP",
-    "sizes": "Tube Length(cms): 10, 25, 50, 100, 150 & 200",
-    "product_code": "1202",
-    "category": "infusion-transfusion",
-    "sub_category": "Extension Tube",
-    "description": "Extension tube are designed to connect the infusion site and the source of infusion, (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Pressure Sustainability for Low pressure Extension Tube is 600 PSI (41 bar)",
-    "sub_desc": "Extension Tube : High Pressure (DEHP Free)",
-    "image": "/images/ecoextt hp.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ],
-    "options": [
-      "With Slide Clamp"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/extensiontube/ecoextt hp.pdf"
-  },
-  {
-    "id": 19,
-    "product_name": "MODEXTT",
-    "sizes": "Single, Double, Triple Lumen",
-    "product_code": "Single 1204, Double 1205, Triple 1206",
-    "category": "infusion-transfusion",
-    "sub_category": "Multiway",
-    "description": "Extension tube are designed to connect the infusion site and the source of infusion,   (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. It enables for multiple infusions simultaneously, eliminates the need for needles, reduces the risk of needlestick injuries and contamination, and simplifies medication administration.",
-    "sub_desc": "Multiline Extension Tube with Needle Free Connectors (DEHP Free)",
-    "image": "/images/triple ext tube.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ],
-    "options": [
-      "PVC Free",
-      "Large Bore / Micro Bore Tube",
-      "Without Needle Free Connector"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/multiway/modextt.pdf"
-  },
-  {
-    "id": 20,
-    "product_name": "ECOTRAN",
-    "sizes": "",
-    "product_code": "ECOTRAN NV - 2401, ECOTRAN V - 2402",
-    "category": "infusion-transfusion",
-    "sub_category": "Blood Transfusion Set",
-    "description": "Blood Transfusion set are used to administer blood in to human circulating system by using intravenous catheter and cannula. ",
-    "sub_desc": "Blood Transfusion Set Vented",
-    "image": "/images/ecotran.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ],
-    "options": [
-      "Without Airvent",
-      "DEHP Free",
-      "Luer lock"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/bloodtransfusionset/ecotran.pdf"
-  },
-  // {
-  //   "id": 21,
-  //   "product_name": "ECOCATH",
-  //   "sizes": "5FG to 24FG",
-  //   "product_code": "1701",
-  //   "category": "Anesthesia",
-  //   "sub_category": "Suction Catheter",
-  //   "description": "To extract bodily secretions, such as mucus or saliva from the upper airway with maximum comfort to the patient. The purpose of suctioning is to keep the airway clear of secretions and to prevent plugging.",
-  //   "image": "https://eversuremedical.com/assets/images/product/infusion/suction-catheter-ecocath.webp",
-  //   "product_features": [
-  //   {
-  //     "title": "Ultra-Sharp Needle Design",
-  //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-  //   },
-  //   {
-  //     "title": "Transparent Needle Hub with Flashback Chamber",
-  //     "description": "Provides easy visualization after needle insertion."
-  //   },
-  //   {
-  //     "title": "Radiopaque Frictionless Catheter",
-  //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-  //   },
-  //   {
-  //     "title": "Biocompatible Material",
-  //     "description": "Supports longer indwelling time and patient safety."
-  //   },
-  //   {
-  //     "title": "Latex and PVC-Free",
-  //     "description": "Safe for allergy-prone and sensitive patients."
-  //   },
-  //   {
-  //     "title": "Sterile and Certified",
-  //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-  //   }
-  // ]
-  // },
-  // {
-  //   "id": 22,
-  //   "product_name": "ECOMASK",
-  //   "sizes": "Adult, Child",
-  //   "product_code": "Adult – 3301, Child – 3302",
-  //   "category": "Anesthesia",
-  //   "sub_category": "Oxygen Mask",
-  //   "description": "For oxygen therapy.",
-  //   "image": "https://eversuremedical.com/assets/images/product/infusion/oxygen-mask-manufacturer-ecomask.webp",
-  //   "product_features": [
-  //   {
-  //     "title": "Ultra-Sharp Needle Design",
-  //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-  //   },
-  //   {
-  //     "title": "Transparent Needle Hub with Flashback Chamber",
-  //     "description": "Provides easy visualization after needle insertion."
-  //   },
-  //   {
-  //     "title": "Radiopaque Frictionless Catheter",
-  //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-  //   },
-  //   {
-  //     "title": "Biocompatible Material",
-  //     "description": "Supports longer indwelling time and patient safety."
-  //   },
-  //   {
-  //     "title": "Latex and PVC-Free",
-  //     "description": "Safe for allergy-prone and sensitive patients."
-  //   },
-  //   {
-  //     "title": "Sterile and Certified",
-  //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-  //   }
-  // ]
-  // },
-  // {
-  //   "id": 23,
-  //   "product_name": "ECONEB",
-  //   "sizes": "Adult, Child",
-  //   "product_code": "Adult – 3201, Child – 3202",
-  //   "category": "Anesthesia",
-  //   "sub_category": "Nebulizer Mask",
-  //   "description": "For administering medication in mist form inhaled into lungs.",
-  //   "image": "https://eversuremedical.com/assets/images/product/infusion/nubulizer-mask-manufacturers-econeb.webp",
-  //   "product_features": [
-  //   {
-  //     "title": "Ultra-Sharp Needle Design",
-  //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-  //   },
-  //   {
-  //     "title": "Transparent Needle Hub with Flashback Chamber",
-  //     "description": "Provides easy visualization after needle insertion."
-  //   },
-  //   {
-  //     "title": "Radiopaque Frictionless Catheter",
-  //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-  //   },
-  //   {
-  //     "title": "Biocompatible Material",
-  //     "description": "Supports longer indwelling time and patient safety."
-  //   },
-  //   {
-  //     "title": "Latex and PVC-Free",
-  //     "description": "Safe for allergy-prone and sensitive patients."
-  //   },
-  //   {
-  //     "title": "Sterile and Certified",
-  //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-  //   }
-  // ]
-  // },
-  // {
-  //   "id": 24,
-  //   "product_name": "ECONAS",
-  //   "sizes": "Adult, Child, Neonatal",
-  //   "product_code": " Adult – 3401, Child – 3402",
-  //   "category": "Anesthesia",
-  //   "sub_category": "Nasal Oxygen Cannula",
-  //   "description": "For easy and efficient administration of oxygen.",
-  //   "image": "http://eversuremedical.com/assets/images/product/econas.webp",
-  //   "product_features": [
-  //   {
-  //     "title": "Ultra-Sharp Needle Design",
-  //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-  //   },
-  //   {
-  //     "title": "Transparent Needle Hub with Flashback Chamber",
-  //     "description": "Provides easy visualization after needle insertion."
-  //   },
-  //   {
-  //     "title": "Radiopaque Frictionless Catheter",
-  //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-  //   },
-  //   {
-  //     "title": "Biocompatible Material",
-  //     "description": "Supports longer indwelling time and patient safety."
-  //   },
-  //   {
-  //     "title": "Latex and PVC-Free",
-  //     "description": "Safe for allergy-prone and sensitive patients."
-  //   },
-  //   {
-  //     "title": "Sterile and Certified",
-  //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-  //   }
-  // ]
-  // },
-  // {
-  //   "id": 25,
-  //   "product_name": "ECOCATH",
-  //   "sizes": "6FG to 24FG",
-  //   "product_code": "1801",
-  //   "category": "Gastroenterology",
-  //   "sub_category": "Ryles Tube",
-  //   "description": "For nasogastirc intubation – short term feeding and administration of drugs & food and aspiration of gastro- intestinal secretion.",
-  //   "image": "https://eversuremedical.com/assets/images/product/top-iv-catheter-manufacturers-in-india-ryles-tube-ecocath.webp",
-  //   "product_features": [
-  //   {
-  //     "title": "Ultra-Sharp Needle Design",
-  //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-  //   },
-  //   {
-  //     "title": "Transparent Needle Hub with Flashback Chamber",
-  //     "description": "Provides easy visualization after needle insertion."
-  //   },
-  //   {
-  //     "title": "Radiopaque Frictionless Catheter",
-  //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-  //   },
-  //   {
-  //     "title": "Biocompatible Material",
-  //     "description": "Supports longer indwelling time and patient safety."
-  //   },
-  //   {
-  //     "title": "Latex and PVC-Free",
-  //     "description": "Safe for allergy-prone and sensitive patients."
-  //   },
-  //   {
-  //     "title": "Sterile and Certified",
-  //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-  //   }
-  // ]
-  // },
-  // {
-  //   "id": 26,
-  //   "product_name": "ECOCATH",
-  //   "sizes": "4FG to 10FG",
-  //   "product_code": "1901",
-  //   "category": "Gastroenterology",
-  //   "sub_category": "Infant Feeding Tube",
-  //   "description": "For providing feedings and medications into the stomach until the baby can take food by mouth.",
-  //   "image": "https://eversuremedical.com/assets/images/product/top-iv-catheter-manufacturer-infant-feeding-tube-ecocath.webp",
-  //   "product_features": [
-  //   {
-  //     "title": "Ultra-Sharp Needle Design",
-  //     "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-  //   },
-  //   {
-  //     "title": "Transparent Needle Hub with Flashback Chamber",
-  //     "description": "Provides easy visualization after needle insertion."
-  //   },
-  //   {
-  //     "title": "Radiopaque Frictionless Catheter",
-  //     "description": "Three-striped FEP catheter with tapered, smooth surface for reduced friction."
-  //   },
-  //   {
-  //     "title": "Biocompatible Material",
-  //     "description": "Supports longer indwelling time and patient safety."
-  //   },
-  //   {
-  //     "title": "Latex and PVC-Free",
-  //     "description": "Safe for allergy-prone and sensitive patients."
-  //   },
-  //   {
-  //     "title": "Sterile and Certified",
-  //     "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-  //   }
-  // ]
-  // },
-  {
-    "id": 27,
-    "product_name": "ECOCATH",
-    "sizes": "6FG to 24FG",
-    "product_code": "Two way 3601, Three way 3602",
-    "category": "Urology",
-    "sub_category": "Nelaton Catheter",
-    "description": "Foley Catheter for single use is a thin, sterile tube inserted into bladder to drain urine.",
-    "sub_desc": "Foley Balloon Catheter",
-    "image": "/images/Foley catheter.png",
-    "product_features": [
-      {
-        "title": "Optimal eyes",
-        "description": "Smooth, optimal eyes ensuring atraumatic introduction ana effective drainage."
-      },
-      {
-        "title": "Pressure resistant balloon",
-        "description": "Easily inflated or deflated for maximum patient safety."
-      },
-      {
-        "title": "Inflation valve",
-        "description": "Choice of hard or soft valve. Ensures balloon is inflated when in use."
-      },
-      {
-        "title": "Reinforced catheter shaft",
-        "description": "Prevents collapse and for effective suctioning."
-      },
-      {
-        "title": "Strang drainage funnel",
-        "description": "Kink resistant and provides best connection to drainage bag."
-      },
-      {
-        "title": "Large drainage lumen",
-        "description": "For fast and effective drainage. Round channel that minimizes encrustation and clogging."
-      },
-      {
-        "title": "Siliconized Catheters",
-        "description": "Silicone fluid surface results in smooth finish for easy passage through the urethral meatus. Ideal for short-term use."
-      }
-    ],
-    "options": [],
-    "unit_consists": [],
-    "variant_pdf": "/variants/urology/foleycatheter.pdf"
-  },
-  {
-    "id": 28,
-    "product_name": "ECOSUC",
-    "sizes": "Tube Length: 210cms, 250cms & 300cms",
-    "product_code": "2301,2302",
-    "category": "surgery-wound-drainage",
-    "sub_category": "Yankaur Suction Set",
-    "description": "Yankauer suction set is used for removal of blood and fluid during surgery.",
-    "sub_desc": "Yankaur Suction Set",
-    "image": "/images/ecosuc.png",
-    "product_features": [
-      {
-        "title": "Durable PVC Tubing",
-        "description": "Flexible, kink-resistant medical-grade PVC for smooth suction and pressure resistance."
-      },
-      {
-        "title": "Easy Connection",
-        "description": "Soft connectors at both ends for easy attachment to suction tips and apparatus."
-      },
-      {
-        "title": "Complete Set",
-        "description": "Includes Yankauer Suction Tip on ribbed tube with universal connectors."
-      },
-      {
-        "title": "Tube Specifications",
-        "description": " I.D. 6.3 mm & O.D. 9.3 mm."
-      },
-      {
-        "title": "Length Options",
-        "description": "Available tube lengths: 210, 250, and 300 cm."
-      },
-      {
-        "title": "Safety Standard",
-        "description": "ETO Sterilized, Single Use, Non-Pyrogenic, CE Certified."
-      }
-    ],
-    "options": [],
-    "unit_consists": [],
-    "variant_pdf": "/variants/yankaursuctionset/ecosuc.pdf"
-  },
-  {
-    "id": 29,
-    "product_name": "ECOCWS",
-    "sizes": "10, 12, 14, 16 & 18 FG",
-    "product_code": "2901",
-    "category": "surgery-wound-drainage",
-    "sub_category": "Closed Wound Suction Unit",
-    "description": "The device Closed wound suction unit is a vacuum based suction device for draining harmful fluids, such as blood, pus, and tissue secretions, from surgical wounds.",
-    "sub_desc": "Closed Wound Suction Unit",
-    "image": "/images/CWS.png",
-    "product_features": [
-      {
-        "title": "Pressure Control",
-        "description": "Large clamp to manage negative pressure effectively."
-      },
-      {
-        "title": "Smooth Insertion",
-        "description": "Flexible suction catheter ensures frictionless wound entry."
-      },
-      {
-        "title": "Durability",
-        "description": "Kink-resistant tube built to endure suction pressure."
-      },
-      {
-        "title": "Spare Catheter",
-        "description": "Includes perforated Redon drain (radio-opaque)."
-      }
-    ],
-    "options": [],
-    "unit_consists": [
-      "Bellow Unit with connector",
-      "Connecting Tube with clamp and Y connector",
-      "Trocar Needle with matching catheter",
-      "Spare performed catheter",
-      "Sizes of Bellow Chamber 400ml, 600ml & 800ml"
-    ],
-    "variant_pdf": "/variants/closedwoundsuctionunit/ecocws.pdf"
-  },
-  {
-    "id": 30,
-    "product_name": "ECOCATH THOR – S",
-    "sizes": "8, 10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 36 & 40 FG",
-    "product_code": "2601",
-    "category": "surgery-wound-drainage",
-    "sub_category": "Thoracic Catheter",
-    "description": "Thoracic Drainage catheter is used to remove air ( Pnemothorax), fluid ( pleural effusion , blood), or pus ( empyema) from the in thoracic space. Thoracic Drainage Catheter is a flexible plastic tube that is inserted through the chest wall and into the pleural space.",
-    "sub_desc": "Thoracic Drainage Catheter Straight",
-    "image": "/images/ecocath thor s.png",
-    "product_features": [
-      {
-        "title": "Atraumatic Tip",
-        "description": "Smooth, rounded distal end with large finish eyes for efficient drainage and minimal tissue damage."
-      },
-      {
-        "title": "Depth Marking",
-        "description": "Graduated every 2 cm for accurate placement during insertion."
-      },
-      {
-        "title": "Easy Handling",
-        "description": "Pull-through tapered tongue at the proximal end improves grip and non-traumatic insertion."
-      },
-      {
-        "title": "Secure Fit",
-        "description": "Comes with size-matched connector for leak-proof connection to the drainage system."
-      },
-      {
-        "title": "Radiopaque",
-        "description": "Full-length radiopaque line ensures visibility under X-ray."
-      },
-      {
-        "title": "Safety",
-        "description": "Cross-side eyes reduce the risk of tissue aspiration."
-      },
-      {
-        "title": "Standard Length",
-        "description": "45 cm catheter length supports common clinical use."
-      }
-    ],
-    "options": [],
-    "unit_consists": [],
-    "variant_pdf": "/variants/thoraciccatheter/ecothors.pdf"
-  },
-  {
-    "id": 31,
-    "product_name": "ECOCATH THOR – T",
-    "sizes": "10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 36, 40 FG",
-    "product_code": "2801",
-    "category": "surgery-wound-drainage",
-    "sub_category": "Thoracic Catheter",
-    "description": "Thoracic Drainage catheter is used to remove air ( Pnemothorax), fluid ( pleural effusion , blood), or pus ( empyema) from the in thoracic space. Thoracic Drainage Catheter is a flexible plastic tube that is inserted through the chest wall and into the pleural space.",
-    "sub_desc": "Thoracic Drainage Catheter Trocar",
-    "image": "/images/ecocath thor t side.png",
-    "product_features": [
-      {
-        "title": "Trocar Tip",
-        "description": "Includes blunt, smooth-tipped trocar for accurate and controlled insertion."
-      },
-      {
-        "title": "Graduated Markings",
-        "description": "Marked at 5, 10, 15 & 20 cm intervals for accurate depth placement."
-      },
-      {
-        "title": "Ease of Use",
-        "description": "Proximal end has a tapered connector for secure drainage bottle connection."
-      },
-      {
-        "title": "Efficient Drainage",
-        "description": "Large, polished eyes at the distal end for maximum fluid evacuation."
-      },
-      {
-        "title": "X-Ray Visible",
-        "description": "Radiopaque line extends through the catheter length for imaging verification."
-      }
-    ],
-    "options": [],
-    "unit_consists": [],
-    "variant_pdf": "/variants/thoraciccatheter/ecothort.pdf"
-  },
-  {
-    "id": 32,
-    "product_name": "MODCVC",
-    "sizes": "Single, Double, Triple Lumen",
-    "product_code": "Single Lumen-2001 to 2004, Double Lumen-2101 to 2103, Triple Lumen-2201 to 2202",
-    "category": "central-venous-access-catheters",
-    "sub_category": "Central Venous Catheter",
-    "description": "The central venous catheter is designed for treatment of critically ill patients and is suggested for Continuous or intermittent drug infusions. - Central venous blood pressure monitoring (CVP). - Acute hyperalimentation - Blood sampling. - Delivery of whole blood or blood products. - Simultaneous, separate infusion of drug",
-    "sub_desc": "Central Venous Access Catheter",
-    "image": "/images/cvc.png",
-    "product_features": [
-      {
-        "title": "Soft Tip Polyurethane Catheter",
-        "description": "Made of biocompatible PU (Polyurethane) for body safety, Soft, tapered tip reduces trauma to vessel walls, Thermo-sensitive – softens at body temperature."
-      },
-      {
-        "title": "J-Tip Guide Wire",
-        "description": "Flexible and kink-resistant for smooth insertion, Soft tip J-end prevents vessel injury, Stainless steel with torque control for maneuverability, Rounded ends increase safety."
-      },
-      {
-        "title": "Y-Shaped Introducer Needle",
-        "description": "Bio-compatible, sharp, stainless steel, Y-valve reduces blood spillage and allows guide wire insertion without leakage, Easy to grip and operate."
-      },
-      {
-        "title": "Tissue Dilator",
-        "description": "Smooth surface and sturdy design for dilating tissue during insertion, Sized to catheter and guide wire for compatibility."
-      }
-    ],
-    "options": [],
-    "unit_consists": [
-      "Soft tip PU indwelling catheter",
-      "'J' tip Guide Wire with Dispenser based upon Seldinger Technique",
-      "'Y' Shaped Introducer Needle",
-      "Tissue Dilator",
-      "Scalpel",
-      "Syringe 5ml",
-      "Entension Line Clamp",
-      "Clamp Fastener"
-    ],
-    "variant_pdf": "/variants/cvc/cvc.pdf"
-  },
-  {
-    "id": 33,
-    "product_name": "ECOCANN S+",
-    "sizes": "14G to 26G",
-    "product_code": "1047",
-    "category": "infusion-transfusion",
-    "sub_category": "Safety IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. circulating system. Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub,   minimizing the risk of needle stick injuries.",
-    "sub_desc": "Safety IV Cannula with wings & injection port",
-    "image": "/images/EcocannS+.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
-      },
-      {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
-      },
-      {
-        "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": " Designed for patient comfort and longer indwelling duration."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Hypoallergenic design ensures broader patient safety."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      }
-    ],
-    "options": [
-      "FEP/PUR Catheter",
-      "Coloured Wings",
-      "Hydrophobic Bacteria Retention Filter",
-      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/ecocann s+.pdf"
-  },
-  {
-    "id": 34,
-    "product_name": "ECOCANN S",
-    "sizes": "14G to 26G",
-    "product_code": "1010",
-    "category": "infusion-transfusion",
-    "sub_category": "Safety IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
-    "sub_desc": "Safety IV Cannula with wings & injection port",
-    "image": "/images/Ecocann S.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
-      },
-      {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
-      },
-      {
-        "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": " Designed for patient comfort and longer indwelling duration."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Hypoallergenic design ensures broader patient safety."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      }
-    ],
-    "options": [
-      "FEP/PUR Catheter",
-      "Coloured Wings",
-      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/ecocann s.pdf"
-  },
-  {
-    "id": 35,
-    "product_name": "ECOWANN WS+",
-    "sizes": "14G to 26G",
-    "product_code": "1048",
-    "category": "infusion-transfusion",
-    "sub_category": "Safety IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub, minimizing the risk of needle stick injuries. Without Port IV Cannula reduce the chance of contamination & microorganism.",
-    "sub_desc": "Safety IV Cannula with wings & w/o injection port",
-    "image": "/images/Ecowannws+copy.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
-      },
-      {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
-      },
-      {
-        "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": " Designed for patient comfort and longer indwelling duration."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Hypoallergenic design ensures broader patient safety."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      }
-    ],
-    "options": [
-      "FEP/PUR Catheter",
-      "Coloured Wings",
-      "Hydrophobic Bacteria Retention Filter",
-      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/ecocann ws+.pdf"
-  },
-  {
-    "id": 36,
-    "product_name": "ECOCANN W-S",
-    "sizes": "14G to 26G",
-    "product_code": "1007",
-    "category": "infusion-transfusion",
-    "sub_category": "Safety IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
-    "sub_desc": "Safety IV Cannula with wings & w/o injection port",
-    "image": "/images/Ecocann WS copy.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
-      },
-      {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
-      },
-      {
-        "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": " Designed for patient comfort and longer indwelling duration."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Hypoallergenic design ensures broader patient safety."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      }
-    ],
-    "options": [
-      "FEP/PUR Catheter",
-      "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/ecocann ws.pdf"
-  },
-  {
-    "id": 37,
-    "product_name": "ECOWIN S+",
-    "sizes": "14G to 26G",
-    "product_code": "1049",
-    "category": "infusion-transfusion",
-    "sub_category": "Safety IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.   Safety cage/clip automatically covers the needle’s bevel after withdrawal of needle from the hub, minimizing the risk of needle stick injuries.Fever place for  contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin for skin better pateint comfort.",
-    "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
-    "image": "/images/EcowinS+copy.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
-      },
-      {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
-      },
-      {
-        "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": " Designed for patient comfort and longer indwelling duration."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Hypoallergenic design ensures broader patient safety."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      }
-    ],
-    "options": [
-      "FEP/PUR Catheter",
-      "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/ecowin s+.pdf"
-  },
-  {
-    "id": 38,
-    "product_name": "ECOWIN S",
-    "sizes": "14G to 26G",
-    "product_code": "1008",
-    "category": "infusion-transfusion",
-    "sub_category": "Safety IV Cannula",
-    "description": "For infusion of intravenous fluids and medicines.",
-    "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
-    "image": "/images/Ecowin S.jpg",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
-      },
-      {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
-      },
-      {
-        "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": " Designed for patient comfort and longer indwelling duration."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Hypoallergenic design ensures broader patient safety."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      }
-    ],
-    "options": [
-      "FEP/PUR Catheter",
-      "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/ecowin s.pdf"
-  },
-  {
-    "id": 39,
-    "product_name": "EVERCATH",
-    "sizes": "16G to 22G",
-    "product_code": "1035",
-    "category": "infusion-transfusion",
-    "sub_category": "IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Integrated three-way stopcock, allowing for simultaneous administration of multiple fluids or medications through a single access point. This design simplifies the process, reduces the number of punctures needed, and enhances patient comfort.",
-    "sub_desc": "IV Cannula with integrated three way stop cock",
-    "image": "/images/Evercath.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
-      },
-      {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
-      },
-      {
-        "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": " Designed for patient comfort and longer indwelling duration."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Hypoallergenic design ensures broader patient safety."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      }
-    ],
-    "options": [
-      "FEP/PUR Catheter",
-      "Hydrophobic Bacteria Retention Filter",
-      "Coloured Wings",
-      "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/ivcannula/evercath.pdf"
-  },
-  {
-    "id": 40,
-    "product_name": "ECOCANN SF",
-    "sizes": "14G to 26G",
-    "product_code": "1035",
-    "category": "infusion-transfusion",
-    "sub_category": "IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Suturable wing allows suture to pass through the perforation & helps to stablize the cannula during pateint movement when inconsious.",
-    "sub_desc": "IV Cannula with Suturable wings and with snap fit port cap",
-    "image": "/images/Suturabl IV Cannula with snap fit cap.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
-      },
-      {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
-      },
-      {
-        "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": " Designed for patient comfort and longer indwelling duration."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Hypoallergenic design ensures broader patient safety."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      },
-      {
-        "title": "Perforated Wings & Snap-Fit",
-        "description": "Includes Perforated Wings and Snap-Fit."
-      }
-    ],
-    "options": [
-      "FEP/PUR Catheter",
-      "Hydrophobic Bacteria Retention Filter",
-      "Coloured Wings",
-      "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/ivcannula/ecocann sf.pdf"
-  },
-  {
-    "id": 41,
-    "product_name": "ECOEXTT FLOW",
-    "sizes": "",
-    "product_code": "1207",
-    "category": "infusion-transfusion",
-    "sub_category": "Extension Tube",
-    "description": "Extension tube are designed to connect the infusion site and the source of infusion, (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between   infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Flow regulator ensure the accurate and safe delivery of fluids and medications during infusion therapy.",
-    "sub_desc": "Extension Tube with Flow Regulator (DEHP Free)",
-    "image": "/images/ecoextt extention tube with flow regulator.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ],
-    "options": [
-      "With Slide Clamp"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/extensiontube/ecoextt flow.pdf"
-  },
-  {
-    "id": 42,
-    "product_name": "ECOEXTT",
-    "sizes": "Tube Length(cms): 10, 25, 50, 100, 150 & 200",
-    "product_code": "1201",
-    "category": "infusion-transfusion",
-    "sub_category": "Extension Tube",
-    "description": "Extension tube are designed to connect the infusion site and the source of infusion, (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Pressure Sustainability for Low pressure Extension Tube is 79 PSI (5.5 bar)",
-    "sub_desc": "Extension Tube - Low Pressure (DEHP Free)",
-    "image": "/images/ecoextt.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ],
-    "options": [
-      "With Y Injection Port for extra medication",
-      "With Slide Clamp"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/extensiontube/ecoextt lp.pdf"
-  },
-  {
-    "id": 43,
-    "product_name": "ECOEXTT DUO",
-    "sizes": "Tube Length(cms): 18",
-    "product_code": "1209",
-    "category": "infusion-transfusion",
-    "sub_category": "Extension Tube",
-    "description": "Extension tube are designed to connect the infusion site and the source of infusion,  (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Extension Tube is used to extend the length of IV lines, catheters, and other infusion sets, providing greater access to patients while minimizing movement of the primary access point.",
-    "sub_desc": "Two Way Extension Tube",
-    "image": "/images/Extension tube two way.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ],
-    "options": [
-      "PVC Free / DEHP Free Tube",
-      "Single, Trio",
-      "With Luer Lock"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/extensiontube/ecoextt duo.pdf"
-  },
-  {
-    "id": 44,
+    "id": 21,
     "product_name": "ECOVENN",
     "sizes": "",
     "product_code": "Vented 1117, Non Vented 1118",
@@ -2106,7 +1177,62 @@ export const products: Product[] = [
     "variant_pdf": "/variants/ivinfusionset/ecovenn.pdf"
   },
   {
-    "id": 45,
+    "id": 22,
+    "product_name": "ECOBUVENN",
+    "sizes": "110 ml & 150 ml",
+    "product_code": "1501",
+    "category": "infusion-transfusion",
+    "sub_category": "Burette Set",
+    "description": "The Burette Type Infusion Set is used to administer Intravenous fluid into human circulating system by using intravenous catheter or cannula, for pediatric use.",
+    "sub_desc": "Burette type Infusion Set",
+    "image": "/images/burette 5.png",
+    "product_features": [
+      {
+        "title": "Graduated Transparent Burette Chamber",
+        "description": "Capacity 110 ml & 150 ml and allows accurate volume control"
+      },
+      {
+        "title": "Bacteria-retentive Air Inlet",
+        "description": "Prevents contamination from external air"
+      },
+      {
+        "title": "Injection Port",
+        "description": "Enables addition of extra medication"
+      },
+      {
+        "title": "Smooth Roller Clamp",
+        "description": "For precise adjustment of flow rate"
+      },
+      {
+        "title": "Floating Auto Shut-off Valve",
+        "description": "Prevents air embolism and also Indicates empty chamber status"
+      },
+      {
+        "title": "15-Micron Fluid Filter",
+        "description": "Removes foreign particles and debris"
+      },
+      {
+        "title": "Drop Rate",
+        "description": "60 drops/ml for controlled infusion"
+      },
+      {
+        "title": "Soft PVC Tubing",
+        "description": "Transparent and kink-resistant , Length: 150 cm and  Diameter: I.D. 2.8 mm, O.D. 4.0 mm"
+      }
+    ],
+    "options": [
+      "With Y injection port",
+      "DEHP Free",
+      "PVC Free",
+      "With/without needle",
+      "Luer lock or rotating luer lock",
+      "With Flow regulator & needle-free Y injection port"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+  },
+  {
+    "id": 23,
     "product_name": "ECOBUVENN Y",
     "sizes": "110 ml & 150 ml",
     "product_code": "1503",
@@ -2157,5 +1283,508 @@ export const products: Product[] = [
     ],
     "unit_consists": [],
     "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
-  }
+  },
+  {
+    "id": 24,
+    "product_name": "ECOEXTT HP",
+    "sizes": "Tube Length(cms): 10, 25, 50, 100, 150 & 200",
+    "product_code": "1202",
+    "category": "infusion-transfusion",
+    "sub_category": "Extension Tube",
+    "description": "Extension tube are designed to connect the infusion site and the source of infusion, (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Pressure Sustainability for Low pressure Extension Tube is 600 PSI (41 bar)",
+    "sub_desc": "Extension Tube : High Pressure (DEHP Free)",
+    "image": "/images/ecoextt hp.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ],
+    "options": [
+      "With Slide Clamp"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/extensiontube/ecoextt hp.pdf"
+  },
+  {
+    "id": 25,
+    "product_name": "ECOCATH",
+    "sizes": "6FG to 24FG",
+    "product_code": "Two way 3601, Three way 3602",
+    "category": "Urology",
+    "sub_category": "Nelaton Catheter",
+    "description": "Foley Catheter for single use is a thin, sterile tube inserted into bladder to drain urine.",
+    "sub_desc": "Foley Balloon Catheter",
+    "image": "/images/Foley catheter.png",
+    "product_features": [
+      {
+        "title": "Optimal eyes",
+        "description": "Smooth, optimal eyes ensuring atraumatic introduction ana effective drainage."
+      },
+      {
+        "title": "Pressure resistant balloon",
+        "description": "Easily inflated or deflated for maximum patient safety."
+      },
+      {
+        "title": "Inflation valve",
+        "description": "Choice of hard or soft valve. Ensures balloon is inflated when in use."
+      },
+      {
+        "title": "Reinforced catheter shaft",
+        "description": "Prevents collapse and for effective suctioning."
+      },
+      {
+        "title": "Strang drainage funnel",
+        "description": "Kink resistant and provides best connection to drainage bag."
+      },
+      {
+        "title": "Large drainage lumen",
+        "description": "For fast and effective drainage. Round channel that minimizes encrustation and clogging."
+      },
+      {
+        "title": "Siliconized Catheters",
+        "description": "Silicone fluid surface results in smooth finish for easy passage through the urethral meatus. Ideal for short-term use."
+      }
+    ],
+    "options": [],
+    "unit_consists": [],
+    "variant_pdf": "/variants/urology/foleycatheter.pdf"
+  },
+  {
+    "id": 26,
+    "product_name": "ECOSUC",
+    "sizes": "Tube Length: 210cms, 250cms & 300cms",
+    "product_code": "2301,2302",
+    "category": "surgery-wound-drainage",
+    "sub_category": "Yankaur Suction Set",
+    "description": "Yankauer suction set is used for removal of blood and fluid during surgery.",
+    "sub_desc": "Yankaur Suction Set",
+    "image": "/images/ecosuc.png",
+    "product_features": [
+      {
+        "title": "Durable PVC Tubing",
+        "description": "Flexible, kink-resistant medical-grade PVC for smooth suction and pressure resistance."
+      },
+      {
+        "title": "Easy Connection",
+        "description": "Soft connectors at both ends for easy attachment to suction tips and apparatus."
+      },
+      {
+        "title": "Complete Set",
+        "description": "Includes Yankauer Suction Tip on ribbed tube with universal connectors."
+      },
+      {
+        "title": "Tube Specifications",
+        "description": " I.D. 6.3 mm & O.D. 9.3 mm."
+      },
+      {
+        "title": "Length Options",
+        "description": "Available tube lengths: 210, 250, and 300 cm."
+      },
+      {
+        "title": "Safety Standard",
+        "description": "ETO Sterilized, Single Use, Non-Pyrogenic, CE Certified."
+      }
+    ],
+    "options": [],
+    "unit_consists": [],
+    "variant_pdf": "/variants/yankaursuctionset/ecosuc.pdf"
+  },
+  {
+    "id": 27,
+    "product_name": "ECOCWS",
+    "sizes": "10, 12, 14, 16 & 18 FG",
+    "product_code": "2901",
+    "category": "surgery-wound-drainage",
+    "sub_category": "Closed Wound Suction Unit",
+    "description": "The device Closed wound suction unit is a vacuum based suction device for draining harmful fluids, such as blood, pus, and tissue secretions, from surgical wounds.",
+    "sub_desc": "Closed Wound Suction Unit",
+    "image": "/images/CWS.png",
+    "product_features": [
+      {
+        "title": "Pressure Control",
+        "description": "Large clamp to manage negative pressure effectively."
+      },
+      {
+        "title": "Smooth Insertion",
+        "description": "Flexible suction catheter ensures frictionless wound entry."
+      },
+      {
+        "title": "Durability",
+        "description": "Kink-resistant tube built to endure suction pressure."
+      },
+      {
+        "title": "Spare Catheter",
+        "description": "Includes perforated Redon drain (radio-opaque)."
+      }
+    ],
+    "options": [],
+    "unit_consists": [
+      "Bellow Unit with connector",
+      "Connecting Tube with clamp and Y connector",
+      "Trocar Needle with matching catheter",
+      "Spare performed catheter",
+      "Sizes of Bellow Chamber 400ml, 600ml & 800ml"
+    ],
+    "variant_pdf": "/variants/closedwoundsuctionunit/ecocws.pdf"
+  },
+  {
+    "id": 28,
+    "product_name": "ECOCATH THOR – S",
+    "sizes": "8, 10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 36 & 40 FG",
+    "product_code": "2601",
+    "category": "surgery-wound-drainage",
+    "sub_category": "Thoracic Catheter",
+    "description": "Thoracic Drainage catheter is used to remove air ( Pnemothorax), fluid ( pleural effusion , blood), or pus ( empyema) from the in thoracic space. Thoracic Drainage Catheter is a flexible plastic tube that is inserted through the chest wall and into the pleural space.",
+    "sub_desc": "Thoracic Drainage Catheter Straight",
+    "image": "/images/ecocath thor s.png",
+    "product_features": [
+      {
+        "title": "Atraumatic Tip",
+        "description": "Smooth, rounded distal end with large finish eyes for efficient drainage and minimal tissue damage."
+      },
+      {
+        "title": "Depth Marking",
+        "description": "Graduated every 2 cm for accurate placement during insertion."
+      },
+      {
+        "title": "Easy Handling",
+        "description": "Pull-through tapered tongue at the proximal end improves grip and non-traumatic insertion."
+      },
+      {
+        "title": "Secure Fit",
+        "description": "Comes with size-matched connector for leak-proof connection to the drainage system."
+      },
+      {
+        "title": "Radiopaque",
+        "description": "Full-length radiopaque line ensures visibility under X-ray."
+      },
+      {
+        "title": "Safety",
+        "description": "Cross-side eyes reduce the risk of tissue aspiration."
+      },
+      {
+        "title": "Standard Length",
+        "description": "45 cm catheter length supports common clinical use."
+      }
+    ],
+    "options": [],
+    "unit_consists": [],
+    "variant_pdf": "/variants/thoraciccatheter/ecothors.pdf"
+  },
+  {
+    "id": 29,
+    "product_name": "ECOCATH THOR – T",
+    "sizes": "10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 36, 40 FG",
+    "product_code": "2801",
+    "category": "surgery-wound-drainage",
+    "sub_category": "Thoracic Catheter",
+    "description": "Thoracic Drainage catheter is used to remove air ( Pnemothorax), fluid ( pleural effusion , blood), or pus ( empyema) from the in thoracic space. Thoracic Drainage Catheter is a flexible plastic tube that is inserted through the chest wall and into the pleural space.",
+    "sub_desc": "Thoracic Drainage Catheter Trocar",
+    "image": "/images/ecocath thor t side.png",
+    "product_features": [
+      {
+        "title": "Trocar Tip",
+        "description": "Includes blunt, smooth-tipped trocar for accurate and controlled insertion."
+      },
+      {
+        "title": "Graduated Markings",
+        "description": "Marked at 5, 10, 15 & 20 cm intervals for accurate depth placement."
+      },
+      {
+        "title": "Ease of Use",
+        "description": "Proximal end has a tapered connector for secure drainage bottle connection."
+      },
+      {
+        "title": "Efficient Drainage",
+        "description": "Large, polished eyes at the distal end for maximum fluid evacuation."
+      },
+      {
+        "title": "X-Ray Visible",
+        "description": "Radiopaque line extends through the catheter length for imaging verification."
+      }
+    ],
+    "options": [],
+    "unit_consists": [],
+    "variant_pdf": "/variants/thoraciccatheter/ecothort.pdf"
+  },
+  {
+    "id": 30,
+    "product_name": "MODCVC",
+    "sizes": "Single, Double, Triple Lumen",
+    "product_code": "Single Lumen-2001 to 2004, Double Lumen-2101 to 2103, Triple Lumen-2201 to 2202",
+    "category": "central-venous-access-catheters",
+    "sub_category": "Central Venous Catheter",
+    "description": "The central venous catheter is designed for treatment of critically ill patients and is suggested for Continuous or intermittent drug infusions. - Central venous blood pressure monitoring (CVP). - Acute hyperalimentation - Blood sampling. - Delivery of whole blood or blood products. - Simultaneous, separate infusion of drug",
+    "sub_desc": "Central Venous Access Catheter",
+    "image": "/images/cvc.png",
+    "product_features": [
+      {
+        "title": "Soft Tip Polyurethane Catheter",
+        "description": "Made of biocompatible PU (Polyurethane) for body safety, Soft, tapered tip reduces trauma to vessel walls, Thermo-sensitive – softens at body temperature."
+      },
+      {
+        "title": "J-Tip Guide Wire",
+        "description": "Flexible and kink-resistant for smooth insertion, Soft tip J-end prevents vessel injury, Stainless steel with torque control for maneuverability, Rounded ends increase safety."
+      },
+      {
+        "title": "Y-Shaped Introducer Needle",
+        "description": "Bio-compatible, sharp, stainless steel, Y-valve reduces blood spillage and allows guide wire insertion without leakage, Easy to grip and operate."
+      },
+      {
+        "title": "Tissue Dilator",
+        "description": "Smooth surface and sturdy design for dilating tissue during insertion, Sized to catheter and guide wire for compatibility."
+      }
+    ],
+    "options": [],
+    "unit_consists": [
+      "Soft tip PU indwelling catheter",
+      "'J' tip Guide Wire with Dispenser based upon Seldinger Technique",
+      "'Y' Shaped Introducer Needle",
+      "Tissue Dilator",
+      "Scalpel",
+      "Syringe 5ml",
+      "Entension Line Clamp",
+      "Clamp Fastener"
+    ],
+    "variant_pdf": "/variants/cvc/cvc.pdf"
+  },
+
+  {
+    "id": 31,
+    "product_name": "ECOEXTT FLOW",
+    "sizes": "",
+    "product_code": "1207",
+    "category": "infusion-transfusion",
+    "sub_category": "Extension Tube",
+    "description": "Extension tube are designed to connect the infusion site and the source of infusion, (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between   infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Flow regulator ensure the accurate and safe delivery of fluids and medications during infusion therapy.",
+    "sub_desc": "Extension Tube with Flow Regulator (DEHP Free)",
+    "image": "/images/ecoextt extention tube with flow regulator.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ],
+    "options": [
+      "With Slide Clamp"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/extensiontube/ecoextt flow.pdf"
+  },
+  {
+    "id": 32,
+    "product_name": "ECOEXTT",
+    "sizes": "Tube Length(cms): 10, 25, 50, 100, 150 & 200",
+    "product_code": "1201",
+    "category": "infusion-transfusion",
+    "sub_category": "Extension Tube",
+    "description": "Extension tube are designed to connect the infusion site and the source of infusion, (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Pressure Sustainability for Low pressure Extension Tube is 79 PSI (5.5 bar)",
+    "sub_desc": "Extension Tube - Low Pressure (DEHP Free)",
+    "image": "/images/ecoextt.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ],
+    "options": [
+      "With Y Injection Port for extra medication",
+      "With Slide Clamp"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/extensiontube/ecoextt lp.pdf"
+  },
+  {
+    "id": 33,
+    "product_name": "ECOEXTT DUO",
+    "sizes": "Tube Length(cms): 18",
+    "product_code": "1209",
+    "category": "infusion-transfusion",
+    "sub_category": "Extension Tube",
+    "description": "Extension tube are designed to connect the infusion site and the source of infusion,  (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. Extension Tube is used to extend the length of IV lines, catheters, and other infusion sets, providing greater access to patients while minimizing movement of the primary access point.",
+    "sub_desc": "Two Way Extension Tube",
+    "image": "/images/Extension tube two way.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ],
+    "options": [
+      "PVC Free / DEHP Free Tube",
+      "Single, Trio",
+      "With Luer Lock"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/extensiontube/ecoextt duo.pdf"
+  },
+  {
+    "id": 34,
+    "product_name": "MODEXTT",
+    "sizes": "",
+    "product_code": "Single 1204, Double 1205, Triple 1206",
+    "category": "infusion-transfusion",
+    "sub_category": "Multiway",
+    "description": "Extension tube are designed to connect the infusion site and the source of infusion,   (i.e. to connect the I.V. Cannula or Three Way Stopcock and I.V. Set) to extend the path between infusion site and source of infusion with 6% luer connection to minimize mechanical irritation and infection. It enables for multiple infusions simultaneously, eliminates the need for needles, reduces the risk of needlestick injuries and contamination, and simplifies medication administration.",
+    "sub_desc": "Multiline Extension Tube with Needle Free Connectors (DEHP Free)",
+    "image": "/images/triple ext tube.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ],
+    "options": [
+      "PVC Free",
+      "Large Bore / Micro Bore Tube",
+      "Without Needle Free Connector"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/multiway/modextt.pdf"
+  },
+  {
+    "id": 35,
+    "product_name": "ECOTRAN",
+    "sizes": "",
+    "product_code": "ECOTRAN NV - 2401, ECOTRAN V - 2402",
+    "category": "infusion-transfusion",
+    "sub_category": "Blood Transfusion Set",
+    "description": "Blood Transfusion set are used to administer blood in to human circulating system by using intravenous catheter and cannula. ",
+    "sub_desc": "Blood Transfusion Set Vented",
+    "image": "/images/ecotran.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ],
+    "options": [
+      "Without Airvent",
+      "DEHP Free",
+      "Luer lock"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/bloodtransfusionset/ecotran.pdf"
+  },
 ];
