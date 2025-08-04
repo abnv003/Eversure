@@ -12,10 +12,10 @@ const Certificate = () => {
       id: 1,
       image: '/ISO 13485_Q5 115632 0001 Rev.00_Valid 2023-04-15 to 2026-04-14 (2)_page-0001.jpg'
     },
-    {
-      id: 2,
-      image: '/CE Certificate G10 115632 0002 Rev. 00_Valid 2023-07-18 Until 2028-07-17 (1) (1)_page-0002.jpg'
-    },
+    // {
+    //   id: 2,
+    //   image: '/CE Certificate G10 115632 0002 Rev. 00_Valid 2023-07-18 Until 2028-07-17 (1) (1)_page-0002.jpg'
+    // },
     {
       id: 3,
       image: '/CE Certificate G10 115632 0002 Rev. 00_Valid 2023-07-18 Until 2028-07-17 (1) (1)_page-0001.jpg'

@@ -189,7 +189,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -226,7 +226,7 @@ export const products: Product[] = [
     "product_code": "1005",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Fever place for  contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin for skin better pateint comfort.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Fever place for  contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin for better pateint comfort.",
     "sub_desc": "IV Cannula w/o wings & w/o injection port",
     "image": "/images/ecowin.png",
     "product_features": [
@@ -302,7 +302,7 @@ export const products: Product[] = [
     "id": 7,
     "product_name": "MODWAY",
     "sizes": "Size information not available",
-    "product_code": "Non Lipid - 1401, Lipid - 1402",
+    "product_code": "1401 - 1402",
     "category": "infusion-transfusion",
     "sub_category": "Three Way Stop Cock",
     "description": "The product is used to deliver intravenous fluid into human circulating system. Lipid resistant three way stop cock available for Lipid resistant medication.",
@@ -814,7 +814,7 @@ export const products: Product[] = [
       },
       {
         "title": "Kink-resistant tubing",
-        "description": "Made from DEHP-free PVC."
+        "description": "Made from PVC Free material."
       },
       {
         "title": "Smooth roller clamp",
@@ -849,7 +849,7 @@ export const products: Product[] = [
     "category": "infusion-transfusion",
     "sub_category": "Burette Set",
     "description": "The Burette Type Infusion Set is used to administer Intravenous fluid into human circulating system by using intravenous catheter or cannula, for pediatric use.",
-    "sub_desc": "Burette type Infusin Set",
+    "sub_desc": "Burette type Infusion Set",
     "image": "/images/burette 5.png",
     "product_features": [
       {
@@ -986,7 +986,7 @@ export const products: Product[] = [
     "product_code": "ECOTRAN NV - 2401, ECOTRAN V - 2402",
     "category": "infusion-transfusion",
     "sub_category": "Blood Transfusion Set",
-    "description": "BT set are used to administer blood in to human circulating system by using intravenous catheter and cannula. ",
+    "description": "Blood Transfusion set are used to administer blood in to human circulating system by using intravenous catheter and cannula. ",
     "sub_desc": "Blood Transfusion Set Vented",
     "image": "/images/ecotran.png",
     "product_features": [
@@ -1559,7 +1559,7 @@ export const products: Product[] = [
         "description": "Non-return silicon valve and color-coded cap for additional medication."
       },
       {
-        "title": "Biocompatible Material",  
+        "title": "Biocompatible Material",
         "description": " Designed for patient comfort and longer indwelling duration."
       },
       {
@@ -1789,7 +1789,7 @@ export const products: Product[] = [
     "sub_category": "IV Cannula",
     "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Integrated three-way stopcock, allowing for simultaneous administration of multiple fluids or medications through a single access point. This design simplifies the process, reduces the number of punctures needed, and enhances patient comfort.",
     "sub_desc": "IV Cannula with integrated three way stop cock",
-    "image": "/images/IV Cannula.png",
+    "image": "/images/Evercath.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1841,7 +1841,7 @@ export const products: Product[] = [
     "sub_category": "IV Cannula",
     "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Suturable wing allows suture to pass through the perforation & helps to stablize the cannula during pateint movement when inconsious.",
     "sub_desc": "IV Cannula with Suturable wings and with snap fit port cap",
-    "image": "/images/IV Cannula.png",
+    "image": "/images/Suturabl IV Cannula with snap fit cap.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1874,6 +1874,10 @@ export const products: Product[] = [
       {
         "title": "Sterile & Certified",
         "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      },
+      {
+        "title": "Perforated Wings & Snap-Fit",
+        "description": "Enhanced fixation with easy, secure placement and improved patient comfort."
       }
     ],
     "options": [
@@ -1970,7 +1974,7 @@ export const products: Product[] = [
   {
     "id": 43,
     "product_name": "ECOEXTT DUO",
-    "sizes": "Tube Length(cms): 10, 25, 50, 100, 150 & 200",
+    "sizes": "Tube Length(cms): 18",
     "product_code": "1209",
     "category": "infusion-transfusion",
     "sub_category": "Extension Tube",

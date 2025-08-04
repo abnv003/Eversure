@@ -116,7 +116,7 @@ const Events = () => {
       <section style={{ backgroundColor: '#309ed9' }} className="text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Events & Training</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Events</h1>
             <p className="text-xl" style={{ color: '#f0f9ff' }}>
               Join us for educational workshops, conferences, and training sessions in medical technology.
             </p>
