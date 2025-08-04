@@ -217,7 +217,7 @@ const Products = () => {
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-lg overflow-hidden group">
                 {/* Custom image container with fixed dimensions */}
-                <div className="w-[289px] h-[309px] mx-auto overflow-hidden rounded-lg border-blue-50 border-2">
+                <div className="w-[289px] h-[309px] mx-auto overflow-hidden rounded-lg border-blue-100 border-2">
                   <img
                     src={product.image}
                     alt={product.product_name}
@@ -228,7 +228,7 @@ const Products = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.product_name}</h3>
+                  <h3 className="text-xl font-semibold text-[#309ed9] mb-2">{product.product_name}</h3>
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-700">{product.sub_desc}</span>
                   </div>
