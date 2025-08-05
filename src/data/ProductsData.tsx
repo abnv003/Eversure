@@ -1735,12 +1735,12 @@ export const products: Product[] = [
   },
   {
     "id": 35,
-    "product_name": "ECOTRAN",
+    "product_name": "ECOTRAN NV",
     "sizes": "",
-    "product_code": "ECOTRAN NV - 2401, ECOTRAN V - 2402",
+    "product_code": "ECOTRAN NV - 2401",
     "category": "infusion-transfusion",
     "sub_category": "Blood Transfusion Set",
-    "description": "Blood Transfusion set are used to administer blood in to human circulating system by using intravenous catheter and cannula. ",
+    "description": "Blood Transfusion set are used to administer blood in to human circulating system by using intravenous catheter and cannula.",
     "sub_desc": "Blood Transfusion Set Vented",
     "image": "/images/ecotran.png",
     "product_features": [

@@ -49,18 +49,18 @@ const AboutUs = () => {
 
   const timelineData = [
     {
-      date: '1978',
-      title: 'Start of rubber business - Polybond India',
-      description: 'Established in 1978 as a family-owned business, Polybond has earned a strong reputation for its design and testing expertise, offering innovative and reliable solutions to its customers.',
-      image: '/timeline/slide1.jpeg',
-      certifications: []
+      "date": "1978",
+      "title": "Start of rubber business - Polybond India",
+      "description": "Polybond began its journey as a family-owned business in 1978, building a strong reputation in design and testing, offering innovative and reliable rubber solutions.",
+      "image": "/timeline/slide1.jpeg",
+      "certifications": []
     },
     {
-      date: '1990',
-      title: 'Plant I at Alandi',
-      description: 'This facility combines rubber mixing with injection and compression molding to produce robust, custom-molded components tailored to client needs.',
-      image: '/timeline/slide2.jpeg',
-      certifications: [
+      "date": "1990",
+      "title": "Plant I at Alandi",
+      "description": "Plant I at Alandi was established in 1990, and this facility combines rubber mixing with injection and compression molding to produce custom-molded components tailored to specific client needs.",
+      "image": "/timeline/slide2.jpeg",
+      "certifications": [
         "IATF 16949",
         "ISO 45001",
         "ISO 14001",
@@ -68,11 +68,11 @@ const AboutUs = () => {
       ]
     },
     {
-      date: '2005',
-      title: 'Plant II at Sanaswadi',
-      description: 'Equipped with injection molding, compression molding, and in-house rubber mixing, the Sanaswadi plant caters to diverse customer requirements with precision and efficiency.',
-      image: '/timeline/slide3.jpeg',
-      certifications: [
+      "date": "2005",
+      "title": "Plant II at Sanaswadi",
+      "description": "Plant II at Sanaswadi was set up in 2005, equipped with injection molding, compression molding, and in-house rubber mixing. It addresses diverse customer requirements with high efficiency.",
+      "image": "/timeline/slide3.jpeg",
+      "certifications": [
         "IATF 16949",
         "ISO 45001",
         "ISO 14001",
@@ -80,32 +80,32 @@ const AboutUs = () => {
       ]
     },
     {
-      date: '2005',
-      title: 'Tool Engineering Division',
-      description: 'Polybond’s design team uses NX to craft high-precision molds for compression, transfer, and injection molding. Each mold is tailored to production needs, ensuring reliability and efficiency. Beyond molds, we design fixtures and gauges to streamline manufacturing and quality assurance.',
-      image: '/timeline/slide6.jpeg',
-      certifications: []
+      "date": "2005",
+      "title": "Tool Engineering Division",
+      "description": "The Tool Engineering Division was launched in 2005 to design and build high-precision molds for compression, transfer, and injection molding using NX software. It also supports fixture and gauge design to enhance manufacturing and quality control.",
+      "image": "/timeline/slide6.jpeg",
+      "certifications": []
     },
     {
-      date: '2012',
-      title: 'Start of Medical Device Division - Polybond India',
-      description: "Eversure is a brand of disposable medical devices from Polybond India Pvt Ltd, part of Pune's Rathigroup. Our world-class certified facility in Pune, India, utilizes advanced processes including injection moulding, extrusion, class 10000 clean room assembly, ETO sterilization, and automated packaging.",
-      image: '/timeline/slide5.jpeg',
-      certifications: []
+      "date": "2012",
+      "title": "Start of Medical Device Division - Polybond India",
+      "description": "Polybond launched its Medical Device Division in 2012 under the brand 'Eversure', offering disposable medical devices from a certified, state-of-the-art facility in Pune. The facility features cleanroom assembly, injection molding, extrusion, sterilization, and automated packaging.",
+      "image": "/timeline/slide5.jpeg",
+      "certifications": []
     },
     {
-      date: '2013',
-      title: 'Technology Centre - Polybond Rubber',
-      description: 'Here we undertake product design by using simulation techniques, product development, tooling design and development, rubber formulation design and testing as well as rigorous endurance testing of parts. This facility enables us to innovate continuously and meet the evolving demands of our customers.',
-      image: '/timeline/slide4.jpeg',
-      certifications: []
+      "date": "2013",
+      "title": "Technology Centre - Polybond Rubber",
+      "description": "Established in 2013, the Technology Centre focuses on product design, tooling, rubber formulation, and endurance testing, driving innovation to meet evolving customer needs.",
+      "image": "/timeline/slide4.jpeg",
+      "certifications": []
     },
     {
-      date: '2017',
-      title: 'Plant III Devas, Madhya Pradesh - Polybond Rubber',
-      description: 'Our newest and most advanced facility, the Dewas plant, integrates injection molding, extrusion, silicone hose manufacturing, rubber mixing, and compression molding to deliver a wide range of high-quality products.',
-      image: '/timeline/slide1.jpeg',
-      certifications: [
+      "date": "2017",
+      "title": "Plant III Devas, Madhya Pradesh - Polybond Rubber",
+      "description": "Plant III in Dewas, inaugurated in 2017, is Polybond’s most advanced facility. It integrates extrusion, injection molding, rubber mixing, and silicone hose manufacturing under one roof.",
+      "image": "/timeline/slide1.jpeg",
+      "certifications": [
         "IATF 16949",
         "ISO 45001",
         "ISO 14001",
@@ -204,88 +204,89 @@ const AboutUs = () => {
       </section>
 
       {/* carousel Section */}
-      <div className="max-w-4xl mx-auto p-6 mb-20">
-        <div className="mb-8 text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#309ed9] mb-3">
-            Our Journey So Far...
-          </h2>
-          <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
-        </div>
+      <div className="max-w-7xl mx-auto p-8 bg-gray-50 mb-20">
+        <div className="max-w-4xl mx-auto p-6 mb-20">
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#309ed9] mb-3">
+              Our Journey So Far...
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
+          </div>
 
-        <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
-          {/* Main Content */}
-          <div className="flex flex-col lg:flex-row">
-            {/* Image Section */}
-            <div className="lg:w-1/2 h-64 lg:h-96 relative overflow-hidden">
-              <img
-                src={currentItem.image}
-                alt={currentItem.title}
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-              />
-              <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                {currentItem.date}
+          <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
+            {/* Main Content */}
+            <div className="flex flex-col lg:flex-row">
+              {/* Image Section */}
+              <div className="lg:w-1/2 h-64 lg:h-96 relative overflow-hidden">
+                <img
+                  src={currentItem.image}
+                  alt={currentItem.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+                <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  {currentItem.date}
+                </div>
+              </div>
+
+              {/* Content Section */}
+              <div className="lg:w-1/2 p-8 flex flex-col justify-center">
+                <h2 className="text-3xl font-bold mb-4 text-slate-800 transition-all duration-300">
+                  {currentItem.title}
+                </h2>
+                <p className="text-slate-600 leading-relaxed text-lg transition-all duration-300">
+                  {currentItem.description}
+                </p>
               </div>
             </div>
 
-            {/* Content Section */}
-            <div className="lg:w-1/2 p-8 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-4 text-slate-800 transition-all duration-300">
-                {currentItem.title}
-              </h2>
-              <p className="text-slate-600 leading-relaxed text-lg transition-all duration-300">
-                {currentItem.description}
-              </p>
-            </div>
-          </div>
-
-          {/* Navigation Buttons */}
-          <button
-            onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-700 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft size={24} />
-          </button>
-
-          <button
-            onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-700 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
-            aria-label="Next slide"
-          >
-            <ChevronRight size={24} />
-          </button>
-        </div>
-
-        {/* Indicators */}
-        <div className="flex justify-center mt-8 space-x-3">
-          {timelineData.map((_, index) => (
+            {/* Navigation Buttons */}
             <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                ? 'bg-slate-700 scale-125'
-                : 'bg-slate-300 hover:bg-slate-400'
-                }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+              onClick={goToPrevious}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-700 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft size={24} />
+            </button>
 
-        {/* Progress Bar */}
-        <div className="mt-6 max-w-md mx-auto">
-          <div className="bg-slate-200 rounded-full h-2 overflow-hidden">
-            <div
-              className="bg-gradient-to-r from-slate-600 to-slate-800 h-full transition-all duration-500 ease-out"
-              style={{ width: `${((currentIndex + 1) / timelineData.length) * 100}%` }}
-            />
+            <button
+              onClick={goToNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-700 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
+              aria-label="Next slide"
+            >
+              <ChevronRight size={24} />
+            </button>
           </div>
-          <div className="flex justify-between mt-2 text-sm text-slate-500">
-            <span>{currentIndex + 1} of {timelineData.length}</span>
-            <span>{Math.round(((currentIndex + 1) / timelineData.length) * 100)}%</span>
+
+          {/* Indicators */}
+          <div className="flex justify-center mt-8 space-x-3">
+            {timelineData.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+                  ? 'bg-slate-700 scale-125'
+                  : 'bg-slate-300 hover:bg-slate-400'
+                  }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Progress Bar */}
+          <div className="mt-6 max-w-md mx-auto">
+            <div className="bg-slate-200 rounded-full h-2 overflow-hidden">
+              <div
+                className="bg-gradient-to-r from-slate-600 to-slate-800 h-full transition-all duration-500 ease-out"
+                style={{ width: `${((currentIndex + 1) / timelineData.length) * 100}%` }}
+              />
+            </div>
+            <div className="flex justify-between mt-2 text-sm text-slate-500">
+              <span>{currentIndex + 1} of {timelineData.length}</span>
+              <span>{Math.round(((currentIndex + 1) / timelineData.length) * 100)}%</span>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   );
 };
