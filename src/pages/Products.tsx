@@ -223,6 +223,7 @@ const Products = () => {
 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#309ed9] mb-2">{product.product_name}</h3>
+                  <p className='text-sm font-medium text-gray-700 mb-2'>{product.addition}</p>
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-medium text-gray-700">{product.sub_desc}</span>
                   </div>

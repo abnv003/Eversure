@@ -8,6 +8,7 @@ export type Product = {
   description: string;
   sub_desc: string;
   image: string;
+  addition?: string;
   product_features: {
     title: string;
     description: string;
@@ -28,6 +29,7 @@ export const products: Product[] = [
     "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Injection Port provided for extra medication and wings for proper fixation.",
     "sub_desc": "IV Cannula with wings & injection port",
     "image": "/images/IV Cannula.png",
+    "addition": "Other Available Brand: Ecosafe, Ecosoft, Ecocann+",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -39,7 +41,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -92,7 +94,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -140,7 +142,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -188,7 +190,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "description": "Three/Four-striped FEP/PUR catheter with tapered, smooth surface for reduced friction."
       },
       {
         "title": "Biocompatible Material",
@@ -232,7 +234,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -281,7 +283,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -342,7 +344,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -399,7 +401,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -455,7 +457,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -508,7 +510,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -555,7 +557,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -602,7 +604,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
