@@ -39,7 +39,7 @@ const Carousel = () => {
             description: "Packaging Responsibly:",
             points: [
                 "We focus on using innovative, recyclable materials sourced from renewable origins.",
-                "Our packaging complies with standards like ISO 13485, ISO 9001, ISO 14001, OHSAS 18001, and directive 94/62/EC."
+                "Our packaging complies with standards like ISO 13485, ISO 9001."
             ]
         }
     ];

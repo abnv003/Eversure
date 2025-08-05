@@ -231,7 +231,7 @@ const ProductDetails = () => {
           {/* Product Info */}
           <div className="space-y-6">
             <div>
-              <h2 className="text-2xl font-bold mb-4" style={{ color: '#309ed9' }}>
+              <h2 className="text-4xl font-bold mb-4" style={{ color: '#309ed9' }}>
                 {product.product_name}
               </h2>
               <div className="w-20 h-1 bg-yellow-400 mb-6"></div>
@@ -248,7 +248,24 @@ const ProductDetails = () => {
                   </>
                 )}
               </div>
-              <p className="text-gray-600 mb-4">{product.description}</p>
+              <p className="text-gray-600 mb-4">
+                {product.description?.includes('-') ? (
+                  <>
+                    {product.description.split('-').map((part, index) => (
+                      <span key={index}>
+                        {index === 0 ? part.trim() : (
+                          <>
+                            <br />
+                            - {part.trim()}
+                          </>
+                        )}
+                      </span>
+                    ))}
+                  </>
+                ) : (
+                  product.description
+                )}
+              </p>
               <button
                 onClick={() => window.open(`${product.variant_pdf}`, '_blank')}
                 className="text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200 flex items-center"
@@ -306,7 +323,7 @@ const ProductDetails = () => {
 
         {/* Features Section */}
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <h2 className="text-3xl font-bold text-[#309ed9] mb-8">
+          <h2 className="text-4xl font-bold text-[#309ed9] mb-8">
             Features
           </h2>
           <div className="w-20 h-1 bg-yellow-400 mt-[-20px] mb-6"></div>

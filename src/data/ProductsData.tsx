@@ -917,7 +917,7 @@ export const products: Product[] = [
     "sub_category": "I. V. Infusion Set",
     "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
     "sub_desc": "IV Infusion Set Vented with PVC Free Double Chamber",
-    "image": "/images/modvennv+.png",
+    "image": "/images/Modvenn V+.png",
     "product_features": [
       {
         "title": "DEHP Free",
