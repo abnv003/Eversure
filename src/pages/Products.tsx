@@ -39,7 +39,8 @@ const Products = () => {
       'Burette Set',
       'Extension Tube',
       'Multiway',
-      'Blood Transfusion Set'
+      'Blood Transfusion Set',
+      'Accessories'
     ],
     'Urology': ['Foley Catheter'],
     'Surgery Wound Drainage': [

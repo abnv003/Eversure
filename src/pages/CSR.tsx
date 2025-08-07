@@ -17,7 +17,8 @@ const renderImage = [
     title: "Health",
     desc: "Health is at the core of our mission, and we strive to improve healthcare access and awareness through:",
     content: [
-      "Organizing medical camps and health check-ups for employees.",
+      "Organizing regular eye check-ups and facilitating cataract surgeries.",
+      "Organizing medical camps and health check-ups.",
       "Conducting blood donation camps.",
       "Promoting preventive healthcare and wellness programs."
     ],
