@@ -153,7 +153,7 @@ const AboutUs = () => {
             About Eversure
           </h1>
           <p className="text-lg mb-4 leading-relaxed">
-            Eversure is the medical device brand of Pune's Rathigroup, world-class local facility. Their product lines include items for Infusion Therapy, Surgery and Wound Drainage, Central Venous Access Catheters, and Urology, all produced using advanced manufacturing and sterilization. The brand is committed to high standards of quality, innovation, and reliability to ensure patient care.
+            Eversure is the medical device brand of Pune's Rathigroup, world-class local facility. Our product lines include items for Infusion Therapy, Surgery and Wound Drainage, Central Venous Access Catheters, and Urology, all produced using advanced manufacturing and sterilization. The brand is committed to high standards of quality, innovation, and reliability to ensure patient care.
           </p>
         </div>
       </section>

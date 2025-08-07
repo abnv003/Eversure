@@ -18,7 +18,7 @@ const renderImage = [
     desc: "Health is at the core of our mission, and we strive to improve healthcare access and awareness through:",
     content: [
       "Organizing medical camps and health check-ups for employees.",
-      "Conducting blood donation camps and providing medical supplies and equipment.",
+      "Conducting blood donation camps.",
       "Promoting preventive healthcare and wellness programs."
     ],
     imageUrl: "/heroimages/health.jpeg",

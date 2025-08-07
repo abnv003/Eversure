@@ -332,7 +332,7 @@ export const products: Product[] = [
     "product_features": [
       {
         "title": "Metalic Safety Clip",
-        "description":""
+        "description": "Passive safety device to prevent needle stick injuries."
       },
       {
         "title": "Ultra-Sharp Needle Design",
@@ -389,7 +389,7 @@ export const products: Product[] = [
     "product_features": [
       {
         "title": "Plastic Cage Safety Clip",
-        "description":""
+        "description":"Passive safety device to prevent needle stick injuries."
       },
       {
         "title": "Ultra-Sharp Needle Design",
@@ -445,7 +445,7 @@ export const products: Product[] = [
     "product_features": [
       {
         "title": "Metalic Safety Clip",
-        "description":""
+        "description":"Passive safety device to prevent needle stick injuries."
       },
       {
         "title": "Ultra-Sharp Needle Design",
@@ -498,7 +498,7 @@ export const products: Product[] = [
     "product_features": [
       {
         "title": "Plastic Cage Safety Clip",
-        "description":""
+        "description":"Passive safety device to prevent needle stick injuries."
       },
       {
         "title": "Ultra-Sharp Needle Design",
@@ -549,7 +549,7 @@ export const products: Product[] = [
     "product_features": [
       {
         "title": "Metalic Safety Clip",
-        "description":""
+        "description":"Passive safety device to prevent needle stick injuries."
       },
       {
         "title": "Ultra-Sharp Needle Design",
@@ -596,7 +596,7 @@ export const products: Product[] = [
     "product_features": [
       {
         "title": "Plastic Cage Safety Clip",
-        "description":""
+        "description":"Passive safety device to prevent needle stick injuries."
       },
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1358,7 +1358,7 @@ export const products: Product[] = [
     ],
     "options": [],
     "unit_consists": [],
-    "variant_pdf": "/variants/urology/foleycatheter.pdf"
+    "variant_pdf": "/variants/urology/foley catheter.pdf"
   },
   {
     "id": 26,
