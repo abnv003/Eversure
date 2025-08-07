@@ -319,6 +319,182 @@ export const products: Product[] = [
     "unit_consists": [],
     "variant_pdf": "/variants/ivcannula/ecocann sf.pdf"
   },
+  //extra products 
+  //IV Cannula
+  {
+    "id": 38,
+    "product_name": "MODCANN WI+",
+    "sizes": "14G to 26G",
+    "product_code": "1002",
+    "category": "infusion-transfusion",
+    "sub_category": "IV Cannula",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.",
+    "sub_desc": "IV cannula with wing with Port",
+    "image": "/images/Modcann+.jpg",
+    "addition": "Other Available Brand: Ecosafe, Ecosoft, Ecocann+",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      },
+      {
+        "title": "Coloured soft wings for easy and proper fixaxation.",
+        "description": "Injection Port provided for extra medication and wings for proper fixation."
+      }
+    ],
+    "options": [
+      "FEP/PUR Catheter",
+      "Coloured Wings",
+      "Hydrophobic Bacteria Retention Filter",
+      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/ivcannula/ecocann.pdf"
+  },
+  {
+    "id": 39,
+    "product_name": "EVER ACTIVE SAFE",
+    "sizes": "14G to 26G",
+    "product_code": "1002",
+    "category": "infusion-transfusion",
+    "sub_category": "IV Cannula",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. circulating system.",
+    "sub_desc": "Active Safety IV Cannula",
+    "image": "/images/everactive.jpg",
+    "addition": "Other Available Brand: Ecosafe, Ecosoft, Ecocann+",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      },
+      {
+        "title": "Active Safety",
+        "description": "Active safety automatically covers the needle after use, preventing needlestick injuries and reducing the risk of exposure to bloodborne pathogens."
+      }
+    ],
+    "options": [
+      "FEP/PUR Catheter",
+      "Coloured Wings",
+      "Hydrophobic Bacteria Retention Filter",
+      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/ivcannula/ecocann.pdf"
+  },
+  {
+    "id": 40,
+    "product_name": "EVERON",
+    "sizes": "14G to 26G",
+    "product_code": "1002",
+    "category": "infusion-transfusion",
+    "sub_category": "IV Cannula",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. circulating system.",
+    "sub_desc": "Jelco Type IV Cannula",
+    "image": "/images/everon.jpg",
+    "addition": "Other Available Brand: Ecosafe, Ecosoft, Ecocann+",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
+      },
+      {
+        "title": "Flexible Fixation Wings",
+        "description": "Wide, soft wings ensure easy and proper placement."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
+      },
+      {
+        "title": "Transparent Flashback Chamber",
+        "description": "Allows quick visual confirmation during venipuncture."
+      },
+      {
+        "title": "Injection Port with Valve",
+        "description": "Non-return silicon valve and color-coded cap for additional medication."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": " Designed for patient comfort and longer indwelling duration."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Hypoallergenic design ensures broader patient safety."
+      },
+      {
+        "title": "Sterile & Certified",
+        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
+      },
+      {
+        "title": "",
+        "description": "Cannula provides access to a vein or artery to sample blood, monitor blood pressure, or administer fluids."
+      }
+    ],
+    "options": [
+      "FEP/PUR Catheter",
+      "Coloured Wings",
+      "Hydrophobic Bacteria Retention Filter",
+      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/ivcannula/everon.pdf"
+  },
   {
     "id": 7,
     "product_name": "ECOCANN S+",
@@ -1167,6 +1343,67 @@ export const products: Product[] = [
     "variant_pdf": "/variants/ivinfusionset/ecovenn.pdf"
   },
   {
+    "id": 42,
+    "product_name": "MODVENN VYO",
+    "sizes": "",
+    "product_code": "1102",
+    "category": "infusion-transfusion",
+    "sub_category": "I. V. Infusion Set",
+    "description": "The infusion Sets are used to protect light-sensitive medications or fluids during infusion, preventing degradation caused by light exposure.",
+    "sub_desc": "Light / Photo-sensitivity IV Set",
+    "image": "/images/modvenn_vyo.png",
+    "product_features": [
+      {
+        "title": "Sharp Spike",
+        "description": "Strong, durable spike ensures easy and precise piercing of fluid containers."
+      },
+      {
+        "title": "Transparent Drip Chamber",
+        "description": "Facilitates visual monitoring of flow rate and effective priming."
+      },
+      {
+        "title": "15 Micron Fluid Filter",
+        "description": "Integrated in chamber for filtration of particulates."
+      },
+      {
+        "title": "Kink-Resistant PVC Tube",
+        "description": "Ensures uninterrupted, uniform fluid flow."
+      },
+      {
+        "title": "Smooth Roller Clamp",
+        "description": "Allows accurate flow rate adjustment."
+      },
+      {
+        "title": "Self-Sealing Latex Bulb",
+        "description": "Prevents leakage during infusion."
+      },
+      {
+        "title": "Drop Rate",
+        "description": "20 drops/ml for standard dosing precision."
+      },
+      {
+        "title": "Tube Size",
+        "description": "Length: 1.5 meters and Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
+      },
+      {
+        "title": "Sterility & Safety",
+        "description": "ETO Sterilized, Single Use, Non-pyrogenic, CE Certified"
+      },
+      {
+        "title": "",
+        "description": "It's primarily used for delivering chemotherapy drugs and other medications where light sensitivity is a concern, particularly in oncology and neonatal care settings."
+      }
+    ],
+    "options": [
+      "With Y injection port", 
+      "With/without needle",
+      "Luer lock or rotating luer lock",
+      "Flow regulator & needle-free Y injection port"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/ivinfusionset/modven vyo.pdf"
+  },
+  {
     "id": 22,
     "product_name": "ECOBUVENN",
     "sizes": "110 ml & 150 ml",
@@ -1778,10 +2015,54 @@ export const products: Product[] = [
     "variant_pdf": "/variants/bloodtransfusionset/ecotran.pdf"
   },
   {
+    "id": 43,
+    "product_name": "ECOTRAN V",
+    "sizes": "",
+    "product_code": "ECOTRAN V - 2402",
+    "category": "infusion-transfusion",
+    "sub_category": "Blood Transfusion Set",
+    "description": "Blood Transfusion set are used to administer blood in to human circulating system by using intravenous catheter and cannula.",
+    "sub_desc": "Blood Transfusion Set Vented",
+    "image": "/images/ecotran_v.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ],
+    "options": [
+      "Without Airvent",
+      "DEHP Free",
+      "Luer lock"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/bloodtransfusionset/ecotran.pdf"
+  },
+  {
     "id": 36,
     "product_name": "LUER CAP",
     "sizes": "",
-    "product_code": "",
+    "product_code": "3602",
     "category": "infusion-transfusion",
     "sub_category": "Accessories",
     "description": "Luer Cap is the thread stopper used to stop leakage when connected to infusion devices.",
@@ -1796,7 +2077,7 @@ export const products: Product[] = [
     "id": 37,
     "product_name": "INJECTION STOPPER",
     "sizes": "",
-    "product_code": "",
+    "product_code": "3501",
     "category": "infusion-transfusion",
     "sub_category": "Accessories",
     "description": "Injection Stopper to be used in conjunction with some other product during infusion therapy.",
@@ -1809,182 +2090,6 @@ export const products: Product[] = [
     ],
     "unit_consists": [],
     "variant_pdf": "/variants/accessories/injection_stopper.pdf"
-  },
-  //extra products 
-  //IV Cannula
-  {
-    "id": 38,
-    "product_name": "MODCANN WI+",
-    "sizes": "14G to 26G",
-    "product_code": "1002",
-    "category": "infusion-transfusion",
-    "sub_category": "IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.",
-    "sub_desc": "IV cannula with wing with Port",
-    "image": "/images/IV Cannula.png",
-    "addition": "Other Available Brand: Ecosafe, Ecosoft, Ecocann+",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
-      },
-      {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
-      },
-      {
-        "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": " Designed for patient comfort and longer indwelling duration."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Hypoallergenic design ensures broader patient safety."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      },
-      {
-        "title": "Coloured soft wings for easy and proper fixaxation.",
-        "description": "Injection Port provided for extra medication and wings for proper fixation."
-      }
-    ],
-    "options": [
-      "FEP/PUR Catheter",
-      "Coloured Wings",
-      "Hydrophobic Bacteria Retention Filter",
-      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/ivcannula/ecocann.pdf"
-  },
-  {
-    "id": 39,
-    "product_name": "EVER ACTIVE SAFE",
-    "sizes": "14G to 26G",
-    "product_code": "1002",
-    "category": "infusion-transfusion",
-    "sub_category": "IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. circulating system.",
-    "sub_desc": "Active Safety IV Cannula",
-    "image": "/images/everactive.jpg",
-    "addition": "Other Available Brand: Ecosafe, Ecosoft, Ecocann+",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
-      },
-      {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
-      },
-      {
-        "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": " Designed for patient comfort and longer indwelling duration."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Hypoallergenic design ensures broader patient safety."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      },
-      {
-        "title": "Active Safety",
-        "description": "Active safety automatically covers the needle after use, preventing needlestick injuries and reducing the risk of exposure to bloodborne pathogens."
-      }
-    ],
-    "options": [
-      "FEP/PUR Catheter",
-      "Coloured Wings",
-      "Hydrophobic Bacteria Retention Filter",
-      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/ivcannula/ecocann.pdf"
-  },
-  {
-    "id": 40,
-    "product_name": "EVERON",
-    "sizes": "14G to 26G",
-    "product_code": "1002",
-    "category": "infusion-transfusion",
-    "sub_category": "IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. circulating system.",
-    "sub_desc": "Jelco Type IV Cannula",
-    "image": "/images/everon.jpg",
-    "addition": "Other Available Brand: Ecosafe, Ecosoft, Ecocann+",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
-      },
-      {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
-      },
-      {
-        "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": " Designed for patient comfort and longer indwelling duration."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Hypoallergenic design ensures broader patient safety."
-      },
-      {
-        "title": "Sterile & Certified",
-        "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      },
-      {
-        "title": "",
-        "description": "Cannula provides access to a vein or artery to sample blood, monitor blood pressure, or administer fluids."
-      }
-    ],
-    "options": [
-      "FEP/PUR Catheter",
-      "Coloured Wings",
-      "Hydrophobic Bacteria Retention Filter",
-      "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/ivcannula/everon.pdf"
   },
   //Foley 
   {
@@ -2034,110 +2139,5 @@ export const products: Product[] = [
     "options": [],
     "unit_consists": [],
     "variant_pdf": "/variants/urology/modcath.pdf"
-  },
-  {
-    "id": 42,
-    "product_name": "MODVENN VYO",
-    "sizes": "",
-    "product_code": "1102",
-    "category": "infusion-transfusion",
-    "sub_category": "I. V. Infusion Set",
-    "description": "The infusion Sets are used to protect light-sensitive medications or fluids during infusion, preventing degradation caused by light exposure.",
-    "sub_desc": "Light / Photo-sensitivity IV Set",
-    "image": "/images/modvenn_vyo.png",
-    "product_features": [
-      {
-        "title": "Sharp Spike",
-        "description": "Strong, durable spike ensures easy and precise piercing of fluid containers."
-      },
-      {
-        "title": "Transparent Drip Chamber",
-        "description": "Facilitates visual monitoring of flow rate and effective priming."
-      },
-      {
-        "title": "15 Micron Fluid Filter",
-        "description": "Integrated in chamber for filtration of particulates."
-      },
-      {
-        "title": "Kink-Resistant PVC Tube",
-        "description": "Ensures uninterrupted, uniform fluid flow."
-      },
-      {
-        "title": "Smooth Roller Clamp",
-        "description": "Allows accurate flow rate adjustment."
-      },
-      {
-        "title": "Self-Sealing Latex Bulb",
-        "description": "Prevents leakage during infusion."
-      },
-      {
-        "title": "Drop Rate",
-        "description": "20 drops/ml for standard dosing precision."
-      },
-      {
-        "title": "Tube Size",
-        "description": "Length: 1.5 meters and Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
-      },
-      {
-        "title": "Sterility & Safety",
-        "description": "ETO Sterilized, Single Use, Non-pyrogenic, CE Certified"
-      },
-      {
-        "title": "",
-        "description": "It's primarily used for delivering chemotherapy drugs and other medications where light sensitivity is a concern, particularly in oncology and neonatal care settings."
-      }
-    ],
-    "options": [
-      "With Y injection port", 
-      "With/without needle",
-      "Luer lock or rotating luer lock",
-      "Flow regulator & needle-free Y injection port"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/ivinfusionset/modven vyo.pdf"
-  },
-  {
-    "id": 43,
-    "product_name": "ECOTRAN V",
-    "sizes": "",
-    "product_code": "ECOTRAN V - 2402",
-    "category": "infusion-transfusion",
-    "sub_category": "Blood Transfusion Set",
-    "description": "Blood Transfusion set are used to administer blood in to human circulating system by using intravenous catheter and cannula.",
-    "sub_desc": "Blood Transfusion Set Vented",
-    "image": "/images/ecotran_v.png",
-    "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
-      {
-        "title": "Biocompatible Material",
-        "description": "Supports longer indwelling time and patient safety."
-      },
-      {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
-        "title": "Sterile and Certified",
-        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
-      }
-    ],
-    "options": [
-      "Without Airvent",
-      "DEHP Free",
-      "Luer lock"
-    ],
-    "unit_consists": [],
-    "variant_pdf": "/variants/bloodtransfusionset/ecotran.pdf"
   },
 ];
