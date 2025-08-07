@@ -1741,7 +1741,7 @@ export const products: Product[] = [
     "category": "infusion-transfusion",
     "sub_category": "Blood Transfusion Set",
     "description": "Blood Transfusion set are used to administer blood in to human circulating system by using intravenous catheter and cannula.",
-    "sub_desc": "Blood Transfusion Set Vented",
+    "sub_desc": "Blood Transfusion Set Non-Vented",
     "image": "/images/ecotran.png",
     "product_features": [
       {
@@ -2095,5 +2095,49 @@ export const products: Product[] = [
     ],
     "unit_consists": [],
     "variant_pdf": "/variants/ivinfusionset/modven vyo.pdf"
+  },
+  {
+    "id": 43,
+    "product_name": "ECOTRAN V",
+    "sizes": "",
+    "product_code": "ECOTRAN V - 2402",
+    "category": "infusion-transfusion",
+    "sub_category": "Blood Transfusion Set",
+    "description": "Blood Transfusion set are used to administer blood in to human circulating system by using intravenous catheter and cannula.",
+    "sub_desc": "Blood Transfusion Set Vented",
+    "image": "/images/ecotran_v.png",
+    "product_features": [
+      {
+        "title": "Ultra-Sharp Needle Design",
+        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+      },
+      {
+        "title": "Transparent Needle Hub with Flashback Chamber",
+        "description": "Provides easy visualization after needle insertion."
+      },
+      {
+        "title": "Radiopaque Frictionless Catheter",
+        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+      },
+      {
+        "title": "Biocompatible Material",
+        "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "Latex and PVC-Free",
+        "description": "Safe for allergy-prone and sensitive patients."
+      },
+      {
+        "title": "Sterile and Certified",
+        "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      }
+    ],
+    "options": [
+      "Without Airvent",
+      "DEHP Free",
+      "Luer lock"
+    ],
+    "unit_consists": [],
+    "variant_pdf": "/variants/bloodtransfusionset/ecotran.pdf"
   },
 ];
