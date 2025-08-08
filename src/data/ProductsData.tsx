@@ -759,7 +759,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped PUR catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -779,7 +779,7 @@ export const products: Product[] = [
       }
     ],
     "options": [
-      "PUR catheter",
+      "FEP catheter",
       "Double flash back confirmation",
       "Tyvek paper",
       "Without Blood control"
