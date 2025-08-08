@@ -394,20 +394,12 @@ export const products: Product[] = [
         "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
       },
       {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
         "title": "Radiopaque Frictionless Catheter",
         "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
         "description": "Allows quick visual confirmation during venipuncture."
-      },
-      {
-        "title": "Injection Port with Valve",
-        "description": "Non-return silicon valve and color-coded cap for additional medication."
       },
       {
         "title": "Biocompatible Material",
@@ -766,8 +758,8 @@ export const products: Product[] = [
         "description": "Blood control feature reduce the leakage of the blood during cannualtion."
       },
       {
-        "title": "Push Button(replace Active safety) mechanism",
-        "description": "retracts needle into locked chamber to prevent acidental needle stick injuries."
+        "title": "Push Button mechanism",
+        "description": "This mechanism retracts needle into locked chamber to prevent acidental needle stick injuries."
       },
       {
         "title": "Radiopaque Frictionless Catheter",
@@ -788,10 +780,6 @@ export const products: Product[] = [
       {
         "title": "Sterile & Certified",
         "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
-      },
-      {
-        "title": "Active Safety",
-        "description": "Active safety automatically covers the needle after use, preventing needlestick injuries and reducing the risk of exposure to bloodborne pathogens."
       }
     ],
     "options": [
@@ -1092,7 +1080,7 @@ export const products: Product[] = [
     "sub_category": "I. V. Infusion Set",
     "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
     "sub_desc": "IV Infusion Set Vented with PVC Free Double Chamber",
-    "image": "/images/Modvenn V+.png",
+    "image": "/images/ModvennV+.png",
     "product_features": [
       {
         "title": "DEHP Free",
