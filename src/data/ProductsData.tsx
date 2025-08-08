@@ -399,7 +399,7 @@ export const products: Product[] = [
       },
       {
         "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
+        "description": "Transparent Flashback Chamber with Hydrophobic Filter and Allows quick visual confirmation during venipuncture."
       },
       {
         "title": "Biocompatible Material",
@@ -415,7 +415,7 @@ export const products: Product[] = [
       },
     ],
     "options": [
-      "FEP/PUR Catheter",
+      "PUR Catheter",
       "Coloured Wings",
       "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
