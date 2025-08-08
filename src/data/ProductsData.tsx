@@ -1566,16 +1566,12 @@ export const products: Product[] = [
         "description": "Prevents collapse and for effective suctioning."
       },
       {
-        "title": "Strang drainage funnel",
+        "title": "Strange drainage funnel",
         "description": "Kink resistant and provides best connection to drainage bag."
       },
       {
         "title": "Large drainage lumen",
         "description": "For fast and effective drainage. Round channel that minimizes encrustation and clogging."
-      },
-      {
-        "title": "Siliconized Catheters",
-        "description": "Silicone fluid surface results in smooth finish for easy passage through the urethral meatus. Ideal for short-term use."
       }
     ],
     "options": [],
@@ -2081,7 +2077,7 @@ export const products: Product[] = [
     "id": 41,
     "product_name": "MODCATH",
     "sizes": "6FG to 24FG",
-    "product_code": "Two way 3601, Three way 3602",
+    "product_code": "Two way 3603, Three way 3604",
     "category": "Urology",
     "sub_category": "Foley Catheter",
     "description": "Foley Catheter for single use is a thin, sterile tube inserted into bladder to drain urine.",
