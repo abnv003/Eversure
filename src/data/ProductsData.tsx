@@ -2113,11 +2113,7 @@ export const products: Product[] = [
         "description": "For fast and effective drainage. Round channel that minimizes encrustation and clogging."
       },
       {
-        "title": "Siliconized Catheters",
-        "description": "Silicone fluid surface results in smooth finish for easy passage through the urethral meatus. Ideal for short-term use."
-      },
-      {
-        "title": "",
+        "title": "Longer Indwelling Time",
         "description": "Reduced irritation, and longer indwelling time compared to latex catheters."
       }
     ],
