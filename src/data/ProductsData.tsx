@@ -385,7 +385,7 @@ export const products: Product[] = [
     "product_code": "1002",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. circulating system.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Circulating system.Cannula provides access to a vein or artery to sample blood, monitor blood pressure, or administer fluids.",
     "sub_desc": "IV Cannula w/o port and w/o wings(Pen Type)",
     "image": "/images/everon.jpg",
     "product_features": [
@@ -413,10 +413,6 @@ export const products: Product[] = [
         "title": "Sterile & Certified",
         "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
       },
-      {
-        "title": "",
-        "description": "Cannula provides access to a vein or artery to sample blood, monitor blood pressure, or administer fluids."
-      }
     ],
     "options": [
       "FEP/PUR Catheter",
@@ -767,7 +763,7 @@ export const products: Product[] = [
       },
       {
         "title": "Transparent Flashback Chamber",
-        "description": "Allows quick visual confirmation during venipuncture."
+        "description": "Transparent Flashback Chamber with Hydrophobic Filter and Allows quick visual confirmation during venipuncture."
       },
       {
         "title": "Biocompatible Material",
@@ -783,8 +779,9 @@ export const products: Product[] = [
       }
     ],
     "options": [
-      "FEP/PuR catheter",
+      "PUR catheter",
       "Double flash back confirmation",
+      "Hydrophobic Bacteria Retention Filter",
       "Tyvek paper",
       "Without Blood control"
     ],
@@ -1572,6 +1569,10 @@ export const products: Product[] = [
       {
         "title": "Large drainage lumen",
         "description": "For fast and effective drainage. Round channel that minimizes encrustation and clogging."
+      },
+      {
+        "title": "Siliconized Catheters",
+        "description": "Silicone fluid surface results in smooth finish for easy passage through the urethral meatus. Ideal for short-term use."
       }
     ],
     "options": [],
@@ -2111,6 +2112,10 @@ export const products: Product[] = [
       {
         "title": "Longer Indwelling Time",
         "description": "Reduced irritation, and longer indwelling time compared to latex catheters."
+      },
+      {
+        "title": "Radiopaque",
+        "description": "Full-Length radiopaque line ensures visibility under X-ray."
       }
     ],
     "options": [],

@@ -358,7 +358,7 @@ const ProductDetails = () => {
             <div className="flex flex-col space-y-4">
               <div className="flex items-center space-x-2">
                 <Phone className="h-8 w-8" style={{ color: '#309ed9' }} />
-                <span className="text-md text-gray-600">+91-020-6766-1200</span>
+                <span className="text-md text-gray-600">+91 2138-679300/679351</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-8 w-8" style={{ color: '#309ed9' }} />
