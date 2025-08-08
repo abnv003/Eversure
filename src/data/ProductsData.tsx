@@ -1438,7 +1438,7 @@ export const products: Product[] = [
       "With Flow regulator & needle-free Y injection port"
     ],
     "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/safetyivcannula/btnv.pdf"
   },
   {
     "id": 23,
@@ -1491,7 +1491,7 @@ export const products: Product[] = [
       "With Flow regulator & needle-free Y-Site"
     ],
     "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/pdf.pdf"
+    "variant_pdf": "/variants/safetyivcannula/btv.pdf"
   },
   {
     "id": 24,
