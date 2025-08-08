@@ -22,12 +22,12 @@ const AboutUs = () => {
     {
       icon: Heart,
       title: 'Customers First',
-      description: 'Every product we create is designed with patient safety and comfort as our top priority.'
+      description: 'At Eversure, every product is crafted with an unwavering focus on patient safety, comfort, and well-being. Our commitment to customers drives innovation and excellence in everything we do.'
     },
     {
       icon: Shield,
       title: 'Ethical Practices',
-      description: 'We strive for perfection in every aspect of our manufacturing and service delivery.'
+      description: 'We are committed to the highest standards of integrity, ensuring that every aspect of our manufacturing and service delivery reflects transparency, accountability, and a drive for excellence.'
     },
     {
       icon: MessageCircle,
@@ -160,7 +160,7 @@ const AboutUs = () => {
             About Eversure
           </h1>
           <p className="text-lg mb-4 leading-relaxed">
-            Eversure is the medical device brand of Pune's Rathigroup, state of the art manufacturing facility. Our product lines include items for Infusion Therapy, Surgery and Wound Drainage, Central Venous Access Catheters, and Urology, all produced using advanced manufacturing and sterilization. The brand is committed to high standards of quality, innovation, and reliability to ensure patient care.
+            Eversure, the medical device brand of Pune-based Rathi Group, operates from a state-of-the-art manufacturing facility. Our comprehensive product portfolio includes solutions for Infusion Therapy, Surgery and Wound Drainage, Central Venous Access Catheters, and Urology. Each product is manufactured and sterilized using advanced technologies to ensure the highest standards of safety, quality, and performance. Eversure is dedicated to innovation, reliability, and excellence in patient care.
           </p>
         </div>
       </section>

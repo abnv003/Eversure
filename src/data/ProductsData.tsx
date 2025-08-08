@@ -25,7 +25,7 @@ export const products: Product[] = [
     "id": 38,
     "product_name": "MODCANN WI+",
     "sizes": "14G to 26G",
-    "product_code": "1002",
+    "product_code": "1001",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
     "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.",
@@ -76,7 +76,7 @@ export const products: Product[] = [
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
     ],
     "unit_consists": [],
-    "variant_pdf": "/variants/ivcannula/modcann wi+.pdf"
+    "variant_pdf": "/variants/ivcannula/modcannwi+.pdf"
   },
   {
     "id": 1,
@@ -197,7 +197,7 @@ export const products: Product[] = [
       },
       {
         "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
+        "description": "Small, soft wings ensure easy and proper placement."
       },
       {
         "title": "Radiopaque Frictionless Catheter",
@@ -781,7 +781,6 @@ export const products: Product[] = [
     "options": [
       "PUR catheter",
       "Double flash back confirmation",
-      "Hydrophobic Bacteria Retention Filter",
       "Tyvek paper",
       "Without Blood control"
     ],
