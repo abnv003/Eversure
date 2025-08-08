@@ -111,6 +111,13 @@ const AboutUs = () => {
         "ISO 14001",
         "ISO 9001"
       ]
+    },
+    {
+      "date": "2023",
+      "title": "Polybond North America",
+      "description": "Our newest facility is in Massachusetts, USA. This specializes in shock and vibration isolators, molded products, and custom material development utilizing rubber, urethane, silicone, and thermoplastic elastomers.",
+      "image": "/timeline/slide8.jpeg",
+      "certifications": []
     }
   ];
 
@@ -153,7 +160,7 @@ const AboutUs = () => {
             About Eversure
           </h1>
           <p className="text-lg mb-4 leading-relaxed">
-            Eversure is the medical device brand of Pune's Rathigroup, world-class local facility. Our product lines include items for Infusion Therapy, Surgery and Wound Drainage, Central Venous Access Catheters, and Urology, all produced using advanced manufacturing and sterilization. The brand is committed to high standards of quality, innovation, and reliability to ensure patient care.
+            Eversure is the medical device brand of Pune's Rathigroup, state of the art manufacturing facility. Our product lines include items for Infusion Therapy, Surgery and Wound Drainage, Central Venous Access Catheters, and Urology, all produced using advanced manufacturing and sterilization. The brand is committed to high standards of quality, innovation, and reliability to ensure patient care.
           </p>
         </div>
       </section>
