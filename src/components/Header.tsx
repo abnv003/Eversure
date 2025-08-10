@@ -396,6 +396,25 @@ const Header = () => {
                     ))}
                   </div>
                 </div>
+              ) : item.name === 'Company' ? (
+                // ADD THIS SECTION FOR COMPANY DROPDOWN IN MOBILE
+                <div key={item.name}>
+                  <span className="block px-3 py-2 text-base font-medium text-gray-700">Company</span>
+                  <div className="ml-4">
+                    {drop_company.map((companyItem) => (
+                      <Link
+                        key={companyItem}
+                        to={formatCompanyPath(companyItem)}
+                        className="block px-3 py-2 text-sm text-gray-600"
+                        onMouseEnter={(e) => e.target.style.color = '#309ed9'}
+                        onMouseLeave={(e) => e.target.style.color = '#6b7280'}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {companyItem}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               ) : (
                 <Link
                   key={item.name}

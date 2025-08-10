@@ -1,4 +1,3 @@
-// QuickFinder.tsx (use React Portal)
 import { createPortal } from "react-dom"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
@@ -12,10 +11,17 @@ export default function QuickFinder({ onClose }: { onClose: () => void }) {
   const filteredProducts = products.filter((product) => product.category === selectedCategory)
 
   const modal = (
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[9999] flex items-center justify-center">
-      <div className="w-[90%] h-[90%] rounded-xl overflow-hidden shadow-2xl flex relative p-24" style={{backgroundColor: '#309ed9'}}>
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[9999] flex items-center justify-center p-4">
+      <div className="w-full h-full md:w-[90%] md:h-[90%] rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row relative p-4 md:p-24" style={{backgroundColor: '#309ed9'}}>
         {/* Sidebar */}
-        <div className="w-80 p-6 overflow-y-auto" style={{backgroundColor: '#309ed9'}}>
+        <div 
+          className="w-full md:w-80 p-6 overflow-y-auto mb-4 md:mb-0" 
+          style={{
+            backgroundColor: '#309ed9',
+            scrollbarWidth: 'thin',
+            scrollbarColor: '#fbbf24 transparent'
+          }}
+        >
           <div className="absolute top-4 right-4">
             <button
               onClick={onClose}
@@ -42,9 +48,15 @@ export default function QuickFinder({ onClose }: { onClose: () => void }) {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 p-6 overflow-y-auto">
+        <div 
+          className="flex-1 p-6 overflow-y-auto"
+          style={{
+            scrollbarWidth: 'thin',
+            scrollbarColor: '#fbbf24 transparent'
+          }}
+        >
           {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-3 gap-4 pt-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
               {filteredProducts.map((product) => (
                 <div
                   key={product.id}
