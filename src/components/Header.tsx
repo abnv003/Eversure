@@ -40,9 +40,11 @@ const Header = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
-  // Create refs for search elements
+  // Create refs for search elements and mobile menu
   const searchRef = useRef(null);
   const searchButtonRef = useRef(null);
+  const mobileMenuRef = useRef(null);
+  const hamburgerButtonRef = useRef(null);
 
   const handleSearch = (value) => {
     const filtered = products.filter((product) =>
@@ -98,9 +100,10 @@ const Header = () => {
     }
   };
 
-  // Handle clicks outside search area
+  // Handle clicks outside search area and mobile menu
   useEffect(() => {
     const handleClickOutside = (event) => {
+      // Close search if clicking outside
       if (showSearch &&
         searchRef.current &&
         !searchRef.current.contains(event.target) &&
@@ -108,13 +111,22 @@ const Header = () => {
         !searchButtonRef.current.contains(event.target)) {
         closeSearch();
       }
+
+      // Close mobile menu if clicking outside
+      if (isMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target) &&
+        hamburgerButtonRef.current &&
+        !hamburgerButtonRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [showSearch]);
+  }, [showSearch, isMenuOpen]);
 
   // Function to format category for URL path
   const formatCategoryForUrl = (category) => {
@@ -262,22 +274,6 @@ const Header = () => {
               )
             )}
 
-            {/* <div className="relative group">
-              <button
-                ref={searchButtonRef}
-                className="p-2 text-gray-700 hover:text-[#309ed9] transition-colors duration-200"
-                onClick={() => navigate('/contact')}
-              >
-                <Download className="h-5 w-5" />
-              </button> */}
-
-            {/* Tooltip */}
-            {/* <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 px-2 py-1 bg-gray-800 text-white text-xs rounded whitespace-nowrap z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                Download Brochure */}
-            {/* Tooltip arrow */}
-            {/* <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-gray-800"></div>
-              </div>
-            </div> */}
             <button
               className="group px-3 py-2 text-sm font-medium transition-colors duration-200 text-gray-700 hover:text-[#309ed9] flex items-center"
               onClick={() => navigate('/contact')}
@@ -290,7 +286,6 @@ const Header = () => {
                 Download Brochure
               </span>
             </button>
-
 
             <div className="relative">
               <button
@@ -364,6 +359,7 @@ const Header = () => {
           {/* Mobile Menu Toggle */}
           <div className="md:hidden">
             <button
+              ref={hamburgerButtonRef}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700"
               onMouseEnter={(e) => e.target.style.color = '#309ed9'}
@@ -376,7 +372,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-t px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div ref={mobileMenuRef} className="md:hidden bg-white border-t px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navigation.map((item) =>
               item.name === 'Products' ? (
                 <div key={item.name}>
