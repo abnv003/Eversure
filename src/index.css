@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 
-/* Set Outfit-500 as default for everything
+/* Set Outfit-500 as default for everything */
 * {
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
-} */
+}
 
 /* Set Roboto for all headings */
-/* h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif !important;
-} */
+}
