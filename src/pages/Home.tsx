@@ -181,32 +181,32 @@ const Home = () => {
     <div className="overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[75vh] bg-black overflow-hidden w-full">
-        {/* Background with overlay */}
-        <div className="absolute inset-0">
-          <img
-            src="/heroimages/homepage_main.jpeg"
-            alt="Medical Technology"
-            className="w-full h-full object-cover opacity-70 object-[center_30%]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
-        </div>
+  {/* Background with overlay */}
+  <div className="absolute inset-0">
+    <img
+      src="/heroimages/homepage_main.jpeg"
+      alt="Medical Technology"
+      className="w-full h-full object-cover object-[center_30%]"
+    />
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+  </div>
 
-        {/* Content */}
-        <div className="relative z-10 min-h-[65vh] flex items-center w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="flex justify-left pt-20 w-full">
-              <div className="text-white max-w-4xl text-center w-full">
-                <h1 className="text-4xl md:text-6xl font-light mb-8 leading-tight">
-                  Empowering health through innovation
-                </h1>
-                <p className="text-lg mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
-                  At Eversure, we believe innovation is key to accessible, high-quality healthcare. By integrating automation, we enhance efficiency and precision in patient care. Our focus is both on current needs and future challenges, driving the development of transformative medical technologies.
-                </p>
-              </div>
-            </div>
-          </div>
+  {/* Content */}
+  <div className="relative z-10 min-h-[75vh] flex items-center justify-center w-full">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="text-center">
+        <div className="text-white max-w-5xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal mb-6 sm:mb-8 leading-tight tracking-tight">
+            Empowering Health Through Innovation
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-100 leading-relaxed max-w-4xl mx-auto font-light">
+            At Eversure, we believe innovation is key to accessible, high-quality healthcare. By integrating automation, we enhance efficiency and precision in patient care. Our focus is both on current needs and future challenges, driving the development of transformative medical technologies.
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* About Us Section */}
       <section ref={aboutRef} className="py-20 bg-white w-full overflow-hidden">
@@ -247,7 +247,7 @@ const Home = () => {
       </section>
 
       {/* Our Product Offerings Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-light mb-4" style={{ color: '#309ed9' }}>Our Product Offerings</h2>
@@ -287,7 +287,7 @@ const Home = () => {
             <div className={`transform transition-all duration-1000 ${isSustainabilityVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
               <div className="relative w-full h-96 rounded-lg shadow-lg overflow-hidden">
                 <img
-                  src="/heroimages/sustain_home.png"
+                  src="/heroimages/sustain_home.jpeg"
                   alt="Healthcare Professional with Patient"
                   className="w-full h-full object-cover"
                 />

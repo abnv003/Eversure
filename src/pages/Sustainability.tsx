@@ -72,7 +72,7 @@ export const Sustainability: React.FC = () => {
 
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-normal mb-4">
             Sustainability
           </h1>
           <p className="text-base sm:text-lg mb-4 leading-relaxed max-w-4xl mx-auto">

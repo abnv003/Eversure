@@ -15,6 +15,7 @@ import ProductDetails from './pages/ProductDetails';
 import { Sustainability } from './pages/Sustainability';
 import { CSR } from './pages/CSR';
 import ScrollToTop from './components/ScrollToTop';
+import FloatingCareerButton from './components/FloatingCareerButton';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <ScrollToTop />
       {/* <DownloadTab /> */}
       <QuickFinderTab />
+      <FloatingCareerButton />
       <div className="min-h-screen bg-white">
         <Header />
         <main>

@@ -29,19 +29,6 @@ const QuickFinderTab = () => {
         </div>
       </div>
 
-      {/* Alternative Mobile Design - Bottom Tab (commented out, use if preferred) */}
-      {/* 
-      <div className="md:hidden fixed bottom-0 left-1/2 transform -translate-x-1/2 z-[9999]">
-        <button
-          onClick={() => setShowQuickFinder(true)}
-          className="bg-yellow-400 text-black px-6 py-3 rounded-t-lg shadow-lg cursor-pointer hover:bg-yellow-300 transition-colors flex items-center justify-center space-x-2"
-        >
-          <Search size={18} />
-          <span className="text-sm font-semibold">Quick Finder</span>
-        </button>
-      </div>
-      */}
-
       {/* Modal component */}
       {showQuickFinder && (
         <QuickFinder onClose={() => setShowQuickFinder(false)} />

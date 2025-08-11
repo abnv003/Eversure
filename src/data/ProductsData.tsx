@@ -235,7 +235,7 @@ export const products: Product[] = [
     "product_code": "1005",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Fever place for  contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin for better pateint comfort.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Fewer places for contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin for better patient comfort.",
     "sub_desc": "IV Cannula w/o wings & w/o injection port",
     "image": "/images/ecowin.png",
     "product_features": [
@@ -279,7 +279,7 @@ export const products: Product[] = [
     "product_code": "1035",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Integrated three-way stopcock, allowing for simultaneous administration of multiple fluids or medications through a single access point. This design simplifies the process, reduces the number of punctures needed, and enhances patient comfort.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Integrated three way stopcock, allowing for simultaneous administration of multiple fluids or medications through a single access point. This design simplifies the process, reduces the number of punctures needed, and enhances patient comfort.",
     "sub_desc": "IV Cannula with integrated three way stop cock",
     "image": "/images/Evercath.png",
     "product_features": [
@@ -328,7 +328,7 @@ export const products: Product[] = [
     "product_code": "1036",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Suturable wing allows suture to pass through the perforation & helps to stablize the cannula during pateint movement when inconsious.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Suturable wing allows suture to pass through the perforation & helps to stabilize the cannula during patient movement when unconscious.",
     "sub_desc": "IV Cannula with Suturable wings and with snap fit port cap",
     "image": "/images/Suturabl IV Cannula with snap fit cap.png",
     "product_features": [
@@ -430,12 +430,12 @@ export const products: Product[] = [
     "product_code": "1047",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.  Metalic Safety clip automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Metallic Safety clip automatically covers the needle’s bevel after withdrawal of needle, minimizing the risk of needle stick injuries.",
     "sub_desc": "Safety IV Cannula with wings & injection port",
     "image": "/images/EcocannS+.png",
     "product_features": [
       {
-        "title": "Metalic Safety Clip",
+        "title": "Metallic Safety Clip",
         "description": "Passive safety device to prevent needle stick injuries."
       },
       {
@@ -543,12 +543,12 @@ export const products: Product[] = [
     "product_code": "1048",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Metalic Safety clip automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries. Without Port IV Cannula reduce the chance of contamination & microorganism.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Metallic Safety clip automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries. Without Port IV Cannula reduce the chance of contamination & microorganism.",
     "sub_desc": "Safety IV Cannula with wings & w/o injection port",
     "image": "/images/Ecowannws+copy.png",
     "product_features": [
       {
-        "title": "Metalic Safety Clip",
+        "title": "Metallic Safety Clip",
         "description":"Passive safety device to prevent needle stick injuries."
       },
       {
@@ -647,12 +647,12 @@ export const products: Product[] = [
     "product_code": "1049",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Metalic Safety clip automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries.Fever place for contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin better pateint comfort.",
+    "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Metallic Safety clip automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries.Fever place for contamination for both (Internal / External) Ideal for small & superficial vein. Less bulky lies, flat against the skin for better patient comfort.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
     "image": "/images/EcowinS+copy.png",
     "product_features": [
       {
-        "title": "Metalic Safety Clip",
+        "title": "Metallic Safety Clip",
         "description":"Passive safety device to prevent needle stick injuries."
       },
       {
@@ -751,11 +751,11 @@ export const products: Product[] = [
       },
       {
         "title": "Blood control valve",
-        "description": "Blood control feature reduce the leakage of the blood during cannualtion."
+        "description": "Blood control feature reduce the leakage of the blood during cannulation."
       },
       {
         "title": "Push Button mechanism",
-        "description": "This mechanism retracts needle into locked chamber to prevent acidental needle stick injuries."
+        "description": "This mechanism retracts needle into locked chamber to prevent accidental needle stick injuries."
       },
       {
         "title": "Radiopaque Frictionless Catheter",
@@ -1092,7 +1092,7 @@ export const products: Product[] = [
       },
       {
         "title": "Air Vent with Filter",
-        "description": "Prevents air contamination, reduces Healthcare Associated Infections (HIM)."
+        "description": "Prevents air contamination, reduces Healthcare Associated Infections (HAI)"
       },
       {
         "title": "Flexible Double Drip Chamber",
@@ -1547,7 +1547,7 @@ export const products: Product[] = [
     "product_features": [
       {
         "title": "Optimal eyes",
-        "description": "Smooth, optimal eyes ensuring atraumatic introduction ana effective drainage."
+        "description": "Smooth, optimal eyes ensuring atraumatic introduction and effective drainage."
       },
       {
         "title": "Pressure resistant balloon",
@@ -1562,7 +1562,7 @@ export const products: Product[] = [
         "description": "Prevents collapse and for effective suctioning."
       },
       {
-        "title": "Strange drainage funnel",
+        "title": "Strong drainage funnel",
         "description": "Kink resistant and provides best connection to drainage bag."
       },
       {
@@ -1631,7 +1631,7 @@ export const products: Product[] = [
     "product_features": [
       {
         "title": "Pressure Control",
-        "description": "Large clamp to manage negative pressure effectively."
+        "description": "Large clamp to mandge negative pressure effectively."
       },
       {
         "title": "Smooth Insertion",
@@ -1669,7 +1669,7 @@ export const products: Product[] = [
     "product_features": [
       {
         "title": "Atraumatic Tip",
-        "description": "Smooth, rounded distal end with large finish eyes for efficient drainage and minimal tissue damage."
+        "description": "Smooth, rounded distal end with large finished eyes for efficient drainage and minimal tissue damage."
       },
       {
         "title": "Depth Marking",
@@ -2086,7 +2086,7 @@ export const products: Product[] = [
     "product_features": [
       {
         "title": "Optimal eyes",
-        "description": "Smooth, optimal eyes ensuring atraumatic introduction ana effective drainage."
+        "description": "Smooth, optimal eyes ensuring atraumatic introduction and effective drainage."
       },
       {
         "title": "Pressure resistant balloon",
@@ -2101,7 +2101,7 @@ export const products: Product[] = [
         "description": "Prevents collapse and for effective suctioning."
       },
       {
-        "title": "Strang drainage funnel",
+        "title": "Strong drainage funnel",
         "description": "Kink resistant and provides best connection to drainage bag."
       },
       {
