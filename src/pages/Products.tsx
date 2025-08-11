@@ -292,11 +292,7 @@ const Products = () => {
     'Central Venous Access Catheters': ['Central Venous Access Catheters', 'central-venous-access-catheters']
   };
 
-  const toTitleCase = (str) => {
-  if (!str) return '';
-  return str.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
-};
-
+  
   // Find the actual category name that matches either the readable format or URL format
   const actualCategory = Object.keys(categoryMapping).find(key =>
     key === readableCategory ||
@@ -479,61 +475,60 @@ const Products = () => {
 
       {/* Product Grid */}
       <section className="py-16">
-  <div className="max-w-7xl mx-auto px-4">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {filteredProducts.map((product) => (
-        <div key={product.id} className="bg-white rounded-lg overflow-hidden group">
-          {/* Custom image container with fixed dimensions */}
-          <div className="w-full max-w-[289px] h-[309px] mx-auto overflow-hidden rounded-lg border-blue-100 border-2">
-            <img
-              src={product.image}
-              alt={product.product_name}
-              className="w-full h-full object-contain"
-              onError={(e) => {
-                e.target.src = '/placeholder-product.jpg'; 
-              }}
-            />
-          </div>
-          <div className="p-6">
-            <h3 className="text-xl font-semibold text-[#309ed9] mb-2">
-              {toTitleCase(product.product_name)}
-            </h3>
-            <p className='text-sm font-medium text-gray-700 mb-2'>{product.addition}</p>
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700">{product.sub_desc}</span>
-            </div>
-          </div>
-          {/* Updated Read More button - Always visible on mobile, hover on desktop */}
-          <button
-            onClick={() => navigate(`/products/${category}/${product.id}`)}
-            className="flex items-center text-sm font-medium text-[#309ed9] transition-all duration-200 px-6 pb-6 md:opacity-0 md:group-hover:opacity-100"
-          >
-            Read More
-            <ArrowRight className="h-4 w-4 ml-1" />
-          </button>
-        </div>
-      ))}
-    </div>
+        <div className="max-w-7xl mx-auto px-4">
 
-    {/* Empty state */}
-    {filteredProducts.length === 0 && (
-      <div className="text-center py-12">
-        <p className="text-gray-600 text-lg mb-2">No products found.</p>
-        <p className="text-gray-500 text-sm">
-          {searchTerm ? 'Try adjusting your search terms.' : 'Try selecting "All Products" or a different category.'}
-        </p>
-        {selectedCategory !== 'All Products' && (
-          <button
-            onClick={() => setSelectedCategory('All Products')}
-            className="mt-4 px-4 py-2 bg-[#309ed9] text-white rounded-lg hover:bg-[#2889c4] transition-colors"
-          >
-            Show All Products
-          </button>
-        )}
-      </div>
-    )}
-  </div>
-</section>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {filteredProducts.map((product) => (
+              <div key={product.id} className="bg-white rounded-lg overflow-hidden group">
+                {/* Custom image container with fixed dimensions */}
+               <div className="w-full max-w-[289px] h-[309px] mx-auto overflow-hidden rounded-lg border-blue-100 border-2">
+                  <img
+                    src={product.image}
+                    alt={product.product_name}
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.target.src = '/placeholder-product.jpg'; 
+                    }}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-[#309ed9] mb-2">{product.product_name}</h3>
+                  <p className='text-sm font-medium text-gray-700 mb-2'>{product.addition}</p>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-700">{product.sub_desc}</span>
+                  </div>
+                </div>
+                {/* Updated Read More button - Always visible on mobile, hover on desktop */}
+                <button
+                  onClick={() => navigate(`/products/${category}/${product.id}`)}
+                  className="flex items-center text-sm font-medium text-[#309ed9] transition-all duration-200 px-6 pb-6 md:opacity-0 md:group-hover:opacity-100"
+                >
+                  Read More
+                  <ArrowRight className="h-4 w-4 ml-1" />
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {/* Empty state */}
+          {filteredProducts.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-600 text-lg mb-2">No products found.</p>
+              <p className="text-gray-500 text-sm">
+                {searchTerm ? 'Try adjusting your search terms.' : 'Try selecting "All Products" or a different category.'}
+              </p>
+              {selectedCategory !== 'All Products' && (
+                <button
+                  onClick={() => setSelectedCategory('All Products')}
+                  className="mt-4 px-4 py-2 bg-[#309ed9] text-white rounded-lg hover:bg-[#2889c4] transition-colors"
+                >
+                  Show All Products
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+      </section>
     </div>
   );
 };

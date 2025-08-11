@@ -105,7 +105,7 @@ const ProductDetails = () => {
       {/* Header Section */}
       <section style={{ backgroundColor: '#309ed9' }} className="text-white py-12">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl lg:text-5xl font-bold text-center mb-6">
+          <h1 className="text-4xl lg:text-5xl font-normal text-center mb-6">
             {product.product_name}
           </h1>
 

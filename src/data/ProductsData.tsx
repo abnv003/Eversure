@@ -23,7 +23,7 @@ export const products: Product[] = [
   //IV Cannula
   {
     "id": 38,
-    "product_name": "MODCANN WI+",
+    "product_name": "Modcann WI+",
     "sizes": "14G to 26G",
     "product_code": "1001",
     "category": "infusion-transfusion",
@@ -80,7 +80,7 @@ export const products: Product[] = [
   },
   {
     "id": 1,
-    "product_name": "ECOCANN",
+    "product_name": "Ecocann",
     "sizes": "14G to 26G",
     "product_code": "1002",
     "category": "infusion-transfusion",
@@ -134,7 +134,7 @@ export const products: Product[] = [
   },
   {
     "id": 2,
-    "product_name": "ECOCANN W",
+    "product_name": "Ecocann W",
     "sizes": "14G to 26G",
     "product_code": "1003",
     "category": "infusion-transfusion",
@@ -182,7 +182,7 @@ export const products: Product[] = [
   },
   {
     "id": 3,
-    "product_name": "ECOCANN N",
+    "product_name": "Ecocann N",
     "sizes": "24G to 26G",
     "product_code": "1004",
     "category": "infusion-transfusion",
@@ -230,7 +230,7 @@ export const products: Product[] = [
   },
   {
     "id": 4,
-    "product_name": "ECOWIN",
+    "product_name": "Ecowin",
     "sizes": "14G to 26G",
     "product_code": "1005",
     "category": "infusion-transfusion",
@@ -274,7 +274,7 @@ export const products: Product[] = [
   },
   {
     "id": 5,
-    "product_name": "EVERCATH",
+    "product_name": "Evercath",
     "sizes": "18G to 24G",
     "product_code": "1035",
     "category": "infusion-transfusion",
@@ -323,7 +323,7 @@ export const products: Product[] = [
   },
   {
     "id": 6,
-    "product_name": "ECOCANN SF",
+    "product_name": "Ecocann SF",
     "sizes": "14G to 26G",
     "product_code": "1036",
     "category": "infusion-transfusion",
@@ -380,7 +380,7 @@ export const products: Product[] = [
   },
   {
     "id": 40,
-    "product_name": "EVERON",
+    "product_name": "Everon",
     "sizes": "14G to 26G",
     "product_code": "1002",
     "category": "infusion-transfusion",
@@ -425,7 +425,7 @@ export const products: Product[] = [
   },
   {
     "id": 7,
-    "product_name": "ECOCANN S+",
+    "product_name": "Ecocann S+",
     "sizes": "14G to 24G",
     "product_code": "1047",
     "category": "infusion-transfusion",
@@ -482,7 +482,7 @@ export const products: Product[] = [
   },
   {
     "id": 8,
-    "product_name": "ECOCANN S",
+    "product_name": "Ecocann S",
     "sizes": "18G to 24G",
     "product_code": "1010",
     "category": "infusion-transfusion",
@@ -538,7 +538,7 @@ export const products: Product[] = [
   },
   {
     "id": 9,
-    "product_name": "ECOCANN WS+",
+    "product_name": "Ecocann WS+",
     "sizes": "14G to 24G",
     "product_code": "1048",
     "category": "infusion-transfusion",
@@ -591,7 +591,7 @@ export const products: Product[] = [
   },
   {
     "id": 10,
-    "product_name": "ECOCANN W-S",
+    "product_name": "Ecocann W-S",
     "sizes": "18G to 24G",
     "product_code": "1007",
     "category": "infusion-transfusion",
@@ -642,7 +642,7 @@ export const products: Product[] = [
   },
   {
     "id": 11,
-    "product_name": "ECOWIN S+",
+    "product_name": "Ecowin S+",
     "sizes": "14G to 24G",
     "product_code": "1049",
     "category": "infusion-transfusion",
@@ -689,7 +689,7 @@ export const products: Product[] = [
   },
   {
     "id": 12,
-    "product_name": "ECOWIN S",
+    "product_name": "Ecowin S",
     "sizes": "18G to 24G",
     "product_code": "1008",
     "category": "infusion-transfusion",
@@ -736,7 +736,7 @@ export const products: Product[] = [
   },
   {
     "id": 39,
-    "product_name": "EVER ACTIVE SAFE",
+    "product_name": "Ever Active Safe",
     "sizes": "14G to 26G",
     "product_code": "1002",
     "category": "infusion-transfusion",
@@ -789,7 +789,7 @@ export const products: Product[] = [
   },
   {
     "id": 13,
-    "product_name": "MODWAY",
+    "product_name": "Modway",
     "sizes": "",
     "product_code": "1401 - 1402",
     "category": "infusion-transfusion",
@@ -841,7 +841,7 @@ export const products: Product[] = [
   },
   {
     "id": 14,
-    "product_name": "MODEXWAY",
+    "product_name": "Modexway",
     "sizes": "Tube Length (cms): 10, 25, 50, 100, 150, 200",
     "product_code": "1302",
     "category": "infusion-transfusion",
@@ -888,7 +888,7 @@ export const products: Product[] = [
   },
   {
     "id": 15,
-    "product_name": "ECOVENN NV",
+    "product_name": "Ecovenn NV",
     "sizes": "",
     "product_code": "1102",
     "category": "infusion-transfusion",
@@ -945,7 +945,7 @@ export const products: Product[] = [
   },
   {
     "id": 16,
-    "product_name": "ECOVENN V",
+    "product_name": "Ecovenn V",
     "sizes": "",
     "product_code": "1106",
     "category": "infusion-transfusion",
@@ -1006,7 +1006,7 @@ export const products: Product[] = [
   },
   {
     "id": 17,
-    "product_name": "MODVENN V",
+    "product_name": "Modvenn V",
     "sizes": "",
     "product_code": "1107",
     "category": "infusion-transfusion",
@@ -1069,7 +1069,7 @@ export const products: Product[] = [
   },
   {
     "id": 18,
-    "product_name": "MODVENN V+",
+    "product_name": "Modvenn V+",
     "sizes": "",
     "product_code": "1105",
     "category": "infusion-transfusion",
@@ -1140,7 +1140,7 @@ export const products: Product[] = [
   },
   {
     "id": 19,
-    "product_name": "MODVENN SV",
+    "product_name": "Modvenn SV",
     "sizes": "",
     "product_code": "1111",
     "category": "infusion-transfusion",
@@ -1207,7 +1207,7 @@ export const products: Product[] = [
   },
   {
     "id": 20,
-    "product_name": "MODVENN SV+",
+    "product_name": "Modvenn SV+",
     "sizes": "",
     "product_code": "1112",
     "category": "infusion-transfusion",
@@ -1268,7 +1268,7 @@ export const products: Product[] = [
   },
   {
     "id": 21,
-    "product_name": "EVERVENN",
+    "product_name": "Evervenn",
     "sizes": "",
     "product_code": "Vented 1117, Non Vented 1118",
     "category": "infusion-transfusion",
@@ -1325,7 +1325,7 @@ export const products: Product[] = [
   },
   {
     "id": 42,
-    "product_name": "MODVENN LS",
+    "product_name": "Modvenn LS",
     "sizes": "",
     "product_code": "1102",
     "category": "infusion-transfusion",
@@ -1386,7 +1386,7 @@ export const products: Product[] = [
   },
   {
     "id": 22,
-    "product_name": "ECOBUVENN",
+    "product_name": "Ecobuvenn",
     "sizes": "110 ml & 150 ml",
     "product_code": "1501",
     "category": "infusion-transfusion",
@@ -1441,7 +1441,7 @@ export const products: Product[] = [
   },
   {
     "id": 23,
-    "product_name": "ECOBUVENN Y",
+    "product_name": "Ecobuvenn Y",
     "sizes": "110 ml & 150 ml",
     "product_code": "1503",
     "category": "infusion-transfusion",
@@ -1494,7 +1494,7 @@ export const products: Product[] = [
   },
   {
     "id": 24,
-    "product_name": "ECOEXTT HP",
+    "product_name": "Ecoextt HP",
     "sizes": "Tube Length(cms): 10, 25, 50, 100, 150 & 200",
     "product_code": "1202",
     "category": "infusion-transfusion",
@@ -1536,7 +1536,7 @@ export const products: Product[] = [
   },
   {
     "id": 25,
-    "product_name": "ECOCATH",
+    "product_name": "Ecocath",
     "sizes": "6FG to 24FG",
     "product_code": "Two way 3601, Three way 3602",
     "category": "Urology",
@@ -1580,7 +1580,7 @@ export const products: Product[] = [
   },
   {
     "id": 26,
-    "product_name": "ECOSUC",
+    "product_name": "Ecosuc",
     "sizes": "Tube Length: 210cms, 250cms & 300cms",
     "product_code": "2301,2302",
     "category": "surgery-wound-drainage",
@@ -1620,7 +1620,7 @@ export const products: Product[] = [
   },
   {
     "id": 27,
-    "product_name": "ECOCWS",
+    "product_name": "Ecocws",
     "sizes": "10, 12, 14, 16 & 18 FG",
     "product_code": "2901",
     "category": "surgery-wound-drainage",
@@ -1658,7 +1658,7 @@ export const products: Product[] = [
   },
   {
     "id": 28,
-    "product_name": "ECOCATH THOR – S",
+    "product_name": "Ecocath Thor – S",
     "sizes": "8, 10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 36 & 40 FG",
     "product_code": "2601",
     "category": "surgery-wound-drainage",
@@ -1702,7 +1702,7 @@ export const products: Product[] = [
   },
   {
     "id": 29,
-    "product_name": "ECOCATH THOR – T",
+    "product_name": "Ecocath Thor – T",
     "sizes": "10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 36, 40 FG",
     "product_code": "2801",
     "category": "surgery-wound-drainage",
@@ -1738,7 +1738,7 @@ export const products: Product[] = [
   },
   {
     "id": 30,
-    "product_name": "MODCVC",
+    "product_name": "Modcvc",
     "sizes": "Single, Double, Triple Lumen",
     "product_code": "Single Lumen-2001 to 2004, Double Lumen-2101 to 2103, Triple Lumen-2201 to 2202",
     "category": "central-venous-access-catheters",
@@ -1780,7 +1780,7 @@ export const products: Product[] = [
 
   {
     "id": 31,
-    "product_name": "ECOEXTT FLOW",
+    "product_name": "Ecoextt Flow",
     "sizes": "",
     "product_code": "1207",
     "category": "infusion-transfusion",
@@ -1822,7 +1822,7 @@ export const products: Product[] = [
   },
   {
     "id": 32,
-    "product_name": "ECOEXTT",
+    "product_name": "Ecoextt",
     "sizes": "Tube Length(cms): 10, 25, 50, 100, 150 & 200",
     "product_code": "1201",
     "category": "infusion-transfusion",
@@ -1865,7 +1865,7 @@ export const products: Product[] = [
   },
   {
     "id": 33,
-    "product_name": "ECOEXTT DUO",
+    "product_name": "Ecoextt Duo",
     "sizes": "Tube Length(cms): 18",
     "product_code": "1209",
     "category": "infusion-transfusion",
@@ -1909,7 +1909,7 @@ export const products: Product[] = [
   },
   {
     "id": 34,
-    "product_name": "MODEXTT",
+    "product_name": "Modextt",
     "sizes": "",
     "product_code": "Single 1204, Double 1205, Triple 1206",
     "category": "infusion-transfusion",
@@ -1953,7 +1953,7 @@ export const products: Product[] = [
   },
   {
     "id": 35,
-    "product_name": "ECOTRAN NV",
+    "product_name": "Ecotran NV",
     "sizes": "",
     "product_code": "ECOTRAN NV - 2401",
     "category": "infusion-transfusion",
@@ -1997,7 +1997,7 @@ export const products: Product[] = [
   },
   {
     "id": 43,
-    "product_name": "ECOTRAN V",
+    "product_name": "Ecotran V",
     "sizes": "",
     "product_code": "ECOTRAN V - 2402",
     "category": "infusion-transfusion",
@@ -2041,7 +2041,7 @@ export const products: Product[] = [
   },
   {
     "id": 36,
-    "product_name": "LUER CAP",
+    "product_name": "Luer Cap",
     "sizes": "",
     "product_code": "3602",
     "category": "infusion-transfusion",
@@ -2056,7 +2056,7 @@ export const products: Product[] = [
   },
   {
     "id": 37,
-    "product_name": "INJECTION STOPPER",
+    "product_name": "Injection Stopper",
     "sizes": "",
     "product_code": "3501",
     "category": "infusion-transfusion",
@@ -2075,7 +2075,7 @@ export const products: Product[] = [
   //Foley 
   {
     "id": 41,
-    "product_name": "MODCATH",
+    "product_name": "Modcath",
     "sizes": "6FG to 24FG",
     "product_code": "Two way 3603, Three way 3604",
     "category": "Urology",
