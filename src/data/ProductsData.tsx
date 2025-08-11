@@ -65,7 +65,7 @@ export const products: Product[] = [
         "description": "ETO sterilized, single-use, CE marked, non-pyrogenic."
       },
       {
-        "title": "Coloured soft wings for easy and proper fixaxation.",
+        "title": "Coloured soft wings for easy and proper fixation.",
         "description": "Injection Port provided for extra medication and wings for proper fixation."
       }
     ],
