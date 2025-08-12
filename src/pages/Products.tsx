@@ -210,7 +210,7 @@ const Products = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {filteredProducts.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg overflow-hidden group">
+              <div onClick={() => navigate(`/products/${category}/${product.id}`)} key={product.id} className="bg-white rounded-lg overflow-hidden group cursor-pointer">
                 {/* Custom image container with fixed dimensions */}
                <div className="w-full max-w-[289px] h-[309px] mx-auto overflow-hidden rounded-lg border-blue-100 border-2">
                   <img
@@ -235,7 +235,6 @@ const Products = () => {
                 </div>
                 {/* Updated Read More button - Always visible on mobile, hover on desktop */}
                 <button
-                  onClick={() => navigate(`/products/${category}/${product.id}`)}
                   className="flex items-center text-sm font-medium text-[#309ed9] transition-all duration-200 px-6 pb-6 md:opacity-0 md:group-hover:opacity-100"
                 >
                   Read More
