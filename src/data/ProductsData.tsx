@@ -1327,10 +1327,10 @@ export const products: Product[] = [
     "id": 42,
     "product_name": "Modvenn LS",
     "sizes": "",
-    "product_code": "1102",
+    "product_code": "1125",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
-    "description": "The infusion Sets are used to protect light-sensitive medications or fluids during infusion, preventing degradation caused by light exposure.",
+    "description": "The infusion Sets are used to protect light-sensitive medications or fluids during infusion, preventing degradation caused by light exposure. It is particularly used in oncology and neonatal care settings.",
     "sub_desc": "Light / Photo-sensitivity IV Set",
     "image": "/images/modvenn_vyo.png",
     "product_features": [
@@ -1369,10 +1369,6 @@ export const products: Product[] = [
       {
         "title": "Sterility & Safety",
         "description": "ETO Sterilized, Single Use, Non-pyrogenic, CE Certified"
-      },
-      {
-        "title": "",
-        "description": "It's primarily used for delivering chemotherapy drugs and other medications where light sensitivity is a concern, particularly in oncology and neonatal care settings."
       }
     ],
     "options": [
@@ -1382,7 +1378,7 @@ export const products: Product[] = [
       "Flow regulator & needle-free Y injection port"
     ],
     "unit_consists": [],
-    "variant_pdf": "/variants/ivinfusionset/modven vyo.pdf"
+    "variant_pdf": "/variants/ivinfusionset/modvenn_ls.pdf"
   },
   {
     "id": 22,

@@ -9,7 +9,6 @@ import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
 import Events from './pages/Event';
 import Certificate from './pages/Certificate';
-import DownloadTab from './components/DownloadTab';
 import QuickFinderTab from './components/QuickFinderTab';
 import ProductDetails from './pages/ProductDetails';
 import { Sustainability } from './pages/Sustainability';
