@@ -3,12 +3,6 @@ import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { Search, Filter, ArrowRight } from 'lucide-react';
 import { products } from '../data/ProductsData';
 
-// Helper function to convert to title case
-const toTitleCase = (str) => {
-  if (!str) return '';
-  return str.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
-};
-
 const Products = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -230,7 +224,7 @@ const Products = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#309ed9] mb-2">
-                    {toTitleCase(product.product_name)}
+                    {product.product_name}
                   </h3>
                   <p className='text-sm font-medium text-gray-700 mb-2'>{product.addition}</p>
                   <div className="flex items-center justify-between mb-2">

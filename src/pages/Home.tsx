@@ -184,7 +184,7 @@ const Home = () => {
   {/* Background with overlay */}
   <div className="absolute inset-0">
     <img
-      src="/heroimages/homepage_main.jpeg"
+      src="/heroimages/homepage_main.png"
       alt="Medical Technology"
       className="w-full h-full object-cover object-[center_30%]"
     />
