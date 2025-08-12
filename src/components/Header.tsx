@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Search, ChevronDown, Download } from 'lucide-react';
 import { products } from '../data/ProductsData.jsx';
+import { EventRibbon } from './EventRibbon.js';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -434,6 +435,8 @@ const Header = () => {
           </div>
         )}
       </nav>
+              <EventRibbon />
+
     </header>
   );
 };

@@ -197,7 +197,7 @@ const Home = () => {
       <div className="text-center">
         <div className="text-white max-w-5xl mx-auto">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal mb-6 sm:mb-8 leading-tight tracking-tight">
-            Precision in Every Device, Reliability for Every Patient
+            Innovating Care, Ensuring Comfort
           </h1>
           <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-100 leading-relaxed max-w-4xl mx-auto font-light">
             At Eversure, we believe innovation is key to accessible, high-quality healthcare. By integrating automation, we enhance efficiency and precision in patient care. Our focus is both on current needs and future challenges, driving the development of transformative medical technologies.

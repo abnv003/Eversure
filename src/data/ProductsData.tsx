@@ -1330,7 +1330,7 @@ export const products: Product[] = [
     "product_code": "1125",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
-    "description": "The infusion Sets are used to protect light-sensitive medications or fluids during infusion, preventing degradation caused by light exposure. It is particularly used in oncology and neonatal care settings.",
+    "description": "The infusion Sets are used to protect light sensitive medications or fluids during infusion, preventing degradation caused by light exposure. It is particularly used in oncology and neonatal care settings.",
     "sub_desc": "Light / Photo-sensitivity IV Set",
     "image": "/images/modvenn_vyo.png",
     "product_features": [

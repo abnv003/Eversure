@@ -169,28 +169,12 @@
 
 import { useState } from 'react';
 import { Calendar, ArrowRight, CheckCircle } from 'lucide-react';
+import { upcomingEvents, pastEvents } from '../data/EventData.tsx';
 
 const Events = () => {
   const [activeTab, setActiveTab] = useState<'upcoming' | 'past'>('upcoming');
 
-  const upcomingEvents = [
-    {
-      id: 1,
-      title: 'Medica Germany',
-      date: 'From 2025-11-17 to 2025-11-20',
-      description: 'Join industry leaders to explore the latest innovations in medical device technology and regulatory updates.',
-      image_url: '/events/Medica Germany.jpg'
-    },
-    {
-      id: 2,
-      title: 'WHX Dubai (Formerly Arab Health)',
-      date: 'From 2026-02-09 to 2026-02-12',
-      description: 'Join industry leaders to explore the latest innovations in medical device technology and regulatory updates.',
-      image_url: '/events/Dubai.jpg'
-    }
-  ];
-
-  const pastEvents = [];
+  
 
   const currentEvents = activeTab === 'upcoming' ? upcomingEvents : pastEvents;
 
@@ -255,7 +239,7 @@ const Events = () => {
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {currentEvents.map((event) => (
                 <div key={event.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200">
                   {event.image_url && (
@@ -263,7 +247,7 @@ const Events = () => {
                       <img 
                         src={event.image_url} 
                         alt={event.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   )}
@@ -292,7 +276,7 @@ const Events = () => {
                       </div>
                     </div>
 
-                    {activeTab === 'upcoming' ? (
+                    {/* {activeTab === 'upcoming' ? (
                       <button className="w-full text-white py-3 px-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2 hover:bg-opacity-90" style={{ backgroundColor: '#309ed9' }}>
                         <span>Learn More</span>
                         <ArrowRight className="h-4 w-4" />
@@ -301,7 +285,7 @@ const Events = () => {
                       <button className="w-full bg-gray-100 text-gray-600 py-3 px-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors duration-200">
                         View Summary
                       </button>
-                    )}
+                    )} */}
                   </div>
                 </div>
               ))}
