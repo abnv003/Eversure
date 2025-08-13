@@ -109,7 +109,7 @@ const ProductDetails = () => {
             {product.product_name}
           </h1>
 
-          {/* Breadcrumb */}
+          {/* Breadcrumb
           <nav className="text-sm opacity-80 text-center">
             <button
               onClick={() => navigate('/')}
@@ -133,7 +133,34 @@ const ProductDetails = () => {
             </button>
             <span className="mx-2">/</span>
             <span>{product.product_name}</span>
+          </nav> */}
+
+          {/* Breadcrumb */}
+          <nav className="text-base opacity-90 text-center text-gray-200">
+            <button
+              onClick={() => navigate('/')}
+              className="hover:underline transition-colors duration-200 font-medium"
+            >
+              Home
+            </button>
+            <span className="mx-2 text-white">/</span>
+            <button
+              onClick={() => navigate(`/products/${category}`)}
+              className="hover:underline transition-colors duration-200 font-medium"
+            >
+              {readableCategory}
+            </button>
+            <span className="mx-2 text-white">/</span>
+            <button
+              onClick={() => navigate(`/products/${category}?subcategory=${encodeURIComponent(product.sub_category)}`)}
+              className="hover:underline transition-colors duration-200 font-medium"
+            >
+              {product.sub_category}
+            </button>
+            <span className="mx-2 text-white">/</span>
+            <span className="font-semibold">{product.product_name}</span>
           </nav>
+
         </div>
       </section>
 
@@ -301,7 +328,7 @@ const ProductDetails = () => {
               </h2>
 
               {/* Product Codes */}
-              <div className="text-md text-gray-500 mb-6">
+              {/* <div className="text-md text-gray-500 mb-6">
                 <span className="font-medium">Product Code: </span>
                 {product.product_code}
                 {product.sizes && product.sizes.trim() !== "" && (
@@ -310,6 +337,19 @@ const ProductDetails = () => {
                     <span className="font-medium">Sizes: </span>
                     {product.sizes}
                   </>
+                )}
+              </div> */}
+
+              <div className="text-md text-gray-500 mb-6">
+                <div>
+                  <span className="font-medium">Product Code: </span>
+                  {product.product_code}
+                </div>
+                {product.sizes && product.sizes.trim() !== "" && (
+                  <div>
+                    <span className="font-medium">Sizes: </span>
+                    {product.sizes}
+                  </div>
                 )}
               </div>
               <p className="text-gray-600 mb-4">

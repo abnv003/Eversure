@@ -1,7 +1,9 @@
 import { Calendar, ArrowRight, CheckCircle } from 'lucide-react';
 import { upcomingEvents } from '../data/EventData.tsx';
+import { useNavigate } from 'react-router-dom';
 
 const Events = () => {
+  const navigate = useNavigate();
   return (
     <div className="">
       {/* Hero Section */}
@@ -9,6 +11,21 @@ const Events = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-normal mb-6">Events</h1>
+            <nav className="text-base opacity-90 text-center text-gray-200">
+            <button
+              onClick={() => navigate('/')}
+              className="hover:underline transition-colors duration-200 font-medium"
+            >
+              Home
+            </button>
+            <span className="mx-2 text-white">/</span>
+            <button
+              onClick={() => navigate(`/events`)}
+              className="hover:underline transition-colors duration-200 font-medium"
+            >
+              Event
+            </button>
+          </nav>
           </div>
         </div>
       </section>

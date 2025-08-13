@@ -15,9 +15,21 @@ const Blog = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-normal mb-6">Blogs</h1>
-            <p className="text-xl" style={{color: '#f0f9ff'}}>
-              Stay informed with the latest developments in medical technology and healthcare innovation.
-            </p>
+            <nav className="text-base opacity-90 text-center text-gray-200">
+            <button
+              onClick={() => navigate('/')}
+              className="hover:underline transition-colors duration-200 font-medium"
+            >
+              Home
+            </button>
+            <span className="mx-2 text-white">/</span>
+            <button
+              onClick={() => navigate(`/blog`)}
+              className="hover:underline transition-colors duration-200 font-medium"
+            >
+              Blog
+            </button>
+          </nav>
           </div>
         </div>
       </section>

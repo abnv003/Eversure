@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Heart, Shield, MessageCircle, Users, Leaf, ArrowRight } from 'lucide-react';
+import Counter from '../components/Counter';
 // import { useNavigate } from 'react-router-dom';
 
 const AboutUs = () => {
@@ -141,15 +142,15 @@ const AboutUs = () => {
   const features = [
     {
       title: "Quality & Safety Assurance",
-      icon: ""
+      icon: "/icons/shield.png"
     },
     {
       title: "Innovative Technology",
-      icon: ""
+      icon: "/icons/machine.png"
     },
     {
       title: "Timely-Delivery",
-      icon: ""
+      icon: "/icons/fast-delivery.png"
     }
   ]
 
@@ -158,9 +159,14 @@ const AboutUs = () => {
     if (!isPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => 
-        prevIndex === timelineData.length - 1 ? 0 : prevIndex + 1
-      );
+      setCurrentIndex(prevIndex => {
+        // For desktop: stop at the last position where we can show 3 items
+        const maxIndex = timelineData.length - 3;
+        if (prevIndex >= maxIndex) {
+          return 0; // Reset to beginning
+        }
+        return prevIndex + 1;
+      });
     }, 4000); // Change slide every 4 seconds
 
     return () => clearInterval(interval);
@@ -180,14 +186,19 @@ const AboutUs = () => {
   const getVisibleItems = () => {
     const items = [];
     for (let i = 0; i < 3; i++) {
-      const index = (currentIndex + i) % timelineData.length;
-      items.push({ ...timelineData[index], originalIndex: index });
+      const index = currentIndex + i;
+      if (index < timelineData.length) {
+        items.push({ ...timelineData[index], originalIndex: index });
+      }
     }
     return items;
   };
 
   const visibleItems = getVisibleItems();
-  const currentItem = timelineData[currentIndex];
+  const currentItem = timelineData[currentIndex % timelineData.length]; // For mobile, keep circular
+
+  // Calculate max index for desktop navigation dots
+  const maxDesktopIndex = Math.max(0, timelineData.length - 3);
 
   return (
     <div className="overflow-x-hidden">
@@ -214,53 +225,55 @@ const AboutUs = () => {
       </section>
 
       {/* Values Section - Card with hover description */}
-<section className="py-16 px-4 mb-24">
-  <div className="max-w-6xl mx-auto">
-    {/* Header */}
-    <div className="mb-8 text-center">
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#309ed9] mb-3">
-        Our Values Lead The Way
-      </h2>
-      <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
-    </div>
+      <section className="py-16 px-4 mb-24">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="mb-8 text-center">
+            <h2 className="text-4xl sm:text-4xl lg:text-4xl font-light text-[#309ed9] mb-3">
+              Our Values Lead The Way
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
+          </div>
 
-    {/* Values Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-      {values.map((value, index) => {
-        const IconComponent = value.icon;
+          {/* Values Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {values.map((value, index) => {
+              const IconComponent = value.icon;
 
-        return (
-          <div key={index} className="text-center group relative">
-            {/* Card Container */}
-            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm group-hover:shadow-xl transition-all duration-300 ease-out cursor-pointer min-h-[180px] flex flex-col justify-center">
-              {/* Default State - Icon and Title */}
-              <div className="group-hover:opacity-0 transition-opacity duration-300 ease-out">
-                {/* Icon Container */}
-                <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 rounded-2xl border border-gray-300 flex items-center justify-center">
-                    <IconComponent className="w-8 h-8 text-gray-700 stroke-1" />
+              return (
+                <div key={index} className="text-center group relative">
+                  {/* Card Container */}
+                  <div className="bg-white group-hover:bg-[#309ed9] rounded-xl p-8 border border-gray-200 shadow-sm group-hover:shadow-xl transition-all duration-300 ease-out cursor-pointer min-h-[180px] flex flex-col justify-center">
+                    {/* Default State - Icon and Title */}
+                    <div className="group-hover:opacity-0 transition-opacity duration-300 ease-out">
+                      {/* Icon Container */}
+                      <div className="flex justify-center mb-6">
+                        <div className="w-16 h-16 rounded-2xl border border-gray-300 group-hover:border-white flex items-center justify-center transition-all duration-300">
+                          <IconComponent className="w-8 h-8 text-gray-700 group-hover:text-white stroke-1 transition-colors duration-300" />
+                        </div>
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-xl font-semibold text-gray-900 group-hover:text-white transition-colors duration-300">
+                        {value.title}
+                      </h3>
+                    </div>
+
+                    {/* Hover State - Description */}
+                    <div className="absolute inset-0 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
+                      <p className="text-white leading-relaxed text-center">
+                        {value.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {value.title}
-                </h3>
-              </div>
-
-              {/* Hover State - Description */}
-              <div className="absolute inset-0 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
-                <p className="text-gray-600 leading-relaxed text-center">
-                  {value.description}
-                </p>
-              </div>
-            </div>
+              );
+            })}
           </div>
-        );
-      })}
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
+
+      <Counter />
 
       {/* Our Journey Carousel Section */}
       <div className="max-w-7xl mx-auto p-4 sm:p-8 bg-gray-100 mb-20">
@@ -273,7 +286,7 @@ const AboutUs = () => {
         </div>
 
         {/* Mobile Layout - Single Card */}
-        <div 
+        <div
           className="block md:hidden mb-8"
           onTouchStart={handleMouseEnter}
           onTouchEnd={handleMouseLeave}
@@ -314,7 +327,7 @@ const AboutUs = () => {
         </div>
 
         {/* Desktop Layout - Three Cards */}
-        <div 
+        <div
           className="hidden md:block relative"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -322,8 +335,8 @@ const AboutUs = () => {
           <div className="overflow-hidden">
             <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
               {visibleItems.map((item, index) => (
-                <div 
-                  key={`${item.originalIndex}-${currentIndex}`} 
+                <div
+                  key={`${item.originalIndex}-${currentIndex}`}
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-[500px] flex flex-col"
                 >
                   <div className="h-48 overflow-hidden relative">
@@ -363,19 +376,37 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Navigation Dots */}
+        {/* Navigation Dots - Different for Desktop and Mobile */}
         <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
-          {timelineData.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex
+          {/* Mobile dots - all timeline items */}
+          <div className="block md:hidden">
+            {timelineData.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-200 mr-2 ${index === (currentIndex % timelineData.length)
                   ? 'bg-[#309ed9] scale-125'
                   : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+                  }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+          
+          {/* Desktop dots - only positions where we can show 3 cards */}
+          <div className="hidden md:block">
+            {Array.from({ length: maxDesktopIndex + 1 }, (_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-200 mr-2 ${index === currentIndex
+                  ? 'bg-[#309ed9] scale-125'
+                  : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                aria-label={`Go to position ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Progress Indicator */}
@@ -383,7 +414,7 @@ const AboutUs = () => {
           <div 
             className="h-full bg-[#309ed9] transition-all duration-100 ease-linear"
             style={{ 
-              width: `${((currentIndex + 1) / timelineData.length) * 100}%`
+              width: `${((currentIndex + 1) / (maxDesktopIndex + 1)) * 100}%`
             }}
           />
         </div>
@@ -406,11 +437,17 @@ const AboutUs = () => {
                 className="rounded-lg p-8 shadow-sm hover:shadow-md transition-colors duration-300 group cursor-pointer border bg-white text-gray-900 border-gray-100 hover:bg-[#309ed9] hover:text-white hover:border-[#309ed9]"
               >
                 <div className="flex flex-col items-center text-center h-full min-h-[200px]">
-                  {/* <div className="mb-6">
-                    <div className="text-gray-700 group-hover:text-white transition-colors duration-300">
-                      {feature.icon}
-                    </div>
-                  </div> */}
+                  <div className="mb-6 w-16 h-16 flex items-center justify-center">
+                    <img
+                      src={feature.icon}
+                      alt={feature.title}
+                      className="w-20 h-20 object-contain filter transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                      onError={(e) => {
+                        // Fallback if image doesn't load
+                        e.target.style.display = 'none';
+                      }}
+                    />
+                  </div>
                   <h3 className="text-lg font-medium mb-4 flex-grow flex items-center text-gray-600 group-hover:text-white transition-colors duration-300">
                     {feature.title}
                   </h3>

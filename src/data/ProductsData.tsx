@@ -37,15 +37,11 @@ export const products: Product[] = [
         "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
       },
       {
-        "title": "Flexible Fixation Wings",
-        "description": "Wide, soft wings ensure easy and proper placement."
-      },
-      {
         "title": "Radiopaque Frictionless Catheter",
         "description": "Three/Four-striped FEP/PUR catheter with tapered tip and smooth surfaces."
       },
       {
-        "title": "Transparent Flashback Chamber",
+        "title": "Transparent Flashback Chamber with Hydrophobic Filter",
         "description": "Allows quick visual confirmation during venipuncture."
       },
       {
@@ -71,8 +67,6 @@ export const products: Product[] = [
     ],
     "options": [
       "FEP/PUR Catheter",
-      "Coloured Wings",
-      "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
     ],
     "unit_consists": [],
@@ -244,7 +238,7 @@ export const products: Product[] = [
         "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
+        "title": "Transparent Flashback Chamber",
         "description": "Provides easy visualization after needle insertion."
       },
       {
@@ -279,7 +273,7 @@ export const products: Product[] = [
     "product_code": "1035",
     "category": "infusion-transfusion",
     "sub_category": "IV Cannula",
-    "description": "An intravenous (IV) cannula or catheter is used to deliver fluids directly into the human circulatory system. It features an integrated three-way stopcock, enabling the simultaneous administration of multiple fluids or medications through a single access point. This design streamlines the procedure, minimizes the number of punctures required, and improves patient comfort.",
+    "description": "An intravenous (IV) cannula or catheter is used to deliver fluids directly into the human circulatory system. It features an integrated three way stopcock, enabling the simultaneous administration of multiple fluids or medications through a single access point. This design streamlines the procedure, minimizes the number of punctures required, and improves patient comfort.",
     "sub_desc": "IV Cannula with integrated three way stop cock",
     "image": "/images/Evercath.png",
     "product_features": [
@@ -336,6 +330,10 @@ export const products: Product[] = [
         "title": "Ultra-Sharp Needle Design",
         "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
       },
+      // {
+      //   "title": "Suturable Wings and with Snap Fit Port Cap",
+      //   "description": ""
+      // },
       {
         "title": "Flexible Fixation Wings",
         "description": "Wide, soft wings ensure easy and proper placement."
@@ -394,6 +392,10 @@ export const products: Product[] = [
         "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
       },
       {
+        "title": "Hydrophobic Bacterial Retention Filter",
+        "description": ""
+      },
+      {
         "title": "Radiopaque Frictionless Catheter",
         "description": "Three/Four-striped PUR catheter with tapered tip and smooth surfaces."
       },
@@ -417,7 +419,6 @@ export const products: Product[] = [
     "options": [
       "PUR Catheter",
       "Coloured Wings",
-      "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
     ],
     "unit_consists": [],
@@ -552,6 +553,10 @@ export const products: Product[] = [
         "description":"Passive safety device to prevent needle stick injuries."
       },
       {
+        "title": "Hydrophobic Bacteria Retention Filter",
+        "description": ""
+      },
+      {
         "title": "Ultra-Sharp Needle Design",
         "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
       },
@@ -582,8 +587,6 @@ export const products: Product[] = [
     ],
     "options": [
       "FEP/PUR Catheter",
-      "Coloured Wings",
-      "Hydrophobic Bacteria Retention Filter",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
     ],
     "unit_consists": [],
@@ -741,7 +744,7 @@ export const products: Product[] = [
     "product_code": "1002",
     "category": "infusion-transfusion",
     "sub_category": "Safety IV Cannula",
-    "description": "The EVER ACTIVE Safety IV Catheter is designed to minimize blood exposure and reduce the risk of needlestick injuries. Its unique push-button mechanism retracts the needle into a locked chamber, preventing accidental needle sticks for both users and healthcare staff. Additionally, the blood control feature reduces blood leakage during IV cannulation, ensuring a cleaner and safer procedure.",
+    "description": "The EVER ACTIVE Safety IV Catheter is designed to minimize blood exposure and reduce the risk of needlestick injuries. Its unique push button mechanism retracts the needle into a locked chamber, preventing accidental needle sticks for both users and healthcare staff. Additionally, the blood control feature reduces blood leakage during IV cannulation, ensuring a cleaner and safer procedure.",
     "sub_desc": "Active Safety IV Cannula",
     "image": "/images/everactive.jpg",
     "product_features": [
@@ -759,7 +762,7 @@ export const products: Product[] = [
       },
       {
         "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered tip and smooth surfaces."
+        "description": "Three/Four-striped PUR catheter with tapered tip and smooth surfaces."
       },
       {
         "title": "Transparent Flashback Chamber",
@@ -890,7 +893,7 @@ export const products: Product[] = [
     "id": 15,
     "product_name": "Ecovenn NV",
     "sizes": "",
-    "product_code": "1102",
+    "product_code": "1102, 1108, 1113",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
     "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
@@ -950,7 +953,7 @@ export const products: Product[] = [
     "product_code": "1106",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
-    "description": "Infusion sets are used to administer intravenous fluids into the human circulatory system through an intravenous catheter or cannula. They feature a built-in air vent that allows air to enter the IV fluid container, typically a glass bottle or rigid plastic container, as the fluid flows out.",
+    "description": "Infusion sets are used to administer intravenous fluids into the human circulatory system through an intravenous catheter or cannula. They feature a built in air vent that allows air to enter the IV fluid container, typically a glass bottle or rigid plastic container, as the fluid flows out.",
     "sub_desc": "IV Infusion Set Vented",
     "image": "/images/infusion.png",
     "product_features": [
@@ -1008,7 +1011,7 @@ export const products: Product[] = [
     "id": 17,
     "product_name": "Modvenn V",
     "sizes": "",
-    "product_code": "1107",
+    "product_code": "1107, 1133",
     "category": "infusion-transfusion",
     "sub_category": "I. V. Infusion Set",
     "description": "For infusion of intravenous fluids and medicines into human circulating system by using intravenous catheter or cannula.",
@@ -1044,7 +1047,7 @@ export const products: Product[] = [
         "description": "Easy control of flow rate."
       },
       {
-        "title": "Self-Sealing Latex-Free Bulb with Luer Lock",
+        "title": "Self-Sealing Latex-Free Y Connector",
         "description": "Includes latex-free Y-connector."
       },
       {
@@ -1062,7 +1065,8 @@ export const products: Product[] = [
     ],
     "options": [
       "Needle free Y connector",
-      "With Flow regulator"
+      "With Flow regulator",
+      "Rotating Luer Lock"
     ],
     "unit_consists": [],
     "variant_pdf": "/variants/ivinfusionset/modvenn v.pdf"
@@ -1099,10 +1103,6 @@ export const products: Product[] = [
         "description": "Improves visual access and allows faster fluid level adjustment."
       },
       {
-        "title": "15 Micron Filter",
-        "description": "Filters foreign particles from fluid."
-      },
-      {
         "title": "Auto Air Stop with Priming Filter",
         "description": "Prevents air embolism during infusion."
       },
@@ -1115,7 +1115,7 @@ export const products: Product[] = [
         "description": "Allows easy control of flow rate."
       },
       {
-        "title": "Latex-Free Self-Sealing Bulb",
+        "title": "Self-Sealing Latex-Free Y Connector",
         "description": "Includes Y-connector for administering additional medication."
       },
       {
@@ -1178,6 +1178,10 @@ export const products: Product[] = [
         "description": "Filters visible foreign particles from the fluid."
       },
       {
+        "title": "Auto air stop with priming filter cap",
+        "description": "Prevents air embolism."
+      },
+      {
         "title": "Kink Resistant, DEHP-Free PVC Tubing",
         "description": "Maintains smooth and uninterrupted fluid flow."
       },
@@ -1194,8 +1198,8 @@ export const products: Product[] = [
         "description": "Standardized drop factor for consistent dosage control."
       },
       {
-        "title": "Tube Length: 2.0 meters",
-        "description": "Provides flexibility for different clinical setups."
+        "title": "Tube Length",
+        "description": "Length: 2.0 meters and Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
       }
     ],
     "options": [
@@ -1229,7 +1233,7 @@ export const products: Product[] = [
         "description": "Prevents air contamination; reduces HAIs has 15-micron fluid filter inside the chamber."
       },
       {
-        "title": "Auto air stop with priming filter",
+        "title": "Auto air stop with priming filter cap",
         "description": "Prevents air embolism."
       },
       {
@@ -1246,7 +1250,7 @@ export const products: Product[] = [
       },
       {
         "title": "Latex-free Y-connector",
-        "description": "With secure luer lock."
+        "description": "Allows for the safe and efficient administration of multiple intravenous fluids or medications to a patient, while minimizing the risk of latex allergies."
       },
       {
         "title": "Drop rate",
@@ -1254,14 +1258,11 @@ export const products: Product[] = [
       },
       {
         "title": "Tube length",
-        "description": "2.0 m"
+        "description": "Length: 2.0 meters and Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
       }
     ],
     "options": [
-      "PVC Free",
-      "Priming filter cap",
-      "Needle Free",
-      "Latex-free or needle-type Y injection ports"
+      "Needle Free Y injection port",
     ],
     "unit_consists": [],
     "variant_pdf": "/variants/ivinfusionset/modvenn_sv+.pdf"
@@ -1298,16 +1299,12 @@ export const products: Product[] = [
         "description": "Allows accurate flow rate adjustment."
       },
       {
-        "title": "Self-Sealing Latex Bulb",
-        "description": "Prevents leakage during infusion."
-      },
-      {
         "title": "Drop Rate",
         "description": "20 drops/ml for standard dosing precision."
       },
       {
         "title": "Tube Size",
-        "description": "Length: 1.5 meters and Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
+        "description": "Length: 2.0 meters and Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
       },
       {
         "title": "Sterility & Safety",
@@ -1339,8 +1336,8 @@ export const products: Product[] = [
         "description": "Strong, durable spike ensures easy and precise piercing of fluid containers."
       },
       {
-        "title": "Transparent Drip Chamber",
-        "description": "Facilitates visual monitoring of flow rate and effective priming."
+        "title": "DEHP Free",
+        "description": "Made from DEHP Free material."
       },
       {
         "title": "15 Micron Fluid Filter",
@@ -1351,12 +1348,12 @@ export const products: Product[] = [
         "description": "Ensures uninterrupted, uniform fluid flow."
       },
       {
-        "title": "Smooth Roller Clamp",
-        "description": "Allows accurate flow rate adjustment."
+        "title": "Light Sensitive",
+        "description": "The infusion Sets are used to protect light sensitive medications or fluids during infusion, preventing degradation caused by light exposure."
       },
       {
-        "title": "Self-Sealing Latex Bulb",
-        "description": "Prevents leakage during infusion."
+        "title": "Smooth Roller Clamp",
+        "description": "Allows accurate flow rate adjustment."
       },
       {
         "title": "Drop Rate",
@@ -1364,7 +1361,7 @@ export const products: Product[] = [
       },
       {
         "title": "Tube Size",
-        "description": "Length: 1.5 meters and Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
+        "description": "Length: 2.0 meters and Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
       },
       {
         "title": "Sterility & Safety",
@@ -1374,7 +1371,6 @@ export const products: Product[] = [
     "options": [
       "With Y injection port", 
       "With/without needle",
-      "Luer lock or rotating luer lock",
       "Flow regulator & needle-free Y injection port"
     ],
     "unit_consists": [],
@@ -1455,6 +1451,10 @@ export const products: Product[] = [
         "description": "Prevents contamination from external air"
       },
       {
+        "title": "DEHP Free",
+        "description": "Made from DEHP Free material."
+      },
+      {
         "title": "Injection Port",
         "description": "Enables addition of extra medication"
       },
@@ -1463,7 +1463,7 @@ export const products: Product[] = [
         "description": "For precise adjustment of flow rate"
       },
       {
-        "title": "Floating Auto Shut-off Valve",
+        "title": "With Floating Auto Shut-off Valve and Latex Free",
         "description": "Prevents air embolism and also Indicates empty chamber status"
       },
       {
@@ -1480,7 +1480,6 @@ export const products: Product[] = [
       }
     ],
     "options": [
-      "DEHP Free",
       "With needle",
       "Rotating luer lock",
       "With Flow regulator & needle-free Y-Site"
@@ -1495,21 +1494,13 @@ export const products: Product[] = [
     "product_code": "1202",
     "category": "infusion-transfusion",
     "sub_category": "Extension Tube",
-    "description": "Extension tubes are designed to connect the infusion site to the source of infusion, such as linking an IV cannula or three-way stopcock to an IV set. They extend the pathway between the infusion site and the fluid source, featuring a 6% Luer connection to minimize mechanical irritation and reduce the risk of infection. The low-pressure extension tube has a pressure sustainability of 600 PSI (41 bar).",
+    "description": "Extension tubes are designed to connect the infusion site to the source of infusion, such as linking an IV cannula or three way stopcock to an IV set. They extend the pathway between the infusion site and the fluid source, featuring a 6% Luer connection to minimize mechanical irritation and reduce the risk of infection. The low pressure extension tube has a pressure sustainability of 600 PSI (41 bar).",
     "sub_desc": "Extension Tube : High Pressure (DEHP Free)",
     "image": "/images/ecoextt hp.png",
     "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "DEHP Free",
+        "description": "Made from DEHP Free material."
       },
       {
         "title": "Biocompatible Material",
@@ -1522,10 +1513,16 @@ export const products: Product[] = [
       {
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      },
+      {
+        "title": "Tube Specifications",
+        "description": "Diameter: I Ø 1.0 mm, O Ø 2.8 mm"
       }
     ],
     "options": [
-      "With Slide Clamp"
+      "With Slide Clamp",
+      "PVC Free"
+      
     ],
     "unit_consists": [],
     "variant_pdf": "/variants/extensiontube/ecoextt hp.pdf"
@@ -1734,7 +1731,7 @@ export const products: Product[] = [
   },
   {
     "id": 30,
-    "product_name": "Modcvc",
+    "product_name": "ModCVC",
     "sizes": "Single, Double, Triple Lumen",
     "product_code": "Single Lumen-2001 to 2004, Double Lumen-2101 to 2103, Triple Lumen-2201 to 2202",
     "category": "central-venous-access-catheters",
@@ -1781,21 +1778,13 @@ export const products: Product[] = [
     "product_code": "1207",
     "category": "infusion-transfusion",
     "sub_category": "Extension Tube",
-    "description": "Extension tubes are designed to connect the infusion site to the source of infusion, such as linking an IV cannula or three-way stopcock to an IV set. They extend the pathway between the infusion site and the fluid source, featuring a 6% Luer connection to minimize mechanical irritation and reduce the risk of infection. The integrated flow regulator ensures accurate and safe delivery of fluids and medications during infusion therapy.",
+    "description": "Extension tubes are designed to connect the infusion site to the source of infusion, such as linking an IV cannula or three way stopcock to an IV set. They extend the pathway between the infusion site and the fluid source, featuring a 6% Luer connection to minimize mechanical irritation and reduce the risk of infection. The integrated flow regulator ensures accurate and safe delivery of fluids and medications during infusion therapy.",
     "sub_desc": "Extension Tube with Flow Regulator (DEHP Free)",
     "image": "/images/ecoextt extention tube with flow regulator.png",
     "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "DEHP Free",
+        "description": "Made from DEHP Free material."
       },
       {
         "title": "Biocompatible Material",
@@ -1808,10 +1797,15 @@ export const products: Product[] = [
       {
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      },  
+      {
+        "title": "Tube Specifications",
+        "description": "Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
       }
     ],
     "options": [
-      "With Slide Clamp"
+      "With Slide Clamp",
+      "PVC Free"
     ],
     "unit_consists": [],
     "variant_pdf": "/variants/extensiontube/ecoextt flow.pdf"
@@ -1823,21 +1817,13 @@ export const products: Product[] = [
     "product_code": "1201",
     "category": "infusion-transfusion",
     "sub_category": "Extension Tube",
-    "description": "Extension tubes are designed to connect the infusion site to the source of infusion, such as linking an IV cannula or three-way stopcock to an IV set. They extend the pathway between the infusion site and the fluid source, featuring a 6% Luer connection to minimize mechanical irritation and reduce the risk of infection. The low-pressure extension tube has a pressure sustainability of 79 PSI (5.5 bar).",
+    "description": "Extension tubes are designed to connect the infusion site to the source of infusion, such as linking an IV cannula or three way stopcock to an IV set. They extend the pathway between the infusion site and the fluid source, featuring a 6% Luer connection to minimize mechanical irritation and reduce the risk of infection. The low pressure extension tube has a pressure sustainability of 79 PSI (5.5 bar).",
     "sub_desc": "Extension Tube - Low Pressure (DEHP Free)",
     "image": "/images/ecoextt.png",
     "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "DEHP Free",
+        "description": "Made from DEHP Free material."
       },
       {
         "title": "Biocompatible Material",
@@ -1850,11 +1836,16 @@ export const products: Product[] = [
       {
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      },
+      {
+        "title": "Tube Specifications",
+        "description": "Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
       }
     ],
     "options": [
       "With Y Injection Port for extra medication",
-      "With Slide Clamp"
+      "With Slide Clamp",
+      "PVC Free"
     ],
     "unit_consists": [],
     "variant_pdf": "/variants/extensiontube/ecoextt lp.pdf"
@@ -1866,22 +1857,10 @@ export const products: Product[] = [
     "product_code": "1209",
     "category": "infusion-transfusion",
     "sub_category": "Extension Tube",
-    "description": "An extension tube connects the infusion site to the fluid source, such as an IV cannula or three-way stopcock, using a 6% Luer connection to minimize irritation and infection risk. It extends IV lines or catheters, enhancing patient access while reducing movement at the primary access point.",
+    "description": "An extension tube connects the infusion site to the fluid source, such as an IV cannula or three way stopcock, using a 6% Luer connection to minimize irritation and infection risk. It extends IV lines or catheters, enhancing patient access while reducing movement at the primary access point.",
     "sub_desc": "Two Way Extension Tube",
     "image": "/images/Extension tube two way.png",
     "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
       {
         "title": "Biocompatible Material",
         "description": "Supports longer indwelling time and patient safety."
@@ -1893,6 +1872,10 @@ export const products: Product[] = [
       {
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      },
+      {
+        "title": "Tube Specifications",
+        "description": "Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
       }
     ],
     "options": [
@@ -1910,22 +1893,10 @@ export const products: Product[] = [
     "product_code": "Single 1204, Double 1205, Triple 1206",
     "category": "infusion-transfusion",
     "sub_category": "Multiway",
-    "description": "An extension tube connects the infusion site to the source, such as an IV cannula or three-way stopcock, using a 6% Luer connection to minimize mechanical irritation and infection. It allows multiple simultaneous infusions, eliminates the need for needles, reduces the risk of needlestick injuries and contamination, and streamlines medication administration.",
+    "description": "An extension tube connects the infusion site to the source, such as an IV cannula or three way stopcock, using a 6% Luer connection to minimize mechanical irritation and infection. It allows multiple simultaneous infusions, eliminates the need for needles, reduces the risk of needlestick injuries and contamination, and streamlines medication administration.",
     "sub_desc": "Multiline Extension Tube with Needle Free Connectors (DEHP Free)",
     "image": "/images/triple ext tube.png",
     "product_features": [
-      {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
-      },
-      {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
-      },
       {
         "title": "Biocompatible Material",
         "description": "Supports longer indwelling time and patient safety."
@@ -1937,6 +1908,10 @@ export const products: Product[] = [
       {
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      },
+      {
+        "title": "Tube Specifications",
+        "description": "Diameter: I Ø 2.3 mm, O Ø 0.8 mm"
       }
     ],
     "options": [
@@ -1959,32 +1934,27 @@ export const products: Product[] = [
     "image": "/images/ecotran.png",
     "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "Transparent Drip Chamber",
+        "description": "To allow visual monitoring of the fluid flow rate and to prevent air from entering the patient's bloodstream."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Blood Filter Size",
+        "description": "Blood Filter Size: 200 micron"
       },
       {
         "title": "Biocompatible Material",
         "description": "Supports longer indwelling time and patient safety."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      },
+      {
+        "title": "Tube Specifications",
+        "description": "Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
       }
     ],
     "options": [
-      "Without Airvent",
       "DEHP Free",
       "Luer lock"
     ],
@@ -2003,32 +1973,27 @@ export const products: Product[] = [
     "image": "/images/ecotran_v.png",
     "product_features": [
       {
-        "title": "Ultra-Sharp Needle Design",
-        "description": "Siliconised stainless steel needle ensures smooth, pain-free insertion."
+        "title": "Transparent Drip Chamber",
+        "description": "To allow visual monitoring of the fluid flow rate and to prevent air from entering the patient's bloodstream."
       },
       {
-        "title": "Transparent Needle Hub with Flashback Chamber",
-        "description": "Provides easy visualization after needle insertion."
-      },
-      {
-        "title": "Radiopaque Frictionless Catheter",
-        "description": "Three/Four-striped FEP catheter with tapered, smooth surface for reduced friction."
+        "title": "Blood Filter Size",
+        "description": "Blood Filter Size: 200 micron"
       },
       {
         "title": "Biocompatible Material",
         "description": "Supports longer indwelling time and patient safety."
       },
       {
-        "title": "Latex and PVC-Free",
-        "description": "Safe for allergy-prone and sensitive patients."
-      },
-      {
         "title": "Sterile and Certified",
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
+      },
+      {
+        "title": "Tube Specifications",
+        "description": "Diameter: I Ø 2.8 mm, O Ø 4.0 mm"
       }
     ],
     "options": [
-      "Without Airvent",
       "DEHP Free",
       "Luer lock"
     ],

@@ -37,9 +37,21 @@ const Certificate = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-normal mb-6">Our Certifications</h1>
-            <p className="text-xl" style={{color: '#f0f9ff'}}>
-              View our comprehensive collection of industry certifications and compliance documents.
-            </p>
+            <nav className="text-base opacity-90 text-center text-gray-200">
+            <button
+              onClick={() => navigate('/')}
+              className="hover:underline transition-colors duration-200 font-medium"
+            >
+              Home
+            </button>
+            <span className="mx-2 text-white">/</span>
+            <button
+              onClick={() => navigate(`/certs`)}
+              className="hover:underline transition-colors duration-200 font-medium"
+            >
+              Certificates
+            </button>
+          </nav>
           </div>
         </div>
       </section>
