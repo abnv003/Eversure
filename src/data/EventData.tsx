@@ -2,7 +2,7 @@ export const upcomingEvents = [
   {
     id: 1,
     title: 'Medica Germany',
-    date: 'From 2025-11-14 to 2025-11-20',
+    date: 'From 2025-11-17 to 2025-11-20',
     description: 'Excited to meet and greet all our friends at Medica 2025',
     image_url: '/events/Medica Germany.jpg'
   },
