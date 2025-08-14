@@ -255,14 +255,14 @@ const AboutUs = () => {
         </section>
 
         {/* Values Carousel Strip - Attached to Hero */}
-        <section 
+        <section
           className="bg-blue-100 py-6 overflow-hidden relative"
           onMouseEnter={handleValuesMouseEnter}
           onMouseLeave={handleValuesMouseLeave}
         >
           <div className="relative">
             {/* Continuously scrolling container */}
-            <div 
+            <div
               className={`flex space-x-8 ${valuesPlaying ? 'animate-scroll' : ''}`}
               style={{
                 width: 'calc(200% + 2rem)', // Double width for seamless loop
@@ -272,7 +272,7 @@ const AboutUs = () => {
               {values.map((value, index) => {
                 const IconComponent = value.icon;
                 return (
-                  <div 
+                  <div
                     key={index}
                     className="flex items-center text-blue-800 flex-shrink-0 min-w-max"
                   >
@@ -288,12 +288,12 @@ const AboutUs = () => {
                   </div>
                 );
               })}
-              
+
               {/* Duplicate set for seamless loop */}
               {values.map((value, index) => {
                 const IconComponent = value.icon;
                 return (
-                  <div 
+                  <div
                     key={`duplicate-${index}`}
                     className="flex items-center text-blue-800 flex-shrink-0 min-w-max"
                   >
@@ -310,7 +310,7 @@ const AboutUs = () => {
                 );
               })}
             </div>
-            
+
             {/* Gradient overlays for smooth edge effect */}
             <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-blue-100 to-transparent pointer-events-none"></div>
             <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-blue-100 to-transparent pointer-events-none"></div>
@@ -320,10 +320,10 @@ const AboutUs = () => {
         <Counter />
 
         {/* Our Journey Carousel Section */}
-        <div className="max-w-7xl mx-auto p-4 sm:p-8 bg-blue-100 mb-20">
+        <div className="max-w-7xl mx-auto p-4 sm:p-8 bg-gray-100 mb-20">
           {/* Header */}
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-4xl font-light text-blue-800 mb-4">
+            <h2 className="text-2xl sm:text-4xl font-light text-[#309ed9] mb-4">
               Our Journey, Route To Success
             </h2>
             <div className="w-16 sm:w-24 h-1 bg-yellow-400 mx-auto"></div>
@@ -335,7 +335,7 @@ const AboutUs = () => {
             onTouchStart={handleMouseEnter}
             onTouchEnd={handleMouseLeave}
           >
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-auto max-w-sm border border-blue-200">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-auto max-w-sm">
               <div className="h-48 overflow-hidden relative">
                 <img
                   src={currentItem.image}
@@ -345,22 +345,22 @@ const AboutUs = () => {
                     e.target.src = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop";
                   }}
                 />
-                <div className="absolute top-4 left-4 bg-blue-800 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-semibold">
                   {currentItem.date}
                 </div>
               </div>
-              <div className="p-6 bg-blue-50">
-                <h3 className="text-xl font-medium text-blue-800 mb-4">
+              <div className="p-6">
+                <h3 className="text-xl font-medium text-[#309ed9] mb-4">
                   {currentItem.title}
                 </h3>
-                <p className="text-blue-700 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   {currentItem.description}
                 </p>
                 <ul className="space-y-3">
                   {currentItem.points.map((point, pointIndex) => (
                     <li key={pointIndex} className="flex items-start">
-                      <span className="inline-block w-2 h-2 bg-blue-800 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span className="text-blue-700 text-sm leading-relaxed">
+                      <span className="inline-block w-2 h-2 bg-[#309ed9] rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span className="text-gray-700 text-sm leading-relaxed">
                         {point}
                       </span>
                     </li>
@@ -381,7 +381,7 @@ const AboutUs = () => {
                 {visibleItems.map((item, index) => (
                   <div
                     key={`${item.originalIndex}-${currentIndex}`}
-                    className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-[500px] flex flex-col border border-blue-200"
+                    className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-[500px] flex flex-col"
                   >
                     <div className="h-48 overflow-hidden relative">
                       <img
@@ -392,22 +392,22 @@ const AboutUs = () => {
                           e.target.src = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop";
                         }}
                       />
-                      <div className="absolute top-4 left-4 bg-blue-800 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-semibold">
                         {item.date}
                       </div>
                     </div>
-                    <div className="p-6 flex-1 flex flex-col bg-blue-50">
-                      <h3 className="text-xl font-medium text-blue-800 mb-4">
+                    <div className="p-6 flex-1 flex flex-col">
+                      <h3 className="text-xl font-medium text-[#309ed9] mb-4">
                         {item.title}
                       </h3>
-                      <p className="text-blue-700 text-sm leading-relaxed mb-4">
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4">
                         {item.description}
                       </p>
                       <ul className="space-y-2 flex-1">
                         {item.points.map((point, pointIndex) => (
                           <li key={pointIndex} className="flex items-start">
-                            <span className="inline-block w-2 h-2 bg-blue-800 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <span className="text-blue-700 text-sm leading-relaxed">
+                            <span className="inline-block w-2 h-2 bg-[#309ed9] rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span className="text-gray-700 text-sm leading-relaxed">
                               {point}
                             </span>
                           </li>
@@ -429,8 +429,8 @@ const AboutUs = () => {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-200 mr-2 ${index === (currentIndex % timelineData.length)
-                    ? 'bg-blue-800 scale-125'
-                    : 'bg-blue-300 hover:bg-blue-600'
+                    ? 'bg-[#309ed9] scale-125'
+                    : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -444,8 +444,8 @@ const AboutUs = () => {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-200 mr-2 ${index === currentIndex
-                    ? 'bg-blue-800 scale-125'
-                    : 'bg-blue-300 hover:bg-blue-600'
+                    ? 'bg-[#309ed9] scale-125'
+                    : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                   aria-label={`Go to position ${index + 1}`}
                 />
@@ -454,9 +454,9 @@ const AboutUs = () => {
           </div>
 
           {/* Progress Indicator */}
-          <div className="w-full max-w-xs mx-auto mt-4 h-1 bg-blue-200 rounded-full overflow-hidden">
+          <div className="w-full max-w-xs mx-auto mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">
             <div
-              className="h-full bg-blue-800 transition-all duration-100 ease-linear"
+              className="h-full bg-[#309ed9] transition-all duration-100 ease-linear"
               style={{
                 width: `${((currentIndex + 1) / (maxDesktopIndex + 1)) * 100}%`
               }}
