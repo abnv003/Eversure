@@ -98,27 +98,55 @@ function Career() {
 
     setIsSubmitting(true);
     setSubmitMessage('');
+    setErrors({}); // Clear any previous errors
+
+    // Create FormData for file upload
+    const formDataToSend = new FormData();
+    formDataToSend.append('firstName', formData.firstName.trim());
+    formDataToSend.append('lastName', formData.lastName.trim());
+    formDataToSend.append('email', formData.email.trim());
+    formDataToSend.append('contactNo', formData.contactNo.trim());
+    formDataToSend.append('address', formData.address.trim());
+    
+    if (formData.resume) {
+      formDataToSend.append('resume', formData.resume);
+    }
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setSubmitMessage('Your application has been submitted successfully! We will review your application and contact you soon.');
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        contactNo: '',
-        address: '',
-        resume: null
+      const response = await fetch('http://localhost:5000/api/career/submit', {
+        method: 'POST',
+        body: formDataToSend,
+        // Don't set Content-Type header - let the browser set it for FormData
       });
 
-      // Reset file input
-      const fileInput = document.getElementById('resume') as HTMLInputElement;
-      if (fileInput) fileInput.value = '';
+      const result = await response.json();
+      
+      if (result.success) {
+        setSubmitMessage(result.message);
+        // Reset form on success
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          contactNo: '',
+          address: '',
+          resume: null
+        });
 
+        // Reset file input
+        const fileInput = document.getElementById('resume') as HTMLInputElement;
+        if (fileInput) fileInput.value = '';
+
+      } else {
+        setSubmitMessage(result.message);
+        // Set backend validation errors if any
+        if (result.errors) {
+          setErrors(result.errors);
+        }
+      }
     } catch (error) {
-      setSubmitMessage('There was an error submitting your application. Please try again.');
+      console.error('Submission error:', error);
+      setSubmitMessage('Network error occurred. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -134,7 +162,7 @@ function Career() {
               Career
             </h1>
             <div className="flex justify-center items-center mt-6 text-blue-100">
-              <span onClick={()=>{navigate('/')}} className='cursor-pointer'>Home</span>
+              <span onClick={()=>{navigate('/')}} className='cursor-pointer hover:text-white transition-colors'>Home</span>
               <span className="mx-2">/</span>
               <span className='cursor-pointer'>Career</span>
             </div>
@@ -150,10 +178,10 @@ function Career() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Submit Your Application
               </h2>
-              {/* <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
                 Take the next step in your career journey with Eversure. 
                 Fill out the form below and upload your resume to get started.
-              </p> */}
+              </p>
             </div>
 
             {submitMessage && (
@@ -162,7 +190,22 @@ function Career() {
                   ? 'bg-green-50 border border-green-200 text-green-800'
                   : 'bg-red-50 border border-red-200 text-red-800'
               }`}>
-                {submitMessage}
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    {submitMessage.includes('successfully') ? (
+                      <svg className="h-5 w-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    ) : (
+                      <svg className="h-5 w-5 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                      </svg>
+                    )}
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-sm font-medium">{submitMessage}</p>
+                  </div>
+                </div>
               </div>
             )}
 
@@ -183,6 +226,7 @@ function Career() {
                       errors.firstName ? 'border-red-300' : 'border-gray-300'
                     }`}
                     placeholder="Enter your first name"
+                    disabled={isSubmitting}
                   />
                   {errors.firstName && (
                     <p className="mt-2 text-sm text-red-600">{errors.firstName}</p>
@@ -203,6 +247,7 @@ function Career() {
                       errors.lastName ? 'border-red-300' : 'border-gray-300'
                     }`}
                     placeholder="Enter your last name"
+                    disabled={isSubmitting}
                   />
                   {errors.lastName && (
                     <p className="mt-2 text-sm text-red-600">{errors.lastName}</p>
@@ -225,6 +270,7 @@ function Career() {
                     errors.email ? 'border-red-300' : 'border-gray-300'
                   }`}
                   placeholder="Enter your email address"
+                  disabled={isSubmitting}
                 />
                 {errors.email && (
                   <p className="mt-2 text-sm text-red-600">{errors.email}</p>
@@ -246,6 +292,7 @@ function Career() {
                     errors.contactNo ? 'border-red-300' : 'border-gray-300'
                   }`}
                   placeholder="Enter your contact number"
+                  disabled={isSubmitting}
                 />
                 {errors.contactNo && (
                   <p className="mt-2 text-sm text-red-600">{errors.contactNo}</p>
@@ -267,6 +314,7 @@ function Career() {
                     errors.address ? 'border-red-300' : 'border-gray-300'
                   }`}
                   placeholder="Enter your complete address"
+                  disabled={isSubmitting}
                 />
                 {errors.address && (
                   <p className="mt-2 text-sm text-red-600">{errors.address}</p>
@@ -286,15 +334,22 @@ function Career() {
                     onChange={handleFileChange}
                     accept=".pdf,.doc,.docx"
                     className="hidden"
+                    disabled={isSubmitting}
                   />
                   <label
                     htmlFor="resume"
-                    className={`w-full flex items-center justify-center px-4 py-6 border-2 border-dashed rounded-lg cursor-pointer transition-colors hover:bg-gray-50 ${
+                    className={`w-full flex items-center justify-center px-4 py-6 border-2 border-dashed rounded-lg transition-colors ${
+                      isSubmitting 
+                        ? 'cursor-not-allowed bg-gray-50' 
+                        : 'cursor-pointer hover:bg-gray-50'
+                    } ${
                       errors.resume ? 'border-red-300' : 'border-gray-300 hover:border-[#309ed9]'
                     }`}
                   >
                     <div className="text-center">
-                      <Upload className="mx-auto h-12 w-12 text-gray-400 mb-4" />
+                      <Upload className={`mx-auto h-12 w-12 mb-4 ${
+                        isSubmitting ? 'text-gray-300' : 'text-gray-400'
+                      }`} />
                       <div className="text-sm text-gray-600">
                         {formData.resume ? (
                           <span className="font-medium text-[#309ed9]">
@@ -346,7 +401,7 @@ function Career() {
                 </p>
                 <p>
                   Contact our HR team at{' '}
-                  <a href="mailto:careers@eversure.com" className="text-[#309ed9] hover:underline">
+                  <a href="mailto:eversure@rathigroup.com" className="text-[#309ed9] hover:underline">
                     eversure@rathigroup.com
                   </a>{' '}
                   or call{' '}
