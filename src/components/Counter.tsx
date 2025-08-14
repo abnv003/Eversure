@@ -25,7 +25,7 @@ function Counter() {
 
   return (
     <section 
-      className="py-20 mb-24 mt-24 relative bg-cover bg-center bg-no-repeat max-w-7xl mx-auto rounded-lg overflow-hidden"
+      className="py-20 mb-20 mt-24 relative bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `url('/heroimages/counter_img.jpeg')`
       }}
