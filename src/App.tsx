@@ -15,6 +15,7 @@ import { Sustainability } from './pages/Sustainability';
 import { CSR } from './pages/CSR';
 import ScrollToTop from './components/ScrollToTop';
 import FloatingCareerButton from './components/FloatingCareerButton';
+import Career from './pages/Career';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/blog/:blogId" element={<BlogDetails />} />
             <Route path="/events" element={<Events />} />
             <Route path="/certs" element={<Certificate />} />
+            <Route path="/career" element={<Career />} />
           </Routes>
         </main>
         <Footer />
