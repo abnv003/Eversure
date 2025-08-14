@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowRight, ChevronRight, Heart, Shield, MessageCircle, Users, Leaf } from 'lucide-react';
+import { ArrowRight, ChevronRight} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -8,35 +8,6 @@ const Home = () => {
   const [isSustainabilityVisible, setIsSustainabilityVisible] = useState(false);
   const aboutRef = useRef(null);
   const sustainabilityRef = useRef(null);
-
-  const values = [
-    {
-      icon: Heart,
-      title: 'Customers First',
-      description: 'Eversure delivers innovative products prioritizing patient safety and comfort.'
-    },
-    {
-      icon: Shield,
-      title: 'Ethical Practices',
-      description: 'We uphold integrity, ensuring transparency, accountability, and excellence in manufacturing and service.'
-    },
-    {
-      icon: MessageCircle,
-      title: 'Honest Communication',
-      description: 'Working closely with healthcare professionals to develop innovative solutions.'
-    },
-    {
-      icon: Users,
-      title: 'Respect Employees',
-      description: 'Making quality healthcare accessible to communities through dedicated teamwork.'
-    },
-    {
-      icon: Leaf,
-      title: 'Environment Care',
-      description: 'Making quality healthcare accessible to communities through sustainable practices.'
-    }
-  ];
-
 
   useEffect(() => {
     const aboutObserver = new IntersectionObserver(
@@ -311,104 +282,8 @@ const Home = () => {
         </div>
       </section>
 
-
-
-      {/* Values Section - Card with hover description */}
-      <section 
-        className="py-20 mb-10 relative bg-cover bg-center bg-no-repeat mt-24"
-        style={{
-          backgroundImage: `url('/heroimages/values.jpeg')`
-        }}
-      >
-        {/* Black tint overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
-        
-        <div className="max-w-6xl mx-auto px-4 relative z-10">
-          {/* Header */}                                                                        
-          <div className="mb-8 text-center">
-            <h2 className="text-4xl sm:text-4xl lg:text-4xl font-light text-white mb-3">
-              Our Values Lead The Way
-            </h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
-          </div>
-
-          {/* Values Grid - Centered layout for second row */}
-          <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
-            {/* First row - 3 items */}
-            {values.slice(0, 3).map((value, index) => {
-              const IconComponent = value.icon;
-
-              return (
-                <div key={index} className="text-center group relative w-full sm:w-80 lg:w-72">
-                  {/* Card Container - Made more square */}
-                  <div className="bg-white group-hover:bg-white/20 group-hover:backdrop-blur-sm min-h-[240px] rounded-xl p-8 border border-gray-200 group-hover:border-white/30 shadow-sm group-hover:shadow-xl transition-all duration-300 ease-out cursor-pointer flex flex-col justify-center">
-                    {/* Default State - Icon and Title */}
-                    <div className="group-hover:opacity-0 transition-opacity duration-300 ease-out">
-                      {/* Icon Container */}
-                      <div className="flex justify-center mb-6">
-                        <div className="w-16 h-16 rounded-2xl border border-gray-300 group-hover:border-white flex items-center justify-center transition-all duration-300">
-                          <IconComponent className="w-8 h-8 text-gray-700 group-hover:text-white stroke-1 transition-colors duration-300" />
-                        </div>
-                      </div>
-
-                      {/* Title */}
-                      <h3 className="text-lg font-semibold text-gray-700 group-hover:text-white transition-colors duration-300">
-                        {value.title}
-                      </h3>
-                    </div>
-
-                    {/* Hover State - Description with larger text */}
-                    <div className="absolute inset-0 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out">
-                      <p className="text-white leading-relaxed text-center text-lg font-medium group-hover:scale-105 transition-transform duration-300">
-                        {value.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Second row - 2 items centered */}
-          <div className="flex flex-wrap justify-center gap-8 lg:gap-12 mt-8 lg:mt-12">
-            {values.slice(3).map((value, index) => {
-              const IconComponent = value.icon;
-
-              return (
-                <div key={index + 3} className="text-center group relative w-full sm:w-80 lg:w-72">
-                  {/* Card Container - Made more square */}
-                  <div className="bg-white group-hover:bg-white/20 group-hover:backdrop-blur-sm min-h-[240px] rounded-xl p-8 border border-gray-200 group-hover:border-white/30 shadow-sm group-hover:shadow-xl transition-all duration-300 ease-out cursor-pointer flex flex-col justify-center">
-                    {/* Default State - Icon and Title */}
-                    <div className="group-hover:opacity-0 transition-opacity duration-300 ease-out">
-                      {/* Icon Container */}
-                      <div className="flex justify-center mb-6">
-                        <div className="w-16 h-16 rounded-2xl border border-gray-300 group-hover:border-white flex items-center justify-center transition-all duration-300">
-                          <IconComponent className="w-8 h-8 text-gray-700 group-hover:text-white stroke-1 transition-colors duration-300" />
-                        </div>
-                      </div>
-
-                      {/* Title */}
-                      <h3 className="text-xl font-semibold text-gray-900 group-hover:text-white transition-colors duration-300">
-                        {value.title}
-                      </h3>
-                    </div>
-
-                    {/* Hover State - Description with larger text */}
-                    <div className="absolute inset-0 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out">
-                      <p className="text-white leading-relaxed text-center text-lg font-medium group-hover:scale-105 transition-transform duration-300">
-                        {value.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Sustainability Section */}
-      <section ref={sustainabilityRef} className="py-20 bg-white w-full overflow-hidden mt-[-40px]">
+      <section ref={sustainabilityRef} className="py-20 bg-white w-full overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className={`transform transition-all duration-1000 ${isSustainabilityVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
