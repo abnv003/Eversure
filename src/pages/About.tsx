@@ -2,6 +2,21 @@ import { useEffect, useState } from 'react';
 import Counter from '../components/Counter';
 import { Heart, Shield, MessageCircle, Users, Leaf } from 'lucide-react';
 
+// Add CSS animation styles
+const scrollAnimation = `
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+`;
+
 // import { useNavigate } from 'react-router-dom';
 
 const AboutUs = () => {
@@ -13,7 +28,6 @@ const AboutUs = () => {
   const [isPlaying, setIsPlaying] = useState(true);
 
   // Values carousel state
-  const [valuesIndex, setValuesIndex] = useState(0);
   const [valuesPlaying, setValuesPlaying] = useState(true);
 
   useEffect(() => {
@@ -177,19 +191,6 @@ const AboutUs = () => {
     return () => clearInterval(interval);
   }, [isPlaying, timelineData.length]);
 
-  // Auto-play functionality for values carousel
-  useEffect(() => {
-    if (!valuesPlaying) return;
-
-    const interval = setInterval(() => {
-      setValuesIndex(prevIndex => {
-        return (prevIndex + 1) % values.length;
-      });
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [valuesPlaying, values.length]);
-
   // Pause on hover (desktop only)
   const handleMouseEnter = () => {
     setIsPlaying(false);
@@ -228,272 +229,279 @@ const AboutUs = () => {
   const maxDesktopIndex = Math.max(0, timelineData.length - 3);
 
   return (
-    <div className="overflow-x-hidden">
-      {/* Hero Section with Curved Design */}
-      <section
-        className="text-white py-48 relative bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: `url('/heroimages/about-section.png')`,
-          backgroundPosition: 'center 40%'
-        }}
-      >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+    <>
+      <style>{scrollAnimation}</style>
+      <div className="overflow-x-hidden">
+        {/* Hero Section with Curved Design */}
+        <section
+          className="text-white py-48 relative bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: `url('/heroimages/about-section.png')`,
+            backgroundPosition: 'center 40%'
+          }}
+        >
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-          <h1 className="text-5xl font-normal mb-4">
-            About Eversure
-          </h1>
-          <p className="text-lg mb-4 leading-relaxed">
-            Eversure, the medical device brand of Pune-based Rathi Group, operates from a state-of-the-art manufacturing facility. Every product is manufactured and sterilized using advanced technologies to ensure the highest standards of safety, quality, and performance. Eversure is dedicated to innovation, reliability, and excellence in patient care.
-          </p>
-        </div>
-      </section>
+          {/* Content */}
+          <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <h1 className="text-5xl font-normal mb-4">
+              About Eversure
+            </h1>
+            <p className="text-lg mb-4 leading-relaxed">
+              Eversure, the medical device brand of Pune-based Rathi Group, operates from a state-of-the-art manufacturing facility. Every product is manufactured and sterilized using advanced technologies to ensure the highest standards of safety, quality, and performance. Eversure is dedicated to innovation, reliability, and excellence in patient care.
+            </p>
+          </div>
+        </section>
 
-      {/* Values Carousel Strip - Attached to Hero */}
-      <section 
-        className="bg-[#309ed9] py-6 overflow-hidden relative"
-        onMouseEnter={handleValuesMouseEnter}
-        onMouseLeave={handleValuesMouseLeave}
-      >
-        <div className="relative">
-          {/* Animated sliding container */}
-          <div 
-            className="flex transition-transform duration-700 ease-in-out"
-            style={{
-              transform: `translateX(-${(valuesIndex * 100) / values.length}%)`,
-              width: `${values.length * 100}%`
-            }}
-          >
-            {values.map((value, index) => {
-              const IconComponent = value.icon;
-              return (
-                <div 
-                  key={index}
-                  className="flex items-center justify-center text-white"
-                  style={{ width: `${100 / values.length}%` }}
-                >
-                  <div className="flex items-center space-x-4 px-8">
-                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                      <IconComponent className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg">{value.title}</h3>
-                      <p className="text-white/90 text-sm max-w-md">{value.description}</p>
+        {/* Values Carousel Strip - Attached to Hero */}
+        <section 
+          className="bg-blue-100 py-6 overflow-hidden relative"
+          onMouseEnter={handleValuesMouseEnter}
+          onMouseLeave={handleValuesMouseLeave}
+        >
+          <div className="relative">
+            {/* Continuously scrolling container */}
+            <div 
+              className={`flex space-x-8 ${valuesPlaying ? 'animate-scroll' : ''}`}
+              style={{
+                width: 'calc(200% + 2rem)', // Double width for seamless loop
+              }}
+            >
+              {/* First set of values */}
+              {values.map((value, index) => {
+                const IconComponent = value.icon;
+                return (
+                  <div 
+                    key={index}
+                    className="flex items-center text-blue-800 flex-shrink-0 min-w-max"
+                  >
+                    <div className="flex items-center space-x-4 px-4">
+                      <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
+                        <IconComponent className="w-5 h-5 text-blue-800" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-lg whitespace-nowrap">{value.title}</h3>
+                        <p className="text-blue-700 text-sm max-w-md">{value.description}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+              
+              {/* Duplicate set for seamless loop */}
+              {values.map((value, index) => {
+                const IconComponent = value.icon;
+                return (
+                  <div 
+                    key={`duplicate-${index}`}
+                    className="flex items-center text-blue-800 flex-shrink-0 min-w-max"
+                  >
+                    <div className="flex items-center space-x-4 px-4">
+                      <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center">
+                        <IconComponent className="w-5 h-5 text-blue-800" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-lg whitespace-nowrap">{value.title}</h3>
+                        <p className="text-blue-700 text-sm max-w-md">{value.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            
+            {/* Gradient overlays for smooth edge effect */}
+            <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-blue-100 to-transparent pointer-events-none"></div>
+            <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-blue-100 to-transparent pointer-events-none"></div>
           </div>
-          
-          {/* Gradient overlays for smooth transition effect */}
-          <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-[#309ed9] to-transparent pointer-events-none"></div>
-          <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-[#309ed9] to-transparent pointer-events-none"></div>
-        </div>
+        </section>
 
-        {/* Progress indicators */}
-        <div className="flex justify-center space-x-2 mt-4">
-          {values.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setValuesIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                index === valuesIndex
-                  ? 'bg-white scale-125'
-                  : 'bg-white/50 hover:bg-white/70'
-              }`}
-              aria-label={`Go to value ${index + 1}`}
-            />
-          ))}
-        </div>
-      </section>
+        <Counter />
 
-      <Counter />
+        {/* Our Journey Carousel Section */}
+        <div className="max-w-7xl mx-auto p-4 sm:p-8 bg-blue-100 mb-20">
+          {/* Header */}
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-4xl font-light text-blue-800 mb-4">
+              Our Journey, Route To Success
+            </h2>
+            <div className="w-16 sm:w-24 h-1 bg-yellow-400 mx-auto"></div>
+          </div>
 
-      {/* Our Journey Carousel Section */}
-      <div className="max-w-7xl mx-auto p-4 sm:p-8 bg-gray-100 mb-20">
-        {/* Header */}
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-4xl font-light text-[#309ed9] mb-4">
-            Our Journey, Route To Success
-          </h2>
-          <div className="w-16 sm:w-24 h-1 bg-yellow-400 mx-auto"></div>
-        </div>
-
-        {/* Mobile Layout - Single Card */}
-        <div
-          className="block md:hidden mb-8"
-          onTouchStart={handleMouseEnter}
-          onTouchEnd={handleMouseLeave}
-        >
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-auto max-w-sm">
-            <div className="h-48 overflow-hidden relative">
-              <img
-                src={currentItem.image}
-                alt={currentItem.title}
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.target.src = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop";
-                }}
-              />
-              <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                {currentItem.date}
+          {/* Mobile Layout - Single Card */}
+          <div
+            className="block md:hidden mb-8"
+            onTouchStart={handleMouseEnter}
+            onTouchEnd={handleMouseLeave}
+          >
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-auto max-w-sm border border-blue-200">
+              <div className="h-48 overflow-hidden relative">
+                <img
+                  src={currentItem.image}
+                  alt={currentItem.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.src = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop";
+                  }}
+                />
+                <div className="absolute top-4 left-4 bg-blue-800 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  {currentItem.date}
+                </div>
+              </div>
+              <div className="p-6 bg-blue-50">
+                <h3 className="text-xl font-medium text-blue-800 mb-4">
+                  {currentItem.title}
+                </h3>
+                <p className="text-blue-700 text-sm leading-relaxed mb-4">
+                  {currentItem.description}
+                </p>
+                <ul className="space-y-3">
+                  {currentItem.points.map((point, pointIndex) => (
+                    <li key={pointIndex} className="flex items-start">
+                      <span className="inline-block w-2 h-2 bg-blue-800 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span className="text-blue-700 text-sm leading-relaxed">
+                        {point}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <div className="p-6">
-              <h3 className="text-xl font-medium text-[#309ed9] mb-4">
-                {currentItem.title}
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                {currentItem.description}
-              </p>
-              <ul className="space-y-3">
-                {currentItem.points.map((point, pointIndex) => (
-                  <li key={pointIndex} className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-[#309ed9] rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span className="text-gray-700 text-sm leading-relaxed">
-                      {point}
-                    </span>
-                  </li>
+          </div>
+
+          {/* Desktop Layout - Three Cards */}
+          <div
+            className="hidden md:block relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="overflow-hidden">
+              <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {visibleItems.map((item, index) => (
+                  <div
+                    key={`${item.originalIndex}-${currentIndex}`}
+                    className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-[500px] flex flex-col border border-blue-200"
+                  >
+                    <div className="h-48 overflow-hidden relative">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          e.target.src = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop";
+                        }}
+                      />
+                      <div className="absolute top-4 left-4 bg-blue-800 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        {item.date}
+                      </div>
+                    </div>
+                    <div className="p-6 flex-1 flex flex-col bg-blue-50">
+                      <h3 className="text-xl font-medium text-blue-800 mb-4">
+                        {item.title}
+                      </h3>
+                      <p className="text-blue-700 text-sm leading-relaxed mb-4">
+                        {item.description}
+                      </p>
+                      <ul className="space-y-2 flex-1">
+                        {item.points.map((point, pointIndex) => (
+                          <li key={pointIndex} className="flex items-start">
+                            <span className="inline-block w-2 h-2 bg-blue-800 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span className="text-blue-700 text-sm leading-relaxed">
+                              {point}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
+          </div>
+
+          {/* Navigation Dots - Different for Desktop and Mobile */}
+          <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
+            {/* Mobile dots - all timeline items */}
+            <div className="block md:hidden">
+              {timelineData.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-200 mr-2 ${index === (currentIndex % timelineData.length)
+                    ? 'bg-blue-800 scale-125'
+                    : 'bg-blue-300 hover:bg-blue-600'
+                    }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Desktop dots - only positions where we can show 3 cards */}
+            <div className="hidden md:block">
+              {Array.from({ length: maxDesktopIndex + 1 }, (_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-200 mr-2 ${index === currentIndex
+                    ? 'bg-blue-800 scale-125'
+                    : 'bg-blue-300 hover:bg-blue-600'
+                    }`}
+                  aria-label={`Go to position ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Progress Indicator */}
+          <div className="w-full max-w-xs mx-auto mt-4 h-1 bg-blue-200 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-blue-800 transition-all duration-100 ease-linear"
+              style={{
+                width: `${((currentIndex + 1) / (maxDesktopIndex + 1)) * 100}%`
+              }}
+            />
           </div>
         </div>
 
-        {/* Desktop Layout - Three Cards */}
-        <div
-          className="hidden md:block relative"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <div className="overflow-hidden">
-            <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {visibleItems.map((item, index) => (
+        {/* Our Features Section */}
+        <section className="py-20 bg-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-light mb-4" style={{ color: '#309ed9' }}>Your Trusted Partner in Quality, Technology & Timeliness</h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {features.map((feature, index) => (
                 <div
-                  key={`${item.originalIndex}-${currentIndex}`}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-[500px] flex flex-col"
+                  // onClick={() => navigate(formatCategoryPath(feature.title))}
+                  key={index}
+                  className="rounded-lg p-8 shadow-sm hover:shadow-md transition-colors duration-300 group cursor-pointer border bg-white text-gray-900 border-gray-100 hover:bg-[#309ed9] hover:text-white hover:border-[#309ed9]"
                 >
-                  <div className="h-48 overflow-hidden relative">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        e.target.src = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop";
-                      }}
-                    />
-                    <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      {item.date}
+                  <div className="flex flex-col items-center text-center h-full min-h-[200px]">
+                    <div className="mb-6 w-16 h-16 flex items-center justify-center">
+                      <img
+                        src={feature.icon}
+                        alt={feature.title}
+                        className="w-20 h-20 object-contain filter transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                        onError={(e) => {
+                          // Fallback if image doesn't load
+                          e.target.style.display = 'none';
+                        }}
+                      />
                     </div>
-                  </div>
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-xl font-medium text-[#309ed9] mb-4">
-                      {item.title}
+                    <h3 className="text-lg font-medium mb-4 flex-grow flex items-center text-gray-600 group-hover:text-white transition-colors duration-300">
+                      {feature.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                      {item.description}
-                    </p>
-                    <ul className="space-y-2 flex-1">
-                      {item.points.map((point, pointIndex) => (
-                        <li key={pointIndex} className="flex items-start">
-                          <span className="inline-block w-2 h-2 bg-[#309ed9] rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          <span className="text-gray-700 text-sm leading-relaxed">
-                            {point}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Navigation Dots - Different for Desktop and Mobile */}
-        <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
-          {/* Mobile dots - all timeline items */}
-          <div className="block md:hidden">
-            {timelineData.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-200 mr-2 ${index === (currentIndex % timelineData.length)
-                  ? 'bg-[#309ed9] scale-125'
-                  : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* Desktop dots - only positions where we can show 3 cards */}
-          <div className="hidden md:block">
-            {Array.from({ length: maxDesktopIndex + 1 }, (_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-200 mr-2 ${index === currentIndex
-                  ? 'bg-[#309ed9] scale-125'
-                  : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                aria-label={`Go to position ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Progress Indicator */}
-        <div className="w-full max-w-xs mx-auto mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-[#309ed9] transition-all duration-100 ease-linear"
-            style={{
-              width: `${((currentIndex + 1) / (maxDesktopIndex + 1)) * 100}%`
-            }}
-          />
-        </div>
+        </section>
       </div>
-
-      {/* Our Features Section */}
-      <section className="py-20 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-light mb-4" style={{ color: '#309ed9' }}>Your Trusted Partner in Quality, Technology & Timeliness</h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <div
-                // onClick={() => navigate(formatCategoryPath(feature.title))}
-                key={index}
-                className="rounded-lg p-8 shadow-sm hover:shadow-md transition-colors duration-300 group cursor-pointer border bg-white text-gray-900 border-gray-100 hover:bg-[#309ed9] hover:text-white hover:border-[#309ed9]"
-              >
-                <div className="flex flex-col items-center text-center h-full min-h-[200px]">
-                  <div className="mb-6 w-16 h-16 flex items-center justify-center">
-                    <img
-                      src={feature.icon}
-                      alt={feature.title}
-                      className="w-20 h-20 object-contain filter transition-all duration-300 group-hover:brightness-0 group-hover:invert"
-                      onError={(e) => {
-                        // Fallback if image doesn't load
-                        e.target.style.display = 'none';
-                      }}
-                    />
-                  </div>
-                  <h3 className="text-lg font-medium mb-4 flex-grow flex items-center text-gray-600 group-hover:text-white transition-colors duration-300">
-                    {feature.title}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
+    </>
   );
 };
 
