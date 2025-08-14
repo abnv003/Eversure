@@ -30,7 +30,7 @@ export const products: Product[] = [
     "sub_category": "IV Cannula",
     "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system.",
     "sub_desc": "IV cannula with wing with Port",
-    "image": "https://eversuremedical.com/assets/images/product/iv-infusion-iv-cannula-modcann-wi.webp",
+    "image": "/images/modcann_wi+.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -1985,7 +1985,7 @@ export const products: Product[] = [
         "description": "Supports longer indwelling time and patient safety."
       },
       {
-        "title": "Sterile and Certified",
+        "title": "Sterile and Certified",     
         "description": "ETO Sterilized, CE Certified, Single Use, Non-Pyrogenic."
       },
       {
