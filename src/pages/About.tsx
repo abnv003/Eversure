@@ -24,12 +24,12 @@ const AboutUs = () => {
     {
       icon: Heart,
       title: 'Customers First',
-      description: 'At Eversure, every product is crafted with an unwavering focus on patient safety, comfort, and well-being. Our commitment to customers drives innovation and excellence in everything we do.'
+      description: 'Eversure delivers innovative products prioritizing patient safety and comfort.'
     },
     {
       icon: Shield,
       title: 'Ethical Practices',
-      description: 'We are committed to the highest standards of integrity, ensuring that every aspect of our manufacturing and service delivery reflects transparency, accountability, and a drive for excellence.'
+      description: 'We uphold integrity, ensuring transparency, accountability, and excellence in manufacturing and service.'
     },
     {
       icon: MessageCircle,
@@ -225,7 +225,7 @@ const AboutUs = () => {
       </section>
 
       {/* Values Section - Card with hover description */}
-      <section className="py-16 px-4 mb-24">
+      <section className="py-16 px-4 mb-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-8 text-center">
@@ -242,8 +242,8 @@ const AboutUs = () => {
 
               return (
                 <div key={index} className="text-center group relative">
-                  {/* Card Container */}
-                  <div className="bg-white group-hover:bg-[#309ed9] rounded-xl p-8 border border-gray-200 shadow-sm group-hover:shadow-xl transition-all duration-300 ease-out cursor-pointer min-h-[180px] flex flex-col justify-center">
+                  {/* Card Container - Made more square */}
+                  <div className="bg-white group-hover:bg-[#309ed9] min-h-[240px] rounded-xl p-8 border border-gray-200 shadow-sm group-hover:shadow-xl transition-all duration-300 ease-out cursor-pointer flex flex-col justify-center">
                     {/* Default State - Icon and Title */}
                     <div className="group-hover:opacity-0 transition-opacity duration-300 ease-out">
                       {/* Icon Container */}
@@ -259,9 +259,9 @@ const AboutUs = () => {
                       </h3>
                     </div>
 
-                    {/* Hover State - Description */}
-                    <div className="absolute inset-0 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
-                      <p className="text-white leading-relaxed text-center">
+                    {/* Hover State - Description with larger text */}
+                    <div className="absolute inset-0 flex items-center justify-center p-8 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out">
+                      <p className="text-white leading-relaxed text-center text-lg font-medium group-hover:scale-105 transition-transform duration-300">
                         {value.description}
                       </p>
                     </div>
@@ -392,7 +392,7 @@ const AboutUs = () => {
               />
             ))}
           </div>
-          
+
           {/* Desktop dots - only positions where we can show 3 cards */}
           <div className="hidden md:block">
             {Array.from({ length: maxDesktopIndex + 1 }, (_, index) => (
@@ -411,9 +411,9 @@ const AboutUs = () => {
 
         {/* Progress Indicator */}
         <div className="w-full max-w-xs mx-auto mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">
-          <div 
+          <div
             className="h-full bg-[#309ed9] transition-all duration-100 ease-linear"
-            style={{ 
+            style={{
               width: `${((currentIndex + 1) / (maxDesktopIndex + 1)) * 100}%`
             }}
           />
@@ -425,7 +425,7 @@ const AboutUs = () => {
       <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light mb-4" style={{ color: '#309ed9' }}>Our Features</h2>
+            <h2 className="text-4xl font-light mb-4" style={{ color: '#309ed9' }}>Your Trusted Partner in Quality, Technology & Timeliness</h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto"></div>
           </div>
 

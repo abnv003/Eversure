@@ -64,7 +64,7 @@ export const Sustainability: React.FC = () => {
       <section
         className="text-white py-24 sm:py-32 md:py-40 lg:py-48 relative bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/heroimages/sustain_head.jpeg')`
+          backgroundImage: `url('/heroimages/sustain_home.jpeg')`
         }}
       >
         {/* Dark overlay */}
