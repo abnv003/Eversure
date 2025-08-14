@@ -311,52 +311,11 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Sustainability Section */}
-      <section ref={sustainabilityRef} className="py-20 bg-white w-full overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className={`transform transition-all duration-1000 ${isSustainabilityVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
-              <div className="relative w-full h-96 rounded-lg shadow-lg overflow-hidden">
-                <img
-                  src="/heroimages/sustain_home.jpeg"
-                  alt="Healthcare Professional with Patient"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-              </div>
-            </div>
-
-            <div className={`transform transition-all duration-1000 delay-300 ${isSustainabilityVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
-              <div className="mb-6">
-                <h2 className="text-4xl font-light mb-4" style={{ color: '#309ed9' }}>Sustainability</h2>
-                <div className="w-20 h-1 bg-yellow-400"></div>
-              </div>
-              <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                We actively invest in green technologies, recyclable materials, and energy-efficient processes to minimize our environmental footprint. Our manufacturing facilities are constantly being optimized for lower emissions and reduced waste generation, ensuring compliance with the highest environmental standards like ISO 14001.
-                <p className='mt-2'>
-                  We also empower our workforce and community with awareness programs and sustainable practices, creating a ripple effect beyond our products and into society.
-                </p>
-              </p>
-              <div className="flex items-center space-x-4">
-                <button
-                  onClick={() => { navigate('/company/sustainability') }}
-                  className="text-white px-8 py-3 rounded-full font-medium transition-colors duration-200 bg-[#309ed9] hover:bg-yellow-400"
-                >
-                  View More
-                </button>
-                <div onClick={() => { navigate('/company/sustainability') }} className="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-colors bg-[#309ed9] hover:bg-yellow-400">
-                  <ChevronRight className="h-6 w-6 text-white" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       {/* Values Section - Card with hover description */}
       <section 
-        className="py-20 mb-24 relative bg-cover bg-center bg-no-repeat mt-24"
+        className="py-20 mb-10 relative bg-cover bg-center bg-no-repeat mt-24"
         style={{
           backgroundImage: `url('/heroimages/values.jpeg')`
         }}
@@ -448,6 +407,47 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Sustainability Section */}
+      <section ref={sustainabilityRef} className="py-20 bg-white w-full overflow-hidden mt-[-40px]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className={`transform transition-all duration-1000 ${isSustainabilityVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
+              <div className="relative w-full h-96 rounded-lg shadow-lg overflow-hidden">
+                <img
+                  src="/heroimages/sustain_home.jpeg"
+                  alt="Healthcare Professional with Patient"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+              </div>
+            </div>
+
+            <div className={`transform transition-all duration-1000 delay-300 ${isSustainabilityVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
+              <div className="mb-6">
+                <h2 className="text-4xl font-light mb-4" style={{ color: '#309ed9' }}>Sustainability</h2>
+                <div className="w-20 h-1 bg-yellow-400"></div>
+              </div>
+              <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                We actively invest in green technologies, recyclable materials, and energy-efficient processes to minimize our environmental footprint. Our manufacturing facilities are constantly being optimized for lower emissions and reduced waste generation, ensuring compliance with the highest environmental standards like ISO 14001.
+                <p className='mt-2'>
+                  We also empower our workforce and community with awareness programs and sustainable practices, creating a ripple effect beyond our products and into society.
+                </p>
+              </p>
+              <div className="flex items-center space-x-4">
+                <button
+                  onClick={() => { navigate('/company/sustainability') }}
+                  className="text-white px-8 py-3 rounded-full font-medium transition-colors duration-200 bg-[#309ed9] hover:bg-yellow-400"
+                >
+                  View More
+                </button>
+                <div onClick={() => { navigate('/company/sustainability') }} className="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-colors bg-[#309ed9] hover:bg-yellow-400">
+                  <ChevronRight className="h-6 w-6 text-white" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
