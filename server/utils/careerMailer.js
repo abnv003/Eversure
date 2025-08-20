@@ -156,4 +156,4 @@ Eversure Team
     text: welcomeContent,
     fromName: 'Eversure'
   });
-};
+};  
