@@ -49,7 +49,7 @@ const Carousel = () => {
         if (!isPlaying) return;
 
         const interval = setInterval(() => {
-            setCurrentIndex(prevIndex => 
+            setCurrentIndex(prevIndex =>
                 prevIndex === sustainabilityData.length - 1 ? 0 : prevIndex + 1
             );
         }, 4000); // Change slide every 4 seconds
@@ -91,7 +91,7 @@ const Carousel = () => {
             </div>
 
             {/* Mobile Layout - Single Card */}
-            <div 
+            <div
                 className="block md:hidden mb-8"
                 onTouchStart={handleMouseEnter}
                 onTouchEnd={handleMouseLeave}
@@ -102,8 +102,8 @@ const Carousel = () => {
                             src={currentItem.image}
                             alt={currentItem.title}
                             className="w-full h-full object-cover"
-                            onError={(e) => {
-                                e.target.src = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop";
+                            onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                                e.currentTarget.src = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop";
                             }}
                         />
                     </div>
@@ -129,7 +129,7 @@ const Carousel = () => {
             </div>
 
             {/* Desktop Layout - Three Cards */}
-            <div 
+            <div
                 className="hidden md:block relative"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -137,8 +137,8 @@ const Carousel = () => {
                 <div className="overflow-hidden">
                     <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {visibleItems.map((item, index) => (
-                            <div 
-                                key={`${item.originalIndex}-${currentIndex}`} 
+                            <div
+                                key={`${item.originalIndex}-${currentIndex}`}
                                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-[500px] flex flex-col"
                             >
                                 <div className="h-48 overflow-hidden">
@@ -146,8 +146,8 @@ const Carousel = () => {
                                         src={item.image}
                                         alt={item.title}
                                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                                        onError={(e) => {
-                                            e.target.src = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop";
+                                        onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                                            e.currentTarget.src = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop";
                                         }}
                                     />
                                 </div>
@@ -182,8 +182,8 @@ const Carousel = () => {
                         key={index}
                         onClick={() => setCurrentIndex(index)}
                         className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex
-                                ? 'bg-[#309ed9] scale-125'
-                                : 'bg-gray-300 hover:bg-gray-400'
+                            ? 'bg-[#309ed9] scale-125'
+                            : 'bg-gray-300 hover:bg-gray-400'
                             }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />
@@ -192,9 +192,9 @@ const Carousel = () => {
 
             {/* Progress Indicator (optional) */}
             <div className="w-full max-w-xs mx-auto mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">
-                <div 
+                <div
                     className="h-full bg-[#309ed9] transition-all duration-100 ease-linear"
-                    style={{ 
+                    style={{
                         width: `${((currentIndex + 1) / sustainabilityData.length) * 100}%`
                     }}
                 />
