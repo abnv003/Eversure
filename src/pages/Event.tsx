@@ -48,7 +48,10 @@ const Events = () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {upcomingEvents.map((event) => (
-                <div key={event.id} className="bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-200">
+<div
+  key={event.id}
+  className="bg-white rounded-lg shadow-lg overflow-hidden transition-shadow duration-200"
+>
                   {event.image_url && (
                     <div className="h-48 overflow-hidden">
                       <img 
