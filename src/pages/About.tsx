@@ -186,7 +186,7 @@ const AboutUs = () => {
         }
         return prevIndex + 1;
       });
-    }, 4000); // Change slide every 4 seconds
+    }, 2000); // Change slide every 4 seconds
 
     return () => clearInterval(interval);
   }, [isPlaying, timelineData.length]);
