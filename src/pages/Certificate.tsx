@@ -12,10 +12,6 @@ const Certificate = () => {
       id: 1,
       image: '/ISO 13485_Q5 115632 0001 Rev.00_Valid 2023-04-15 to 2026-04-14 (2)_page-0001.jpg'
     },
-    // {
-    //   id: 2,
-    //   image: '/CE Certificate G10 115632 0002 Rev. 00_Valid 2023-07-18 Until 2028-07-17 (1) (1)_page-0002.jpg'
-    // },
     {
       id: 3,
       image: '/CE Certificate G10 115632 0002 Rev. 00_Valid 2023-07-18 Until 2028-07-17 (1) (1)_page-0001.jpg'
@@ -61,7 +57,10 @@ const Certificate = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
             {certificates.map((certificate) => (
-              <div key={certificate.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-all duration-200 group">
+<div 
+  key={certificate.id} 
+  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-200 group"
+>
                 <div className="relative aspect-[3/4] bg-gray-200 overflow-hidden">
                   <div className="w-full h-full flex items-center justify-center text-gray-500">
                     <img src={certificate.image} alt='cert-image'/>
