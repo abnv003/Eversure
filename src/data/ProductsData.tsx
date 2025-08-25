@@ -1136,7 +1136,7 @@ export const products: Product[] = [
       "With Flow regulator & needle-free Y injection port"
     ],
     "unit_consists": [],
-    "variant_pdf": "/variants/ivinfusionset/modvenn v+.pdf"
+    "variant_pdf": "/variants/ivinfusionset/modvennv+.pdf"
   },
   {
     "id": 19,
