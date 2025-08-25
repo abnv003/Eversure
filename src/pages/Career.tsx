@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 interface FormData {
   firstName: string;
   lastName: string;
+  post: string;
   email: string;
   contactNo: string;
   address: string;
@@ -14,6 +15,7 @@ interface FormData {
 interface FormErrors {
   firstName?: string;
   lastName?: string;
+  post?: string;
   email?: string;
   contactNo?: string;
   address?: string;
@@ -25,6 +27,7 @@ function Career() {
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
+    post: '',
     email: '',
     contactNo: '',
     address: '',
@@ -113,7 +116,9 @@ function Career() {
     }
 
     try {
-      const response = await fetch('https://eversure-final.onrender.com/api/career/submit', {
+      // const response = await fetch('https://eversure-final.onrender.com/api/career/submit', {
+      const response = await fetch('http://localhost:5000/api/career/submit', {
+
         method: 'POST',
         body: formDataToSend,
         // Don't set Content-Type header - let the browser set it for FormData
@@ -127,6 +132,7 @@ function Career() {
         setFormData({
           firstName: '',
           lastName: '',
+          post: '',
           email: '',
           contactNo: '',
           address: '',
@@ -253,6 +259,28 @@ function Career() {
                     <p className="mt-2 text-sm text-red-600">{errors.lastName}</p>
                   )}
                 </div>
+              </div>
+
+              {/* Post Field */}
+              <div>
+                <label htmlFor="post" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <Mail className="inline w-4 h-4 mr-2" />
+                  Applying For Post *
+                </label>
+                <input
+                  type="text"
+                  id="post"
+                  value={formData.post}
+                  onChange={(e) => handleInputChange('post', e.target.value)}
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#309ed9] focus:border-[#309ed9] transition-colors ${
+                    errors.post ? 'border-red-300' : 'border-gray-300'
+                  }`}
+                  placeholder="which post are you applying for ?"
+                  disabled={isSubmitting}
+                />
+                {errors.post && (
+                  <p className="mt-2 text-sm text-red-600">{errors.post}</p>
+                )}
               </div>
 
               {/* Email Field */}

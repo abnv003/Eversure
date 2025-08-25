@@ -50,17 +50,18 @@ export const submitCareerApplication = async (req, res) => {
   }
   console.log('================================');
 
-  const { firstName, lastName, email, contactNo, address, position } = req.body;
+  const { firstName, lastName, post, email, contactNo, address } = req.body;
   const resumeFile = req.file;
 
   // Validation
-  if (!firstName || !lastName || !email || !contactNo || !address) {
+  if (!firstName || !lastName || !post || !email || !contactNo || !address) {
     return res.status(400).json({ 
       success: false, 
       message: 'All fields are required',
       errors: {
         firstName: !firstName ? 'First name is required' : undefined,
         lastName: !lastName ? 'Last name is required' : undefined,
+        post: ! post ? 'Post is required': undefined,
         email: !email ? 'Email is required' : undefined,
         contactNo: !contactNo ? 'Contact number is required' : undefined,
         address: !address ? 'Address is required' : undefined
@@ -108,7 +109,7 @@ Name: ${firstName} ${lastName}
 Email: ${email}
 Contact: ${contactNo}
 Address: ${address}
-${position ? `Position Applied: ${position}` : ''}
+${post ? `Position Applied: ${post}` : ''}
 
 Application Date: ${new Date().toLocaleDateString('en-US', { 
   weekday: 'long', 
@@ -164,7 +165,7 @@ Application Details:
 - Email: ${email}
 - Contact: ${contactNo}
 - Submitted: ${new Date().toLocaleDateString()}
-
+- Position Applied: ${post}
 If you have any questions, please contact us at ${process.env.HR_EMAIL || 'hr@company.com'} or call +91 2138-679300/679351.
 
 Best regards,
