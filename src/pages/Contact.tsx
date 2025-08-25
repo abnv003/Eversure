@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Download } from 'lucide-react';
 import LocationMap from '../components/LocationMap';
 import { useNavigate } from 'react-router-dom';
 
@@ -16,6 +16,7 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+  const [downloadBrochure, setDownloadBrochure] = useState(false); // New toggle state
 
   const handleChange = (e) => {
     setFormData({
@@ -38,46 +39,50 @@ const Contact = () => {
     };
 
     try {
-  const response = await fetch('https://eversure-final.onrender.com/api/send-mail', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(mailData)
-  });
+      // const response = await fetch('https://eversure-final.onrender.com/api/send-mail', {
+      const response = await fetch('http://localhost:5000/api/send-mail', {
 
-  const result = await response.json();
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(mailData)
+      });
 
-  if (response.ok && result.success) {
-    setSubmitStatus('success');
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
-    
-    // Trigger brochure download after successful submission
-    const link = document.createElement('a');
-    link.href = '/brochure.pdf'; // Adjust path as needed
-    link.download = 'brochure.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-  } else {
-    setSubmitStatus('error');
-    console.error('Server error:', result.error);
-  }
-  
-} catch (error) {
-  setSubmitStatus('error');
-  console.error('Network error:', error);
-} finally {
-  setIsSubmitting(false);
-}
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+        
+        // Trigger brochure download only if toggle is enabled
+        if (downloadBrochure) {
+          const link = document.createElement('a');
+          link.href = '/brochure.pdf'; // Adjust path as needed
+          link.download = 'brochure.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+        
+      } else {
+        setSubmitStatus('error');
+        console.error('Server error:', result.error);
+      }
+      
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Network error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -120,6 +125,7 @@ const Contact = () => {
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                   <p className="text-green-800">
                     Thank you for your message! We will get back to you soon.
+                    {downloadBrochure && " Your brochure download should start automatically."}
                   </p>
                 </div>
               )}
@@ -232,6 +238,29 @@ const Contact = () => {
                     placeholder="Please provide details about your inquiry..."
                   ></textarea>
                 </div>
+
+                {/* Brochure Download Toggle */}
+                <div className="flex items-center space-x-3">
+                  <label className="relative inline-flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={downloadBrochure}
+                      onChange={(e) => setDownloadBrochure(e.target.checked)}
+                      disabled={isSubmitting}
+                      className="sr-only"
+                    />
+                    <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer ${downloadBrochure ? 'bg-[#309ed9]' : 'bg-gray-200'} ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                      <div className={`dot absolute top-[2px] left-[2px] bg-white w-5 h-5 rounded-full transition ${downloadBrochure ? 'transform translate-x-full' : ''}`}></div>
+                    </div>
+                  </label>
+                  <div className="flex items-center space-x-2">
+                    <Download className="h-5 w-5 text-gray-600" />
+                    <span className="text-sm font-medium text-gray-700">
+                      Download Brochure
+                    </span>
+                  </div>
+                </div>
+
                 <button
                   type="submit"
                   disabled={isSubmitting}

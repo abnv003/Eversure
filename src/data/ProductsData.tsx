@@ -1530,7 +1530,7 @@ export const products: Product[] = [
   {
     "id": 25,
     "product_name": "Ecocath",
-    "sizes": "6FG to 24FG",
+    "sizes": "6FR to 24FR",
     "product_code": "Two way 3601, Three way 3602",
     "category": "Urology",
     "sub_category": "Foley Catheter",
@@ -1574,7 +1574,7 @@ export const products: Product[] = [
   {
     "id": 26,
     "product_name": "Ecosuc",
-    "sizes": "Tube Length: 210cms, 250cms & 300cms",
+    "sizes": "Tube Length (cm): 210, 250 & 300",
     "product_code": "2301,2302",
     "category": "Surgery-Wound-Drainage",
     "sub_category": "Yankaur Suction Set",
@@ -1965,7 +1965,7 @@ export const products: Product[] = [
     "id": 43,
     "product_name": "Ecotran V",
     "sizes": "",
-    "product_code": "ECOTRAN V - 2402",
+    "product_code": "2401 - 2405",
     "category": "Infusion-Transfusion",
     "sub_category": "Blood Transfusion Set",
     "description": "Blood Transfusion set are used to administer blood in to human circulating system by using intravenous catheter and cannula.",
@@ -2037,7 +2037,7 @@ export const products: Product[] = [
   {
     "id": 41,
     "product_name": "Modcath",
-    "sizes": "6FG to 24FG",
+    "sizes": "6FR to 24FR",
     "product_code": "Two way 3603, Three way 3604",
     "category": "Urology",
     "sub_category": "Foley Catheter",

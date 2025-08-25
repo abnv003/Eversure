@@ -137,7 +137,7 @@ export const Sustainability: React.FC = () => {
                     {/* Title with underline */}
                     <div className="mb-6 sm:mb-8">
                       <h2
-                        className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-[#309ed9] mb-3 transition-all duration-1000 ease-out delay-500 ${isCurrentVisible
+                        className={`text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-light text-[#309ed9] mb-3 transition-all duration-1000 ease-out delay-500 ${isCurrentVisible
                             ? 'opacity-100 translate-x-0'
                             : `opacity-0 ${isImageLeft ? 'translate-x-10' : '-translate-x-10'}`
                           }`}

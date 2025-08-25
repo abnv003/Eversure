@@ -402,10 +402,13 @@ const ProductDetails = () => {
         {/* Unit Consists Of section */}
         {product.unit_consists && product.unit_consists.length > 0 && (
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-[#309ed9] mb-8">
+            {/* <h2 className="text-3xl font-bold text-[#309ed9] mb-8">
               Unit Consists Of
             </h2>
-            <div className="w-20 h-1 bg-yellow-400 mb-6"></div>
+            <div className="w-20 h-1 bg-yellow-400 mb-6"></div> */}
+            <h2 className="text-4xl font-normal text-[#309ed9] mb-8 border-b-4 border-yellow-400 inline-block pb-2">
+              Unit Consists Of
+            </h2>
 
             <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -425,30 +428,6 @@ const ProductDetails = () => {
           </div>
         )}
 
-        {/* Features Section
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          <h2 className="text-4xl font-normal  text-[#309ed9] mb-8">
-            Features
-          </h2>
-          <div className="w-20 h-1 bg-yellow-400 mt-[-20px] mb-6"></div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-4 mb-12">
-            {product.product_features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm hover:shadow-lg hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <h3 className="text-lg font-semibold mb-3 text-[#309ed9] leading-tight">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-sm">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div> */}
-
-        {/* Option 3: Using border-bottom on the heading itself */}
         {/* Features Section - Only render if features exist */}
         {product.product_features && product.product_features.length > 0 && (
           <div className="max-w-7xl mx-auto px-4 py-8">
