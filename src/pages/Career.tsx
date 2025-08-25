@@ -49,6 +49,11 @@ function Career() {
       newErrors.lastName = 'Last name is required';
     }
 
+    // FIXED: Added post validation
+    if (!formData.post.trim()) {
+      newErrors.post = 'Position/Post is required';
+    }
+
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
@@ -96,6 +101,7 @@ function Career() {
     e.preventDefault();
     
     if (!validateForm()) {
+      console.log('Validation failed, errors:', errors);
       return;
     }
 
@@ -107,6 +113,7 @@ function Career() {
     const formDataToSend = new FormData();
     formDataToSend.append('firstName', formData.firstName.trim());
     formDataToSend.append('lastName', formData.lastName.trim());
+    formDataToSend.append('post', formData.post.trim()); // Make sure post is included
     formDataToSend.append('email', formData.email.trim());
     formDataToSend.append('contactNo', formData.contactNo.trim());
     formDataToSend.append('address', formData.address.trim());
@@ -115,16 +122,22 @@ function Career() {
       formDataToSend.append('resume', formData.resume);
     }
 
-    try {
-      // const response = await fetch('https://eversure-final.onrender.com/api/career/submit', {
-      const response = await fetch('http://localhost:5000/api/career/submit', {
+    // Debug: Log what we're sending
+    console.log('Form data being sent:');
+    for (let [key, value] of formDataToSend.entries()) {
+      console.log(key, value);
+    }
 
+    try {
+      // Use the correct URL
+      const response = await fetch('http://localhost:5000/api/career/submit', {
         method: 'POST',
         body: formDataToSend,
         // Don't set Content-Type header - let the browser set it for FormData
       });
 
       const result = await response.json();
+      console.log('Response:', result);
       
       if (result.success) {
         setSubmitMessage(result.message);
@@ -147,6 +160,7 @@ function Career() {
         setSubmitMessage(result.message);
         // Set backend validation errors if any
         if (result.errors) {
+          console.log('Backend errors:', result.errors);
           setErrors(result.errors);
         }
       }
@@ -264,7 +278,7 @@ function Career() {
               {/* Post Field */}
               <div>
                 <label htmlFor="post" className="block text-sm font-semibold text-gray-700 mb-2">
-                  <Mail className="inline w-4 h-4 mr-2" />
+                  <FileText className="inline w-4 h-4 mr-2" />
                   Applying For Post *
                 </label>
                 <input
@@ -275,7 +289,7 @@ function Career() {
                   className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#309ed9] focus:border-[#309ed9] transition-colors ${
                     errors.post ? 'border-red-300' : 'border-gray-300'
                   }`}
-                  placeholder="which post are you applying for ?"
+                  placeholder="Which post are you applying for?"
                   disabled={isSubmitting}
                 />
                 {errors.post && (

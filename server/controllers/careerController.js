@@ -53,7 +53,7 @@ export const submitCareerApplication = async (req, res) => {
   const { firstName, lastName, post, email, contactNo, address } = req.body;
   const resumeFile = req.file;
 
-  // Validation
+  // Validation - FIXED: Added post validation
   if (!firstName || !lastName || !post || !email || !contactNo || !address) {
     return res.status(400).json({ 
       success: false, 
@@ -61,7 +61,7 @@ export const submitCareerApplication = async (req, res) => {
       errors: {
         firstName: !firstName ? 'First name is required' : undefined,
         lastName: !lastName ? 'Last name is required' : undefined,
-        post: ! post ? 'Post is required': undefined,
+        post: !post ? 'Position/Post is required' : undefined, 
         email: !email ? 'Email is required' : undefined,
         contactNo: !contactNo ? 'Contact number is required' : undefined,
         address: !address ? 'Address is required' : undefined
@@ -99,7 +99,7 @@ export const submitCareerApplication = async (req, res) => {
   }
 
   const to = process.env.HR_EMAIL || process.env.CONTACT_RECEIVER;
-  const subject = `New Career Application - ${firstName} ${lastName}`;
+  const subject = `New Career Application - ${firstName} ${lastName} - ${post}`; // FIXED: Added post to subject
   
   const message = `
 New Career Application Received
@@ -109,7 +109,7 @@ Name: ${firstName} ${lastName}
 Email: ${email}
 Contact: ${contactNo}
 Address: ${address}
-${post ? `Position Applied: ${post}` : ''}
+Position Applied: ${post}
 
 Application Date: ${new Date().toLocaleDateString('en-US', { 
   weekday: 'long', 
@@ -164,8 +164,9 @@ Application Details:
 - Name: ${firstName} ${lastName}
 - Email: ${email}
 - Contact: ${contactNo}
-- Submitted: ${new Date().toLocaleDateString()}
 - Position Applied: ${post}
+- Submitted: ${new Date().toLocaleDateString()}
+
 If you have any questions, please contact us at ${process.env.HR_EMAIL || 'hr@company.com'} or call +91 2138-679300/679351.
 
 Best regards,
