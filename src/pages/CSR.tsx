@@ -131,20 +131,10 @@ export const CSR = () => {
                 >
                   {/* Title with underline */}
                   <div className="mb-6">
-                    <h2 
-                      className={`text-2xl md:text-3xl font-light text-[#309ed9] mb-3 transition-all duration-1000 ease-out delay-500 ${
-                        isCurrentVisible 
-                          ? 'opacity-100 translate-x-0' 
-                          : 'opacity-0 translate-x-10'
-                      }`}
-                    >
+                    <h2 className="text-4xl font-light mb-4" style={{ color: '#309ed9' }}>
                       {item.title}
                     </h2>
-                    <div 
-                      className={`w-20 h-1 bg-yellow-400 transition-all duration-800 ease-out delay-700 ${
-                        isCurrentVisible ? 'w-20 opacity-100' : 'w-0 opacity-0'
-                      }`}
-                    ></div>
+                    <div className="w-20 h-1 bg-yellow-400"></div>
                   </div>
 
                   {/* Description */}
@@ -225,21 +215,11 @@ export const CSR = () => {
                       }`}
                     >
                       {/* Title with underline */}
-                      <div className="mb-8">
-                        <h2 
-                          className={`text-3xl sm:text-4xl lg:text-5xl font-light text-[#309ed9] mb-3 transition-all duration-1000 ease-out delay-500 ${
-                            isCurrentVisible 
-                              ? 'opacity-100 translate-x-0' 
-                              : `opacity-0 ${isImageLeft ? 'translate-x-10' : '-translate-x-10'}`
-                          }`}
-                        >
+                      <div className="mb-6">
+                        <h2 className="text-4xl font-light mb-4" style={{ color: '#309ed9' }}>
                           {item.title}
                         </h2>
-                        <div 
-                          className={`w-20 h-1 bg-yellow-400 transition-all duration-800 ease-out delay-700 ${
-                            isCurrentVisible ? 'w-20 opacity-100' : 'w-0 opacity-0'
-                          }`}
-                        ></div>
+                        <div className="w-20 h-1 bg-yellow-400"></div>
                       </div>
 
                       {/* Description */}

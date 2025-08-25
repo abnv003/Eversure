@@ -75,7 +75,7 @@ export const products: Product[] = [
   {
     "id": 1,
     "product_name": "Ecocann",
-    "sizes": "14G to 26G",
+    "sizes": "14G to 24G",
     "product_code": "1002",
     "category": "Infusion-Transfusion",
     "sub_category": "IV Cannula",
@@ -129,7 +129,7 @@ export const products: Product[] = [
   {
     "id": 2,
     "product_name": "Ecocann W",
-    "sizes": "14G to 26G",
+    "sizes": "14G to 24G",
     "product_code": "1003",
     "category": "Infusion-Transfusion",
     "sub_category": "IV Cannula",
@@ -225,7 +225,7 @@ export const products: Product[] = [
   {
     "id": 4,
     "product_name": "Ecowin",
-    "sizes": "14G to 26G",
+    "sizes": "14G to 24G",
     "product_code": "1005",
     "category": "Infusion-Transfusion",
     "sub_category": "IV Cannula",
@@ -269,7 +269,7 @@ export const products: Product[] = [
   {
     "id": 5,
     "product_name": "Evercath",
-    "sizes": "18G to 24G",
+    "sizes": "18G to 22G",
     "product_code": "1035",
     "category": "Infusion-Transfusion",
     "sub_category": "IV Cannula",
@@ -318,7 +318,7 @@ export const products: Product[] = [
   {
     "id": 6,
     "product_name": "Ecocann SF",
-    "sizes": "14G to 26G",
+    "sizes": "14G to 24G",
     "product_code": "1036",
     "category": "Infusion-Transfusion",
     "sub_category": "IV Cannula",
@@ -479,7 +479,7 @@ export const products: Product[] = [
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
     ],
     "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/ecocann s+.pdf"
+    "variant_pdf": "/variants/safetyivcannula/ecocanns+.pdf"
   },
   {
     "id": 8,
@@ -590,7 +590,7 @@ export const products: Product[] = [
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
     ],
     "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/ecocann ws+.pdf"
+    "variant_pdf": "/variants/safetyivcannula/ecocannws+.pdf"
   },
   {
     "id": 10,
@@ -688,7 +688,7 @@ export const products: Product[] = [
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
     ],
     "unit_consists": [],
-    "variant_pdf": "/variants/safetyivcannula/ecowin s+.pdf"
+    "variant_pdf": "/variants/safetyivcannula/ecowins+.pdf"
   },
   {
     "id": 12,

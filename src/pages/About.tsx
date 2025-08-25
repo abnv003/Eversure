@@ -27,9 +27,6 @@ const AboutUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  // Values carousel state
-  const [valuesPlaying, setValuesPlaying] = useState(true);
-
   useEffect(() => {
     // Trigger animation after component mounts
     const timer = setTimeout(() => {
@@ -186,7 +183,7 @@ const AboutUs = () => {
         }
         return prevIndex + 1;
       });
-    }, 2000); // Change slide every 4 seconds
+    }, 3000); // Change slide every 4 seconds
 
     return () => clearInterval(interval);
   }, [isPlaying, timelineData.length]);
@@ -199,15 +196,6 @@ const AboutUs = () => {
   // Resume on mouse leave
   const handleMouseLeave = () => {
     setIsPlaying(true);
-  };
-
-  // Values carousel hover handlers
-  const handleValuesMouseEnter = () => {
-    setValuesPlaying(false);
-  };
-
-  const handleValuesMouseLeave = () => {
-    setValuesPlaying(true);
   };
 
   // Get the three visible items for desktop based on current index
@@ -255,15 +243,11 @@ const AboutUs = () => {
         </section>
 
         {/* Values Carousel Strip - Attached to Hero */}
-        <section
-          className="bg-blue-100 py-6 overflow-hidden relative"
-          onMouseEnter={handleValuesMouseEnter}
-          onMouseLeave={handleValuesMouseLeave}
-        >
+        <section className="bg-blue-100 py-6 overflow-hidden relative">
           <div className="relative">
             {/* Continuously scrolling container */}
             <div
-              className={`flex space-x-8 ${valuesPlaying ? 'animate-scroll' : ''}`}
+              className="flex space-x-8 animate-scroll"
               style={{
                 width: 'calc(200% + 2rem)', // Double width for seamless loop
               }}
