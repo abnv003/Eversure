@@ -188,28 +188,27 @@ import { products } from "../data/ProductsData"
 // Mock useNavigate for demo
 // const useNavigate = () => (path: string) => console.log('Navigate to:', path)
 
-export default function QuickFinder({ onClose }: { onClose: () => void }) {
+export default function QuickFinder({ onClose }) {
   const navigate = useNavigate()
   const [selectedCategory, setSelectedCategory] = useState("Infusion-Transfusion")
   const categories = Array.from(new Set(products.map((p) => p.category)))
   const filteredProducts = products.filter((product) => product.category === selectedCategory)
 
   const modal = (
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[9999] flex items-center justify-center p-4">
-      <div className="w-full h-full md:w-[90%] md:h-[90%] rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row relative p-4 md:p-24" style={{backgroundColor: '#309ed9'}}>
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9999] flex items-center justify-center p-4">
+      <div className="w-full h-full md:w-[90%] md:h-[90%] rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row relative p-4 md:p-24 bg-slate-800">
         {/* Sidebar */}
         <div 
-          className="w-full md:w-80 p-6 overflow-y-auto mb-4 md:mb-0" 
+          className="w-full md:w-80 p-6 overflow-y-auto mb-4 md:mb-0 bg-slate-900" 
           style={{
-            backgroundColor: '#309ed9',
             scrollbarWidth: 'thin',
-            scrollbarColor: '#fbbf24 transparent'
+            scrollbarColor: '#f59e0b transparent'
           }}
         >
           <div className="absolute top-4 right-4">
             <button
               onClick={onClose}
-              className="text-white hover:bg-white/20 p-2 rounded-full"
+              className="text-gray-300 hover:bg-gray-700 p-2 rounded-full transition-colors"
             >
               <X size={24} />
             </button>
@@ -220,16 +219,16 @@ export default function QuickFinder({ onClose }: { onClose: () => void }) {
                 <div
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`border border-white/30 p-4 text-white hover:bg-white/10 transition-colors cursor-pointer ${
+                  className={`border border-gray-600 p-4 text-gray-300 hover:bg-gray-700 transition-colors cursor-pointer ${
                     selectedCategory === category
-                      ? "bg-yellow-400 text-black font-medium border-yellow-400"
+                      ? "bg-amber-600 text-white font-medium border-amber-600"
                       : ''
                   }`}
                 >
                   <h3 className="text-sm font-semibold text-center">
                     {category.replace(/-/g, " ")}
                   </h3>
-                </div>
+                  </div>
               ))}
             </div>
           </div>
@@ -237,10 +236,10 @@ export default function QuickFinder({ onClose }: { onClose: () => void }) {
 
         {/* Main Content */}
         <div 
-          className="flex-1 p-6 overflow-y-auto"
+          className="flex-1 p-6 overflow-y-auto bg-slate-800"
           style={{
             scrollbarWidth: 'thin',
-            scrollbarColor: '#fbbf24 transparent'
+            scrollbarColor: '#f59e0b transparent'
           }}
         >
           {filteredProducts.length > 0 ? (
@@ -252,7 +251,7 @@ export default function QuickFinder({ onClose }: { onClose: () => void }) {
                     navigate(`/products/${product.category}/${product.id}`)
                     onClose()
                   }}
-                  className="border border-white/30 p-4 text-white hover:bg-white/10 transition-colors cursor-pointer"
+                  className="border border-gray-600 p-4 text-gray-300 hover:bg-gray-700 transition-colors cursor-pointer"
                 >
                   <h3 className="text-sm font-semibold text-center">
                     {product.product_name}
@@ -261,7 +260,7 @@ export default function QuickFinder({ onClose }: { onClose: () => void }) {
               ))}
             </div>
           ) : (
-            <p className="text-white text-sm pt-6">
+            <p className="text-gray-300 text-sm pt-6">
               No products found for this category.
             </p>
           )}
@@ -270,5 +269,5 @@ export default function QuickFinder({ onClose }: { onClose: () => void }) {
     </div>
   )
 
-  return createPortal(modal, document.body)
+  return modal
 }
