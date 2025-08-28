@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, Download } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Download, ChevronDown } from 'lucide-react';
 import LocationMap from '../components/LocationMap';
-import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,8 +13,38 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
-  const [downloadBrochure, setDownloadBrochure] = useState(false); // New toggle state
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const [downloadBrochure, setDownloadBrochure] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState({
+    code: '+91',
+    flag: '🇮🇳',
+    name: 'India'
+  });
+  const [showCountryDropdown, setShowCountryDropdown] = useState(false);
+
+  // Country codes with flags
+  const countryCodes = [
+    { code: '+91', flag: '🇮🇳', name: 'India' },
+    { code: '+1', flag: '🇺🇸', name: 'United States' },
+    { code: '+44', flag: '🇬🇧', name: 'United Kingdom' },
+    { code: '+86', flag: '🇨🇳', name: 'China' },
+    { code: '+81', flag: '🇯🇵', name: 'Japan' },
+    { code: '+49', flag: '🇩🇪', name: 'Germany' },
+    { code: '+33', flag: '🇫🇷', name: 'France' },
+    { code: '+61', flag: '🇦🇺', name: 'Australia' },
+    { code: '+7', flag: '🇷🇺', name: 'Russia' },
+    { code: '+55', flag: '🇧🇷', name: 'Brazil' },
+    { code: '+34', flag: '🇪🇸', name: 'Spain' },
+    { code: '+39', flag: '🇮🇹', name: 'Italy' },
+    { code: '+31', flag: '🇳🇱', name: 'Netherlands' },
+    { code: '+46', flag: '🇸🇪', name: 'Sweden' },
+    { code: '+47', flag: '🇳🇴', name: 'Norway' },
+    { code: '+45', flag: '🇩🇰', name: 'Denmark' },
+    { code: '+41', flag: '🇨🇭', name: 'Switzerland' },
+    { code: '+43', flag: '🇦🇹', name: 'Austria' },
+    { code: '+32', flag: '🇧🇪', name: 'Belgium' },
+    { code: '+65', flag: '🇸🇬', name: 'Singapore' }
+  ];
 
   const handleChange = (e) => {
     setFormData({
@@ -25,23 +53,25 @@ const Contact = () => {
     });
   };
 
+  const handleCountrySelect = (country) => {
+    setSelectedCountry(country);
+    setShowCountryDropdown(false);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Prepare data for backend API
     const mailData = {
       name: formData.name,
-      contact: formData.email + (formData.phone ? ` | Phone: ${formData.phone}` : ''),
+      contact: formData.email + (formData.phone ? ` | Phone: ${selectedCountry.code}${formData.phone}` : ''),
       subject: `${formData.subject} - ${formData.name}${formData.company ? ` (${formData.company})` : ''}`,
       body: formData.message
     };
 
     try {
       const response = await fetch('https://eversure-final.onrender.com/api/send-mail', {
-      // const response = await fetch('http://localhost:5000/api/send-mail', {
-
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,10 +92,9 @@ const Contact = () => {
           message: ''
         });
         
-        // Trigger brochure download only if toggle is enabled
         if (downloadBrochure) {
           const link = document.createElement('a');
-          link.href = '/brochure.pdf'; // Adjust path as needed
+          link.href = '/brochure.pdf';
           link.download = 'brochure.pdf';
           document.body.appendChild(link);
           link.click();
@@ -86,34 +115,33 @@ const Contact = () => {
   };
 
   return (
-    <div className="">
+    <div className="relative z-0">
       {/* Hero Section */}
-      <section style={{backgroundColor: '#309ed9'}} className="text-white py-20">
+      <section style={{backgroundColor: '#309ed9'}} className="text-white py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-normal mb-6">Contact Us</h1>
             <nav className="text-base opacity-90 text-center text-gray-200">
-            <button
-              onClick={() => navigate('/')}
-              className="hover:underline transition-colors duration-200 font-medium"
-            >
-              Home
-            </button>
-            <span className="mx-2 text-white">/</span>
-            <button
-              onClick={() => navigate(`/contact`)}
-              className="hover:underline transition-colors duration-200 font-medium"
-            >
-              Contact
-            </button>
-          </nav>
-
+              <button
+                onClick={() => console.log('Navigate to home')}
+                className="hover:underline transition-colors duration-200 font-medium"
+              >
+                Home
+              </button>
+              <span className="mx-2 text-white">/</span>
+              <button
+                onClick={() => console.log('Navigate to contact')}
+                className="hover:underline transition-colors duration-200 font-medium"
+              >
+                Contact
+              </button>
+            </nav>
           </div>
         </div>
       </section>
 
       {/* Contact Form and Map */}
-      <section className="py-16">
+      <section className="py-16 relative z-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -138,7 +166,7 @@ const Contact = () => {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <div onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -190,15 +218,46 @@ const Contact = () => {
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number
                     </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      disabled={isSubmitting}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9] disabled:bg-gray-100 disabled:cursor-not-allowed" 
-                    />
+                    <div className="flex">
+                      <div className="relative">
+                        <button
+                          type="button"
+                          onClick={() => setShowCountryDropdown(!showCountryDropdown)}
+                          disabled={isSubmitting}
+                          className="flex items-center px-3 py-2 border border-r-0 border-gray-300 rounded-l-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#309ed9] disabled:bg-gray-100 disabled:cursor-not-allowed"
+                        >
+                          <span className="text-lg mr-1">{selectedCountry.flag}</span>
+                          <span className="text-sm font-medium text-gray-700 mr-1">{selectedCountry.code}</span>
+                          <ChevronDown className="h-4 w-4 text-gray-500" />
+                        </button>
+                        
+                        {showCountryDropdown && (
+                          <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-300 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
+                            {countryCodes.map((country, index) => (
+                              <button
+                                key={index}
+                                type="button"
+                                onClick={() => handleCountrySelect(country)}
+                                className="w-full flex items-center px-3 py-2 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none text-left"
+                              >
+                                <span className="text-lg mr-2">{country.flag}</span>
+                                <span className="text-sm font-medium mr-2">{country.code}</span>
+                                <span className="text-sm text-gray-600 truncate">{country.name}</span>
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-r-lg focus:border-transparent focus:ring-2 focus:ring-[#309ed9] disabled:bg-gray-100 disabled:cursor-not-allowed" 
+                      />
+                    </div>                                                                                    
                   </div>
                 </div>
                 <div>
@@ -239,7 +298,7 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                {/* Brochure Download Toggle */}
+                {/* Fixed Brochure Download Toggle */}
                 <div className="flex items-center space-x-3">
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input
@@ -249,8 +308,16 @@ const Contact = () => {
                       disabled={isSubmitting}
                       className="sr-only"
                     />
-                    <div className={`w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer ${downloadBrochure ? 'bg-[#309ed9]' : 'bg-gray-200'} ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}>
-                      <div className={`dot absolute top-[2px] left-[2px] bg-white w-5 h-5 rounded-full transition ${downloadBrochure ? 'transform translate-x-full' : ''}`}></div>
+                    <div 
+                      className={`w-11 h-6 rounded-full peer transition-colors duration-200 ${
+                        downloadBrochure ? 'bg-[#309ed9]' : 'bg-gray-200'
+                      } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
+                    >
+                      <div 
+                        className={`absolute top-[2px] left-[2px] bg-white w-5 h-5 rounded-full transition-transform duration-200 ${
+                          downloadBrochure ? 'transform translate-x-full' : ''
+                        }`}
+                      ></div>
                     </div>
                   </label>
                   <div className="flex items-center space-x-2">
@@ -264,13 +331,14 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
+                  onClick={handleSubmit}
                   className="w-full text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed" 
                   style={{backgroundColor: isSubmitting ? '#6b7280' : '#309ed9'}}
                 >
                   <Send className="h-5 w-5" />
                   <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                 </button>
-              </form>
+              </div>
             </div>
 
             {/* Map and Additional Info */}
