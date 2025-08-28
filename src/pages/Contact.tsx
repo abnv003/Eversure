@@ -39,8 +39,8 @@ const Contact = () => {
     };
 
     try {
-      // const response = await fetch('https://eversure-final.onrender.com/api/send-mail', {
-      const response = await fetch('http://localhost:5000/api/send-mail', {
+      const response = await fetch('https://eversure-final.onrender.com/api/send-mail', {
+      // const response = await fetch('http://localhost:5000/api/send-mail', {
 
         method: 'POST',
         headers: {

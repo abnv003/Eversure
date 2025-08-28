@@ -146,7 +146,7 @@ const AboutUs = () => {
     {
       icon: Users,
       title: 'Respect Employees',
-      description: 'Making quality healthcare accessible to communities through dedicated teamwork.'
+      description: 'Where respect fuels teamwork, and teamwork delivers healthcare.'
     },
     {
       icon: Leaf,
