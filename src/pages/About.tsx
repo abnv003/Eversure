@@ -131,12 +131,12 @@ const AboutUs = () => {
     {
       icon: Heart,
       title: 'Customers First',
-      description: 'Eversure delivers innovative products prioritizing patient safety and comfort.'
+      description: 'Eversure creates innovative products prioritizing patient safety, comfort, and well-being.'
     },
     {
       icon: Shield,
       title: 'Ethical Practices',
-      description: 'We uphold integrity, ensuring transparency, accountability, and excellence in manufacturing and service.'
+      description: 'We uphold integrity through transparent, accountable, and excellence-driven manufacturing and services.'
     },
     {
       icon: MessageCircle,
