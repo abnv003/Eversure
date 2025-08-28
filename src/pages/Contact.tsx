@@ -146,7 +146,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+              <h2 className="text-3xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
               
               {/* Status Messages */}
               {submitStatus === 'success' && (
@@ -343,9 +343,9 @@ const Contact = () => {
 
             {/* Map and Additional Info */}
             <div className="flex flex-col h-full">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Visit Our Facility</h2>
+              <h2 className="text-3xl font-semibold text-gray-900 mb-6">Visit Our Facility</h2>
               <div className="flex-1 min-h-[600px]">
-                <h2 className="text-xl font-bold mb-4">Our Location</h2>
+                <h2 className="text-xl font-semibold mb-4">Our Location</h2>
                 <div className="h-full min-h-[550px] w-full">
                   <LocationMap />
                 </div>
