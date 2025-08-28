@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, Download, ChevronDown } from 'lucide-react';
 import LocationMap from '../components/LocationMap';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -123,7 +125,7 @@ const Contact = () => {
             <h1 className="text-4xl md:text-5xl font-normal mb-6">Contact Us</h1>
             <nav className="text-base opacity-90 text-center text-gray-200">
               <button
-                onClick={() => console.log('Navigate to home')}
+                onClick={() => navigate('/')}
                 className="hover:underline transition-colors duration-200 font-medium"
               >
                 Home
