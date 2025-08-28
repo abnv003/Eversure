@@ -198,7 +198,7 @@ export default function QuickFinder({ onClose }) {
         <div 
           className="w-full md:w-80 p-6 overflow-y-auto mb-4 md:mb-0" 
           style={{
-            backgroundColor: '#005a96',
+            backgroundColor: '#006cb4',
             scrollbarWidth: 'thin',
             scrollbarColor: '#fbbf24 transparent'
           }}
