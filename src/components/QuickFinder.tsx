@@ -185,9 +185,6 @@ import { useNavigate } from "react-router-dom"
 import { products } from "../data/ProductsData"
 
 
-// Mock useNavigate for demo
-// const useNavigate = () => (path: string) => console.log('Navigate to:', path)
-
 export default function QuickFinder({ onClose }) {
   const navigate = useNavigate()
   const [selectedCategory, setSelectedCategory] = useState("Infusion-Transfusion")
@@ -196,19 +193,20 @@ export default function QuickFinder({ onClose }) {
 
   const modal = (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9999] flex items-center justify-center p-4">
-      <div className="w-full h-full md:w-[90%] md:h-[90%] rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row relative p-4 md:p-24 bg-slate-800">
+      <div className="w-full h-full md:w-[90%] md:h-[90%] rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row relative p-4 md:p-24" style={{backgroundColor: '#006cb4'}}>
         {/* Sidebar */}
         <div 
-          className="w-full md:w-80 p-6 overflow-y-auto mb-4 md:mb-0 bg-slate-900" 
+          className="w-full md:w-80 p-6 overflow-y-auto mb-4 md:mb-0" 
           style={{
+            backgroundColor: '#005a96',
             scrollbarWidth: 'thin',
-            scrollbarColor: '#f59e0b transparent'
+            scrollbarColor: '#fbbf24 transparent'
           }}
         >
           <div className="absolute top-4 right-4">
             <button
               onClick={onClose}
-              className="text-gray-300 hover:bg-gray-700 p-2 rounded-full transition-colors"
+              className="text-white hover:bg-white/20 p-2 rounded-full transition-colors"
             >
               <X size={24} />
             </button>
@@ -219,9 +217,9 @@ export default function QuickFinder({ onClose }) {
                 <div
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`border border-gray-600 p-4 text-gray-300 hover:bg-gray-700 transition-colors cursor-pointer ${
+                  className={`border border-white/30 p-4 text-white hover:bg-white/10 transition-colors cursor-pointer ${
                     selectedCategory === category
-                      ? "bg-amber-600 text-white font-medium border-amber-600"
+                      ? "bg-yellow-400 text-black font-medium border-yellow-400"
                       : ''
                   }`}
                 >
@@ -236,10 +234,11 @@ export default function QuickFinder({ onClose }) {
 
         {/* Main Content */}
         <div 
-          className="flex-1 p-6 overflow-y-auto bg-slate-800"
+          className="flex-1 p-6 overflow-y-auto"
           style={{
+            backgroundColor: '#006cb4',
             scrollbarWidth: 'thin',
-            scrollbarColor: '#f59e0b transparent'
+            scrollbarColor: '#fbbf24 transparent'
           }}
         >
           {filteredProducts.length > 0 ? (
@@ -251,7 +250,7 @@ export default function QuickFinder({ onClose }) {
                     navigate(`/products/${product.category}/${product.id}`)
                     onClose()
                   }}
-                  className="border border-gray-600 p-4 text-gray-300 hover:bg-gray-700 transition-colors cursor-pointer"
+                  className="border border-white/30 p-4 text-white hover:bg-white/10 transition-colors cursor-pointer"
                 >
                   <h3 className="text-sm font-semibold text-center">
                     {product.product_name}
@@ -260,7 +259,7 @@ export default function QuickFinder({ onClose }) {
               ))}
             </div>
           ) : (
-            <p className="text-gray-300 text-sm pt-6">
+            <p className="text-white text-sm pt-6">
               No products found for this category.
             </p>
           )}
@@ -269,5 +268,8 @@ export default function QuickFinder({ onClose }) {
     </div>
   )
 
+  if (typeof document !== 'undefined') {
+    return document.body ? modal : null
+  }
   return modal
 }
