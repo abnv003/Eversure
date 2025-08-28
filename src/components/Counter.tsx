@@ -153,7 +153,7 @@ function Counter() {
             return (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-lg border-2 border-white/30 p-8 text-center group hover:bg-white/20 transition-all duration-300"
+                className="bg-white/10  rounded-lg border-2 border-white/30 p-8 text-center group hover:bg-white/20 transition-all duration-300"
               >
                 {/* Icon */}
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#309ed9] transition-all duration-300">
