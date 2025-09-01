@@ -1965,7 +1965,7 @@ export const products: Product[] = [
     "id": 43,
     "product_name": "Ecotran V",
     "sizes": "",
-    "product_code": "2401 - 2405",
+    "product_code": "2402, 2404, 2405",
     "category": "Infusion-Transfusion",
     "sub_category": "Blood Transfusion Set",
     "description": "Blood Transfusion set are used to administer blood in to human circulating system by using intravenous catheter and cannula.",
