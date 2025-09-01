@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, Download, ChevronDown } from 'lucide-react';
 import LocationMap from '../components/LocationMap';
 import { useNavigate } from 'react-router-dom';
+import { countryCodes } from '../data/Countries';
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -23,30 +24,6 @@ const Contact = () => {
     name: 'India'
   });
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
-
-  // Country codes with flags
-  const countryCodes = [
-    { code: '+91', flag: '🇮🇳', name: 'India' },
-    { code: '+1', flag: '🇺🇸', name: 'United States' },
-    { code: '+44', flag: '🇬🇧', name: 'United Kingdom' },
-    { code: '+86', flag: '🇨🇳', name: 'China' },
-    { code: '+81', flag: '🇯🇵', name: 'Japan' },
-    { code: '+49', flag: '🇩🇪', name: 'Germany' },
-    { code: '+33', flag: '🇫🇷', name: 'France' },
-    { code: '+61', flag: '🇦🇺', name: 'Australia' },
-    { code: '+7', flag: '🇷🇺', name: 'Russia' },
-    { code: '+55', flag: '🇧🇷', name: 'Brazil' },
-    { code: '+34', flag: '🇪🇸', name: 'Spain' },
-    { code: '+39', flag: '🇮🇹', name: 'Italy' },
-    { code: '+31', flag: '🇳🇱', name: 'Netherlands' },
-    { code: '+46', flag: '🇸🇪', name: 'Sweden' },
-    { code: '+47', flag: '🇳🇴', name: 'Norway' },
-    { code: '+45', flag: '🇩🇰', name: 'Denmark' },
-    { code: '+41', flag: '🇨🇭', name: 'Switzerland' },
-    { code: '+43', flag: '🇦🇹', name: 'Austria' },
-    { code: '+32', flag: '🇧🇪', name: 'Belgium' },
-    { code: '+65', flag: '🇸🇬', name: 'Singapore' }
-  ];
 
   const handleChange = (e) => {
     setFormData({

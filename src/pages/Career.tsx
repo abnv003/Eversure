@@ -130,7 +130,8 @@ function Career() {
 
     try {
       // Use the correct URL
-      const response = await fetch('http://localhost:5000/api/career/submit', {
+      // const response = await fetch('http://localhost:5000/api/career/submit', {
+      const response = await fetch('https://eversure-final.onrender.com/api/career/submit', {
         method: 'POST',
         body: formDataToSend,
         // Don't set Content-Type header - let the browser set it for FormData

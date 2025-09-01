@@ -175,7 +175,7 @@ const Home = () => {
     }
   ];
 
-  const formatCategoryPath = (category) => {
+  const formatCategoryPath = (category: any) => {
     return `/products/${encodeURIComponent(category.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-'))}`;
   };
 
