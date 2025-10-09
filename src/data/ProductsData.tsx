@@ -75,13 +75,13 @@ export const products: Product[] = [
   {
     "id": 1,
     "product_name": "Ecocann",
-    "sizes": "14G to 24G",
+    "sizes": "14G to 26G",
     "product_code": "1002",
     "category": "Infusion-Transfusion",
     "sub_category": "IV Cannula",
     "description": "An intravenous (IV) cannula or catheter is used to deliver fluids directly into the human circulatory system. It features an injection port for the administration of additional medication and wings to ensure secure fixation.",
     "sub_desc": "IV Cannula with wings & injection port",
-    "image": "/images/IV Cannula.png",
+    "image": "/images/Ecocann.png",
     "addition": "Other Available Brand: Ecosafe, Ecosoft, Ecocann+",
     "product_features": [
       {
@@ -129,7 +129,7 @@ export const products: Product[] = [
   {
     "id": 2,
     "product_name": "Ecocann W",
-    "sizes": "14G to 24G",
+    "sizes": "14G to 26G",
     "product_code": "1003",
     "category": "Infusion-Transfusion",
     "sub_category": "IV Cannula",
@@ -225,13 +225,13 @@ export const products: Product[] = [
   {
     "id": 4,
     "product_name": "Ecowin",
-    "sizes": "14G to 24G",
+    "sizes": "14G to 26G",
     "product_code": "1005",
     "category": "Infusion-Transfusion",
     "sub_category": "IV Cannula",
     "description": "An intravenous (IV) cannula or catheter is used to deliver fluids directly into the human circulatory system. It offers fewer potential sites for internal and external contamination, making it ideal for use in small and superficial veins. Its less bulky design lies flat against the skin, enhancing patient comfort.",
     "sub_desc": "IV Cannula w/o wings & w/o injection port",
-    "image": "/images/ecowin.png",
+    "image": "/images/Ecowin.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -318,13 +318,13 @@ export const products: Product[] = [
   {
     "id": 6,
     "product_name": "Ecocann SF",
-    "sizes": "14G to 24G",
+    "sizes": "14G to 26G",
     "product_code": "1036",
     "category": "Infusion-Transfusion",
     "sub_category": "IV Cannula",
     "description": "An intravenous (IV) cannula or catheter is used to deliver fluids directly into the human circulatory system. The suturable wing features perforations that allow a suture to pass through, helping to secure the cannula and maintain stability during patient movement, particularly when the patient is unconscious.",
     "sub_desc": "IV Cannula with Suturable wings and with snap fit port cap",
-    "image": "/images/Suturabl IV Cannula with snap fit cap.png",
+    "image": "/images/Ecocann SF.png",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -393,7 +393,7 @@ export const products: Product[] = [
       },
       {
         "title": "Hydrophobic Bacterial Retention Filter",
-        "description": ""
+        "description": "A hydrophobic bacteria filter vents air but blocks fluids and microbes, ensuring sterility and leak prevention.- Hudrophobic bacteria retention filter"
       },
       {
         "title": "Radiopaque Frictionless Catheter",
@@ -438,6 +438,10 @@ export const products: Product[] = [
       {
         "title": "Metallic Safety Clip",
         "description": "Passive safety device to prevent needle stick injuries."
+      },
+      {
+        "title": "Hydrophobic Bacterial Retention Filter",
+        "description": "A hydrophobic bacteria filter vents air but blocks fluids and microbes, ensuring sterility and leak prevention.- Hudrophobic bacteria retention filter",
       },
       {
         "title": "Ultra-Sharp Needle Design",
@@ -497,6 +501,10 @@ export const products: Product[] = [
         "description":"Passive safety device to prevent needle stick injuries."
       },
       {
+        "title": "Hydrophobic Bacterial Retention Filter",
+        "description": "A hydrophobic bacteria filter vents air but blocks fluids and microbes, ensuring sterility and leak prevention.- Hudrophobic bacteria retention filter",
+      },
+      {
         "title": "Ultra-Sharp Needle Design",
         "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
       },
@@ -532,6 +540,7 @@ export const products: Product[] = [
     "options": [
       "FEP/PUR Catheter",
       "Coloured Wings",
+      "Hydrophobic Bacterial Retention Filter",
       "Packing in Coloured Paper/Medical Grape Paper / Tyvek"
     ],
     "unit_consists": [],
@@ -546,7 +555,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Metallic Safety clip automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries. Without Port IV Cannula reduce the chance of contamination & microorganism.",
     "sub_desc": "Safety IV Cannula with wings & w/o injection port",
-    "image": "/images/Ecowannws+copy.png",
+    "image": "/images/Ecocann WS+.png",
     "product_features": [
       {
         "title": "Metallic Safety Clip",
@@ -554,7 +563,7 @@ export const products: Product[] = [
       },
       {
         "title": "Hydrophobic Bacteria Retention Filter",
-        "description": ""
+        "description": "A hydrophobic bacteria filter vents air but blocks fluids and microbes, ensuring sterility and leak prevention.- Hudrophobic bacteria retention filter"
       },
       {
         "title": "Ultra-Sharp Needle Design",
@@ -594,7 +603,7 @@ export const products: Product[] = [
   },
   {
     "id": 10,
-    "product_name": "Ecocann W-S",
+    "product_name": "Ecocann WS",
     "sizes": "18G to 24G",
     "product_code": "1007",
     "category": "Infusion-Transfusion",
@@ -606,6 +615,10 @@ export const products: Product[] = [
       {
         "title": "Plastic Cage Safety Clip",
         "description":"Passive safety device to prevent needle stick injuries."
+      },
+      {
+        "title": "Hydrophobic Bacterial Retention Filter",
+        "description": "A hydrophobic bacteria filter vents air but blocks fluids and microbes, ensuring sterility and leak prevention.- Hudrophobic bacteria retention filter"
       },
       {
         "title": "Ultra-Sharp Needle Design",
@@ -638,6 +651,7 @@ export const products: Product[] = [
     ],
     "options": [
       "FEP/PUR Catheter",
+      "Hydrophobic Bacterial Retention Filter",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
     ],
     "unit_consists": [],
@@ -652,11 +666,15 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "An intravenous (IV) cannula or catheter is used to deliver fluids directly into the human circulatory system. The metallic safety clip automatically covers the needle’s bevel after withdrawal, minimizing the risk of needlestick injuries. It offers fewer potential sites for both internal and external contamination, making it ideal for use in small and superficial veins. Its less bulky design lies flat against the skin, enhancing patient comfort.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
-    "image": "/images/EcowinS+copy.png",
+    "image": "/images/Ecowin S+.png",
     "product_features": [
       {
         "title": "Metallic Safety Clip",
         "description":"Passive safety device to prevent needle stick injuries."
+      },
+      {
+        "title": "Hydrophobic Bacterial Retention Filter",
+        "description": "A hydrophobic bacteria filter vents air but blocks fluids and microbes, ensuring sterility and leak prevention.- Hudrophobic bacteria retention filter"
       },
       {
         "title": "Ultra-Sharp Needle Design",
@@ -685,6 +703,7 @@ export const products: Product[] = [
     ],
     "options": [
       "FEP/PUR Catheter",
+      "Hydrophobic Bacterial Retention Filter",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
     ],
     "unit_consists": [],
@@ -706,6 +725,10 @@ export const products: Product[] = [
         "description":"Passive safety device to prevent needle stick injuries."
       },
       {
+        "title": "Hydrophobic Bacterial Retention Filter",
+        "description": "A hydrophobic bacteria filter vents air but blocks fluids and microbes, ensuring sterility and leak prevention.- Hudrophobic bacteria retention filter"
+      },
+      {
         "title": "Ultra-Sharp Needle Design",
         "description": "Siliconised stainless steel, back-cut needle for pain-free insertion."
       },
@@ -732,6 +755,7 @@ export const products: Product[] = [
     ],
     "options": [
       "FEP/PUR Catheter",
+      "Hydrophobic Bacterial Retention Filter",
       "Packing in Coloured Paper / Medical Grape Paper / Tyvek"
     ],
     "unit_consists": [],
@@ -747,6 +771,7 @@ export const products: Product[] = [
     "description": "The EVER ACTIVE Safety IV Catheter is designed to minimize blood exposure and reduce the risk of needlestick injuries. Its unique push button mechanism retracts the needle into a locked chamber, preventing accidental needle sticks for both users and healthcare staff. Additionally, the blood control feature reduces blood leakage during IV cannulation, ensuring a cleaner and safer procedure.",
     "sub_desc": "Active Safety IV Cannula",
     "image": "/images/everactive.jpg",
+    "addition": "Coming Soon",
     "product_features": [
       {
         "title": "Ultra-Sharp Needle Design",
@@ -799,7 +824,7 @@ export const products: Product[] = [
     "sub_category": "Three Way Stop Cock",
     "description": "The product is used to deliver intravenous fluid into human circulating system. Lipid resistant three way stop cock available for Lipid resistant medication.",
     "sub_desc": "Three Way Stop Cock",
-    "image": "/images/three way stop cock.png",
+    "image": "/images/Modway.png",
     "product_features": [
       {
         "title": "360° Smooth Rotation",
@@ -1895,11 +1920,15 @@ export const products: Product[] = [
     "sub_category": "Multiway",
     "description": "An extension tube connects the infusion site to the source, such as an IV cannula or three way stopcock, using a 6% Luer connection to minimize mechanical irritation and infection. It allows multiple simultaneous infusions, eliminates the need for needles, reduces the risk of needlestick injuries and contamination, and streamlines medication administration.",
     "sub_desc": "Multiline Extension Tube with Needle Free Connectors (DEHP Free)",
-    "image": "/images/triple ext tube.png",
+    "image": "/images/Modextt.png",
     "product_features": [
       {
         "title": "Biocompatible Material",
         "description": "Supports longer indwelling time and patient safety."
+      },
+      {
+        "title": "DEHP Free",
+        "description": "Made from DEHP Free material."
       },
       {
         "title": "Latex and PVC-Free",
