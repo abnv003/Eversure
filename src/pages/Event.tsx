@@ -57,7 +57,7 @@ const Events = () => {
                       <img 
                         src={event.image_url} 
                         alt={event.title}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   )}
