@@ -666,7 +666,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "An intravenous (IV) cannula or catheter is used to deliver fluids directly into the human circulatory system. The metallic safety clip automatically covers the needle’s bevel after withdrawal, minimizing the risk of needlestick injuries. It offers fewer potential sites for both internal and external contamination, making it ideal for use in small and superficial veins. Its less bulky design lies flat against the skin, enhancing patient comfort.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
-  "image": "/images/ecowin-splus.png",
+  "image": "/images/ecowinS+.png",
     "product_features": [
       {
         "title": "Metallic Safety Clip",
