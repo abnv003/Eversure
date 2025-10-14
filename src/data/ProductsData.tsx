@@ -718,7 +718,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "An intravenous (IV) cannula or catheter is used to deliver fluids directly into the human circulatory system. The plastic safety cage automatically covers the needle’s bevel after withdrawal, minimizing the risk of needlestick injuries. It provides fewer potential sites for both internal and external contamination, making it ideal for use in small and superficial veins. Its less bulky design lies flat against the skin, offering better patient comfort.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
-    "image": "/images/Ecowins.png",
+  "image": "/images/ecowin s.png",
     "product_features": [
       {
         "title": "Plastic Cage Safety Clip",
