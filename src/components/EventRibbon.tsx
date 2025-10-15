@@ -24,7 +24,7 @@ export const EventRibbon = () => {
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
   
   // Use a ref to store the test date to avoid recreating it on every render
-  const testDate = useRef(new Date(2025, 10, 15)); // Month is 0-based, so 10 = November
+  const testDate = useRef(new Date(2025, 11, 15)); // Month is 0-based, so 10 = November
   
   // Function to get current date (returns test date for testing)
   const getCurrentDate = () => new Date(testDate.current.getTime());
