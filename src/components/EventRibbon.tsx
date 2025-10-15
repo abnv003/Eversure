@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { upcomingEvents } from "../data/EventData.tsx";
 import { AlertTriangle, Clock } from 'lucide-react';
 
@@ -19,24 +19,14 @@ interface WarningInfo {
 }
 
 export const EventRibbon = () => {
-  // For testing: set to November 15, 2025 (2 days before Medica Germany)
-  // For testing: set date to Nov 15, 2025 (2 days before Medica Germany which starts Nov 17)
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
-  
-  // Use a ref to store the test date to avoid recreating it on every render
-  const testDate = useRef(new Date(2025, 11, 15)); // Month is 0-based, so 10 = November
-  
-  // Function to get current date (returns test date for testing)
-  const getCurrentDate = () => new Date(testDate.current.getTime());
-  
   const warningInfo = getEventWarning(upcomingEvents);
 
   useEffect(() => {
     if (!warningInfo?.showWarning) return;
 
     const calculateTimeLeft = () => {
-      const now = new Date(testDate.current.getTime());
-      now.setMilliseconds(now.getMilliseconds() + Date.now() - testDate.current.getTime());
+      const now = new Date();
       
       // Parse the event date from warningInfo
       const match = warningInfo.event.date.match(/From (\d{4})-(\d{2})-(\d{2})/);
@@ -117,8 +107,8 @@ export const getEventWarning = (events: Event[]): WarningInfo | null => {
   let minDifference = Infinity;
   let eventDate: Date | null = null;
 
-  const testDate = new Date(2025, 10, 15); // November 15, 2025
-  testDate.setHours(0, 0, 0, 0); // Reset to midnight for consistent day calculations
+  const now = new Date();
+  now.setHours(0, 0, 0, 0); // Reset to midnight for consistent day calculations
 
   events.forEach(event => {
     // Extract start date from "From YYYY-MM-DD to YYYY-MM-DD"
@@ -130,7 +120,7 @@ export const getEventWarning = (events: Event[]): WarningInfo | null => {
 
       const eventStartDate = new Date(year, month - 1, day);
       eventStartDate.setHours(0, 0, 0, 0); // Reset to midnight for consistent day calculations
-      const timeDiff = eventStartDate.getTime() - testDate.getTime();
+      const timeDiff = eventStartDate.getTime() - now.getTime();
       const daysDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
 
       if (daysDiff >= 0 && daysDiff < minDifference) {
