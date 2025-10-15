@@ -555,7 +555,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "Intravenous (IV) Cannula / Catheter is used to deliver intravenous fluid in to human circulating system. Metallic Safety clip automatically covers the needle’s bevel after withdrawal of needle which minimizing the risk of needle stick injuries. Without Port IV Cannula reduce the chance of contamination & microorganism.",
     "sub_desc": "Safety IV Cannula with wings & w/o injection port",
-    "image": "/images/Ecocann WS+.png",
+  "image": "/images/EcocannWS+.png",
     "product_features": [
       {
         "title": "Metallic Safety Clip",
@@ -666,7 +666,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "An intravenous (IV) cannula or catheter is used to deliver fluids directly into the human circulatory system. The metallic safety clip automatically covers the needle’s bevel after withdrawal, minimizing the risk of needlestick injuries. It offers fewer potential sites for both internal and external contamination, making it ideal for use in small and superficial veins. Its less bulky design lies flat against the skin, enhancing patient comfort.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
-    "image": "/images/Ecowin S+.png",
+  "image": "/images/EcowinS+.jpg",
     "product_features": [
       {
         "title": "Metallic Safety Clip",
@@ -718,7 +718,7 @@ export const products: Product[] = [
     "sub_category": "Safety IV Cannula",
     "description": "An intravenous (IV) cannula or catheter is used to deliver fluids directly into the human circulatory system. The plastic safety cage automatically covers the needle’s bevel after withdrawal, minimizing the risk of needlestick injuries. It provides fewer potential sites for both internal and external contamination, making it ideal for use in small and superficial veins. Its less bulky design lies flat against the skin, offering better patient comfort.",
     "sub_desc": "Safety IV Cannula w/o wings & w/o injection port",
-    "image": "/images/Ecowins.png",
+  "image": "/images/Ecowin S.jpg",
     "product_features": [
       {
         "title": "Plastic Cage Safety Clip",
